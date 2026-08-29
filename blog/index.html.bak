@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog · OneSig Atlas</title>
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#f7f1e7">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="OneSig Blog - UAE e-invoicing readiness, mandates, and operating practice">
+<meta property="og:description" content="Field notes from UAE FTA Phase 2 e-invoicing readiness work. Mandate timelines, record-level validation, and what changes between a deck and a re-runnable loop.">
+<meta property="og:url" content="https://www.onesig.co/blog/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OneSig Atlas - UAE FTA Phase 2 readiness">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OneSig Blog - UAE e-invoicing readiness, mandates, and operating practice">
+<meta name="twitter:description" content="Field notes from UAE FTA Phase 2 e-invoicing readiness work.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image.png">
+
+<meta name="description" content="Field notes from UAE FTA Phase 2 e-invoicing readiness work. Mandate timelines, record-level validation, and what changes between a deck and a re-runnable loop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #f7f1e7; color: #161616; -webkit-font-smoothing: antialiased; }
+  .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(109, 40, 217); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 border-b border-black/10 bg-[#f7f1e7]/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/solutions/readiness-scan/" class="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900">
+      <img src="/assets/logo.png" alt="OneSig" class="h-9 w-auto shrink-0">
+      OneSig
+    </a>
+    <div class="hidden items-center gap-1 lg:flex">
+      <a href="/solutions/readiness-scan/" class="osNavBtn">Readiness Scan</a>
+      <a href="/solutions/readiness-scan/how-it-works/" class="osNavBtn">How it works</a>
+      <a href="/solutions/readiness-scan/cost-calculator/" class="osNavBtn">Calculate Cost of Getting It Wrong</a>
+      <a href="/solutions/readiness-scan/partners/" class="osNavBtn">For Partners</a>
+      <a href="/blog/" class="osNavBtn active">Blog</a>
+    </div>
+    <a href="/solutions/readiness-scan/" class="rounded-full bg-[#171717] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black">Book a Readiness Scan</a>
+  </div>
+</nav>
+<style>
+  .osNavBtn { padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: rgb(82,82,82); transition: color 0.2s; white-space: nowrap; }
+  .osNavBtn:hover { color: rgb(23,23,23); }
+  .osNavBtn.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+</style>
+
+
+<!-- HEADER -->
+<section class="px-5 pt-16 pb-12 md:pt-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-4">OneSig journal</div>
+    <h1 class="text-5xl font-semibold tracking-[-0.04em] md:text-6xl">Field notes on UAE e-invoicing readiness.</h1>
+    <p class="mt-5 max-w-3xl text-lg leading-8 text-neutral-700">Short pieces on what we see across UAE FTA Phase 2 engagements. Mandate timelines, record-level validation, the gap between a deck and a re-runnable loop, and what partners actually walk away with.</p>
+  </div>
+</section>
+
+
+<!-- POST LIST -->
+<section class="border-t border-black/10 px-5 py-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-6">Latest</div>
+
+    <!-- Featured post: Founder POV -->
+    <a href="/blog/uae-e-invoicing-readiness-not-transmission/" class="group block overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm transition hover:shadow-md">
+      <div class="grid gap-0 md:grid-cols-[1.2fr_1fr]">
+        <!-- Left: poster -->
+        <div class="relative bg-gradient-to-br from-[#211d18] via-[#26221d] to-[#1c1813] p-8 text-white md:p-10">
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-300">Point of view</span>
+            <span class="rounded-full bg-violet-500/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-violet-200 ring-1 ring-violet-300/30">Founder</span>
+          </div>
+          <div class="mt-6 max-w-md font-serif text-2xl font-bold leading-tight tracking-tight text-white md:text-3xl">An invoice can be valid <span class="text-violet-300">and wrong</span> at the same time.</div>
+          <div class="mt-6 flex flex-wrap items-center gap-3 text-xs text-neutral-400">
+            <span class="text-neutral-300">Abhi · Founder, OneSig</span>
+            <span class="text-neutral-500">·</span>
+            <span>4 June 2026</span>
+            <span class="text-neutral-500">·</span>
+            <span>12 min read</span>
+          </div>
+        </div>
+        <!-- Right: copy -->
+        <div class="flex flex-col justify-between gap-4 p-8 md:p-10">
+          <div>
+            <h2 class="text-2xl font-semibold leading-snug tracking-[-0.02em] text-neutral-900 group-hover:text-violet-700 md:text-[1.75rem]">The same invoice can be valid and wrong at the same time. That's the UAE e-invoicing problem nobody is pricing in.</h2>
+            <p class="mt-4 text-base leading-7 text-neutral-700">Why readiness, not transmission, is the hard part of the FTA mandate, and how we're building an assessment that proves it.</p>
+          </div>
+          <div class="flex items-center gap-2 text-sm font-semibold text-violet-700">
+            Read post
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-1"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- More posts grid -->
+    <div class="mt-12">
+      <div class="eyebrow mb-6">More posts</div>
+      <div class="grid gap-5 md:grid-cols-2">
+
+        <!-- Post 2: SAP SIs -->
+        <a href="/blog/sap-system-integrators-uae-e-invoicing-readiness-billable-step/" class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm transition hover:shadow-md">
+          <div class="relative bg-gradient-to-br from-[#f4ede0] via-[#f7f1e7] to-[#ede4d2] p-7">
+            <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">For partners</div>
+            <div class="mt-5 font-serif text-xl font-bold leading-tight tracking-tight text-neutral-900">Stop running readiness as <span class="text-violet-700">a conversation</span>.</div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between gap-4 p-7">
+            <div>
+              <h3 class="text-lg font-semibold leading-snug tracking-[-0.01em] text-neutral-900 group-hover:text-violet-700">How SAP system integrators can sell UAE e-invoicing readiness as a billable first step.</h3>
+              <p class="mt-3 text-sm leading-6 text-neutral-700">Most SIs give readiness away as pre-sales. Here's how to make it a billable, AI-native deliverable that de-risks the implementation you win next.</p>
+            </div>
+            <div class="flex items-center justify-between gap-3 text-xs text-neutral-500">
+              <span>OneSig · 3 June 2026 · 6 min</span>
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-violet-700">
+                Read
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-1"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 1: Deck vs loop -->
+        <a href="/blog/uae-e-invoicing-readiness-assessment-deck-vs-loop/" class="group flex flex-col overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm transition hover:shadow-md">
+          <div class="relative bg-gradient-to-br from-[#f4ede0] via-[#f7f1e7] to-[#ede4d2] p-7">
+            <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">UAE e-invoicing</div>
+            <div class="mt-5 font-serif text-xl font-bold leading-tight tracking-tight text-neutral-900">Readiness is not a deck. <span class="text-violet-700">It is a loop.</span></div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between gap-4 p-7">
+            <div>
+              <h3 class="text-lg font-semibold leading-snug tracking-[-0.01em] text-neutral-900 group-hover:text-violet-700">Why a UAE e-invoicing readiness deck fails the week after you deliver it.</h3>
+              <p class="mt-3 text-sm leading-6 text-neutral-700">A readiness deck tells you what might be wrong on the day it was written. Your data keeps changing after that, so the deck is stale within a week.</p>
+            </div>
+            <div class="flex items-center justify-between gap-3 text-xs text-neutral-500">
+              <span>OneSig · 3 June 2026 · 5 min</span>
+              <span class="inline-flex items-center gap-1 text-sm font-semibold text-violet-700">
+                Read
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-1"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- More posts coming soon -->
+    <div class="mt-12 rounded-3xl border border-dashed border-black/15 bg-white/30 p-8 text-center">
+      <div class="eyebrow mb-2">More on the way</div>
+      <p class="text-base leading-7 text-neutral-600">We are publishing as we run engagements. Check back, or drop us a note if there is a UAE FTA Phase 2 question worth writing about.</p>
+      <a href="mailto:abhi@onesig.co?subject=Blog%20topic%20suggestion" class="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">
+        Suggest a topic →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="border-t border-black/10 px-5 py-20">
+  <div class="mx-auto max-w-5xl rounded-[2rem] bg-[#0c0c0c] p-10 text-white shadow-xl md:p-14">
+    <div class="text-xs font-bold uppercase tracking-[0.22em] text-violet-300">Run the loop</div>
+    <h2 class="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-4xl">Readiness is not a deck. It is a loop.</h2>
+    <p class="mt-5 max-w-2xl text-base leading-7 text-neutral-300">Run Atlas before implementation starts. Scan → Fix → Validate → Prove.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/solutions/readiness-scan/" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 shadow-sm hover:bg-neutral-100">Book a UAE Readiness Scan →</a>
+      <a href="/solutions/readiness-scan/partners/" class="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 hover:bg-white/15">For Partners →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="border-t border-black/10 bg-white/40 px-5 py-10">
+  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 text-sm text-neutral-600">
+    <div>© OneSig 2026</div>
+    <div class="flex flex-wrap gap-5">
+      <a href="/solutions/readiness-scan/" class="hover:text-neutral-900">Readiness Scan</a>
+      <a href="/solutions/readiness-scan/cost-calculator/" class="hover:text-neutral-900">Cost Calculator</a>
+      <a href="/solutions/readiness-scan/partners/" class="hover:text-neutral-900">For Partners</a>
+      <a href="/blog/" class="hover:text-neutral-900">Blog</a>
+      <a href="mailto:abhi@onesig.co" class="hover:text-neutral-900">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

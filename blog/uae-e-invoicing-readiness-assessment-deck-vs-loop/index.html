@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why a UAE e-invoicing readiness deck fails the week after you deliver it · OneSig Atlas</title>
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#F4F4F4">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="Why a UAE e-invoicing readiness deck fails the week after you deliver it">
+<meta property="og:description" content="A UAE e-invoicing readiness deck is out of date the moment your data changes. Here's what a record-level, re-runnable readiness assessment gives you instead.">
+<meta property="og:url" content="https://www.onesig.co/blog/uae-e-invoicing-readiness-assessment-deck-vs-loop/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image-v13.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="OneSig Atlas - UAE FTA Phase 2 readiness">
+<meta property="article:published_time" content="2026-06-03">
+<meta property="article:author" content="OneSig">
+<meta property="article:section" content="UAE e-invoicing">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why a UAE e-invoicing readiness deck fails the week after you deliver it">
+<meta name="twitter:description" content="A UAE e-invoicing readiness deck is out of date the moment your data changes. Here's what a record-level, re-runnable readiness assessment gives you instead.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image-v13.png">
+
+<meta name="description" content="A UAE e-invoicing readiness deck is out of date the moment your data changes. Here's what a record-level, re-runnable readiness assessment gives you instead.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/august.css">
+<style>
+  /* ---- OneSig brand system: matches collateral + sample reports ---- */
+  :root {
+    --navy:  #0B2E4F;
+    --teal:  #0EA5A4;
+    --gold:  #C9A227;
+    --clay:  #B4432F;
+    --paper: #f7f1e7;
+    --ink:   #161616;
+  }
+  .os-navy      { color: var(--navy); }
+  .os-bg-navy   { background: var(--navy); }
+  .os-teal      { color: var(--teal); }
+  .os-bg-teal   { background: var(--teal); }
+  .os-gold      { color: var(--gold); }
+  .os-clay      { color: var(--clay); }
+  .os-mark-gold { background: rgba(201,162,39,0.22); padding: 0 0.35rem 0.1rem; }
+  .os-mark-teal { background: rgba(14,165,164,0.18); padding: 0 0.35rem 0.1rem; }
+  .font-mono, code, kbd, samp { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+  /* OneSig site chrome (does not collide with .onesig-post) */
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f7f1e7; color: #161616; -webkit-font-smoothing: antialiased; }
+  .os-nav { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(0,0,0,0.10); background: rgba(247,241,231,0.85); backdrop-filter: blur(20px); }
+  .os-nav-inner { max-width: 1280px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .os-brand { display: flex; align-items: center; gap: 8px; text-decoration: none; color: #171717; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  .os-brand img { height: 36px; width: auto; flex-shrink: 0; }
+  .os-nav-links { display: none; gap: 4px; }
+  @media (min-width: 1024px) { .os-nav-links { display: flex; } }
+  .os-nav-links a { padding: 6px 12px; border-radius: 9999px; font-size: 14px; font-weight: 500; color: rgb(82,82,82); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+  .os-nav-links a:hover { color: rgb(23,23,23); }
+  .os-nav-links a.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+  .os-nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background: #171717; color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .os-nav-cta:hover { background: #000; }
+  .os-nav-dd { position: relative; }
+  .os-nav-dd-btn { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 9999px; font-size: 14px; font-weight: 500; color: rgb(82,82,82); background: transparent; border: 0; cursor: pointer; white-space: nowrap; font-family: inherit; }
+  .os-nav-dd-btn:hover { color: rgb(23,23,23); }
+  .os-nav-dd-menu { position: absolute; left: 0; top: 100%; margin-top: 6px; min-width: 220px; padding: 6px; background: #fff; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; box-shadow: 0 20px 40px -12px rgba(0,0,0,0.18), 0 4px 8px -2px rgba(0,0,0,0.06); opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s; z-index: 60; }
+  .os-nav-dd:hover .os-nav-dd-menu, .os-nav-dd:focus-within .os-nav-dd-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .os-nav-dd-menu a { display: block; padding: 8px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; color: rgb(64,64,64); text-decoration: none; }
+  .os-nav-dd-menu a:hover { background: rgb(245,245,245); color: rgb(23,23,23); }
+
+  .os-back { max-width: 720px; margin: 32px auto 0; padding: 0 24px; }
+  .os-back a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #0B7C7B; text-decoration: none; font-weight: 600; }
+  .os-back a:hover { text-decoration: underline; }
+
+  .os-footer { border-top: 1px solid rgba(0,0,0,0.10); background: rgba(255,255,255,0.4); padding: 40px 20px; margin-top: 64px; }
+  .os-footer-inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-size: 14px; color: rgb(82,82,82); }
+  .os-footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+  .os-footer-links a { color: rgb(82,82,82); text-decoration: none; }
+  .os-footer-links a:hover { color: rgb(23,23,23); }
+
+  /* ===== OneSig look & feel v2 (light/airy, Poppins) — overrides above ===== */
+  :root{
+    --navy:#0B2E4F; --teal:#0EA5A4; --gold:#C9A227; --clay:#B4432F;
+    --paper:#FCFBFD; --tint:#F4F4FA; --ink:#16161A; --muted:#6B6B78;
+  }
+  body{
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif !important;
+    font-weight:400; color:var(--ink); font-size:16px; line-height:1.7;
+    background-color:var(--paper) !important;
+    background-image:radial-gradient(rgba(11,46,79,0.05) 1px, transparent 1px);
+    background-size:24px 24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (min-width:768px){ body{font-size:17px;} }
+  h1,h2,h3,h4{
+    font-family:'Poppins',sans-serif !important;
+    font-weight:600 !important; letter-spacing:-0.03em; text-wrap:balance; color:var(--ink);
+  }
+  p{ text-wrap:pretty; }
+  .eyebrow{ font-family:'Poppins',sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--teal); }
+  .font-mono, code, kbd, samp{ font-family:'IBM Plex Mono',ui-monospace,monospace; }
+  section{ position:relative; }
+  .os-navy{color:var(--navy)} .os-bg-navy{background:var(--navy)}
+  .os-teal{color:var(--teal)} .os-bg-teal{background:var(--teal)}
+  .os-gold{color:var(--gold)} .os-clay{color:var(--clay)}
+  .os-mark-gold{ background:none; color:#C9A227; padding:0; }
+  .os-mark-teal{ background:none; color:#0EA5A4; padding:0; }
+  .os-card{ background:var(--tint); border:1px solid rgba(11,46,79,.06); border-radius:22px; }
+  .os-card-white{ background:#fff; border:1px solid rgba(11,46,79,.07); border-radius:22px; box-shadow:0 1px 2px rgba(16,16,26,.03); }
+  .os-orb{ position:absolute; border-radius:9999px; filter:blur(70px); opacity:.45; pointer-events:none; z-index:0; }
+  .os-orb-a{ width:420px;height:420px; background:radial-gradient(circle at 30% 30%, #FFD9A8, #FFB36B 45%, transparent 70%); }
+  .os-orb-b{ width:360px;height:360px; background:radial-gradient(circle at 40% 40%, #C6E9FF, #9FD4FF 45%, transparent 70%); }
+  .os-orb-c{ width:320px;height:320px; background:radial-gradient(circle at 40% 40%, #E9D7FF, #CBB4FF 45%, transparent 70%); }
+  .os-above{ position:relative; z-index:1; }
+  /* nav */
+  .osNavBtn.active{ background:rgba(11,46,79,.06) !important; }
+  .osDdItem.active{ background:rgba(14,165,164,.10) !important; color:#0B7C7B !important; }
+  /* blog nav system */
+  .os-nav{ background:rgba(255,255,255,.75) !important; }
+  .os-nav-links a.active{ background:rgba(11,46,79,.06) !important; }
+  .os-nav-cta{ background:var(--navy) !important; }
+  .os-nav-dd-menu a:hover{ background:#F4F4FA !important; }
+
+  </style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="os-nav">
+  <div class="os-nav-inner">
+    <a href="/solutions/atlas/" class="os-brand">
+      <img src="/assets/logo-v4.png" alt="OneSig" class="h-8 w-auto shrink-0">
+      
+    </a>
+    <div class="os-nav-links">
+      <a href="/solutions/atlas/">Atlas</a>
+      <a href="/solutions/atlas/how-it-works/">How it works</a>
+      <div class="os-nav-dd">
+        <button type="button" class="os-nav-dd-btn" aria-haspopup="true">Partners
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="os-nav-dd-menu">
+          <a href="/solutions/atlas/partners/">Overview</a>
+          <a href="/for/advisors/">For Advisors</a>
+          <a href="/for/technologypartners/">For Technology Partners</a>
+          <a href="/for/asps/">For ASPs</a>
+        </div>
+      </div>
+      <a href="/blog/" class="active">Blog</a>
+    </div>
+    <a href="/solutions/atlas/" class="os-nav-cta">Free teardown</a>
+  </div>
+</nav>
+
+<!-- ============ BACK TO BLOG ============ -->
+<div class="os-back">
+  <a href="/blog/">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
+    Back to all posts
+  </a>
+</div>
+
+
+<!-- ============ POST BODY (scoped, user-provided) ============ -->
+<!-- =============================================================
+     OneSig blog post - paste-ready body snippet
+     All styles scoped under .onesig-post so they do not collide.
+     ============================================================= -->
+<style>
+.onesig-post{
+  --os-cream:#F4F4FA; --os-paper:#FCFBFD; --os-ink:#16161A; --os-muted:#6B6B78;
+  --os-faint:#9a9081; --os-line:#e7ddcd; --os-accent:#c1502e; --os-accent-dark:#a8421f;
+  --os-accent-soft:#f6e3da; --os-panel:#211d18;
+  --os-serif:Georgia,'Times New Roman',serif;
+  --os-sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  max-width:720px; margin:0 auto; padding:24px; background:var(--os-cream);
+  color:var(--os-ink); font-family:var(--os-sans); font-size:18px; line-height:1.7;
+}
+.onesig-post *{box-sizing:border-box}
+.onesig-post .os-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--os-accent);font-weight:700;margin-bottom:14px}
+.onesig-post h1{font-family:var(--os-serif);font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-.5px;margin:0 0 18px;color:var(--os-ink)}
+.onesig-post .os-byline{color:var(--os-faint);font-size:14px;margin-bottom:8px}
+.onesig-post .os-hr{height:1px;background:var(--os-line);margin:26px 0 30px;border:0}
+.onesig-post p{margin:0 0 20px}
+.onesig-post h2{font-family:var(--os-serif);font-weight:700;font-size:25px;line-height:1.25;letter-spacing:-.3px;margin:40px 0 14px;color:var(--os-ink)}
+.onesig-post a{color:var(--os-accent-dark);text-decoration:underline;text-underline-offset:2px}
+.onesig-post .os-callout{background:var(--os-paper);border:1px solid var(--os-line);border-left:3px solid var(--os-accent);border-radius:10px;padding:20px 22px;margin:0 0 30px}
+.onesig-post .os-callout .os-lbl{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--os-accent);font-weight:700;margin-bottom:8px}
+.onesig-post .os-callout p:last-child{margin-bottom:0}
+.onesig-post ul{margin:0 0 22px;padding:0;list-style:none}
+.onesig-post ul li{position:relative;padding-left:26px;margin-bottom:11px}
+.onesig-post ul li::before{content:"";position:absolute;left:6px;top:12px;width:7px;height:7px;background:var(--os-accent);border-radius:2px;transform:rotate(45deg)}
+.onesig-post .os-receive{background:var(--os-panel);border-radius:14px;padding:28px;margin:6px 0 30px;color:#ece4d6}
+.onesig-post .os-receive h3{font-family:var(--os-serif);color:#fff;font-size:20px;margin:0 0 4px}
+.onesig-post .os-receive .os-sub{color:#b6a98f;font-size:14px;margin-bottom:18px}
+.onesig-post .os-receive ol{margin:0;padding:0;counter-reset:r;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.onesig-post .os-receive ol li{counter-increment:r;position:relative;padding-left:40px;font-size:15px;line-height:1.5;color:#ddd3c2}
+.onesig-post .os-receive ol li::before{content:counter(r,decimal-leading-zero);position:absolute;left:0;top:0;font-family:var(--os-serif);font-size:13px;color:var(--os-accent);background:#2f2a23;width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.onesig-post .os-receive ol li b{color:#fbf3e7;font-weight:600}
+.onesig-post .os-faq .os-q{font-family:var(--os-serif);font-weight:700;font-size:19px;margin:24px 0 6px}
+.onesig-post .os-endcta{background:var(--os-accent-soft);border:1px solid #eecbbd;border-radius:14px;padding:26px;margin:38px 0 10px;text-align:center}
+.onesig-post .os-endcta .os-big{font-family:var(--os-serif);font-size:22px;color:#7e3a1f;margin:0 0 6px}
+.onesig-post .os-endcta p{color:#8a4a2c;font-size:15px;margin:0 0 16px}
+.onesig-post .os-endcta a{display:inline-block;background:var(--os-accent);color:#fff;text-decoration:none;padding:11px 22px;border-radius:9px;font-weight:600;font-size:15px}
+@media(max-width:620px){.onesig-post .os-receive ol{grid-template-columns:1fr}.onesig-post h1{font-size:32px}}
+</style>
+<div class="onesig-post">
+  <div class="os-kicker">UAE e-invoicing</div>
+  <h1>Why a UAE e-invoicing readiness deck fails the week after you deliver it</h1>
+  <div class="os-byline">OneSig · 3 June 2026 · 5 min read</div>
+  <hr class="os-hr">
+  <div class="os-callout">
+    <div class="os-lbl">The short answer</div>
+    <p>A readiness deck tells you what might be wrong on the day it was written. Your data keeps changing after that, so the deck is out of date within a week. A useful UAE e-invoicing readiness assessment isn't a document at all. It's a loop you can re-run: you validate every record, send each failure to an owner, fix it, then re-test to confirm the fix actually held.</p>
+    <p>If you remember one thing from this, make it this question. Does your assessment produce a static finding, or a score you can re-run? That's what separates a slide from something your team can actually work from.</p>
+  </div>
+  <h2>What a UAE e-invoicing readiness assessment is supposed to do</h2>
+  <p>The mandate now runs on a fixed timeline. The pilot opens on 1 July 2026. It becomes mandatory for businesses above AED 50 million in revenue on 1 January 2027, and the next wave follows on 1 July 2027. Then, in February 2026, the Federal Tax Authority published the full set of mandatory fields: 50 for tax invoices and 49 for commercial invoices. A lot of those fields aren't required under current VAT law, which is exactly why they tend to be missing.</p>
+  <p>So the hard part isn't connectivity anymore. Accredited Service Providers handle the transmission. The hard part is whether your invoices actually carry the right attributes in the first place, pulled correctly from your ERP, your billing system, and the spreadsheets nobody likes to admit they rely on. A readiness assessment exists to answer one question before go-live: will our invoices pass, and if they won't, where exactly do they break?</p>
+  <h2>Why the deck model breaks</h2>
+  <p>A traditional assessment runs four to eight weeks of workshops and ends in a slide deck. Three things tend to go wrong.</p>
+  <p>The findings are too general to act on. "Master data needs cleanup" isn't a finding, it's a heading, and it tells nobody what to do on Monday morning.</p>
+  <p>The deck also has no memory. The day after it lands, someone edits a customer record, a new exemption case shows up, an integration changes. None of that reaches the deck, because the deck was a photograph rather than a feed.</p>
+  <p>And there's no proof the fix worked. You might spend three weeks cleaning buyer tax registration numbers, and the only way to know whether you're ready now is to pay for another assessment.</p>
+  <h2>What record-level readiness looks like instead</h2>
+  <p>The shift is simple: replace the heading with the record. Rather than "master data needs cleanup," you get something you can route: 150 buyer TRNs failed validation, owner is Master Data, fix before ASP onboarding. The same goes for the harder cases, like reverse-charge routing, exemption reason codes, and credit notes that don't reference an original invoice.</p>
+  <p>Every failure carries three things a deck never does: the record that failed, the rule it broke, and the person who owns the fix. That's the gap between knowing you have a problem and being able to hand it to someone.</p>
+  <p>Then you re-run it. Once the buyer TRNs are cleaned, you re-test and the readiness score moves. A score that climbs from 62% to 86% across re-runs is proof. A deck is just an opinion that ages quickly.</p>
+  <h2>The contradiction problem</h2>
+  <p>Most readiness gaps were never written down. They live in how teams actually work day to day. Ask three departments where the buyer TRN comes from and you can easily get three answers: Finance says the ERP customer master, IT says a spreadsheet of exceptions, AR says it gets checked by hand at month-end.</p>
+  <p>In the deck model, that contradiction usually surfaces late, often buried in an appendix after the engagement has wrapped. It should surface in the first hour instead, get flagged during discovery, land with an owner, and be resolved well before it reaches the regulator. Turning "ask Maria, she knows the exemption codes" into a written, testable rule is most of the actual work.</p>
+  <h2>What to ask for before you sign</h2>
+  <p>Whether you run this in-house, with a Big Four firm, or through a system integrator, four questions are worth asking up front:</p>
+  <ul>
+    <li>Does the assessment validate our actual records, or just describe our systems in general terms?</li>
+    <li>When a fix ships, can we re-run it and watch the score change, without paying for a new engagement?</li>
+    <li>Are cross-department contradictions caught during discovery, or written up at the end?</li>
+    <li>Do we walk away with a signed, versioned record of who agreed to each requirement?</li>
+  </ul>
+  <p>If the answers are no, you're buying a slide, not readiness.</p>
+  <h2>What you actually receive</h2>
+  <p>The real test of a readiness assessment is what you're holding when it's done. Not a slide deck, but a working file your team can act on and re-run. After an <a href="/solutions/atlas/">Atlas Scan</a>, that file is nine things:</p>
+  <div class="os-receive">
+    <h3>The operating file you walk away with</h3>
+    <div class="os-sub">Two weeks. Not a report.</div>
+    <ol>
+      <li><b>AI-captured workshop evidence</b>, with the context each answer was given in</li>
+      <li><b>A contradiction report</b> across Tax, Finance, IT, AP and AR, surfaced during discovery</li>
+      <li><b>Tribal knowledge converted into validation rules</b>, so "ask Maria" becomes testable</li>
+      <li><b>Source-to-schema mapping</b> from your sample data, showing where each field comes from</li>
+      <li><b>Record-level validation failures</b>, the specific records that break, not a heading</li>
+      <li><b>An owner-specific fix plan</b>, each failure assigned to the person who can resolve it</li>
+      <li><b>A readiness score by area</b>, scoring master data, tax logic and the ASP layer separately</li>
+      <li><b>A re-run dashboard</b> that proves progress as the score moves with each fix</li>
+      <li><b>An ASP or SI handoff package</b>, a clean brief for whoever builds and transmits next</li>
+    </ol>
+  </div>
+  <p>That's the whole difference in one list. A deck describes the problem. This file lets you fix it, prove the fix, and hand it off, and it's still current the week after you get it because you can run it again.</p>
+  <h2>Frequently asked questions</h2>
+  <div class="os-faq">
+    <div class="os-q">What is a UAE e-invoicing readiness assessment?</div>
+    <p>It's a structured check, done before implementation, of whether your invoices can meet the FTA's mandatory requirements. It covers data quality, field mapping, process ownership, and edge cases like reverse-charge and credit notes. A good one validates your real records rather than describing your systems in general.</p>
+    <div class="os-q">When does UAE e-invoicing become mandatory?</div>
+    <p>The pilot opens on 1 July 2026. It's mandatory from 1 January 2027 for businesses above AED 50 million in revenue, and from 1 July 2027 for the next wave. Large businesses have until 30 October 2026 to appoint an Accredited Service Provider.</p>
+    <div class="os-q">Why isn't a readiness deck enough?</div>
+    <p>A deck captures a single moment. Your data changes continuously, so the deck is stale within a week, and it can't prove whether a fix worked. A re-runnable assessment keeps a live score and re-tests after every change.</p>
+    <div class="os-q">What's the difference between readiness and an ASP?</div>
+    <p>An ASP transmits compliant invoices to the regulator. Readiness is the upstream step that makes sure your data and processes can produce a compliant invoice in the first place. You handle readiness before you select and onboard an ASP.</p>
+  </div>
+  <div class="os-endcta">
+    <div class="os-big">Readiness is not a deck. It is a loop.</div>
+    <p>Run Atlas before implementation starts. Scan → Fix → Validate → Prove.</p>
+    <a href="/solutions/atlas/">Book a UAE Readiness Scan →</a>
+  </div>
+</div>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="os-footer">
+  <div class="os-footer-inner">
+    <div>© OneSig 2026</div>
+    <div class="os-footer-links">
+      <a href="/solutions/atlas/">Atlas</a>
+      <a href="/solutions/atlas/partners/">For Partners</a>
+      <a href="/blog/">Blog</a>
+      <a href="mailto:abhi@onesig.co">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============ STRUCTURED DATA (Article + FAQ) ============ -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Why a UAE e-invoicing readiness deck fails the week after you deliver it","description":"A UAE e-invoicing readiness deck is out of date the moment your data changes. Here's what a record-level, re-runnable readiness assessment gives you instead.","author":{"@type":"Organization","name":"OneSig"},"publisher":{"@type":"Organization","name":"OneSig Atlas","logo":{"@type":"ImageObject","url":"https://www.onesig.co/assets/logo-v2.png"}},"datePublished":"2026-06-03","dateModified":"2026-06-03","mainEntityOfPage":"https://www.onesig.co/blog/uae-e-invoicing-readiness-assessment-deck-vs-loop/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a UAE e-invoicing readiness assessment?","acceptedAnswer":{"@type":"Answer","text":"It's a structured check, done before implementation, of whether your invoices can meet the FTA's mandatory requirements. It covers data quality, field mapping, process ownership, and edge cases like reverse-charge and credit notes. A good one validates your real records rather than describing your systems in general."}},{"@type":"Question","name":"When does UAE e-invoicing become mandatory?","acceptedAnswer":{"@type":"Answer","text":"The pilot opens on 1 July 2026. It's mandatory from 1 January 2027 for businesses above AED 50 million in revenue, and from 1 July 2027 for the next wave. Large businesses have until 30 October 2026 to appoint an Accredited Service Provider."}},{"@type":"Question","name":"Why isn't a readiness deck enough?","acceptedAnswer":{"@type":"Answer","text":"A deck captures a single moment. Your data changes continuously, so the deck is stale within a week, and it can't prove whether a fix worked. A re-runnable assessment keeps a live score and re-tests after every change."}},{"@type":"Question","name":"What's the difference between readiness and an ASP?","acceptedAnswer":{"@type":"Answer","text":"An ASP transmits compliant invoices to the regulator. Readiness is the upstream step that makes sure your data and processes can produce a compliant invoice in the first place. You handle readiness before you select and onboard an ASP."}}]}
+</script>
+
+</body>
+</html>

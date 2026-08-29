@@ -1,0 +1,1782 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OneSig Atlas · How it works - Experts for judgment. Machines for coverage.</title>
+<meta name="description" content="Our methodology: Capture, Map, Validate, Implement. Atlas combines AI-led evidence capture with tax, data, and implementation expertise. Every material decision remains evidence-backed and human-approved.">
+
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#F4F4F4">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="OneSig Atlas · How it works - Experts for judgment. Machines for coverage.">
+<meta property="og:description" content="Capture → Map → Validate → Implement. AI-led evidence capture with tax, data, and implementation expertise.">
+<meta property="og:url" content="https://www.onesig.co/solutions/atlas/how-it-works/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image-v13.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="OneSig Atlas methodology - Capture, Map, Validate, Implement">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OneSig Atlas · How it works">
+<meta name="twitter:description" content="Experts for judgment. Machines for coverage. Capture → Map → Validate → Implement.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image-v13.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/august.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* ---- OneSig brand system: matches collateral + sample reports ---- */
+  :root {
+    --navy:  #0B2E4F;
+    --teal:  #0EA5A4;
+    --gold:  #C9A227;
+    --clay:  #B4432F;
+    --paper: #f7f1e7;
+    --ink:   #161616;
+  }
+  .os-navy      { color: var(--navy); }
+  .os-bg-navy   { background: var(--navy); }
+  .os-teal      { color: var(--teal); }
+  .os-bg-teal   { background: var(--teal); }
+  .os-gold      { color: var(--gold); }
+  .os-clay      { color: var(--clay); }
+  .os-mark-gold { background: rgba(201,162,39,0.22); padding: 0 0.35rem 0.1rem; }
+  .os-mark-teal { background: rgba(14,165,164,0.18); padding: 0 0.35rem 0.1rem; }
+  .font-mono, code, kbd, samp { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f7f1e7; color: #161616; }
+  .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
+  html { scroll-behavior: smooth; }
+  h1, h2, h3, h4 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; text-wrap: balance; }
+  p { text-wrap: pretty; }
+  /* Mock product window chrome */
+  .mockChrome { border-radius: 14px 14px 0 0; padding: 10px 14px; background: linear-gradient(180deg, #f8fafc, #eef2f6); border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; align-items: center; gap: 8px; }
+  .mockDot { width: 8px; height: 8px; border-radius: 999px; }
+
+  /* ===== OneSig look & feel v2 (light/airy, Poppins) — overrides above ===== */
+  :root{
+    --navy:#0B2E4F; --teal:#0EA5A4; --gold:#C9A227; --clay:#B4432F;
+    --paper:#FCFBFD; --tint:#F4F4FA; --ink:#16161A; --muted:#6B6B78;
+  }
+  body{
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif !important;
+    font-weight:400; color:var(--ink); font-size:16px; line-height:1.7;
+    background-color:var(--paper) !important;
+    background-image:radial-gradient(rgba(11,46,79,0.05) 1px, transparent 1px);
+    background-size:24px 24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (min-width:768px){ body{font-size:17px;} }
+  h1,h2,h3,h4{
+    font-family:'Poppins',sans-serif !important;
+    font-weight:600 !important; letter-spacing:-0.03em; text-wrap:balance; color:var(--ink);
+  }
+  p{ text-wrap:pretty; }
+  .eyebrow{ font-family:'Poppins',sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--teal); }
+  .font-mono, code, kbd, samp{ font-family:'IBM Plex Mono',ui-monospace,monospace; }
+  section{ position:relative; }
+  .os-navy{color:var(--navy)} .os-bg-navy{background:var(--navy)}
+  .os-teal{color:var(--teal)} .os-bg-teal{background:var(--teal)}
+  .os-gold{color:var(--gold)} .os-clay{color:var(--clay)}
+  .os-mark-gold{ background:none; color:#C9A227; padding:0; }
+  .os-mark-teal{ background:none; color:#0EA5A4; padding:0; }
+  .os-card{ background:var(--tint); border:1px solid rgba(11,46,79,.06); border-radius:22px; }
+  .os-card-white{ background:#fff; border:1px solid rgba(11,46,79,.07); border-radius:22px; box-shadow:0 1px 2px rgba(16,16,26,.03); }
+  .os-orb{ position:absolute; border-radius:9999px; filter:blur(70px); opacity:.45; pointer-events:none; z-index:0; }
+  .os-orb-a{ width:420px;height:420px; background:radial-gradient(circle at 30% 30%, #FFD9A8, #FFB36B 45%, transparent 70%); }
+  .os-orb-b{ width:360px;height:360px; background:radial-gradient(circle at 40% 40%, #C6E9FF, #9FD4FF 45%, transparent 70%); }
+  .os-orb-c{ width:320px;height:320px; background:radial-gradient(circle at 40% 40%, #E9D7FF, #CBB4FF 45%, transparent 70%); }
+  .os-above{ position:relative; z-index:1; }
+  /* nav */
+  .osNavBtn.active{ background:rgba(11,46,79,.06) !important; }
+  .osDdItem.active{ background:rgba(14,165,164,.10) !important; color:#0B7C7B !important; }
+  /* blog nav system */
+  .os-nav{ background:rgba(255,255,255,.75) !important; }
+  .os-nav-links a.active{ background:rgba(11,46,79,.06) !important; }
+  .os-nav-cta{ background:var(--navy) !important; }
+  .os-nav-dd-menu a:hover{ background:#F4F4FA !important; }
+
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 border-b border-black/10 bg-white/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/solutions/atlas/" class="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900">
+      <img src="/assets/logo-v4.png" alt="OneSig" class="h-8 w-auto shrink-0">
+      Atlas
+    </a>
+    <div class="hidden items-center gap-1 lg:flex">
+      <a href="/solutions/atlas/" class="osNavBtn">Atlas</a>
+      <a href="/solutions/atlas/how-it-works/" class="osNavBtn active">How it works</a>
+      <div class="osNavDdWrap">
+        <button type="button" class="osNavBtn osNavDd" aria-haspopup="true" aria-expanded="false">Partners
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="osNavDdMenu" role="menu">
+          <a href="/solutions/atlas/partners/" class="osDdItem" role="menuitem">Overview</a>
+          <a href="/for/advisors/" class="osDdItem" role="menuitem">For Advisors</a>
+          <a href="/for/technologypartners/" class="osDdItem" role="menuitem">For Technology Partners</a>
+          <a href="/for/asps/" class="osDdItem" role="menuitem">For ASPs</a>
+        </div>
+      </div>
+      <a href="/access/" class="osNavBtn">Access</a>
+    </div>
+    <button type="button" data-open-lead-modal data-intent="assessment" class="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90" style="background: var(--ink);">Free assessment</button>
+  </div>
+</nav>
+<style>
+  .osNavBtn { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: rgb(82,82,82); transition: color 0.2s, background 0.2s; white-space: nowrap; background: transparent; border: 0; cursor: pointer; }
+  .osNavBtn:hover { color: rgb(23,23,23); }
+  .osNavBtn.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+  .osNavDdWrap { position: relative; }
+  .osNavDdMenu {
+    position: absolute; left: 0; top: 100%; margin-top: 0.35rem;
+    min-width: 220px; padding: 0.4rem;
+    background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px;
+    box-shadow: 0 20px 40px -12px rgba(0,0,0,0.18), 0 4px 8px -2px rgba(0,0,0,0.06);
+    opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 60;
+  }
+  .osNavDdWrap:hover .osNavDdMenu,
+  .osNavDdWrap:focus-within .osNavDdMenu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .osDdItem { display: block; padding: 0.5rem 0.75rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: rgb(64,64,64); }
+  .osDdItem:hover { background: rgb(245,245,245); color: rgb(23,23,23); }
+  .osDdItem.active { background: rgba(184,76,22,0.08); color: #B84C16; }
+</style>
+
+
+<style>
+/* ===== Shared inline animations (.osanim) ===== */
+.osanim{
+  --navy:#0B2E4F; --navy2:#092539;
+  --teal:#B84C16; --tealDim:rgba(184,76,22,.42);   /* brand accent; set to #0EA5A4 for original teal */
+  --gold:#C9A227; --ink:#1F2937; --mid:#6B7280; --soft:#E5E7EB;
+  --canvas:#F8FAFC; --warn:#B54708;
+    --csans:'Inter',-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --cmono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  position:relative;overflow:hidden;border-radius:16px;
+  background:radial-gradient(1100px 720px at 42% 45%, #fff 0%, var(--canvas) 55%, #eef2f6 100%);
+  border:1px solid rgba(0,0,0,.07)}
+.osanim *{box-sizing:border-box}
+.osanim .cscaler{transform-origin:top left}
+.osanim .cstage{position:relative;width:960px;height:600px;font-family:var(--csans);color:var(--ink)}
+
+.osanim .glow{position:absolute;left:322px;top:150px;width:270px;height:320px;
+  background:radial-gradient(closest-side, rgba(11,46,79,.22), rgba(11,46,79,0) 72%);
+  filter:blur(4px);border-radius:32px}
+.osanim .colLabel{position:absolute;font-family:var(--cmono);font-size:12px;letter-spacing:.16em;
+  color:var(--mid);text-transform:uppercase}
+.osanim .labIn{left:24px;top:96px}
+.osanim .labOut{left:614px;top:58px;width:322px;display:block}
+.osanim .labOut .head{display:block;font-family:var(--csans);font-size:15.5px;font-weight:600;
+  letter-spacing:0;text-transform:none;color:var(--navy);line-height:1.25}
+.osanim .labOut .sub{display:block;font-family:var(--csans);font-size:12.5px;letter-spacing:0;
+  text-transform:none;color:var(--mid);margin-top:3px}
+.osanim svg.wires{position:absolute;inset:0;width:960px;height:600px;overflow:visible}
+.osanim .inWire,.osanim .outWire{fill:none;stroke:var(--tealDim);stroke-width:1.5;
+  stroke-dasharray:5 6;animation:capFlow 1.1s linear infinite}
+@keyframes capFlow{to{stroke-dashoffset:-22}}
+.osanim .inNode{position:absolute;width:80px;text-align:center;opacity:.55;transition:opacity .4s}
+.osanim .cstage.run .inNode{opacity:.7}
+.osanim .inIcon{width:46px;height:46px;margin:0 auto;border-radius:10px;background:#fff;
+  border:1px solid var(--soft);box-shadow:0 5px 14px rgba(11,46,79,.08);
+  display:flex;align-items:center;justify-content:center;color:var(--mid)}
+.osanim .inIcon svg{width:22px;height:22px}
+.osanim .inCap{margin-top:7px;font-family:var(--cmono);font-size:10.5px;letter-spacing:.04em;
+  color:var(--mid);text-transform:uppercase}
+.osanim .flow{position:absolute;inset:0;pointer-events:none}
+.osanim .chip{position:absolute;left:0;top:0;display:flex;align-items:center;gap:6px;
+  padding:5px 9px 5px 6px;background:#fff;border:1px solid var(--soft);border-radius:8px;
+  box-shadow:0 7px 16px rgba(11,46,79,.13);font-size:11.5px;font-weight:600;color:var(--navy);
+  offset-rotate:0deg;white-space:nowrap}
+.osanim .chip .ci{width:15px;height:15px;color:var(--teal);flex:0 0 auto}
+.osanim .chip .ci svg{width:15px;height:15px;display:block}
+
+.osanim .capture{position:absolute;left:332px;top:152px;width:250px;height:312px;border-radius:18px;
+  color:#fff;padding:16px 15px 14px;overflow:hidden;
+  background:linear-gradient(158deg,#123f61 0%,var(--navy) 45%,var(--navy2) 100%);
+  box-shadow:0 26px 54px rgba(11,46,79,.34),inset 0 1px 0 rgba(255,255,255,.08)}
+.osanim .eyebrow{font-family:var(--cmono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:5px}
+.osanim .capTitle{font-family:var(--csans);font-size:28px;font-weight:600;letter-spacing:.01em;line-height:1}
+.osanim .capSub{font-size:12.5px;color:#b9ccd8;margin-top:5px}
+.osanim .rule{height:1px;background:rgba(255,255,255,.12);margin:12px 0 10px}
+.osanim .src{display:flex;align-items:center;gap:9px;padding:6px 2px;opacity:0;transform:translateX(-6px);
+  transition:opacity .35s ease,transform .35s ease}
+.osanim .src.on{opacity:1;transform:none}
+.osanim .src .tick{width:16px;height:16px;border-radius:50%;background:rgba(184,76,22,.22);
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.osanim .src .tick svg{width:10px;height:10px;color:var(--teal)}
+.osanim .src .nm{font-size:13px;font-weight:600;color:#eaf1f5}
+.osanim .src .tag{margin-left:auto;font-family:var(--cmono);font-size:9.5px;letter-spacing:.08em;
+  text-transform:uppercase;color:#a9bcc4}
+.osanim .capFoot{position:absolute;left:15px;right:15px;bottom:13px;display:flex;align-items:center;gap:9px}
+.osanim .capFoot .count{font-family:var(--cmono);font-size:12.5px;color:var(--teal);font-weight:600;white-space:nowrap}
+.osanim .bar{flex:1;height:4px;border-radius:3px;background:rgba(255,255,255,.12);overflow:hidden}
+.osanim .bar i{display:block;height:100%;width:0;background:var(--teal);border-radius:3px;
+  box-shadow:0 0 8px var(--teal);transition:width .3s ease}
+.osanim .scan{position:absolute;left:0;right:0;height:34px;top:70px;
+  background:linear-gradient(180deg,rgba(184,76,22,0),rgba(184,76,22,.16),rgba(184,76,22,0));
+  animation:capSweep 3.4s ease-in-out infinite}
+@keyframes capSweep{0%{top:70px}50%{top:246px}100%{top:70px}}
+.osanim .cards{position:absolute;left:614px;top:150px;width:322px;display:flex;flex-direction:column;gap:16px}
+.osanim .card{position:relative;width:100%;background:#fff;border:1px solid var(--soft);
+  border-radius:10px;padding:12px 14px;box-shadow:0 12px 26px rgba(11,46,79,.09);
+  opacity:0;transform:translateY(10px);transition:opacity .5s ease,transform .5s ease}
+.osanim .cstage.run .card{opacity:1;transform:none}
+.osanim .cardHd{display:flex;align-items:center;margin-bottom:9px}
+.osanim .h3{font-family:var(--cmono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--navy);font-weight:700}
+.osanim .review{margin-left:auto;font-family:var(--cmono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--teal);background:rgba(184,76,22,.1);padding:3px 7px;border-radius:20px;font-weight:700}
+.osanim .qa{display:flex;align-items:flex-start;gap:8px;margin-bottom:9px}
+.osanim .qa:last-child{margin-bottom:0}
+.osanim .box{width:15px;height:15px;border-radius:4px;border:1.5px solid var(--soft);flex:0 0 auto;margin-top:1px;
+  display:flex;align-items:center;justify-content:center;transition:all .3s}
+.osanim .box svg{width:9px;height:9px;color:#fff;opacity:0;transition:opacity .3s}
+.osanim .cstage.run .card.qa-c .box{background:var(--teal);border-color:var(--teal)}
+.osanim .cstage.run .card.qa-c .box svg{opacity:1}
+.osanim .qtext{font-size:12.5px;line-height:1.4}
+.osanim .qtext b{color:var(--navy);font-weight:600}
+.osanim .qtext .ans{color:var(--mid)}
+.osanim .prefill{display:block;font-size:10.5px;color:var(--teal);font-family:var(--cmono);letter-spacing:.03em;margin-top:2px}
+.osanim .map-row{display:flex;align-items:center;gap:8px;font-family:var(--cmono);font-size:12px;margin:6px 0}
+.osanim .map-row:first-of-type{margin-top:0}
+.osanim .map-row:last-child{margin-bottom:0}
+.osanim .map-row .from{color:var(--ink);font-weight:600}
+.osanim .map-row .arw{color:var(--teal);font-weight:700}
+.osanim .map-row .to{color:var(--navy);font-weight:700}
+.osanim .map-row .badge{margin-left:auto;font-size:9.5px;color:var(--mid)}
+.osanim .pmap{display:flex;align-items:center;gap:6px;margin:2px 0 7px;flex-wrap:wrap}
+.osanim .pnode{font-size:10.5px;font-weight:600;color:var(--navy);background:var(--canvas);
+  border:1px solid var(--soft);border-radius:7px;padding:5px 7px;white-space:nowrap}
+.osanim .pnode.gap{border-color:var(--warn);color:var(--warn);background:#FFFAEB}
+.osanim .parw{color:var(--teal);font-weight:700;font-size:11px}
+.osanim .pmeta{font-size:11px;color:var(--mid)}
+.osanim .cfooter{position:absolute;left:0;bottom:12px;width:960px;text-align:center;
+  font-family:var(--cmono);font-size:11.5px;letter-spacing:.14em;color:#9aa6ad;text-transform:uppercase}
+
+
+/* ===== Inline product stages ===== */
+.mlane{background:#FBFBFC;border:1px solid rgba(16,24,40,.10)}
+.mlane .cstage{font-family:var(--csans);color:#101828}
+.mlane .mlrule{position:absolute;left:0;right:0;border-top:1px solid rgba(16,24,40,.09)}
+.mlane .mlserif{position:absolute;left:0;right:0;text-align:center;
+  font-family:var(--csans);font-weight:600;font-size:38px;
+  letter-spacing:-.015em;color:#101828}
+.mlane .mlserif.sm{font-size:30px;line-height:1.3;padding:0 86px;letter-spacing:-.02em}
+.mlane .mlserif b{font-weight:700;color:#B84C16}
+.mlane .mlsub{position:absolute;left:0;right:0;text-align:center;
+  font-family:var(--csans);font-size:17px;color:#667085}
+
+.mlane .mlmarq{position:absolute;left:0;right:0;overflow:hidden;padding:14px 0}
+.mlane .mltrack{display:flex;gap:26px;width:max-content;padding-left:26px;
+  animation:mlMarq 42s linear infinite}
+.mlane .mltrack.rev{animation-name:mlMarqR}
+@keyframes mlMarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes mlMarqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.mlane:hover .mltrack{animation-play-state:paused}
+
+.mlane .mlc{flex:0 0 auto;background:#fff;border:1px solid rgba(16,24,40,.10);border-radius:10px;
+  padding:9px 9px 7px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);position:relative}
+.mlane .mlc .cap{font-family:var(--csans);font-size:11.5px;color:#667085;text-align:center;
+  margin-top:6px;line-height:1;font-weight:500}
+.mlane .mlc .tab{position:absolute;top:-8px;right:12px;font-family:var(--cmono);font-size:9px;
+  font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:3px 8px;
+  border-radius:5px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05)}
+
+/* mini page thumbnails */
+.mlane .th{width:138px;height:132px;border-radius:8px;background:#F9FAFB;
+  border:1px solid rgba(16,24,40,.06);padding:11px 11px;overflow:hidden;position:relative}
+.mlane .th .ln{height:5px;border-radius:3px;background:#EAECF0;margin-bottom:7px}
+.mlane .th .ln.o{background:rgba(184,76,22,.32)}
+.mlane .wave{display:flex;align-items:flex-end;gap:3px;height:52px;margin-top:16px}
+.mlane .wave i{flex:1;background:rgba(184,76,22,.42);border-radius:2px}
+.mlane .bub{background:#EAECF0;border-radius:9px 9px 9px 3px;height:15px;margin-bottom:6px}
+.mlane .bub.r{background:rgba(184,76,22,.18);border-radius:9px 9px 3px 9px;margin-left:22px}
+.mlane .grid5{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:4px}
+.mlane .grid5 span{height:12px;border-radius:2px;background:#EAECF0}
+.mlane .grid5 span.o{background:rgba(184,76,22,.22)}
+
+/* deliverable cards (row 2) */
+.mlane .mld{flex:0 0 auto;width:238px;background:#fff;border:1px solid rgba(16,24,40,.10);
+  border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);overflow:hidden;position:relative}
+.mlane .mld .dh{display:flex;align-items:center;gap:7px;padding:9px 12px;
+  border-bottom:1px solid rgba(16,24,40,.09)}
+.mlane .mld .dh .t{font-family:var(--cmono);font-size:10px;letter-spacing:.11em;
+  text-transform:uppercase;font-weight:700;color:#101828}
+.mlane .mld .dh .r{margin-left:auto;font-family:var(--cmono);font-size:8.5px;letter-spacing:.06em;
+  text-transform:uppercase;font-weight:700;color:#B84C16;background:rgba(184,76,22,.1);
+  padding:3px 7px;border-radius:20px}
+.mlane .mld .db{padding:10px 12px 12px}
+.mlane .qline{display:flex;align-items:flex-start;gap:7px;margin-bottom:9px}
+.mlane .qline:last-child{margin-bottom:0}
+.mlane .qline .bx{width:14px;height:14px;border-radius:4px;background:#B84C16;flex:0 0 auto;
+  margin-top:1px;display:flex;align-items:center;justify-content:center}
+.mlane .qline .bx svg{width:9px;height:9px;color:#fff}
+.mlane .qline .qt{font-size:11.5px;line-height:1.35;color:#101828;font-weight:600}
+.mlane .qline .qt em{font-style:normal;color:#475467;font-weight:500}
+.mlane .qline .qt span{display:block;font-family:var(--csans);font-size:13px;color:#B84C16;
+  margin-top:1px;font-weight:500}
+.mlane .mrw{display:flex;align-items:center;gap:7px;font-family:var(--cmono);font-size:11px;
+  padding:3px 0;color:#101828}
+.mlane .mrw .a{color:#B84C16;font-weight:700}
+.mlane .mrw .bg{margin-left:auto;font-size:9px;color:#98A2B3}
+.mlane .pchain{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-bottom:7px}
+.mlane .pn{font-size:10px;font-weight:600;color:#101828;background:#F9FAFB;
+  border:1px solid rgba(16,24,40,.10);border-radius:7px;padding:5px 7px;white-space:nowrap}
+.mlane .pn.gapn{border-color:#B54708;color:#B54708;background:#FFFAEB;border-style:dashed}
+.mlane .par{color:#B84C16;font-weight:700;font-size:11px}
+.mlane .note{font-family:var(--csans);font-size:13px;color:#667085;margin-top:6px;line-height:1.1;font-weight:500}
+
+
+
+/* ---- Step 02: cursor clicks the i, reference opens at the bottom ---- */
+#map-anim .cards{position:absolute;left:30px;right:30px;top:268px;display:grid;
+  grid-template-columns:repeat(3,1fr);gap:22px;width:auto}
+#map-anim .qcard{position:relative;padding:12px 14px 13px}
+#map-anim .ibtn{position:absolute;top:11px;right:12px;width:19px;height:19px;border-radius:50%;
+  border:1px solid rgba(16,24,40,.16);background:#fff;color:#98A2B3;font-family:var(--csans);
+  font-size:11px;font-weight:700;line-height:1;padding:0;display:flex;
+  align-items:center;justify-content:center}
+#map-anim .qcard.confirm .ibtn{animation:mlBtn1 14s ease-in-out infinite}
+#map-anim .qcard.conflict .ibtn{animation:mlBtn2 14s ease-in-out infinite}
+@keyframes mlBtn1{0%,10%{border-color:rgba(16,24,40,.16);color:#98A2B3;background:#fff}
+  13%,44%{border-color:#B84C16;color:#B84C16;background:rgba(184,76,22,.1)}
+  47%,100%{border-color:rgba(16,24,40,.16);color:#98A2B3;background:#fff}}
+@keyframes mlBtn2{0%,48%{border-color:rgba(16,24,40,.16);color:#98A2B3;background:#fff}
+  52%,84%{border-color:#B54708;color:#B54708;background:#FFFAEB}
+  88%,100%{border-color:rgba(16,24,40,.16);color:#98A2B3;background:#fff}}
+
+#map-anim .mlbox{position:absolute;top:424px;background:#fff;border:1px solid rgba(16,24,40,.10);
+  border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);padding:11px 14px 13px;opacity:0}
+#map-anim .mlbox.b1{left:30px;width:426px;border-left:3px solid #B84C16;
+  animation:mlBox1 14s ease-in-out infinite}
+#map-anim .mlbox.b2{left:490px;width:440px;border-left:3px solid #B54708;
+  animation:mlBox2 14s ease-in-out infinite}
+@keyframes mlBox1{0%,11%{opacity:0;transform:translateY(9px)}
+  16%,43%{opacity:1;transform:none}47%,100%{opacity:0;transform:translateY(9px)}}
+@keyframes mlBox2{0%,49%{opacity:0;transform:translateY(9px)}
+  55%,83%{opacity:1;transform:none}88%,100%{opacity:0;transform:translateY(9px)}}
+#map-anim .mlbox .bh{display:flex;align-items:center;gap:7px;font-family:var(--cmono);font-size:9px;
+  letter-spacing:.1em;text-transform:uppercase;color:#98A2B3;margin-bottom:8px}
+#map-anim .mlbox .bh svg{width:12px;height:12px;color:#B84C16;flex:0 0 auto}
+#map-anim .mlbox .bh b{color:#101828;letter-spacing:.05em}
+#map-anim .mlbox .bq{font-size:11px;line-height:1.4;color:#344054;border-left:2px solid #B84C16;
+  padding-left:9px;margin-bottom:6px}
+#map-anim .mlbox .bq:last-child{margin-bottom:0}
+#map-anim .mlbox .bq.alt{border-left-color:#B4432F}
+#map-anim .mlbox .bq mark{background:rgba(184,76,22,.18);color:#101828;font-weight:700;padding:0 2px;
+  border-radius:2px}
+#map-anim .mlbox .bq.alt mark{background:rgba(180,67,47,.16);color:#B4432F}
+#map-anim .mlbox .bq .cite{display:block;font-family:var(--csans);font-size:12px;color:#667085;
+  margin-top:0;font-weight:500}
+
+#map-anim .mlcur{position:absolute;left:0;top:0;width:22px;height:22px;z-index:60;
+  animation:mlCur 14s cubic-bezier(.5,0,.2,1) infinite;pointer-events:none}
+#map-anim .mlcur svg{width:22px;height:22px;filter:drop-shadow(0 2px 4px rgba(60,40,20,.3))}
+@keyframes mlCur{
+  0%,5%{transform:translate(300px,392px);opacity:0}
+  10%{transform:translate(284px,300px);opacity:1}
+  13%{transform:translate(284px,300px) scale(.82);opacity:1}
+  16%,44%{transform:translate(284px,300px);opacity:1}
+  50%{transform:translate(592px,300px);opacity:1}
+  53%{transform:translate(592px,300px) scale(.82);opacity:1}
+  55%,84%{transform:translate(592px,300px);opacity:1}
+  92%,100%{transform:translate(620px,392px);opacity:0}}
+@media(prefers-reduced-motion:reduce){
+  #map-anim .mlcur{display:none}
+  #map-anim .mlbox{opacity:1;animation:none}
+  #map-anim .qcard .ibtn{animation:none}
+}
+
+/* ---- Step 02 scrapbook overrides ---- */
+#map-anim .mlnode{flex:0 0 auto;background:#fff;border:1px solid rgba(16,24,40,.10);border-radius:10px;
+  box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);padding:11px 13px 10px;min-width:158px}
+#map-anim .mlnode .k{font-family:var(--cmono);font-size:8.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:#98A2B3;margin-bottom:5px}
+#map-anim .mlnode .v{font-size:13.5px;font-weight:600;color:#101828;line-height:1.2}
+#map-anim .mlnode .s{font-family:var(--csans);font-size:13.5px;color:#667085;margin-top:3px;line-height:1;font-weight:500}
+#map-anim .mlnode.flagn{border-color:rgba(180,67,47,.4);border-style:dashed}
+#map-anim .mlnode.flagn .v{color:#B4432F}
+
+/* question cards in cream */
+#map-anim .qcard{opacity:1;transform:none;background:#fff;border:1px solid rgba(16,24,40,.10);
+  border-left:3px solid;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);padding:12px 14px}
+#map-anim .qcard.confirm{border-left-color:#B84C16}
+#map-anim .qcard.conflict{border-left-color:#B54708}
+#map-anim .qcard.gap{border-left-color:#B4432F}
+#map-anim .qq{font-size:13px;color:#101828}
+#map-anim .qq em{color:#475467}
+#map-anim .schip{background:#F9FAFB;border-color:rgba(16,24,40,.08);color:#475467}
+#map-anim .schip b{color:#101828}
+#map-anim .qstate{font-family:var(--csans);font-size:13.5px;letter-spacing:0;text-transform:none;
+  opacity:1;font-weight:500}
+#map-anim .qcard.confirm .qstate{color:#B84C16}
+#map-anim .qcard.conflict .qstate{color:#B54708}
+#map-anim .qcard.gap .qstate{color:#B4432F}
+#map-anim .btn{border-color:rgba(16,24,40,.12);color:#475467;background:#fff}
+#map-anim .btn.pri{border-color:#B84C16;background:#B84C16;color:#fff}
+#map-anim .ibtn{border-color:rgba(16,24,40,.14);background:#fff;color:#98A2B3}
+#map-anim .ipop{box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);border-color:rgba(16,24,40,.08)}
+#map-anim .ipop .ph b{color:#101828}
+
+/* ---- Map animation specifics ---- */
+.osanim .mapc{position:absolute;left:322px;top:140px;width:270px;height:336px;border-radius:18px;
+  color:#fff;padding:16px 15px 14px;overflow:hidden;
+  background:linear-gradient(158deg,#123f61 0%,var(--navy) 45%,var(--navy2) 100%);
+  box-shadow:0 26px 54px rgba(11,46,79,.34),inset 0 1px 0 rgba(255,255,255,.08)}
+.osanim .mrow{display:flex;align-items:center;gap:9px;padding:7px 2px;opacity:0;transform:translateX(-6px);
+  transition:opacity .35s ease,transform .35s ease}
+.osanim .mrow.on{opacity:1;transform:none}
+.osanim .mrow .dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex:0 0 auto;
+  box-shadow:0 0 8px var(--teal)}
+.osanim .mrow .nm{font-size:14px;font-weight:600;color:#eaf1f5;line-height:1.25}
+#dep-anim .mrow{align-items:flex-start;padding:6px 2px}
+#dep-anim .mrow .dot{margin-top:5px}
+#dep-anim .mrow .ct{margin-top:1px;white-space:nowrap}
+.osanim .mrow .ct{margin-left:auto;font-family:var(--cmono);font-size:12px;color:#a9bcc4}
+.osanim .mrow .ct b{color:var(--teal);font-weight:700}
+.osanim .askFoot{position:absolute;left:15px;right:15px;bottom:13px}
+.osanim .askFoot .lbl{font-family:var(--cmono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:#a9bcc4;display:block;margin-bottom:6px}
+.osanim .askFoot .big{font-family:var(--cmono);font-size:14px;color:var(--teal);font-weight:700}
+
+/* question cards on the right */
+.osanim .qcard{position:relative;width:100%;background:#fff;border:1px solid var(--soft);
+  border-left:3px solid var(--soft);border-radius:10px;padding:11px 13px;
+  box-shadow:0 12px 26px rgba(11,46,79,.09);opacity:0;transform:translateY(10px);
+  transition:opacity .5s ease,transform .5s ease}
+.osanim .cstage.run .qcard{opacity:1;transform:none}
+.osanim .qcard.confirm{border-left-color:var(--teal)}
+.osanim .qcard.conflict{border-left-color:var(--warn)}
+.osanim .qcard.gap{border-left-color:#B4432F}
+.osanim .qbadge{display:inline-block;font-family:var(--cmono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:20px;margin-bottom:7px}
+.osanim .qcard.confirm .qbadge{color:var(--teal);background:rgba(184,76,22,.1)}
+.osanim .qcard.conflict .qbadge{color:var(--warn);background:#FFFAEB}
+.osanim .qcard.gap .qbadge{color:#B4432F;background:rgba(180,67,47,.1)}
+.osanim .qq{font-size:13.5px;line-height:1.45;color:var(--navy);font-weight:600}
+.osanim .qq em{font-style:normal;color:var(--mid);font-weight:500}
+.osanim .qsrc{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.osanim .schip{display:flex;align-items:center;gap:5px;font-family:var(--cmono);font-size:11px;
+  color:var(--mid);background:var(--canvas);border:1px solid var(--soft);border-radius:6px;padding:3px 7px}
+.osanim .schip b{color:var(--navy);font-weight:700}
+.osanim .schip.x{border-color:rgba(180,67,47,.4);color:#B4432F;background:#FEF3F2}
+.osanim .qact{display:flex;align-items:center;gap:6px;margin-top:9px}
+.osanim .btn{font-family:var(--cmono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  font-weight:700;padding:4px 9px;border-radius:20px;border:1px solid var(--soft);color:var(--mid);background:#fff}
+.osanim .btn.pri{border-color:var(--teal);color:#fff;background:var(--teal)}
+.osanim .qstate{margin-left:auto;font-family:var(--cmono);font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;font-weight:700;color:var(--mid);opacity:0;transition:opacity .4s ease}
+.osanim .cstage.done .qcard .qstate{opacity:1}
+.osanim .cstage.done .qcard.confirm .qstate{color:var(--teal)}
+.osanim .cstage.done .qcard.conflict .qstate{color:var(--warn)}
+.osanim .cstage.done .qcard.gap .qstate{color:#B4432F}
+.osanim .cstage.done .qcard .qact .btn{opacity:.35}
+.osanim .pulse{animation:osPulse 1.7s ease-in-out infinite}
+@keyframes osPulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+
+
+/* ---- Step 03 scrapbook ---- */
+#val-anim .mlf{flex:0 0 auto;width:250px;background:#fff;border:1px solid rgba(16,24,40,.10);
+  border-left:3px solid #B4432F;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);
+  padding:11px 13px 10px}
+#val-anim .mlf.proc{border-left-color:#B54708}
+#val-anim .mlf.cav{border-left-color:#98A2B3}
+#val-anim .mlf .fid{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+#val-anim .mlf .fid .n{font-family:var(--cmono);font-size:10.5px;font-weight:700;color:#B84C16}
+#val-anim .mlf .fid .p{margin-left:auto;font-family:var(--cmono);font-size:8.5px;letter-spacing:.07em;
+  text-transform:uppercase;font-weight:700;padding:2px 6px;border-radius:20px}
+#val-anim .mlf .p.b{color:#B4432F;background:rgba(180,67,47,.12)}
+#val-anim .mlf .p.pr{color:#B54708;background:#FFFAEB}
+#val-anim .mlf .p.cv{color:#667085;background:#F2F4F7}
+#val-anim .mlf .ft{font-size:12.5px;font-weight:600;color:#101828;line-height:1.3}
+#val-anim .mlf .fo{font-family:var(--csans);font-size:13.5px;color:#667085;margin-top:4px;line-height:1;font-weight:500}
+
+/* proof strip: process map + trace + approval, pinned so nothing clips */
+#val-anim .mlpanel{position:absolute;background:#fff;border:1px solid rgba(16,24,40,.10);
+  border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);overflow:hidden}
+#val-anim .mlph{display:flex;align-items:center;gap:7px;padding:9px 13px;
+  border-bottom:1px solid rgba(16,24,40,.09)}
+#val-anim .mlph .t{font-family:var(--cmono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;
+  font-weight:700;color:#101828}
+#val-anim .mlph .m{margin-left:auto;font-family:var(--csans);font-size:13.5px;color:#667085;font-weight:500}
+#val-anim .mlpb{padding:10px 13px 11px}
+#val-anim .pcv{background:
+    linear-gradient(90deg,rgba(16,24,40,.045) 1px,transparent 1px) 0 0/20px 20px,
+    linear-gradient(rgba(16,24,40,.045) 1px,transparent 1px) 0 0/20px 20px,#FCFCFD;
+  border-radius:9px;padding:8px 6px 4px}
+#val-anim .pdash{stroke:rgba(184,76,22,.5);stroke-width:1.6;fill:none;stroke-dasharray:4 5;
+  animation:capFlow 1.1s linear infinite}
+#val-anim .pdash.warnline{stroke:rgba(180,67,47,.6)}
+#val-anim .pbox{fill:#fff;stroke:rgba(16,24,40,.12);stroke-width:1}
+#val-anim .pbox.flag{stroke:#B4432F;stroke-dasharray:4 3}
+#val-anim .plab{font-family:var(--csans);font-size:10px;font-weight:600;fill:#101828}
+#val-anim .psub{font-family:var(--cmono);font-size:8.5px;fill:#98A2B3}
+#val-anim .pflag{font-family:var(--csans);font-size:12.5px;fill:#B4432F;font-weight:500}
+#val-anim .tq{font-size:10.5px;line-height:1.4;color:#101828;border-left:2px solid #B84C16;
+  padding-left:8px;margin-bottom:5px}
+#val-anim .tq.alt{border-left-color:#B4432F}
+#val-anim .tq b{font-weight:700}
+#val-anim .tq .cite{display:block;font-family:var(--csans);font-size:12px;color:#667085;margin-top:0;font-weight:500}
+#val-anim .ast{display:flex;align-items:flex-start;gap:8px;padding:3px 0}
+#val-anim .ast .mk{width:15px;height:15px;border-radius:50%;background:#B84C16;flex:0 0 auto;margin-top:1px;
+  display:flex;align-items:center;justify-content:center}
+#val-anim .ast .mk svg{width:9px;height:9px;color:#fff}
+#val-anim .ast .tx{font-size:11px;font-weight:600;color:#101828;line-height:1.3}
+#val-anim .ast .tx em{font-style:normal;display:block;font-family:var(--csans);font-size:12px;
+  color:#667085;font-weight:400;margin-top:0;line-height:1}
+#val-anim .ast .tm{margin-left:auto;font-family:var(--cmono);font-size:8.5px;color:#98A2B3}
+
+
+/* ---- Step 04 scrapbook ---- */
+#dep-anim .mlr{flex:0 0 auto;width:252px;background:#fff;border:1px solid rgba(16,24,40,.10);
+  border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);padding:11px 13px 10px}
+#dep-anim .mlr .rh{display:flex;align-items:center;gap:7px;margin-bottom:5px}
+#dep-anim .mlr .rh .n{font-family:var(--cmono);font-size:10.5px;font-weight:700;color:#B84C16}
+#dep-anim .mlr .rh .s{margin-left:auto;font-family:var(--cmono);font-size:8.5px;letter-spacing:.07em;
+  text-transform:uppercase;font-weight:700;padding:2px 6px;border-radius:20px}
+#dep-anim .s.rdy{color:#1F7A4C;background:rgba(31,122,76,.11)}
+#dep-anim .s.blk{color:#B4432F;background:rgba(180,67,47,.12)}
+#dep-anim .s.rev{color:#B54708;background:#FFFAEB}
+#dep-anim .mlr .rt{font-size:12.5px;font-weight:600;color:#101828;line-height:1.3}
+#dep-anim .mlr .rp{font-family:var(--csans);font-size:13.5px;color:#667085;margin-top:4px;line-height:1;font-weight:500}
+
+#dep-anim .mlpanel{position:absolute;background:#fff;border:1px solid rgba(16,24,40,.10);
+  border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);overflow:hidden}
+#dep-anim .mlpanel.hold{border-color:rgba(180,67,47,.35)}
+#dep-anim .mlph{display:flex;align-items:center;gap:8px;padding:9px 13px;
+  border-bottom:1px solid rgba(16,24,40,.09)}
+#dep-anim .mlph .n{font-family:var(--cmono);font-size:10.5px;font-weight:700;color:#B84C16}
+#dep-anim .mlph .t{font-size:12px;font-weight:600;color:#101828;line-height:1.2}
+#dep-anim .mlph .s{margin-left:auto;font-family:var(--cmono);font-size:8.5px;letter-spacing:.07em;
+  text-transform:uppercase;font-weight:700;padding:3px 7px;border-radius:20px;white-space:nowrap}
+#dep-anim .mlpb{display:grid;grid-template-columns:1fr 1px 1fr}
+#dep-anim .mlpb .sp{background:rgba(16,24,40,.08)}
+#dep-anim .mlcell{padding:10px 13px 12px}
+#dep-anim .lb{font-family:var(--cmono);font-size:8.5px;letter-spacing:.11em;text-transform:uppercase;
+  color:#98A2B3;margin-bottom:7px}
+#dep-anim .pr{display:flex;align-items:center;gap:7px;margin-bottom:7px}
+#dep-anim .pr:last-child{margin-bottom:0}
+#dep-anim .pr .av{width:19px;height:19px;border-radius:50%;flex:0 0 auto;display:flex;
+  align-items:center;justify-content:center;font-family:var(--cmono);font-size:8px;font-weight:700;
+  color:#fff;background:#667085}
+#dep-anim .pr .av.p2{background:#B84C16}#dep-anim .pr .av.p3{background:#5E7C8B}
+#dep-anim .pr .w{font-size:11px;font-weight:600;color:#101828;line-height:1.2}
+#dep-anim .pr .w em{font-style:normal;display:block;font-family:var(--csans);font-size:12.5px;
+  color:#667085;font-weight:400;margin-top:0}
+#dep-anim .pr .mk{margin-left:auto;width:15px;height:15px;border-radius:50%;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;background:#1F7A4C}
+#dep-anim .pr .mk svg{width:9px;height:9px;color:#fff}
+#dep-anim .pr .mk.wait{background:#fff;border:1.5px solid #B4432F}
+#dep-anim .pr .mk.wait:after{content:"";width:5px;height:5px;border-radius:50%;background:#B4432F}
+#dep-anim .tcx{display:flex;align-items:center;gap:6px;font-family:var(--cmono);font-size:10px;
+  color:#475467;padding:3px 0}
+#dep-anim .tcx b{color:#101828}
+#dep-anim .tcx .r{margin-left:auto;font-weight:700;padding:2px 6px;border-radius:20px;font-size:8.5px;
+  letter-spacing:.05em;text-transform:uppercase}
+#dep-anim .r.ps{color:#1F7A4C;background:rgba(31,122,76,.11)}
+#dep-anim .r.qd{color:#667085;background:#F2F4F7}
+#dep-anim .r.fl{color:#B4432F;background:rgba(180,67,47,.12)}
+#dep-anim .mlpf{display:flex;align-items:center;gap:7px;padding:8px 13px;
+  border-top:1px solid rgba(16,24,40,.09);font-family:var(--csans);font-size:13.5px;color:#667085;font-weight:500}
+#dep-anim .mlpf b{font-family:var(--csans);font-size:10.5px;font-weight:700;color:#101828}
+#dep-anim .mlpf .z{margin-left:auto;font-family:var(--cmono);font-size:9px;letter-spacing:.05em;
+  text-transform:uppercase;font-weight:700;color:#1F7A4C}
+#dep-anim .mlpf .z.bad{color:#B4432F}
+
+/* ---- Ask Atlas: the AI-native bar on every step ---- */
+#cap-anim .cstage,#map-anim .cstage,#val-anim .cstage,#dep-anim .cstage,
+#kn-anim .cstage{height:700px}
+.mlane .askbar{position:absolute;left:30px;right:30px;top:596px;background:#fff;
+  border:1px solid rgba(16,24,40,.10);border-radius:14px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);
+  padding:13px 17px 15px;z-index:5}
+.mlane .askhd{display:flex;align-items:center;gap:9px}
+.mlane .aim{width:21px;height:21px;border-radius:7px;flex:0 0 auto;display:flex;align-items:center;
+  justify-content:center;background:linear-gradient(135deg,#B84C16 0%,#E28A57 100%);
+  box-shadow:0 3px 8px rgba(184,76,22,.32)}
+.mlane .aim svg{width:12px;height:12px;color:#fff}
+.mlane .askhd .lbl{font-family:var(--cmono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:#98A2B3;flex:0 0 auto}
+.mlane .askq{font-size:14px;font-weight:600;color:#101828;white-space:nowrap;overflow:hidden;
+  width:0;border-right:2px solid #B84C16;animation:askType 15s steps(48,end) infinite,
+  askCaret .85s step-end infinite}
+@keyframes askType{0%{width:0}20%{width:var(--ch,44ch)}84%{width:var(--ch,44ch)}
+  88%,100%{width:0}}
+@keyframes askCaret{0%,100%{border-color:#B84C16}50%{border-color:transparent}}
+.mlane .aska{display:flex;align-items:flex-start;gap:10px;margin-top:11px;padding-top:11px;
+  border-top:1px solid rgba(16,24,40,.09);opacity:0;animation:askAns 15s ease-in-out infinite}
+@keyframes askAns{0%,22%{opacity:0;transform:translateY(7px)}
+  28%,83%{opacity:1;transform:none}87%,100%{opacity:0;transform:translateY(7px)}}
+.mlane .aska .dot{width:6px;height:6px;border-radius:50%;background:#B84C16;flex:0 0 auto;margin-top:6px}
+.mlane .aska .txt{font-size:12.5px;line-height:1.5;color:#344054}
+.mlane .aska .txt b{color:#101828;font-weight:700}
+.mlane .aska .src{margin-left:auto;flex:0 0 auto;display:flex;align-items:center;gap:5px;
+  font-family:var(--cmono);font-size:8.5px;letter-spacing:.07em;text-transform:uppercase;
+  font-weight:700;color:#B84C16;background:rgba(184,76,22,.09);padding:4px 9px;border-radius:20px}
+.mlane .aska .src svg{width:10px;height:10px}
+@media(prefers-reduced-motion:reduce){
+  .mlane .askq{animation:none;width:auto;border-right:0}
+  .mlane .aska{animation:none;opacity:1;transform:none}
+}
+
+/* ---- Intelligence: a network that gets denser every engagement ---- */
+#kn-anim .brain{position:absolute;left:170px;top:70px;width:620px;height:300px;z-index:1}
+#kn-anim .brain svg{width:100%;height:100%;overflow:visible}
+#kn-anim .ed{stroke:rgba(184,76,22,.26);stroke-width:1;stroke-dasharray:6 140;stroke-dashoffset:146;
+  animation:knPulse 5.2s linear infinite}
+#kn-anim .ed.hot{stroke:rgba(184,76,22,.55);stroke-width:1.4}
+@keyframes knPulse{0%{stroke-dashoffset:146}55%,100%{stroke-dashoffset:-146}}
+#kn-anim .nd{fill:#C9A98F;animation:knBlink 4.4s ease-in-out infinite}
+#kn-anim .nd.hot{fill:#B84C16;filter:drop-shadow(0 0 7px rgba(184,76,22,.85));
+  animation:knBlinkHot 3.2s ease-in-out infinite}
+@keyframes knBlink{0%,100%{opacity:.5}50%{opacity:1}}
+@keyframes knBlinkHot{0%,100%{opacity:.75;r:5}50%{opacity:1;r:6.4}}
+#kn-anim .web{position:absolute;left:170px;top:70px;width:620px;height:300px;z-index:0;
+  background:radial-gradient(closest-side, rgba(184,76,22,.13), rgba(184,76,22,0) 74%);
+  animation:knGlow 7s ease-in-out infinite}
+@keyframes knGlow{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.05)}}
+
+#kn-anim .tag{position:absolute;z-index:3;background:#fff;border:1px solid rgba(16,24,40,.10);
+  border-radius:10px;padding:7px 11px;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);white-space:nowrap;
+  opacity:0;animation:knTag 15s ease-in-out infinite}
+@keyframes knTag{0%{opacity:0;transform:translateY(8px)}8%,88%{opacity:1;transform:none}
+  95%,100%{opacity:0;transform:translateY(8px)}}
+#kn-anim .tag .n{font-family:var(--cmono);font-size:12px;font-weight:700;color:#B84C16;line-height:1}
+#kn-anim .tag .l{font-size:11px;font-weight:600;color:#101828;margin-top:3px;line-height:1}
+#kn-anim .tag i{font-style:normal;display:block;font-family:var(--csans);font-size:12px;
+  color:#667085;line-height:1;margin-top:2px;font-weight:500}
+#kn-anim .tag.new{border-color:rgba(184,76,22,.4);background:#FFF8F4}
+
+#kn-anim .knroad{position:absolute;left:0;right:0;top:390px;display:flex;justify-content:center;
+  align-items:stretch;gap:10px;z-index:3}
+#kn-anim .rc{display:flex;flex-direction:column;justify-content:center;background:#fff;
+  border:1px solid rgba(16,24,40,.12);border-radius:10px;padding:8px 14px;font-size:12.5px;
+  font-weight:600;color:#101828;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05);white-space:nowrap}
+#kn-anim .rc i{font-style:normal;display:block;font-family:var(--csans);font-size:12.5px;
+  color:#667085;line-height:1;margin-top:2px;font-weight:500}
+#kn-anim .rc.done{border-color:rgba(31,122,76,.35)}
+#kn-anim .rc.done i{color:#1F7A4C}
+#kn-anim .rc.now{border-color:rgba(184,76,22,.45);background:#FFF7F2}
+#kn-anim .rc.now i{color:#B84C16}
+#kn-anim .rc.soon{border-style:dashed;border-color:rgba(16,24,40,.20);color:#475467;background:#F9FAFB}
+
+/* ===== Mobile: unpin the stage and let it flow at full size ===== */
+@media(max-width:900px){
+  .osanim{overflow:visible;height:auto !important;border-radius:14px;
+    margin-left:-1rem;margin-right:-1rem}
+  .osanim .cscaler{transform:none !important}
+  .osanim .cstage{width:auto !important;height:auto !important;display:flex;flex-direction:column;
+    gap:13px;padding:16px 14px 18px}
+  .osanim .cstage > *{position:static !important;left:auto !important;top:auto !important;
+    right:auto !important;width:auto !important;transform:none !important}
+
+  /* decorative layers off */
+  .osanim .knsvg,.osanim .mlcur,.osanim .spark,.osanim .glow{display:none !important}
+  .osanim .mlrule{border-top:1px solid rgba(16,24,40,.09);margin:2px 0}
+
+  /* type scales back up to real sizes */
+    .mlane .mlserif{font-size:26px;text-align:left}
+  .mlane .mlserif.sm{font-size:23px;padding:0;text-align:left;line-height:1.25}
+
+  /* rows of cards stay swipeable, everything else stacks */
+  .mlane .mlmarq{overflow:hidden;padding:6px 0;margin:0 -14px;width:auto !important}
+  .mlane .mltrack{padding-left:14px;gap:14px}
+  .mlane .mlc,.mlane .mld,.mlane .mlnode,.mlane .mlf,.mlane .mlr{transform:none !important}
+
+  /* inline heights from the fixed canvas must not clip the flowed layout */
+  .osanim .cstage > *{height:auto !important;min-height:0}
+  .mlane .mlmarq{height:auto !important}
+
+  /* grids collapse */
+  #map-anim .cards{display:grid !important;grid-template-columns:1fr;gap:12px}
+  #map-anim .qcard{transform:none !important;opacity:1 !important;animation:none !important}
+  #map-anim .ibtn{display:none}
+  #map-anim .mlbox{opacity:1 !important;animation:none !important;width:auto !important;
+    box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05)}
+  #map-anim .mlbox .bh{margin-bottom:6px}
+  #map-anim .mlbox:before{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;
+    letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:7px}
+  #map-anim .mlbox.b1:before{content:"Source behind \2014 Confirm";color:#B84C16}
+  #map-anim .mlbox.b2:before{content:"Source behind \2014 Conflict";color:#B54708}
+  #val-anim .mlpanel,#dep-anim .mlpanel{width:auto !important;transform:none !important;
+    overflow:visible}
+  #dep-anim .mlpb{grid-template-columns:1fr}
+  #dep-anim .mlpb .sp{display:none}
+
+  /* step 03: the process map is a wide diagram - let it scroll rather than shrink to nothing */
+  #val-anim .mlpb{padding:12px 14px 14px}
+  #val-anim .pcv{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 8px 6px}
+  #val-anim .pcv svg{width:414px !important;min-width:414px;height:auto}
+  #val-anim .tq{font-size:12.5px;line-height:1.5;margin-bottom:9px;padding-left:10px}
+  #val-anim .tq .cite{font-size:11.5px}
+  #val-anim .ast{padding:5px 0}
+  #val-anim .ast .tx{font-size:12.5px}
+  #val-anim .ast .tx em{font-size:11.5px}
+  #val-anim .ast .tm{font-size:10px}
+  #val-anim .mlph .t{font-size:11px}
+  #val-anim .mlph .m{font-size:12.5px}
+  #val-anim .mlf{width:236px}
+  #val-anim .mlf .ft{font-size:13px}
+  #val-anim .mlf .fo{font-size:12.5px}
+
+  /* step 04: same treatment for the requirement panels */
+  #dep-anim .mlph .t{font-size:12.5px}
+  #dep-anim .pr .w{font-size:12.5px}
+  #dep-anim .pr .w em{font-size:11.5px}
+  #dep-anim .tcx{font-size:11.5px}
+  #dep-anim .mlpf{font-size:12.5px}
+  #dep-anim .mlr .rt{font-size:13px}
+  #dep-anim .mlr .rp{font-size:12.5px}
+  #kn-anim .web{display:none}
+  #kn-anim .brain{width:100% !important;height:auto !important;aspect-ratio:620/300;margin:2px 0 4px}
+  #kn-anim .tag{opacity:1 !important;animation:none !important;display:inline-block;
+    margin:0 6px 6px 0;box-shadow:0 1px 2px rgba(16,24,40,.05), 0 6px 18px rgba(16,24,40,.05)}
+  #kn-anim .knroad{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:8px}
+
+  /* ask bar reads as a real component, no typewriter */
+  .mlane .askbar{padding:12px 14px 14px}
+  .mlane .askhd{flex-wrap:wrap;gap:7px}
+  .mlane .askq{white-space:normal;width:auto !important;border-right:0;animation:none !important;
+    font-size:15px;line-height:1.3;flex:1 1 100%}
+  .mlane .aska{flex-wrap:wrap;opacity:1 !important;animation:none !important;transform:none !important}
+  .mlane .aska .txt{font-size:13.5px;flex:1 1 auto}
+  .mlane .aska .src{margin-left:0;margin-top:6px}
+}
+</style>
+
+<style>
+/* ===== How it works (hiw-) ===== */
+.hiw-card{position:relative;border:1px solid rgba(0,0,0,.10);border-radius:22px;background:#fff;
+  overflow:hidden;transition:box-shadow .35s ease,border-color .35s ease}
+.hiw-card:hover{border-color:rgba(184,76,22,.35);box-shadow:0 14px 40px rgba(16,24,40,.07)}
+.hiw-num{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:#B84C16}
+.hiw-h{font-size:34px;font-weight:600;letter-spacing:-.035em;line-height:1.1;color:#171717}
+.hiw-tx{font-size:17px;line-height:1.75;color:#404040}
+.hiw-tx span{display:inline}
+.hiw-fig{position:relative;border-radius:16px;background:#FAFAFA;border:1px solid rgba(0,0,0,.07);
+  overflow:hidden}
+.hiw-bar{position:absolute;left:0;top:0;height:2px;width:0;background:#B84C16;border-radius:2px}
+.hiw-card:hover .hiw-bar,.hiw-card.hiw-play .hiw-bar{animation:hiwBar 1.5s cubic-bezier(.3,0,.2,1) forwards}
+@keyframes hiwBar{to{width:100%}}
+
+/* replayable reveal: visible at rest, re-plays on hover / on scroll-in */
+.hiw-r{opacity:1}
+.hiw-card:hover .hiw-r,.hiw-card.hiw-play .hiw-r{
+  animation:hiwIn .55s cubic-bezier(.3,0,.2,1) backwards;
+  animation-delay:calc(var(--i,0)*70ms)}
+.hiw-card:hover .hiw-t,.hiw-card.hiw-play .hiw-t{
+  animation:hiwUp .5s cubic-bezier(.3,0,.2,1) backwards;
+  animation-delay:calc(var(--i,0)*60ms)}
+@keyframes hiwIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes hiwUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.hiw-draw{stroke-dasharray:200;stroke-dashoffset:0}
+.hiw-card:hover .hiw-draw,.hiw-card.hiw-play .hiw-draw{
+  animation:hiwDraw 1s cubic-bezier(.4,0,.2,1) backwards;
+  animation-delay:calc(var(--i,0)*80ms)}
+@keyframes hiwDraw{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}
+@media(max-width:900px){.hiw-h{font-size:27px}.hiw-tx{font-size:15.5px;line-height:1.7}}
+@media(prefers-reduced-motion:reduce){
+  .hiw-card:hover .hiw-r,.hiw-card:hover .hiw-t,.hiw-card:hover .hiw-draw,
+  .hiw-card.hiw-play .hiw-r,.hiw-card.hiw-play .hiw-t,.hiw-card.hiw-play .hiw-draw,
+  .hiw-card:hover .hiw-bar{animation:none}
+}
+</style>
+
+
+<!-- 1. HERO -->
+<section class="px-5 pt-16 pb-14 md:pt-24 md:pb-20">
+  <div class="mx-auto max-w-6xl">
+    <div class="eyebrow mb-4">Automation with expert judgement</div>
+    <h1 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-6xl" style="text-wrap:pretty">Atlas turns business data into <span class="os-mark-teal">evidence</span>. Your experts turn evidence into <span class="os-mark-gold">decisions</span>.</h1>
+  </div>
+</section>
+
+
+<!-- 3. THE FOUR PHASES -->
+<section class="border-t border-black/10 bg-white px-5 pt-16 pb-24 md:pt-20">
+  <div class="mx-auto max-w-6xl space-y-6">
+
+    <!-- ================= 01 CAPTURE ================= -->
+    <article id="phase-capture" class="hiw-card">
+      <span class="hiw-bar"></span>
+      <div class="grid gap-8 p-6 sm:p-8 lg:grid-cols-2 lg:items-center lg:gap-12 lg:p-11">
+        <div>
+          <div class="hiw-num hiw-t" style="--i:0">Step 01</div>
+          <h3 class="hiw-h mt-3 hiw-t" style="--i:1">Capture</h3>
+          <p class="hiw-tx mt-5">
+            <span class="hiw-t" style="--i:2">Atlas starts by analyzing your existing documents, ERP data, and invoices to build a complete evidence base.</span>
+            <span class="hiw-t" style="--i:4"> AI surfaces requirements, gaps, and targeted questions before workshops begin.</span>
+          </p>
+        </div>
+
+        <div class="osanim mlane" id="cap-anim" data-w="960" data-h="700">
+            <div class="cscaler">
+              <div class="cstage" id="cap-stage">
+
+                <div class="mlmarq" style="top:24px;height:196px">
+                  <div class="mltrack">
+                  <div class="mlc"><span class="tab" style="background:#475467">pdf</span>
+                    <div class="th"><div class="ln" style="width:82%"></div><div class="ln o" style="width:56%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div><div class="ln" style="width:86%"></div><div class="ln" style="width:48%"></div></div><div class="cap">VAT_SOP.pdf</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">call</span>
+                    <div class="th"><div class="wave"><i style="height:30%"></i><i style="height:62%"></i><i style="height:45%"></i><i style="height:88%"></i><i style="height:52%"></i><i style="height:74%"></i><i style="height:38%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:42%"></i><i style="height:78%"></i><i style="height:55%"></i><i style="height:33%"></i><i style="height:70%"></i><i style="height:48%"></i></div></div><div class="cap">Kickoff call · 42:18</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">chat</span>
+                    <div class="th"><div class="bub" style="width:78%"></div><div class="bub r" style="width:62%"></div><div class="bub" style="width:70%"></div><div class="bub r" style="width:48%"></div></div><div class="cap">Slack #tax-ops</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">xls</span>
+                    <div class="th"><div class="ln" style="width:60%"></div><div class="grid5"><span></span><span class="o"></span><span></span><span></span><span class="o"></span><span></span><span></span><span class="o"></span><span></span><span></span><span></span><span></span></div></div><div class="cap">Invoices.xlsx</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">doc</span>
+                    <div class="th"><div class="ln" style="width:82%"></div><div class="ln o" style="width:56%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div><div class="ln" style="width:86%"></div><div class="ln" style="width:48%"></div></div><div class="cap">Mapping.docx</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">voice</span>
+                    <div class="th"><div class="wave"><i style="height:30%"></i><i style="height:62%"></i><i style="height:45%"></i><i style="height:88%"></i><i style="height:52%"></i><i style="height:74%"></i><i style="height:38%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:42%"></i><i style="height:78%"></i><i style="height:55%"></i><i style="height:33%"></i><i style="height:70%"></i><i style="height:48%"></i></div></div><div class="cap">Voice note · 2:41</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">csv</span>
+                    <div class="th"><div class="ln" style="width:60%"></div><div class="grid5"><span></span><span class="o"></span><span></span><span></span><span class="o"></span><span></span><span></span><span class="o"></span><span></span><span></span><span></span><span></span></div></div><div class="cap">Master data.csv</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">mail</span>
+                    <div class="th"><div class="ln" style="width:82%"></div><div class="ln o" style="width:56%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div><div class="ln" style="width:86%"></div><div class="ln" style="width:48%"></div></div><div class="cap">RFP email thread</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">pdf</span>
+                    <div class="th"><div class="ln" style="width:82%"></div><div class="ln o" style="width:56%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div><div class="ln" style="width:86%"></div><div class="ln" style="width:48%"></div></div><div class="cap">VAT_SOP.pdf</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">call</span>
+                    <div class="th"><div class="wave"><i style="height:30%"></i><i style="height:62%"></i><i style="height:45%"></i><i style="height:88%"></i><i style="height:52%"></i><i style="height:74%"></i><i style="height:38%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:42%"></i><i style="height:78%"></i><i style="height:55%"></i><i style="height:33%"></i><i style="height:70%"></i><i style="height:48%"></i></div></div><div class="cap">Kickoff call · 42:18</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">chat</span>
+                    <div class="th"><div class="bub" style="width:78%"></div><div class="bub r" style="width:62%"></div><div class="bub" style="width:70%"></div><div class="bub r" style="width:48%"></div></div><div class="cap">Slack #tax-ops</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">xls</span>
+                    <div class="th"><div class="ln" style="width:60%"></div><div class="grid5"><span></span><span class="o"></span><span></span><span></span><span class="o"></span><span></span><span></span><span class="o"></span><span></span><span></span><span></span><span></span></div></div><div class="cap">Invoices.xlsx</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">doc</span>
+                    <div class="th"><div class="ln" style="width:82%"></div><div class="ln o" style="width:56%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div><div class="ln" style="width:86%"></div><div class="ln" style="width:48%"></div></div><div class="cap">Mapping.docx</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">voice</span>
+                    <div class="th"><div class="wave"><i style="height:30%"></i><i style="height:62%"></i><i style="height:45%"></i><i style="height:88%"></i><i style="height:52%"></i><i style="height:74%"></i><i style="height:38%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:42%"></i><i style="height:78%"></i><i style="height:55%"></i><i style="height:33%"></i><i style="height:70%"></i><i style="height:48%"></i></div></div><div class="cap">Voice note · 2:41</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">csv</span>
+                    <div class="th"><div class="ln" style="width:60%"></div><div class="grid5"><span></span><span class="o"></span><span></span><span></span><span class="o"></span><span></span><span></span><span class="o"></span><span></span><span></span><span></span><span></span></div></div><div class="cap">Master data.csv</div></div>
+                  <div class="mlc"><span class="tab" style="background:#475467">mail</span>
+                    <div class="th"><div class="ln" style="width:82%"></div><div class="ln o" style="width:56%"></div><div class="ln" style="width:92%"></div><div class="ln" style="width:70%"></div><div class="ln" style="width:86%"></div><div class="ln" style="width:48%"></div></div><div class="cap">RFP email thread</div></div>
+                  </div>
+                </div>
+
+                <div class="mlrule" style="top:238px"></div>
+                <div class="mlserif sm" style="top:254px">First, Atlas understands your business through the data and documents <b>you already have</b>.</div>
+
+                <div class="mlmarq" style="top:372px;height:176px">
+                  <div class="mltrack rev">
+                  <div class="mld"><div class="dh"><span class="t">Questions &amp; answers</span><span class="r">Review</span></div>
+                    <div class="db"><div class="qline"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span><span class="qt">Who approves credit notes? <em>Finance Director</em><span>pre-filled from the SOP</span></span></div>
+                    <div class="qline"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span><span class="qt">Is reverse charge applied? <em>Yes, 31 invoices</em><span>pre-filled from the data</span></span></div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Data schema mapping</span><span class="r">Review</span></div>
+                    <div class="db"><div class="mrw">Document No.<span class="a">&rarr;</span>IBT-001<span class="bg">exact</span></div>
+                    <div class="mrw">Tax Reg No.<span class="a">&rarr;</span>BT-AE-01<span class="bg">exact</span></div>
+                    <div class="mrw">Currency<span class="a">&rarr;</span>BT-005<span class="bg">inferred</span></div>
+                    <div class="note">38 fields mapped for you</div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Process map</span><span class="r">Review</span></div>
+                    <div class="db"><div class="pchain"><span class="pn">Order</span><span class="par">&rarr;</span><span class="pn">Invoice</span><span class="par">&rarr;</span><span class="pn gapn">Approve?</span><span class="par">&rarr;</span><span class="pn">Issue</span></div>
+                    <div class="note">as-is flow · 1 gap flagged<br>for your team</div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Open questions</span><span class="r">For you</span></div>
+                    <div class="db"><div class="mrw">Q-07<span class="a">·</span>KSA branch tax code<span class="bg">no source</span></div>
+                    <div class="mrw">Q-11<span class="a">·</span>Free-zone treatment<span class="bg">no source</span></div>
+                    <div class="note">the 3 things nobody wrote down</div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Requirements draft</span><span class="r">Review</span></div>
+                    <div class="db"><div class="mrw">REQ-014<span class="a">·</span>Buyer TRN<span class="bg">+ TC-08</span></div>
+                    <div class="mrw">REQ-021<span class="a">·</span>Credit note<span class="bg">+ TC-18</span></div>
+                    <div class="note">24 drafted, each with a test</div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Questions &amp; answers</span><span class="r">Review</span></div>
+                    <div class="db"><div class="qline"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span><span class="qt">Who approves credit notes? <em>Finance Director</em><span>pre-filled from the SOP</span></span></div>
+                    <div class="qline"><span class="bx"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span><span class="qt">Is reverse charge applied? <em>Yes, 31 invoices</em><span>pre-filled from the data</span></span></div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Data schema mapping</span><span class="r">Review</span></div>
+                    <div class="db"><div class="mrw">Document No.<span class="a">&rarr;</span>IBT-001<span class="bg">exact</span></div>
+                    <div class="mrw">Tax Reg No.<span class="a">&rarr;</span>BT-AE-01<span class="bg">exact</span></div>
+                    <div class="mrw">Currency<span class="a">&rarr;</span>BT-005<span class="bg">inferred</span></div>
+                    <div class="note">38 fields mapped for you</div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Process map</span><span class="r">Review</span></div>
+                    <div class="db"><div class="pchain"><span class="pn">Order</span><span class="par">&rarr;</span><span class="pn">Invoice</span><span class="par">&rarr;</span><span class="pn gapn">Approve?</span><span class="par">&rarr;</span><span class="pn">Issue</span></div>
+                    <div class="note">as-is flow · 1 gap flagged<br>for your team</div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Open questions</span><span class="r">For you</span></div>
+                    <div class="db"><div class="mrw">Q-07<span class="a">·</span>KSA branch tax code<span class="bg">no source</span></div>
+                    <div class="mrw">Q-11<span class="a">·</span>Free-zone treatment<span class="bg">no source</span></div>
+                    <div class="note">the 3 things nobody wrote down</div></div></div>
+                  <div class="mld"><div class="dh"><span class="t">Requirements draft</span><span class="r">Review</span></div>
+                    <div class="db"><div class="mrw">REQ-014<span class="a">·</span>Buyer TRN<span class="bg">+ TC-08</span></div>
+                    <div class="mrw">REQ-021<span class="a">·</span>Credit note<span class="bg">+ TC-18</span></div>
+                    <div class="note">24 drafted, each with a test</div></div></div>
+                  </div>
+                </div>
+
+
+                <div class="askbar">
+                  <div class="askhd">
+                    <span class="aim"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg></span>
+                    <span class="lbl">Ask Atlas</span>
+                    <span class="askq" style="--ch:50ch">What did the kickoff call say about credit notes?</span>
+                  </div>
+                  <div class="aska">
+                    <span class="dot"></span>
+                    <span class="txt">At <b>42:18</b> the client said the Controller signs those off. Linked to question Q-07 and flagged against the SOP.</span>
+                    <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>Kickoff call &middot; 42:18</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </article>
+
+    <!-- ================= 02 MAP ================= -->
+    <article id="phase-map" class="hiw-card">
+      <span class="hiw-bar"></span>
+      <div class="grid gap-8 p-6 sm:p-8 lg:grid-cols-2 lg:items-center lg:gap-12 lg:p-11">
+        <div class="order-2 lg:order-1">
+          <div class="osanim mlane" id="map-anim" data-w="960" data-h="700">
+            <div class="cscaler">
+              <div class="cstage" id="map-stage">
+
+                <div class="mlmarq" style="top:24px;height:118px">
+                  <div class="mltrack">
+                  <div class="mlnode"><div class="k">Entity</div><div class="v">Entity AE-01</div><div class="s">Dubai HQ</div></div>
+                  <div class="mlnode"><div class="k">System</div><div class="v">SAP S/4HANA</div><div class="s">source of the invoice</div></div>
+                  <div class="mlnode"><div class="k">Process</div><div class="v">AR process</div><div class="s">order to cash · 6 steps</div></div>
+                  <div class="mlnode"><div class="k">Field</div><div class="v">Buyer TRN</div><div class="s">&rarr; BT-AE-01</div></div>
+                  <div class="mlnode"><div class="k">Owner</div><div class="v">Master Data</div><div class="s">Priya N.</div></div>
+                  <div class="mlnode"><div class="k">Entity</div><div class="v">Entity AE-02</div><div class="s">Abu Dhabi</div></div>
+                  <div class="mlnode"><div class="k">System</div><div class="v">Billing engine</div><div class="s">recurring invoices</div></div>
+                  <div class="mlnode"><div class="k">Field</div><div class="v">Tax code</div><div class="s">&rarr; BT-118</div></div>
+                  <div class="mlnode flagn"><div class="k">Owner</div><div class="v">Credit notes</div><div class="s">nobody named</div></div>
+                  <div class="mlnode"><div class="k">System</div><div class="v">POS</div><div class="s">retail only</div></div>
+                  <div class="mlnode"><div class="k">Entity</div><div class="v">Entity AE-01</div><div class="s">Dubai HQ</div></div>
+                  <div class="mlnode"><div class="k">System</div><div class="v">SAP S/4HANA</div><div class="s">source of the invoice</div></div>
+                  <div class="mlnode"><div class="k">Process</div><div class="v">AR process</div><div class="s">order to cash · 6 steps</div></div>
+                  <div class="mlnode"><div class="k">Field</div><div class="v">Buyer TRN</div><div class="s">&rarr; BT-AE-01</div></div>
+                  <div class="mlnode"><div class="k">Owner</div><div class="v">Master Data</div><div class="s">Priya N.</div></div>
+                  <div class="mlnode"><div class="k">Entity</div><div class="v">Entity AE-02</div><div class="s">Abu Dhabi</div></div>
+                  <div class="mlnode"><div class="k">System</div><div class="v">Billing engine</div><div class="s">recurring invoices</div></div>
+                  <div class="mlnode"><div class="k">Field</div><div class="v">Tax code</div><div class="s">&rarr; BT-118</div></div>
+                  <div class="mlnode flagn"><div class="k">Owner</div><div class="v">Credit notes</div><div class="s">nobody named</div></div>
+                  <div class="mlnode"><div class="k">System</div><div class="v">POS</div><div class="s">retail only</div></div>
+                  </div>
+                </div>
+
+                <div class="mlrule" style="top:158px"></div>
+                <div class="mlserif sm" style="top:174px">Then it connects the people, systems, and processes <b>behind every transaction</b>.</div>
+
+                <div class="cards">
+                  <div class="qcard confirm">
+                    <button type="button" class="ibtn" aria-label="Show the source">i</button>
+                    <span class="qbadge">Confirm</span>
+                    <div class="qq">Document No. maps to <em>IBT-001</em>. Is this the correct field?</div>
+                    <div class="qsrc"><span class="schip">from <b>SOP v3, p.12</b></span><span class="schip">98% match</span></div>
+                    <div class="qact"><span class="btn pri">Confirm</span><span class="btn">Change</span>
+                      <span class="qstate">Confirmed</span></div>
+                  </div>
+
+                  <div class="qcard conflict">
+                    <button type="button" class="ibtn" aria-label="Show the source">i</button>
+                    <span class="qbadge">Conflict</span>
+                    <div class="qq">Two sources disagree on who approves credit notes.</div>
+                    <div class="qsrc"><span class="schip">SOP says <b>Finance Director</b></span><span class="schip x">Call says <b>Controller</b></span></div>
+                    <div class="qact"><span class="btn pri">Resolve</span><span class="btn">Ask owner</span>
+                      <span class="qstate">Routed to Tax lead</span></div>
+                  </div>
+
+                  <div class="qcard gap">
+                    <span class="qbadge">Unanswered</span>
+                    <div class="qq">No file covers the KSA branch tax code. <em>Nothing to infer from.</em></div>
+                    <div class="qsrc"><span class="schip">0 of 14 sources</span></div>
+                    <div class="qact"><span class="btn pri">Assign</span><span class="btn">Add a source</span>
+                      <span class="qstate pulse">Open</span></div>
+                  </div>
+                </div>
+
+                <div class="mlbox b1">
+                  <div class="bh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg><b>SOP v3</b> &middot; page 12</div>
+                  <div class="bq">Each outgoing invoice carries a unique <mark>Document No.</mark> generated by the billing system at the point of issue.
+                    <span class="cite">the source behind the mapping</span></div>
+                </div>
+
+                <div class="mlbox b2">
+                  <div class="bh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>Both sources, side by side</div>
+                  <div class="bq">Credit notes above AED 50,000 require the <mark>Finance Director</mark>'s approval.
+                    <span class="cite">SOP v3, page 31</span></div>
+                  <div class="bq alt">&ldquo;In practice the <mark>Controller</mark> signs those off.&rdquo;
+                    <span class="cite">Kickoff call, 42:18</span></div>
+                </div>
+
+                <div class="mlcur"><svg viewBox="0 0 24 24" fill="#101828" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"><path d="M5 2.5 19.5 12 12.6 13.4 9.7 20z"/></svg></div>
+
+
+                <div class="askbar">
+                  <div class="askhd">
+                    <span class="aim"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg></span>
+                    <span class="lbl">Ask Atlas</span>
+                    <span class="askq" style="--ch:32ch">Which owners are still unnamed?</span>
+                  </div>
+                  <div class="aska">
+                    <span class="dot"></span>
+                    <span class="txt"><b>One.</b> Credit notes has no named approver. Three questions are routed and waiting on a person.</span>
+                    <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>Owner map &middot; live</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2 lg:pl-2">
+          <div class="hiw-num hiw-t" style="--i:0">Step 02</div>
+          <h3 class="hiw-h mt-3 hiw-t" style="--i:1">Map</h3>
+          <p class="hiw-tx mt-5">
+            <span class="hiw-t" style="--i:2">Then Atlas connects that scattered information into one connected operating model.</span>
+            <span class="hiw-t" style="--i:4"> Atlas reveals dependencies, ownership gaps, and process risks before delivery begins.</span>
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 03 VALIDATE ================= -->
+    <article id="phase-validate" class="hiw-card">
+      <span class="hiw-bar"></span>
+      <div class="grid gap-8 p-6 sm:p-8 lg:grid-cols-2 lg:items-center lg:gap-12 lg:p-11">
+        <div>
+          <div class="hiw-num hiw-t" style="--i:0">Step 03</div>
+          <h3 class="hiw-h mt-3 hiw-t" style="--i:1">Validate</h3>
+          <p class="hiw-tx mt-5">
+            <span class="hiw-t" style="--i:2">Next, Atlas tests real business data against regulatory requirements to identify readiness gaps before implementation begins.</span>
+          </p>
+        </div>
+
+        <div>
+          <div class="osanim mlane" id="val-anim" data-w="960" data-h="700">
+            <div class="cscaler">
+              <div class="cstage" id="val-stage">
+
+                <div class="mlmarq" style="top:24px;height:138px">
+                  <div class="mltrack">
+                  <div class="mlf"><div class="fid"><span class="n">FIN-001</span><span class="p b">Blocker</span></div><div class="ft">Buyer TRN blank on 30% of B2B records</div><div class="fo">Master Data owns this</div></div>
+                  <div class="mlf proc"><div class="fid"><span class="n">FIN-002</span><span class="p pr">Process</span></div><div class="ft">Credit-note approver differs from the SOP</div><div class="fo">Finance owns this</div></div>
+                  <div class="mlf"><div class="fid"><span class="n">FIN-003</span><span class="p b">Blocker</span></div><div class="ft">Reverse-charge scenario has no tax code</div><div class="fo">Tax owns this</div></div>
+                  <div class="mlf cav"><div class="fid"><span class="n">FIN-004</span><span class="p cv">Caveat</span></div><div class="ft">Sample covered 1 of 3 entities</div><div class="fo">nobody assigned yet</div></div>
+                  <div class="mlf"><div class="fid"><span class="n">FIN-005</span><span class="p b">Blocker</span></div><div class="ft">Emirate code missing on POS invoices</div><div class="fo">IT owns this</div></div>
+                  <div class="mlf proc"><div class="fid"><span class="n">FIN-006</span><span class="p pr">Process</span></div><div class="ft">Approval happens in email, not the ERP</div><div class="fo">Finance ops owns this</div></div>
+                  <div class="mlf"><div class="fid"><span class="n">FIN-001</span><span class="p b">Blocker</span></div><div class="ft">Buyer TRN blank on 30% of B2B records</div><div class="fo">Master Data owns this</div></div>
+                  <div class="mlf proc"><div class="fid"><span class="n">FIN-002</span><span class="p pr">Process</span></div><div class="ft">Credit-note approver differs from the SOP</div><div class="fo">Finance owns this</div></div>
+                  <div class="mlf"><div class="fid"><span class="n">FIN-003</span><span class="p b">Blocker</span></div><div class="ft">Reverse-charge scenario has no tax code</div><div class="fo">Tax owns this</div></div>
+                  <div class="mlf cav"><div class="fid"><span class="n">FIN-004</span><span class="p cv">Caveat</span></div><div class="ft">Sample covered 1 of 3 entities</div><div class="fo">nobody assigned yet</div></div>
+                  <div class="mlf"><div class="fid"><span class="n">FIN-005</span><span class="p b">Blocker</span></div><div class="ft">Emirate code missing on POS invoices</div><div class="fo">IT owns this</div></div>
+                  <div class="mlf proc"><div class="fid"><span class="n">FIN-006</span><span class="p pr">Process</span></div><div class="ft">Approval happens in email, not the ERP</div><div class="fo">Finance ops owns this</div></div>
+                  </div>
+                </div>
+
+                <div class="mlrule" style="top:178px"></div>
+                <div class="mlserif sm" style="top:194px">Next, it identifies <b>what will break</b> before implementation begins.</div>
+
+                <div class="mlpanel" style="left:30px;top:294px;width:452px;">
+                  <div class="mlph"><span class="t">Process map &middot; FIN-002</span><span class="m">as it really runs</span></div>
+                  <div class="mlpb"><div class="pcv">
+                    <svg viewBox="0 0 414 118" style="width:100%;height:auto;display:block" aria-hidden="true">
+                      <rect class="pbox" x="2" y="26" width="76" height="38" rx="8"/>
+                      <text class="plab" x="12" y="45">ERP</text><text class="psub" x="12" y="57">invoice created</text>
+                      <path class="pdash" d="M80 45 H100"/>
+                      <rect class="pbox" x="102" y="26" width="74" height="38" rx="8"/>
+                      <text class="plab" x="112" y="45">AR clerk</text><text class="psub" x="112" y="57">picks it up</text>
+                      <path class="pdash" d="M178 45 H198"/>
+                      <rect class="pbox" x="200" y="26" width="82" height="38" rx="8"/>
+                      <text class="plab" x="210" y="45">Pricing.xlsx</text><text class="psub" x="210" y="57">looks up rate</text>
+                      <path class="pdash warnline" d="M284 45 H304"/>
+                      <rect class="pbox flag" x="306" y="26" width="76" height="38" rx="8"/>
+                      <text class="plab" x="316" y="45" fill="#B4432F">Email</text><text class="psub" x="316" y="57" fill="#B4432F">asks approval</text>
+                      <path class="pdash warnline" d="M344 66 C 344 92, 220 92, 139 92 C 139 82, 139 74, 139 66"/>
+                      <text class="pflag" x="168" y="110">sent back 3 times, no record</text>
+                    </svg>
+                  </div></div>
+                </div>
+
+                <div class="mlpanel" style="left:502px;top:294px;width:428px;">
+                  <div class="mlph"><span class="t">Trace &amp; approval</span><span class="m">who said what</span></div>
+                  <div class="mlpb">
+                    <div class="tq"><b>Finance Director</b> approves credit notes above AED 50,000.
+                      <span class="cite">SOP v3, page 31</span></div>
+                    <div class="tq alt">&ldquo;In practice the <b>Controller</b> signs those off.&rdquo;
+                      <span class="cite">Kickoff call, 42:18</span></div>
+                    <div class="ast"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span><span class="tx">Identified by Atlas<em>AI, rule pack v1.2</em></span><span class="tm">12:04</span></div>
+                    <div class="ast"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span><span class="tx">Reviewed by Xavi M.<em>Finance Analyst</em></span><span class="tm">14:20</span></div>
+                    <div class="ast"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span><span class="tx">Approved<em>process document v2</em></span><span class="tm">14:26</span></div>
+                  </div>
+                </div>
+
+
+                <div class="askbar">
+                  <div class="askhd">
+                    <span class="aim"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg></span>
+                    <span class="lbl">Ask Atlas</span>
+                    <span class="askq" style="--ch:57ch">Which rule flagged FIN-001, and how many records failed?</span>
+                  </div>
+                  <div class="aska">
+                    <span class="dot"></span>
+                    <span class="txt"><b>CAN-R-03</b>, buyer TRN must be 15 digits. <b>372 of 1,240</b> records failed. Rule pack UAE v1.2.</span>
+                    <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>Rule pack &middot; v1.2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ================= 04 IMPLEMENT ================= -->
+    <article id="phase-deploy" class="hiw-card" style="border-color:rgba(184,76,22,.35)">
+      <span class="hiw-bar"></span>
+      <div class="grid gap-8 p-6 sm:p-8 lg:grid-cols-2 lg:items-center lg:gap-12 lg:p-11">
+        <div class="order-2 lg:order-1">
+          <div class="osanim mlane" id="dep-anim" data-w="960" data-h="700">
+            <div class="cscaler">
+              <div class="cstage" id="dep-stage">
+
+                <div class="mlmarq" style="top:24px;height:140px">
+                  <div class="mltrack">
+                  <div class="mlr"><div class="rh"><span class="n">REQ-014</span><span class="s rdy">Ready</span></div><div class="rt">Populate Buyer TRN on all B2B invoices</div><div class="rp">Master Data &middot; Technology implementer</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-021</span><span class="s blk">Blocked</span></div><div class="rt">Credit-note approval routed to the real approver</div><div class="rp">Finance ops &middot; Dataphi</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-008</span><span class="s rdy">Ready</span></div><div class="rt">Emirate code on POS invoices</div><div class="rp">IT &middot; Technology implementer</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-030</span><span class="s rev">In review</span></div><div class="rt">Reverse-charge tax code</div><div class="rp">Tax &middot; SAP team</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-041</span><span class="s rdy">Ready</span></div><div class="rt">Free-zone entity handling</div><div class="rp">Tax &middot; Dataphi</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-052</span><span class="s rev">In review</span></div><div class="rt">Intercompany TRN inheritance</div><div class="rp">Master Data &middot; Technology implementer</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-014</span><span class="s rdy">Ready</span></div><div class="rt">Populate Buyer TRN on all B2B invoices</div><div class="rp">Master Data &middot; Technology implementer</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-021</span><span class="s blk">Blocked</span></div><div class="rt">Credit-note approval routed to the real approver</div><div class="rp">Finance ops &middot; Dataphi</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-008</span><span class="s rdy">Ready</span></div><div class="rt">Emirate code on POS invoices</div><div class="rp">IT &middot; Technology implementer</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-030</span><span class="s rev">In review</span></div><div class="rt">Reverse-charge tax code</div><div class="rp">Tax &middot; SAP team</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-041</span><span class="s rdy">Ready</span></div><div class="rt">Free-zone entity handling</div><div class="rp">Tax &middot; Dataphi</div></div>
+                  <div class="mlr"><div class="rh"><span class="n">REQ-052</span><span class="s rev">In review</span></div><div class="rt">Intercompany TRN inheritance</div><div class="rp">Master Data &middot; Technology implementer</div></div>
+                  </div>
+                </div>
+
+                <div class="mlrule" style="top:180px"></div>
+                <div class="mlserif sm" style="top:196px">Finally, it gives your delivery teams <b>everything they need</b> to move forward confidently.</div>
+
+                <div class="mlpanel" style="left:30px;top:292px;width:440px;">
+                  <div class="mlph"><span class="n">REQ-014</span><span class="t">Populate Buyer TRN</span><span class="s rdy">Ready to build</span></div>
+                  <div class="mlpb">
+                    <div class="mlcell">
+                      <div class="lb">Who works on it</div>
+                      <div class="pr"><span class="av">MD</span><span class="w">Master Data<em>owner, client side</em></span></div>
+                      <div class="pr"><span class="av p3">SI</span><span class="w">Technology implementer<em>ERP build</em></span></div>
+                      <div class="lb" style="margin-top:10px">Sign-off</div>
+                      <div class="pr"><span class="av p2">XM</span><span class="w">Xavi M.<em>Finance Analyst</em></span><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span></div>
+                      <div class="pr"><span class="av p2">RK</span><span class="w">R. Kapoor<em>Head of Tax</em></span><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span></div>
+                    </div>
+                    <div class="sp"></div>
+                    <div class="mlcell">
+                      <div class="lb">Linked test cases</div>
+                      <div class="tcx"><b>TC-08</b> valid 15-digit TRN <span class="r ps">Pass</span></div>
+                      <div class="tcx"><b>TC-09</b> TRN missing <span class="r ps">Pass</span></div>
+                      <div class="tcx"><b>TC-10</b> intercompany inherited <span class="r ps">Pass</span></div>
+                      <div class="tcx"><b>TC-11</b> free-zone entity <span class="r qd">Queued</span></div>
+                    </div>
+                  </div>
+                  <div class="mlpf"><b>Technology implementer</b> starts next sprint<span class="z">2 of 2 approvals</span></div>
+                </div>
+
+                <div class="mlpanel hold" style="left:490px;top:292px;width:440px;">
+                  <div class="mlph"><span class="n">REQ-021</span><span class="t">Credit-note approval routing</span><span class="s blk">Blocked</span></div>
+                  <div class="mlpb">
+                    <div class="mlcell">
+                      <div class="lb">Who works on it</div>
+                      <div class="pr"><span class="av">FI</span><span class="w">Finance operations<em>owner, client side</em></span></div>
+                      <div class="pr"><span class="av p3">AS</span><span class="w">Dataphi<em>ASP, transmission</em></span></div>
+                      <div class="lb" style="margin-top:10px">Sign-off</div>
+                      <div class="pr"><span class="av p2">XM</span><span class="w">Xavi M.<em>Finance Analyst</em></span><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><path d="M4 12l6 6L20 5"/></svg></span></div>
+                      <div class="pr"><span class="av p2">RK</span><span class="w">R. Kapoor<em>waiting on the conflict</em></span><span class="mk wait"></span></div>
+                    </div>
+                    <div class="sp"></div>
+                    <div class="mlcell">
+                      <div class="lb">Linked test cases</div>
+                      <div class="tcx"><b>TC-18</b> credit note under 50k <span class="r ps">Pass</span></div>
+                      <div class="tcx"><b>TC-19</b> credit note over 50k <span class="r fl">Blocked</span></div>
+                      <div class="tcx"><b>TC-20</b> approver on leave <span class="r qd">Queued</span></div>
+                      <div class="tcx"><b>FIN-002</b> open conflict <span class="r fl">Blocker</span></div>
+                    </div>
+                  </div>
+                  <div class="mlpf"><b>Dataphi</b> cannot start yet<span class="z bad">blocked by FIN-002</span></div>
+                </div>
+
+
+                <div class="askbar">
+                  <div class="askhd">
+                    <span class="aim"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg></span>
+                    <span class="lbl">Ask Atlas</span>
+                    <span class="askq" style="--ch:27ch">Give me the weekly update.</span>
+                  </div>
+                  <div class="aska">
+                    <span class="dot"></span>
+                    <span class="txt"><b>21 of 24</b> requirements ready. Two approvals landed this week. <b>REQ-021</b> is still blocked by FIN-002.</span>
+                    <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>Delivery plan &middot; today</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <div class="hiw-num hiw-t" style="--i:0">Step 04</div>
+          <h3 class="hiw-h mt-3 hiw-t" style="--i:1">Implement</h3>
+          <p class="hiw-tx mt-5">
+            <span class="hiw-t" style="--i:2">Finally, Atlas transforms validated findings into a structured delivery plan with clear priorities, named owners, implementation requirements, and next steps.</span>
+            <span class="hiw-t" style="--i:4"> Every stakeholder, from the client to the SI, ERP partner and ASP, works from the same evidence-backed record.</span>
+            <span class="hiw-t" style="--i:6"> Real-time regulation, process and personnel changes are tracked to show the impact on project progress.</span>
+          </p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- 4. KNOWLEDGE THAT STAYS WITH YOUR TEAM -->
+<section class="border-t border-black/10 px-5 py-24 md:py-28">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-4">Beyond the engagement</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">Knowledge that stays with <span class="os-mark-gold">your team</span>.</h2>
+    </div>
+
+    <div class="mt-12 grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
+        <div>
+          <p class="hiw-tx">
+            <span>Whenever your team completes an engagement, Atlas adds that data to a library of evidence, requirements, and implementation knowledge.</span>
+            <span> Future projects begin with more context, greater consistency, and less repetition.</span>
+            <span> A growing, live intelligence that acts as a catalyst for future work.</span>
+            <span> When the next mandate lands, most of the answers are already there.</span>
+          </p>
+        </div>
+
+        <div>
+          <div class="osanim mlane" id="kn-anim" data-w="960" data-h="700">
+            <div class="cscaler">
+              <div class="cstage" id="kn-stage">
+
+                <div class="web"></div>
+                <div class="brain">
+                  <svg viewBox="0 0 620 300" aria-hidden="true">
+                    <line class="ed" x1="260.3" y1="201.8" x2="310.0" y2="196.0" style="animation-delay:0.00s"/>
+                    <line class="ed" x1="260.3" y1="201.8" x2="310.0" y2="252.0" style="animation-delay:0.42s"/>
+                    <line class="ed" x1="260.3" y1="201.8" x2="265.1" y2="127.1" style="animation-delay:0.84s"/>
+                    <line class="ed" x1="265.1" y1="127.1" x2="310.0" y2="112.0" style="animation-delay:1.26s"/>
+                    <line class="ed" x1="265.1" y1="127.1" x2="202.2" y2="147.1" style="animation-delay:1.68s"/>
+                    <line class="ed" x1="265.1" y1="127.1" x2="235.7" y2="60.2" style="animation-delay:2.10s"/>
+                    <line class="ed" x1="141.4" y1="138.2" x2="115.6" y2="175.5" style="animation-delay:2.52s"/>
+                    <line class="ed" x1="141.4" y1="138.2" x2="169.2" y2="177.4" style="animation-delay:2.94s"/>
+                    <line class="ed" x1="141.4" y1="138.2" x2="202.2" y2="147.1" style="animation-delay:3.36s"/>
+                    <line class="ed" x1="500.4" y1="189.5" x2="543.7" y2="197.9" style="animation-delay:3.78s"/>
+                    <line class="ed" x1="500.4" y1="189.5" x2="448.6" y2="203.4" style="animation-delay:4.20s"/>
+                    <line class="ed" x1="500.4" y1="189.5" x2="475.8" y2="133.8" style="animation-delay:4.62s"/>
+                    <line class="ed" x1="388.0" y1="172.9" x2="339.5" y2="207.4" style="animation-delay:5.04s"/>
+                    <line class="ed" x1="388.0" y1="172.9" x2="448.6" y2="203.4" style="animation-delay:5.46s"/>
+                    <line class="ed" x1="388.0" y1="172.9" x2="407.0" y2="100.8" style="animation-delay:0.00s"/>
+                    <line class="ed" x1="78.6" y1="210.8" x2="115.6" y2="175.5" style="animation-delay:0.42s"/>
+                    <line class="ed" x1="78.6" y1="210.8" x2="133.8" y2="227.0" style="animation-delay:0.84s"/>
+                    <line class="ed" x1="78.6" y1="210.8" x2="45.8" y2="136.5" style="animation-delay:1.26s"/>
+                    <line class="ed" x1="116.2" y1="63.8" x2="163.6" y2="59.2" style="animation-delay:1.68s"/>
+                    <line class="ed" x1="116.2" y1="63.8" x2="74.5" y2="93.2" style="animation-delay:2.10s"/>
+                    <line class="ed" x1="116.2" y1="63.8" x2="141.4" y2="138.2" style="animation-delay:2.52s"/>
+                    <line class="ed" x1="407.0" y1="100.8" x2="375.8" y2="49.9" style="animation-delay:2.94s"/>
+                    <line class="ed" x1="407.0" y1="100.8" x2="458.9" y2="47.7" style="animation-delay:3.36s"/>
+                    <line class="ed" x1="217.2" y1="267.3" x2="185.0" y2="235.0" style="animation-delay:3.78s"/>
+                    <line class="ed" x1="217.2" y1="267.3" x2="260.3" y2="201.8" style="animation-delay:4.20s"/>
+                    <line class="ed" x1="217.2" y1="267.3" x2="133.8" y2="227.0" style="animation-delay:4.62s"/>
+                    <line class="ed" x1="402.0" y1="247.3" x2="363.0" y2="282.5" style="animation-delay:5.04s"/>
+                    <line class="ed" x1="402.0" y1="247.3" x2="448.6" y2="203.4" style="animation-delay:5.46s"/>
+                    <line class="ed" x1="402.0" y1="247.3" x2="467.8" y2="251.4" style="animation-delay:0.00s"/>
+                    <line class="ed" x1="197.8" y1="94.3" x2="163.6" y2="59.2" style="animation-delay:0.42s"/>
+                    <line class="ed" x1="197.8" y1="94.3" x2="235.7" y2="60.2" style="animation-delay:0.84s"/>
+                    <line class="ed" x1="197.8" y1="94.3" x2="202.2" y2="147.1" style="animation-delay:1.26s"/>
+                    <line class="ed" x1="375.8" y1="49.9" x2="329.8" y2="56.5" style="animation-delay:1.68s"/>
+                    <line class="ed" x1="375.8" y1="49.9" x2="310.0" y2="52.0" style="animation-delay:2.10s"/>
+                    <line class="ed" x1="318.0" y1="256.0" x2="310.0" y2="252.0" style="animation-delay:2.52s"/>
+                    <line class="ed" x1="318.0" y1="256.0" x2="363.0" y2="282.5" style="animation-delay:2.94s"/>
+                    <line class="ed" x1="318.0" y1="256.0" x2="339.5" y2="207.4" style="animation-delay:3.36s"/>
+                    <line class="ed" x1="45.8" y1="136.5" x2="74.5" y2="93.2" style="animation-delay:3.78s"/>
+                    <line class="ed" x1="45.8" y1="136.5" x2="115.6" y2="175.5" style="animation-delay:4.20s"/>
+                    <line class="ed" x1="329.8" y1="56.5" x2="310.0" y2="52.0" style="animation-delay:4.62s"/>
+                    <line class="ed" x1="329.8" y1="56.5" x2="283.9" y2="37.6" style="animation-delay:5.04s"/>
+                    <line class="ed" x1="235.7" y1="60.2" x2="283.9" y2="37.6" style="animation-delay:5.46s"/>
+                    <line class="ed" x1="235.7" y1="60.2" x2="163.6" y2="59.2" style="animation-delay:0.00s"/>
+                    <line class="ed" x1="458.9" y1="47.7" x2="518.5" y2="68.8" style="animation-delay:0.42s"/>
+                    <line class="ed" x1="458.9" y1="47.7" x2="375.8" y2="49.9" style="animation-delay:0.84s"/>
+                    <line class="ed" x1="133.8" y1="227.0" x2="185.0" y2="235.0" style="animation-delay:1.26s"/>
+                    <line class="ed" x1="133.8" y1="227.0" x2="115.6" y2="175.5" style="animation-delay:1.68s"/>
+                    <line class="ed" x1="543.7" y1="197.9" x2="586.0" y2="174.6" style="animation-delay:2.10s"/>
+                    <line class="ed" x1="543.7" y1="197.9" x2="537.4" y2="124.1" style="animation-delay:2.52s"/>
+                    <line class="ed" x1="537.4" y1="124.1" x2="518.5" y2="68.8" style="animation-delay:2.94s"/>
+                    <line class="ed" x1="537.4" y1="124.1" x2="475.8" y2="133.8" style="animation-delay:3.36s"/>
+                    <line class="ed" x1="537.4" y1="124.1" x2="586.0" y2="174.6" style="animation-delay:3.78s"/>
+                    <line class="ed" x1="339.5" y1="207.4" x2="310.0" y2="196.0" style="animation-delay:4.20s"/>
+                    <line class="ed" x1="339.5" y1="207.4" x2="310.0" y2="252.0" style="animation-delay:4.62s"/>
+                    <line class="ed" x1="448.6" y1="203.4" x2="467.8" y2="251.4" style="animation-delay:5.04s"/>
+                    <line class="ed" x1="115.6" y1="175.5" x2="169.2" y2="177.4" style="animation-delay:5.46s"/>
+                    <line class="ed" x1="586.0" y1="174.6" x2="500.4" y2="189.5" style="animation-delay:0.00s"/>
+                    <line class="ed" x1="202.2" y1="147.1" x2="169.2" y2="177.4" style="animation-delay:0.42s"/>
+                    <line class="ed" x1="475.8" y1="133.8" x2="448.6" y2="203.4" style="animation-delay:0.84s"/>
+                    <line class="ed" x1="467.8" y1="251.4" x2="500.4" y2="189.5" style="animation-delay:1.26s"/>
+                    <line class="ed" x1="185.0" y1="235.0" x2="169.2" y2="177.4" style="animation-delay:1.68s"/>
+                    <line class="ed" x1="74.5" y1="93.2" x2="141.4" y2="138.2" style="animation-delay:2.10s"/>
+                    <line class="ed" x1="518.5" y1="68.8" x2="475.8" y2="133.8" style="animation-delay:2.52s"/>
+                    <line class="ed" x1="363.0" y1="282.5" x2="310.0" y2="252.0" style="animation-delay:2.94s"/>
+                    <line class="ed" x1="283.9" y1="37.6" x2="310.0" y2="52.0" style="animation-delay:3.36s"/>
+                    <line class="ed" x1="310.0" y1="52.0" x2="310.0" y2="112.0" style="animation-delay:3.78s"/>
+                    <line class="ed" x1="310.0" y1="112.0" x2="329.8" y2="56.5" style="animation-delay:4.20s"/>
+                    <line class="ed" x1="310.0" y1="196.0" x2="310.0" y2="252.0" style="animation-delay:4.62s"/>
+                    <circle class="nd" cx="260.3" cy="201.8" r="3.4" style="animation-delay:0.00s"/>
+                    <circle class="nd" cx="265.1" cy="127.1" r="3.4" style="animation-delay:0.50s"/>
+                    <circle class="nd hot" cx="141.4" cy="138.2" r="5.4" style="animation-delay:1.00s"/>
+                    <circle class="nd" cx="500.4" cy="189.5" r="3.4" style="animation-delay:1.50s"/>
+                    <circle class="nd" cx="388.0" cy="172.9" r="3.4" style="animation-delay:2.00s"/>
+                    <circle class="nd" cx="78.6" cy="210.8" r="3.4" style="animation-delay:2.50s"/>
+                    <circle class="nd" cx="116.2" cy="63.8" r="3.4" style="animation-delay:3.00s"/>
+                    <circle class="nd" cx="407.0" cy="100.8" r="3.4" style="animation-delay:3.50s"/>
+                    <circle class="nd" cx="217.2" cy="267.3" r="3.4" style="animation-delay:4.00s"/>
+                    <circle class="nd hot" cx="402.0" cy="247.3" r="5.4" style="animation-delay:4.50s"/>
+                    <circle class="nd" cx="197.8" cy="94.3" r="3.4" style="animation-delay:5.00s"/>
+                    <circle class="nd" cx="375.8" cy="49.9" r="3.4" style="animation-delay:5.50s"/>
+                    <circle class="nd" cx="318.0" cy="256.0" r="3.4" style="animation-delay:0.00s"/>
+                    <circle class="nd" cx="45.8" cy="136.5" r="3.4" style="animation-delay:0.50s"/>
+                    <circle class="nd" cx="329.8" cy="56.5" r="3.4" style="animation-delay:1.00s"/>
+                    <circle class="nd" cx="235.7" cy="60.2" r="3.4" style="animation-delay:1.50s"/>
+                    <circle class="nd" cx="458.9" cy="47.7" r="3.4" style="animation-delay:2.00s"/>
+                    <circle class="nd hot" cx="133.8" cy="227.0" r="5.4" style="animation-delay:2.50s"/>
+                    <circle class="nd" cx="543.7" cy="197.9" r="3.4" style="animation-delay:3.00s"/>
+                    <circle class="nd" cx="537.4" cy="124.1" r="3.4" style="animation-delay:3.50s"/>
+                    <circle class="nd" cx="339.5" cy="207.4" r="3.4" style="animation-delay:4.00s"/>
+                    <circle class="nd" cx="448.6" cy="203.4" r="3.4" style="animation-delay:4.50s"/>
+                    <circle class="nd" cx="115.6" cy="175.5" r="3.4" style="animation-delay:5.00s"/>
+                    <circle class="nd" cx="586.0" cy="174.6" r="3.4" style="animation-delay:5.50s"/>
+                    <circle class="nd" cx="202.2" cy="147.1" r="3.4" style="animation-delay:0.00s"/>
+                    <circle class="nd" cx="475.8" cy="133.8" r="3.4" style="animation-delay:0.50s"/>
+                    <circle class="nd hot" cx="163.6" cy="59.2" r="5.4" style="animation-delay:1.00s"/>
+                    <circle class="nd" cx="467.8" cy="251.4" r="3.4" style="animation-delay:1.50s"/>
+                    <circle class="nd" cx="185.0" cy="235.0" r="3.4" style="animation-delay:2.00s"/>
+                    <circle class="nd" cx="74.5" cy="93.2" r="3.4" style="animation-delay:2.50s"/>
+                    <circle class="nd" cx="518.5" cy="68.8" r="3.4" style="animation-delay:3.00s"/>
+                    <circle class="nd" cx="363.0" cy="282.5" r="3.4" style="animation-delay:3.50s"/>
+                    <circle class="nd" cx="283.9" cy="37.6" r="3.4" style="animation-delay:4.00s"/>
+                    <circle class="nd" cx="169.2" cy="177.4" r="3.4" style="animation-delay:4.50s"/>
+                    <circle class="nd" cx="310.0" cy="52.0" r="3.4" style="animation-delay:5.00s"/>
+                    <circle class="nd" cx="310.0" cy="112.0" r="3.4" style="animation-delay:5.50s"/>
+                    <circle class="nd hot" cx="310.0" cy="196.0" r="5.4" style="animation-delay:0.00s"/>
+                    <circle class="nd" cx="310.0" cy="252.0" r="3.4" style="animation-delay:0.50s"/>
+                  </svg>
+                </div>
+
+                <div class="tag " style="left:26px;top:108px;animation-delay:0.00s"><div class="n">96</div><div class="l">process maps<i>reused across clients</i></div></div>
+                <div class="tag " style="left:26px;top:300px;animation-delay:0.30s"><div class="n">18,400</div><div class="l">evidence records<i>traced to a source</i></div></div>
+                <div class="tag " style="left:770px;top:104px;animation-delay:0.60s"><div class="n">412</div><div class="l">requirements<i>each with a test</i></div></div>
+                <div class="tag " style="left:770px;top:300px;animation-delay:0.90s"><div class="n">210</div><div class="l">named owners<i>who decides what</i></div></div>
+                <div class="tag new" style="left:300px;top:22px;animation-delay:1.20s"><div class="n">340</div><div class="l">decisions logged<i>with the reason</i></div></div>
+                <div class="tag new" style="left:612px;top:22px;animation-delay:1.50s"><div class="n">9</div><div class="l">rule packs<i>UAE, France, more</i></div></div>
+
+                <div class="knroad">
+                  <span class="rc done">UAE<i>shipped</i></span>
+                  <span class="rc now">France<i>next</i></span>
+                  <span class="rc soon">Pillar Two<i>same library</i></span>
+                  <span class="rc soon">Tax engine<i>same library</i></span>
+                </div>
+
+                <div class="mlrule" style="top:452px"></div>
+                <div class="mlserif sm" style="top:466px">Most of it carries over. <b>Only the rule pack changes.</b></div>
+
+                <div class="askbar">
+                  <div class="askhd">
+                    <span class="aim"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9z"/></svg></span>
+                    <span class="lbl">Ask Atlas</span>
+                    <span class="askq" style="--ch:46ch">What can I import into the France engagement?</span>
+                  </div>
+                  <div class="aska">
+                    <span class="dot"></span>
+                    <span class="txt">Process maps, owners and the evidence library carry over as they are. <b>18 of 24</b> requirements and <b>22 of 31</b> test cases are reusable. Only the rule pack is new.</span>
+                    <span class="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.6"/></svg>Library &middot; 4 engagements</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4. TAKE CONTROL OF WHAT MATTERS -->
+<section class="border-t border-black/10 os-bg-ink px-5 py-24 text-white">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#FF8D6B]">Take control of what matters</div>
+      <h2 class="mt-4 text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">You make the decisions. You apply the judgment.</h2>
+      <p class="mt-6 text-lg leading-8 text-neutral-300 md:text-xl">AI handles pattern recognition, evidence extraction, and validation at scale.</p>
+    </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <div class="rounded-3xl border-2 border-white/10 bg-white/5 p-6 backdrop-blur">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#FF8D6B]">AI handles</div>
+        <ul class="mt-4 space-y-2 text-sm leading-6 text-neutral-200">
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Evidence extraction</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Requirement identification</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Cross-document comparison</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Process reconstruction from evidence</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Data validation at scale</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Contradiction detection</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Owner and action suggestions</span></li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border-2 border-white/10 bg-white/5 p-6 backdrop-blur">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#B84C16]">Your experts handle</div>
+        <ul class="mt-4 space-y-2 text-sm leading-6 text-neutral-200">
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Tax interpretation</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Materiality</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Business judgment</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Target process design</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Remediation priorities</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Implementation trade-offs</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#B84C16]"></span></span><span>Final recommendations</span></li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border-2 border-[#C9A227]/40 bg-[#C9A227]/10 p-6 backdrop-blur">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#C9A227]">Your team approves</div>
+        <ul class="mt-4 space-y-2 text-sm leading-6 text-neutral-200">
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#C9A227]"></span></span><span>Findings</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#C9A227]"></span></span><span>Requirements</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#C9A227]"></span></span><span>Caveats</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#C9A227]"></span></span><span>Process documents</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#C9A227]"></span></span><span>Owners</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#C9A227]"></span></span><span>Decisions</span></li>
+          <li class="flex items-start gap-2.5"><span class="flex h-6 w-1.5 shrink-0 items-center"><span class="h-1.5 w-1.5 rounded-full bg-[#C9A227]"></span></span><span>Sign-offs</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 rounded-2xl border-l-4 border-[#B84C16] bg-white/5 px-6 py-5">
+      <p class="text-lg font-bold leading-7 text-white md:text-xl">Every material decision remains evidence-backed and human-approved.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 7. FINAL CTA -->
+<section class="border-t border-black/10 bg-white px-5 py-24">
+  <div class="mx-auto max-w-4xl text-center">
+    <div class="eyebrow mb-3">See it in action &middot; Start with your own data</div>
+    <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">See where the project is likely to <span class="os-mark-gold">stall before work begins</span>.</h2>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+      <button type="button" data-open-lead-modal data-intent="assessment" class="inline-flex items-center gap-2 rounded-full os-bg-ink px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-black">Get one free client assessment</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="border-t border-black/10 px-5 py-12">
+  <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-5">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2 text-lg font-bold">
+        <img src="../../../assets/logo-v4.png" alt="OneSig" class="h-9 w-auto shrink-0">
+        
+      </div>
+      <p class="mt-4 max-w-sm text-sm leading-6 text-neutral-600">The AI OS for tax transformation advisors.</p>
+    </div>
+    <div>
+      <h4 class="font-bold">Solutions</h4>
+      <div class="mt-4 space-y-3 text-sm text-neutral-600">
+        <div><a href="/solutions/atlas/" class="hover:os-teal">Atlas</a></div>
+        <div><a href="/solutions/atlas/how-it-works/" class="hover:os-teal">How it works</a></div>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold">Countries</h4>
+      <div class="mt-4 space-y-3 text-sm text-neutral-600">
+        <div><a href="/countries/uae/" class="hover:os-teal">UAE</a></div>
+        <div><a href="/countries/france/" class="hover:os-teal">France</a></div>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold">Company</h4>
+      <div class="mt-4 space-y-3 text-sm text-neutral-600">
+        <div><a href="/solutions/atlas/partners/" class="hover:os-teal">Partners</a></div>
+        <div><a href="/access/" class="hover:os-teal">Access</a></div>
+        <div><a href="mailto:abhi@onesig.co" class="hover:os-teal">Contact</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto mt-10 max-w-7xl text-xs text-neutral-500">© 2026 OneSig Atlas. Experts for judgment. Machines for coverage.</div>
+</footer>
+
+
+<!-- ============ EMAIL LEAD MODAL ============ -->
+<div id="lead-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <div class="relative my-8 w-full max-w-md rounded-3xl border border-black/10 bg-white shadow-2xl">
+    <button type="button" id="lead-close" aria-label="Close" class="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+    </button>
+
+    <div id="lead-form-view" class="px-7 pb-7 pt-8 md:px-9">
+      <div class="eyebrow mb-3" id="lead-eyebrow">Free assessment</div>
+      <h3 class="text-2xl font-semibold tracking-[-0.02em] text-neutral-900">One free client assessment</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">Drop your email and we will send you instructions on how and where to run it. No cost, no commitment.</p>
+
+      <form id="lead-form" class="mt-6" novalidate>
+        <label class="block">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Work email<span class="os-clay">*</span></span>
+          <input type="email" name="workEmail" required class="mt-1.5 w-full os-card px-4 py-3 text-sm text-neutral-900 outline-none focus:border-[#B84C16] focus:ring-2 focus:ring-[#B84C16]/30" placeholder="name@company.com" />
+        </label>
+        <p id="lead-error" class="mt-3 hidden rounded-lg bg-[#B4432F]/8 px-3 py-2 text-xs os-clay ring-1 ring-[#B4432F]/30"></p>
+        <button type="submit" id="lead-submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black disabled:opacity-60">
+          Send request
+        </button>
+        <p class="mt-3 text-center text-[11px] text-neutral-500">Your email goes to abhi@onesig.co. No mailing list, no spam.</p>
+      </form>
+    </div>
+
+    <div id="lead-success-view" class="hidden px-7 py-10 text-center md:px-9 md:py-12">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-[#B84C16]/12 ring-4 ring-[#B84C16]/10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3 class="mt-5 text-2xl font-semibold tracking-[-0.02em] text-neutral-900">Thank you for your interest.</h3>
+      <p class="mx-auto mt-3 max-w-sm text-base leading-7 text-neutral-700">Check your inbox. Instructions are on the way.</p>
+      <button type="button" id="lead-success-close" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
+    const INTENT = {
+      'assessment': { eyebrow: 'Free assessment', subject: 'OneSig Atlas - free client assessment request' },
+    };
+    const modal       = document.getElementById('lead-modal');
+    const formView    = document.getElementById('lead-form-view');
+    const successView = document.getElementById('lead-success-view');
+    const form        = document.getElementById('lead-form');
+    const eyebrowEl   = document.getElementById('lead-eyebrow');
+    const errorEl     = document.getElementById('lead-error');
+    const submitBtn   = document.getElementById('lead-submit');
+    let currentIntent = 'sandbox';
+
+    function openLeadModal(intent) {
+      currentIntent = INTENT[intent] ? intent : 'assessment';
+      eyebrowEl.textContent = INTENT[currentIntent].eyebrow;
+      formView.classList.remove('hidden');
+      successView.classList.add('hidden');
+      errorEl.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send request';
+      form.reset();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function(){ form.querySelector('[name="workEmail"]').focus(); }, 50);
+    }
+    function closeLeadModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('[data-open-lead-modal]').forEach(function (btn) {
+      btn.addEventListener('click', function () { openLeadModal(btn.dataset.intent || 'walkthrough'); });
+    });
+    document.getElementById('lead-close').addEventListener('click', closeLeadModal);
+    document.getElementById('lead-success-close').addEventListener('click', closeLeadModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeLeadModal(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeLeadModal();
+    });
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const email = form.workEmail.value.trim();
+      const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+      if (!emailOk) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      errorEl.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      const subject = INTENT[currentIntent].subject;
+      const payload = {
+        _subject:  subject,
+        _captcha:  'false',
+        _template: 'table',
+        source:    'onesig-atlas-how-it-works',
+        intent:    currentIntent,
+        workEmail: email,
+        page:      'https://www.onesig.co/solutions/atlas/how-it-works/',
+        createdAt: new Date().toISOString(),
+      };
+      let succeeded = false;
+      try {
+        const res = await fetch(LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(function(){ return {}; });
+        succeeded = (data && (data.success === 'true' || data.success === true));
+      } catch (err) { succeeded = false; }
+      if (!succeeded) {
+        const body = 'Hi Abhi,%0A%0AI%27m interested in the OneSig Atlas readiness work.%0A%0AReply to: ' + encodeURIComponent(email) + '%0A%0AThanks.';
+        window.location.href = 'mailto:abhi@onesig.co?subject=' + encodeURIComponent(subject) + '&body=' + body;
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send request';
+      formView.classList.add('hidden');
+      successView.classList.remove('hidden');
+    });
+  })();
+</script>
+
+
+<script>
+(function(){
+  var cards=document.querySelectorAll('.hiw-card'); if(!cards.length) return;
+  if(!window.matchMedia('(hover: none)').matches) return;   // desktop uses :hover
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('hiw-play'); io.unobserve(e.target); } });
+  },{threshold:.28});
+  cards.forEach(function(c){ io.observe(c); });
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('cap-anim'); if(!root) return;
+  var SW=+root.dataset.w||960, SH=+root.dataset.h||600;
+  var scaler=root.querySelector('.cscaler'),
+      tracks=[].slice.call(root.querySelectorAll('.mltrack,.askq,.aska'));
+
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      tracks.forEach(function(t){ t.style.animationPlayState = e.isIntersecting ? 'running' : 'paused'; });
+    });
+  },{threshold:.1}).observe(root);
+
+  function fit(){
+    if(window.matchMedia('(max-width:900px)').matches){
+      scaler.style.transform=''; root.style.height=''; return;
+    }
+    var w=root.clientWidth, sc=Math.min(w/SW,0.62);
+    scaler.style.transform='scale('+sc+')';
+    root.style.height=Math.round(SH*sc)+'px';
+  }
+  fit();
+  if(window.ResizeObserver) new ResizeObserver(fit).observe(root);
+  window.addEventListener('resize',fit);
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('map-anim'); if(!root) return;
+  var SW=+root.dataset.w||960, SH=+root.dataset.h||600;
+  var scaler=root.querySelector('.cscaler'),
+      tracks=[].slice.call(root.querySelectorAll('.mltrack,.askq,.aska'));
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      tracks.forEach(function(t){ t.style.animationPlayState = e.isIntersecting ? 'running' : 'paused'; });
+    });
+  },{threshold:.1}).observe(root);
+  function fit(){
+    if(window.matchMedia('(max-width:900px)').matches){
+      scaler.style.transform=''; root.style.height=''; return;
+    }
+    var w=root.clientWidth, sc=Math.min(w/SW,0.62);
+    scaler.style.transform='scale('+sc+')';
+    root.style.height=Math.round(SH*sc)+'px';
+  }
+  fit();
+  if(window.ResizeObserver) new ResizeObserver(fit).observe(root);
+  window.addEventListener('resize',fit);
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('val-anim'); if(!root) return;
+  var SW=+root.dataset.w||960, SH=+root.dataset.h||600;
+  var scaler=root.querySelector('.cscaler'),
+      tracks=[].slice.call(root.querySelectorAll('.mltrack,.askq,.aska'));
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      tracks.forEach(function(t){ t.style.animationPlayState = e.isIntersecting ? 'running' : 'paused'; });
+    });
+  },{threshold:.1}).observe(root);
+  function fit(){
+    if(window.matchMedia('(max-width:900px)').matches){
+      scaler.style.transform=''; root.style.height=''; return;
+    }
+    var w=root.clientWidth, sc=Math.min(w/SW,0.62);
+    scaler.style.transform='scale('+sc+')';
+    root.style.height=Math.round(SH*sc)+'px';
+  }
+  fit();
+  if(window.ResizeObserver) new ResizeObserver(fit).observe(root);
+  window.addEventListener('resize',fit);
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('dep-anim'); if(!root) return;
+  var SW=+root.dataset.w||960, SH=+root.dataset.h||600;
+  var scaler=root.querySelector('.cscaler'),
+      tracks=[].slice.call(root.querySelectorAll('.mltrack,.askq,.aska'));
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      tracks.forEach(function(t){ t.style.animationPlayState = e.isIntersecting ? 'running' : 'paused'; });
+    });
+  },{threshold:.1}).observe(root);
+  function fit(){
+    if(window.matchMedia('(max-width:900px)').matches){
+      scaler.style.transform=''; root.style.height=''; return;
+    }
+    var w=root.clientWidth, sc=Math.min(w/SW,0.62);
+    scaler.style.transform='scale('+sc+')';
+    root.style.height=Math.round(SH*sc)+'px';
+  }
+  fit();
+  if(window.ResizeObserver) new ResizeObserver(fit).observe(root);
+  window.addEventListener('resize',fit);
+})();
+</script>
+<script>
+(function(){
+  var root=document.getElementById('kn-anim'); if(!root) return;
+  var SW=+root.dataset.w||960, SH=+root.dataset.h||600;
+  var scaler=root.querySelector('.cscaler'),
+      anim=[].slice.call(root.querySelectorAll('.ed,.nd,.web,.tag,.askq,.aska'));
+  new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      anim.forEach(function(t){ t.style.animationPlayState = e.isIntersecting ? 'running' : 'paused'; });
+    });
+  },{threshold:.1}).observe(root);
+  function fit(){
+    if(window.matchMedia('(max-width:900px)').matches){
+      scaler.style.transform=''; root.style.height=''; return;
+    }
+    var w=root.clientWidth, sc=Math.min(w/SW,0.62);
+    scaler.style.transform='scale('+sc+')';
+    root.style.height=Math.round(SH*sc)+'px';
+  }
+  fit();
+  if(window.ResizeObserver) new ResizeObserver(fit).observe(root);
+  window.addEventListener('resize',fit);
+})();
+</script>
+</body>
+</html>

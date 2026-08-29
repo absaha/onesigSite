@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog · OneSig Atlas</title>
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#F4F4F4">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="OneSig Blog - UAE e-invoicing readiness, mandates, and operating practice">
+<meta property="og:description" content="Field notes from UAE FTA Phase 2 e-invoicing readiness work. Mandate timelines, record-level validation, and what changes between a deck and a re-runnable loop.">
+<meta property="og:url" content="https://www.onesig.co/blog/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image-v13.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="OneSig Atlas - UAE FTA Phase 2 readiness">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OneSig Blog - UAE e-invoicing readiness, mandates, and operating practice">
+<meta name="twitter:description" content="Field notes from UAE FTA Phase 2 e-invoicing readiness work.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image-v13.png">
+
+<meta name="description" content="Field notes from UAE FTA Phase 2 e-invoicing readiness work. Mandate timelines, record-level validation, and what changes between a deck and a re-runnable loop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/august.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* ---- OneSig brand system: matches collateral + sample reports ---- */
+  :root {
+    --navy:  #0B2E4F;
+    --teal:  #0EA5A4;
+    --gold:  #C9A227;
+    --clay:  #B4432F;
+    --paper: #f7f1e7;
+    --ink:   #161616;
+  }
+  .os-navy      { color: var(--navy); }
+  .os-bg-navy   { background: var(--navy); }
+  .os-teal      { color: var(--teal); }
+  .os-bg-teal   { background: var(--teal); }
+  .os-gold      { color: var(--gold); }
+  .os-clay      { color: var(--clay); }
+  .os-mark-gold { background: rgba(201,162,39,0.22); padding: 0 0.35rem 0.1rem; }
+  .os-mark-teal { background: rgba(14,165,164,0.18); padding: 0 0.35rem 0.1rem; }
+  .font-mono, code, kbd, samp { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f7f1e7; color: #161616; -webkit-font-smoothing: antialiased; }
+  .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
+  h1, h2, h3, h4 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
+
+  /* ===== OneSig look & feel v2 (light/airy, Poppins) — overrides above ===== */
+  :root{
+    --navy:#0B2E4F; --teal:#0EA5A4; --gold:#C9A227; --clay:#B4432F;
+    --paper:#FCFBFD; --tint:#F4F4FA; --ink:#16161A; --muted:#6B6B78;
+  }
+  body{
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif !important;
+    font-weight:400; color:var(--ink); font-size:16px; line-height:1.7;
+    background-color:var(--paper) !important;
+    background-image:radial-gradient(rgba(11,46,79,0.05) 1px, transparent 1px);
+    background-size:24px 24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (min-width:768px){ body{font-size:17px;} }
+  h1,h2,h3,h4{
+    font-family:'Poppins',sans-serif !important;
+    font-weight:600 !important; letter-spacing:-0.03em; text-wrap:balance; color:var(--ink);
+  }
+  p{ text-wrap:pretty; }
+  .eyebrow{ font-family:'Poppins',sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--teal); }
+  .font-mono, code, kbd, samp{ font-family:'IBM Plex Mono',ui-monospace,monospace; }
+  section{ position:relative; }
+  .os-navy{color:var(--navy)} .os-bg-navy{background:var(--navy)}
+  .os-teal{color:var(--teal)} .os-bg-teal{background:var(--teal)}
+  .os-gold{color:var(--gold)} .os-clay{color:var(--clay)}
+  .os-mark-gold{ background:none; color:#C9A227; padding:0; }
+  .os-mark-teal{ background:none; color:#0EA5A4; padding:0; }
+  .os-card{ background:var(--tint); border:1px solid rgba(11,46,79,.06); border-radius:22px; }
+  .os-card-white{ background:#fff; border:1px solid rgba(11,46,79,.07); border-radius:22px; box-shadow:0 1px 2px rgba(16,16,26,.03); }
+  .os-orb{ position:absolute; border-radius:9999px; filter:blur(70px); opacity:.45; pointer-events:none; z-index:0; }
+  .os-orb-a{ width:420px;height:420px; background:radial-gradient(circle at 30% 30%, #FFD9A8, #FFB36B 45%, transparent 70%); }
+  .os-orb-b{ width:360px;height:360px; background:radial-gradient(circle at 40% 40%, #C6E9FF, #9FD4FF 45%, transparent 70%); }
+  .os-orb-c{ width:320px;height:320px; background:radial-gradient(circle at 40% 40%, #E9D7FF, #CBB4FF 45%, transparent 70%); }
+  .os-above{ position:relative; z-index:1; }
+  /* nav */
+  .osNavBtn.active{ background:rgba(11,46,79,.06) !important; }
+  .osDdItem.active{ background:rgba(14,165,164,.10) !important; color:#0B7C7B !important; }
+  /* blog nav system */
+  .os-nav{ background:rgba(255,255,255,.75) !important; }
+  .os-nav-links a.active{ background:rgba(11,46,79,.06) !important; }
+  .os-nav-cta{ background:var(--navy) !important; }
+  .os-nav-dd-menu a:hover{ background:#F4F4FA !important; }
+
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 border-b border-black/10 bg-white/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/solutions/atlas/" class="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900">
+      <img src="/assets/logo-v4.png" alt="OneSig" class="h-8 w-auto shrink-0">
+      Atlas
+    </a>
+    <div class="hidden items-center gap-1 lg:flex">
+      <a href="/solutions/atlas/" class="osNavBtn">Atlas</a>
+      <a href="/solutions/atlas/how-it-works/" class="osNavBtn">How it works</a>
+      <div class="osNavDdWrap">
+        <button type="button" class="osNavBtn osNavDd" aria-haspopup="true" aria-expanded="false">Partners
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="osNavDdMenu" role="menu">
+          <a href="/solutions/atlas/partners/" class="osDdItem" role="menuitem">Overview</a>
+          <a href="/for/advisors/" class="osDdItem" role="menuitem">For Advisors</a>
+          <a href="/for/technologypartners/" class="osDdItem" role="menuitem">For Technology Partners</a>
+          <a href="/for/asps/" class="osDdItem" role="menuitem">For ASPs</a>
+        </div>
+      </div>
+      <a href="/blog/" class="osNavBtn active">Blog</a>
+    </div>
+    <button type="button" data-open-lead-modal data-intent="assessment" class="rounded-full bg-[#171717] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black">Free assessment</button>
+  </div>
+</nav>
+<style>
+  .osNavBtn { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: rgb(82,82,82); transition: color 0.2s, background 0.2s; white-space: nowrap; background: transparent; border: 0; cursor: pointer; }
+  .osNavBtn:hover { color: rgb(23,23,23); }
+  .osNavBtn.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+  .osNavDdWrap { position: relative; }
+  .osNavDdMenu {
+    position: absolute; left: 0; top: 100%; margin-top: 0.35rem;
+    min-width: 220px; padding: 0.4rem;
+    background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px;
+    box-shadow: 0 20px 40px -12px rgba(0,0,0,0.18), 0 4px 8px -2px rgba(0,0,0,0.06);
+    opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 60;
+  }
+  .osNavDdWrap:hover .osNavDdMenu,
+  .osNavDdWrap:focus-within .osNavDdMenu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .osDdItem { display: block; padding: 0.5rem 0.75rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: rgb(64,64,64); }
+  .osDdItem:hover { background: rgb(245,245,245); color: rgb(23,23,23); }
+  .osDdItem.active { background: rgba(184,76,22,0.08); color: #B84C16; }
+</style>
+
+
+<!-- HEADER -->
+<section class="px-5 pt-16 pb-12 md:pt-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-4">OneSig journal</div>
+    <h1 class="text-5xl font-semibold tracking-[-0.04em] md:text-6xl">Field notes on UAE e-invoicing readiness.</h1>
+    <p class="mt-5 max-w-3xl text-lg leading-8 text-neutral-700">Short pieces on what we see across UAE FTA Phase 2 engagements. Mandate timelines, record-level validation, the gap between a deck and a re-runnable loop, and what partners actually walk away with.</p>
+  </div>
+</section>
+
+
+<!-- POST LIST -->
+<section class="border-t border-black/10 px-5 py-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-6">Latest</div>
+
+    <!-- Featured post: Founder POV -->
+    <a href="/blog/uae-e-invoicing-readiness-not-transmission/" class="group block overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm transition hover:shadow-md">
+      <div class="grid gap-0 md:grid-cols-[1.2fr_1fr]">
+        <!-- Left: poster -->
+        <div class="relative bg-gradient-to-br from-[#211d18] via-[#26221d] to-[#1c1813] p-8 text-white md:p-10">
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold uppercase tracking-[0.22em] text-[#FF8D6B]">Point of view</span>
+            <span class="rounded-full bg-[#B84C16]/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#FF8D6B] ring-1 ring-[#B84C16]/30">Founder</span>
+          </div>
+          <div class="mt-6 max-w-md font-serif text-2xl font-bold leading-tight tracking-tight text-white md:text-3xl">An invoice can be valid <span class="text-[#FF8D6B]">and wrong</span> at the same time.</div>
+          <div class="mt-6 flex flex-wrap items-center gap-3 text-xs text-neutral-400">
+            <span class="text-neutral-300">Abhi · Founder, OneSig</span>
+            <span class="text-neutral-500">·</span>
+            <span>4 June 2026</span>
+            <span class="text-neutral-500">·</span>
+            <span>12 min read</span>
+          </div>
+        </div>
+        <!-- Right: copy -->
+        <div class="flex flex-col justify-between gap-4 p-8 md:p-10">
+          <div>
+            <h2 class="text-2xl font-semibold leading-snug tracking-[-0.02em] text-neutral-900 group-hover:os-teal md:text-[1.75rem]">The same invoice can be valid and wrong at the same time. That's the UAE e-invoicing problem nobody is pricing in.</h2>
+            <p class="mt-4 text-base leading-7 text-neutral-700">Why readiness, not transmission, is the hard part of the FTA mandate, and how we're building an assessment that proves it.</p>
+          </div>
+          <div class="flex items-center gap-2 text-sm font-semibold os-teal">
+            Read post
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-1"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- More posts grid -->
+    <div class="mt-12">
+      <div class="eyebrow mb-6">More posts</div>
+      <div class="grid gap-5 md:grid-cols-2">
+
+        <!-- Post 2: SAP SIs -->
+        <a href="/blog/sap-system-integrators-uae-e-invoicing-readiness-billable-step/" class="group flex flex-col overflow-hidden os-card-white transition hover:shadow-md">
+          <div class="relative bg-white p-7">
+            <div class="text-[10px] font-bold uppercase tracking-[0.22em] os-teal">For partners</div>
+            <div class="mt-5 font-serif text-xl font-bold leading-tight tracking-tight text-neutral-900">Stop running readiness as <span class="os-teal">a conversation</span>.</div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between gap-4 p-7">
+            <div>
+              <h3 class="text-lg font-semibold leading-snug tracking-[-0.01em] text-neutral-900 group-hover:os-teal">How SAP system integrators can sell UAE e-invoicing readiness as a billable first step.</h3>
+              <p class="mt-3 text-sm leading-6 text-neutral-700">Most SIs give readiness away as pre-sales. Here's how to make it a billable, AI-native deliverable that de-risks the implementation you win next.</p>
+            </div>
+            <div class="flex items-center justify-between gap-3 text-xs text-neutral-500">
+              <span>OneSig · 3 June 2026 · 6 min</span>
+              <span class="inline-flex items-center gap-1 text-sm font-semibold os-teal">
+                Read
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-1"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 1: Deck vs loop -->
+        <a href="/blog/uae-e-invoicing-readiness-assessment-deck-vs-loop/" class="group flex flex-col overflow-hidden os-card-white transition hover:shadow-md">
+          <div class="relative bg-white p-7">
+            <div class="text-[10px] font-bold uppercase tracking-[0.22em] os-teal">UAE e-invoicing</div>
+            <div class="mt-5 font-serif text-xl font-bold leading-tight tracking-tight text-neutral-900">Readiness is not a deck. <span class="os-teal">It is a loop.</span></div>
+          </div>
+          <div class="flex flex-1 flex-col justify-between gap-4 p-7">
+            <div>
+              <h3 class="text-lg font-semibold leading-snug tracking-[-0.01em] text-neutral-900 group-hover:os-teal">Why a UAE e-invoicing readiness deck fails the week after you deliver it.</h3>
+              <p class="mt-3 text-sm leading-6 text-neutral-700">A readiness deck tells you what might be wrong on the day it was written. Your data keeps changing after that, so the deck is stale within a week.</p>
+            </div>
+            <div class="flex items-center justify-between gap-3 text-xs text-neutral-500">
+              <span>OneSig · 3 June 2026 · 5 min</span>
+              <span class="inline-flex items-center gap-1 text-sm font-semibold os-teal">
+                Read
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="transition group-hover:translate-x-1"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- More posts coming soon -->
+    <div class="mt-12 rounded-3xl border border-dashed border-black/15 bg-white/30 p-8 text-center">
+      <div class="eyebrow mb-2">More on the way</div>
+      <p class="text-base leading-7 text-neutral-600">We are publishing as we run engagements. Check back, or drop us a note if there is a UAE FTA Phase 2 question worth writing about.</p>
+      <a href="mailto:abhi@onesig.co?subject=Blog%20topic%20suggestion" class="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">
+        Suggest a topic →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FINAL CTA -->
+<section class="border-t border-black/10 px-5 py-20">
+  <div class="mx-auto max-w-5xl rounded-[2rem] bg-[#0c0c0c] p-10 text-white shadow-xl md:p-14">
+    <div class="text-xs font-bold uppercase tracking-[0.22em] text-[#FF8D6B]">Run the loop</div>
+    <h2 class="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-4xl">Readiness is not a deck. It is a loop.</h2>
+    <p class="mt-5 max-w-2xl text-base leading-7 text-neutral-300">Run Atlas before implementation starts. Scan → Fix → Validate → Prove.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="/solutions/atlas/" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 shadow-sm hover:bg-neutral-100">Book a UAE Readiness Scan →</a>
+      <a href="/solutions/atlas/partners/" class="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 hover:bg-white/15">For Partners →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="border-t border-black/10 bg-white px-5 py-10">
+  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 text-sm text-neutral-600">
+    <div>© OneSig 2026</div>
+    <div class="flex flex-wrap gap-5">
+      <a href="/solutions/atlas/" class="hover:text-neutral-900">Atlas</a>
+      <a href="/solutions/atlas/partners/" class="hover:text-neutral-900">For Partners</a>
+      <a href="/blog/" class="hover:text-neutral-900">Blog</a>
+      <a href="mailto:abhi@onesig.co" class="hover:text-neutral-900">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div id="lead-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <div class="relative my-8 w-full max-w-md rounded-3xl border border-black/10 bg-white shadow-2xl">
+    <button type="button" id="lead-close" aria-label="Close" class="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button>
+    <div id="lead-form-view" class="px-7 pb-7 pt-8 md:px-9">
+      <div class="eyebrow mb-3" id="lead-eyebrow">Free assessment</div>
+      <h3 class="text-2xl font-semibold text-neutral-900">One free client assessment</h3>
+      <p class="mt-3 text-sm text-neutral-600">Drop your email and we will send you instructions on how and where to run it. No cost, no commitment.</p>
+      <form id="lead-form" class="mt-6" novalidate>
+        <label class="block"><span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Work email<span class="os-clay">*</span></span><input type="email" name="workEmail" required class="mt-1.5 w-full os-card px-4 py-3 text-sm outline-none focus:border-[#B84C16] focus:ring-2 focus:ring-[#B84C16]/30" placeholder="name@company.com" /></label>
+        <p id="lead-error" class="mt-3 hidden rounded-lg bg-[#B4432F]/8 px-3 py-2 text-xs os-clay ring-1 ring-[#B4432F]/30"></p>
+        <button type="submit" id="lead-submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black disabled:opacity-60">Send request</button>
+        <p class="mt-3 text-center text-[11px] text-neutral-500">Your email goes to abhi@onesig.co. No mailing list.</p>
+      </form>
+    </div>
+    <div id="lead-success-view" class="hidden px-7 py-10 text-center md:px-9 md:py-12">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-[#B84C16]/12 ring-4 ring-[#B84C16]/10"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3 class="mt-5 text-2xl font-semibold text-neutral-900">Thank you for your interest.</h3>
+      <p class="mx-auto mt-3 max-w-sm text-base text-neutral-700">Check your inbox. Instructions are on the way.</p>
+      <button type="button" id="lead-success-close" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">Close</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
+    const INTENT = {
+      'assessment': { eyebrow: 'Free assessment', subject: 'OneSig Atlas - free client assessment request' },
+    };
+    const modal=document.getElementById('lead-modal'), formView=document.getElementById('lead-form-view'), successView=document.getElementById('lead-success-view'), form=document.getElementById('lead-form'), eyebrowEl=document.getElementById('lead-eyebrow'), errorEl=document.getElementById('lead-error'), submitBtn=document.getElementById('lead-submit');
+    let currentIntent='sandbox';
+    function openLeadModal(i){currentIntent=INTENT[i]?i:'sandbox';eyebrowEl.textContent=INTENT[currentIntent].eyebrow;formView.classList.remove('hidden');successView.classList.add('hidden');errorEl.classList.add('hidden');submitBtn.disabled=false;submitBtn.textContent='Send request';form.reset();modal.classList.remove('hidden');modal.classList.add('flex');document.body.style.overflow='hidden';setTimeout(()=>form.querySelector('[name=workEmail]').focus(),50);}
+    function closeLeadModal(){modal.classList.add('hidden');modal.classList.remove('flex');document.body.style.overflow='';}
+    document.querySelectorAll('[data-open-lead-modal]').forEach(b=>b.addEventListener('click',()=>openLeadModal(b.dataset.intent||'sandbox')));
+    document.getElementById('lead-close').addEventListener('click',closeLeadModal);
+    document.getElementById('lead-success-close').addEventListener('click',closeLeadModal);
+    modal.addEventListener('click',e=>{if(e.target===modal)closeLeadModal();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('hidden'))closeLeadModal();});
+    form.addEventListener('submit',async e=>{e.preventDefault();const email=form.workEmail.value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){errorEl.textContent='Please enter a valid email address.';errorEl.classList.remove('hidden');return;}errorEl.classList.add('hidden');submitBtn.disabled=true;submitBtn.textContent='Sending...';const subject=INTENT[currentIntent].subject;const payload={_subject:subject,_captcha:'false',_template:'table',source:'onesig-for-advisors',intent:currentIntent,workEmail:email,page:'https://www.onesig.co/for/advisors/',createdAt:new Date().toISOString()};let ok=false;try{const r=await fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});const d=await r.json().catch(()=>({}));ok=(d&&(d.success==='true'||d.success===true));}catch(x){}if(!ok){window.location.href='mailto:abhi@onesig.co?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent('Hi Abhi,\n\nI\'m interested in the OneSig Atlas advisor readiness work.\n\nReply to: '+email+'\n\nThanks.');}submitBtn.disabled=false;submitBtn.textContent='Send request';formView.classList.add('hidden');successView.classList.remove('hidden');});
+  })();
+</script>
+</body>
+</html>

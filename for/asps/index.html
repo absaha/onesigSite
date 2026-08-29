@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OneSig Atlas · For ASPs - Get more signed accounts to first live invoice with the team you already have</title>
+<meta name="description" content="Atlas as the assurance layer between your sales promise and your delivery reality. Client acquisition, cleaner onboarding, faster time to first live invoice.">
+<link rel="icon" href="/assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#F4F4F4">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="OneSig Atlas · For ASPs - Get more signed accounts to first live invoice with the team you already have">
+<meta property="og:description" content="Atlas as the assurance layer between your sales promise and your delivery reality.">
+<meta property="og:url" content="https://www.onesig.co/for/asps/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image-v13.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OneSig Atlas · For ASPs">
+<meta name="twitter:description" content="Get more signed accounts to first live invoice with the team you already have.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image-v13.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/august.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* ---- OneSig brand system: matches collateral + sample reports ---- */
+  :root {
+    --navy:  #0B2E4F;
+    --teal:  #0EA5A4;
+    --gold:  #C9A227;
+    --clay:  #B4432F;
+    --paper: #f7f1e7;
+    --ink:   #161616;
+  }
+  .os-navy      { color: var(--navy); }
+  .os-bg-navy   { background: var(--navy); }
+  .os-teal      { color: var(--teal); }
+  .os-bg-teal   { background: var(--teal); }
+  .os-gold      { color: var(--gold); }
+  .os-clay      { color: var(--clay); }
+  .os-mark-gold { background: rgba(201,162,39,0.22); padding: 0 0.35rem 0.1rem; }
+  .os-mark-teal { background: rgba(14,165,164,0.18); padding: 0 0.35rem 0.1rem; }
+  .font-mono, code, kbd, samp { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f7f1e7; color: #161616; }
+  .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
+  html { scroll-behavior: smooth; }
+  h1, h2, h3, h4 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  /* ===== OneSig look & feel v2 (light/airy, Poppins) — overrides above ===== */
+  :root{
+    --navy:#0B2E4F; --teal:#0EA5A4; --gold:#C9A227; --clay:#B4432F;
+    --paper:#FCFBFD; --tint:#F4F4FA; --ink:#16161A; --muted:#6B6B78;
+  }
+  body{
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif !important;
+    font-weight:400; color:var(--ink); font-size:16px; line-height:1.7;
+    background-color:var(--paper) !important;
+    background-image:radial-gradient(rgba(11,46,79,0.05) 1px, transparent 1px);
+    background-size:24px 24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (min-width:768px){ body{font-size:17px;} }
+  h1,h2,h3,h4{
+    font-family:'Poppins',sans-serif !important;
+    font-weight:600 !important; letter-spacing:-0.03em; text-wrap:balance; color:var(--ink);
+  }
+  p{ text-wrap:pretty; }
+  .eyebrow{ font-family:'Poppins',sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--teal); }
+  .font-mono, code, kbd, samp{ font-family:'IBM Plex Mono',ui-monospace,monospace; }
+  section{ position:relative; }
+  .os-navy{color:var(--navy)} .os-bg-navy{background:var(--navy)}
+  .os-teal{color:var(--teal)} .os-bg-teal{background:var(--teal)}
+  .os-gold{color:var(--gold)} .os-clay{color:var(--clay)}
+  .os-mark-gold{ background:none; color:#C9A227; padding:0; }
+  .os-mark-teal{ background:none; color:#0EA5A4; padding:0; }
+  .os-card{ background:var(--tint); border:1px solid rgba(11,46,79,.06); border-radius:22px; }
+  .os-card-white{ background:#fff; border:1px solid rgba(11,46,79,.07); border-radius:22px; box-shadow:0 1px 2px rgba(16,16,26,.03); }
+  .os-orb{ position:absolute; border-radius:9999px; filter:blur(70px); opacity:.45; pointer-events:none; z-index:0; }
+  .os-orb-a{ width:420px;height:420px; background:radial-gradient(circle at 30% 30%, #FFD9A8, #FFB36B 45%, transparent 70%); }
+  .os-orb-b{ width:360px;height:360px; background:radial-gradient(circle at 40% 40%, #C6E9FF, #9FD4FF 45%, transparent 70%); }
+  .os-orb-c{ width:320px;height:320px; background:radial-gradient(circle at 40% 40%, #E9D7FF, #CBB4FF 45%, transparent 70%); }
+  .os-above{ position:relative; z-index:1; }
+  /* nav */
+  .osNavBtn.active{ background:rgba(11,46,79,.06) !important; }
+  .osDdItem.active{ background:rgba(14,165,164,.10) !important; color:#0B7C7B !important; }
+  /* blog nav system */
+  .os-nav{ background:rgba(255,255,255,.75) !important; }
+  .os-nav-links a.active{ background:rgba(11,46,79,.06) !important; }
+  .os-nav-cta{ background:var(--navy) !important; }
+  .os-nav-dd-menu a:hover{ background:#F4F4FA !important; }
+
+  </style>
+</head>
+<body>
+
+<nav class="sticky top-0 z-50 border-b border-black/10 bg-white/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/solutions/atlas/" class="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900">
+      <img src="/assets/logo-v4.png" alt="OneSig" class="h-8 w-auto shrink-0">
+      Atlas
+    </a>
+    <div class="hidden items-center gap-1 lg:flex">
+      <a href="/solutions/atlas/" class="osNavBtn">Atlas</a>
+      <a href="/solutions/atlas/how-it-works/" class="osNavBtn">How it works</a>
+      <div class="osNavDdWrap">
+        <button type="button" class="osNavBtn osNavDd active" aria-haspopup="true" aria-expanded="false">Partners
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="osNavDdMenu" role="menu">
+          <a href="/solutions/atlas/partners/" class="osDdItem" role="menuitem">Overview</a>
+          <a href="/for/advisors/" class="osDdItem" role="menuitem">For Advisors</a>
+          <a href="/for/technologypartners/" class="osDdItem" role="menuitem">For Technology Partners</a>
+          <a href="/for/asps/" class="osDdItem active" role="menuitem">For ASPs</a>
+        </div>
+      </div>
+      <a href="/access/" class="osNavBtn">Access</a>
+    </div>
+    <button type="button" data-open-lead-modal data-intent="assessment" class="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90" style="background: var(--ink);">Free assessment</button>
+  </div>
+</nav>
+<style>
+  .osNavBtn { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: rgb(82,82,82); transition: color 0.2s, background 0.2s; white-space: nowrap; background: transparent; border: 0; cursor: pointer; }
+  .osNavBtn:hover { color: rgb(23,23,23); }
+  .osNavBtn.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+  .osNavDdWrap { position: relative; }
+  .osNavDdMenu {
+    position: absolute; left: 0; top: 100%; margin-top: 0.35rem;
+    min-width: 220px; padding: 0.4rem;
+    background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px;
+    box-shadow: 0 20px 40px -12px rgba(0,0,0,0.18), 0 4px 8px -2px rgba(0,0,0,0.06);
+    opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 60;
+  }
+  .osNavDdWrap:hover .osNavDdMenu,
+  .osNavDdWrap:focus-within .osNavDdMenu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .osDdItem { display: block; padding: 0.5rem 0.75rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: rgb(64,64,64); }
+  .osDdItem:hover { background: rgb(245,245,245); color: rgb(23,23,23); }
+  .osDdItem.active { background: rgba(184,76,22,0.08); color: #B84C16; }
+</style>
+
+
+<!-- 1. HERO -->
+<section class="px-5 pt-16 pb-14 md:pt-24 md:pb-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="text-[10px] font-bold uppercase tracking-[0.22em] os-teal">For UAE ASPs &amp; e-invoicing access points</div>
+    <h1 class="mt-3 text-5xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-6xl">Get more signed accounts to <span class="os-mark-teal">first live invoice</span> with the team you already have.</h1>
+    <p class="mt-7 max-w-3xl text-xl leading-9 text-neutral-700 md:text-2xl">How many accounts can your current onboarding team carry in parallel?</p>
+    <p class="mt-3 max-w-3xl text-lg leading-8 text-neutral-800 md:text-xl">Accounts stuck in readiness are deferred metered revenue. Atlas handles the readiness work in front of your platform, so you onboard more clients in parallel without becoming a consulting organization.</p>
+
+    <!-- Deferred-revenue example -->
+    <div class="mt-8 max-w-3xl rounded-2xl border border-[#B84C16]/40 bg-white p-5 shadow-sm md:p-6">
+      <div class="text-[10px] font-bold uppercase tracking-[0.22em] os-teal">The deferred-revenue math</div>
+      <div class="mt-3 flex flex-wrap items-center gap-2 font-mono text-sm text-neutral-800 md:text-base">
+        <span class="rounded bg-neutral-100 px-2 py-1 font-semibold text-neutral-900">12 stalled accounts</span>
+        <span class="text-neutral-400">&times;</span>
+        <span class="rounded bg-neutral-100 px-2 py-1 font-semibold text-neutral-900">2 delayed months</span>
+        <span class="text-neutral-400">&times;</span>
+        <span class="rounded bg-[#B84C16]/12 px-2 py-1 font-semibold text-[#0B2E4F]">avg monthly platform revenue</span>
+      </div>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">Every non-ready account is metered revenue you haven&rsquo;t started billing yet.</p>
+    </div>
+
+    <div class="mt-10 flex flex-wrap items-center gap-3">
+      <button type="button" data-open-lead-modal data-intent="assessment" class="inline-flex items-center gap-2 rounded-full os-bg-ink px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-black">Get one free client assessment</button>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- 2. THE MONEY STORY -->
+<section class="border-t border-black/10 bg-white px-5 py-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-3">The money story</div>
+    <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">The accredited list grows every month. <span class="os-mark-teal">Transmission stopped being the differentiator</span> the day it did.</h2>
+    <p class="mt-6 max-w-3xl text-lg leading-8 text-neutral-800 md:text-xl">In UAE, France, and every other mandate market, enterprises fail readiness before they fail transmission. The ASP that names the problem first - with evidence - is the ASP the enterprise onboards with. Atlas gives you a neutral scan you can walk into the room with, without pretending you're a consultancy.</p>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      <div class="rounded-2xl border border-[#B84C16]/40 bg-white p-5 shadow-sm">
+        <div class="text-sm font-bold text-neutral-900">Prospect ready accounts</div>
+        <p class="mt-2 text-sm leading-6 text-neutral-600">Every teardown you run surfaces the enterprises that need an access point next. You know before they RFP.</p>
+      </div>
+      <div class="rounded-2xl border border-[#B84C16]/40 bg-white p-5 shadow-sm">
+        <div class="text-sm font-bold text-neutral-900">Onboard cleaner clients</div>
+        <p class="mt-2 text-sm leading-6 text-neutral-600">Master data fixed, tax logic verified, invoice templates aligned before integration begins. Weeks off onboarding.</p>
+      </div>
+      <div class="rounded-2xl border-2 border-[#B84C16] bg-[#B84C16]/8 p-5 shadow-sm">
+        <div class="text-sm font-bold text-neutral-900">Reach first live invoice faster</div>
+        <p class="mt-2 text-sm leading-6 text-neutral-700">Your first go-live is when the client stops being cost and starts being revenue. Atlas moves that date left.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 3. HOW YOU USE IT -->
+<section class="border-t border-black/10 px-5 py-20">
+  <div class="mx-auto max-w-6xl">
+    <div class="eyebrow mb-3">How you use it</div>
+    <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">Three steps from prospect to connected client.</h2>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-3 lg:gap-6">
+      <div class="os-card p-6 md:p-7">
+        <div class="grid h-10 w-10 place-items-center rounded-lg bg-[#B84C16]/12 font-mono text-sm font-bold os-teal">01</div>
+        <div class="mt-4 text-lg font-bold text-neutral-900">Acquire the account</div>
+        <p class="mt-2 text-sm leading-6 text-neutral-700">Use a neutral Atlas teardown to open the enterprise conversation before provider selection. You're not selling - you're diagnosing.</p>
+      </div>
+      <div class="os-card p-6 md:p-7">
+        <div class="grid h-10 w-10 place-items-center rounded-lg bg-[#B84C16]/12 font-mono text-sm font-bold os-teal">02</div>
+        <div class="mt-4 text-lg font-bold text-neutral-900">Accelerate onboarding</div>
+        <p class="mt-2 text-sm leading-6 text-neutral-700">Receive validated requirements, source-system information, ownership, test scenarios, and open remediation items before integration begins.</p>
+      </div>
+      <div class="rounded-3xl border-2 border-[#B84C16] bg-gradient-to-br from-white via-white to-[#B84C16]/5 p-6 shadow-lg shadow-[#B84C16]/15 md:p-7">
+        <div class="grid h-10 w-10 place-items-center rounded-lg bg-[#B84C16] font-mono text-sm font-bold text-white">03</div>
+        <div class="mt-4 text-lg font-bold text-neutral-900">Expand account value</div>
+        <p class="mt-2 text-sm leading-6 text-neutral-700">Add entities, invoice volumes, transaction types, jurisdictions, and managed services after the first connection goes live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4. PROOF -->
+<section class="border-t border-black/10 bg-white px-5 py-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-3">Proof, not promise</div>
+    <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">The result: <span class="os-mark-teal">more connected clients reaching production</span>.</h2>
+    <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-2xl border border-[#B84C16]/40 bg-white p-5 shadow-sm"><div class="text-base font-bold leading-7 text-neutral-900">More qualified enterprise opportunities</div></div>
+      <div class="rounded-2xl border border-[#B84C16]/40 bg-white p-5 shadow-sm"><div class="text-base font-bold leading-7 text-neutral-900">Cleaner onboarding inputs</div></div>
+      <div class="rounded-2xl border border-[#B84C16]/40 bg-white p-5 shadow-sm"><div class="text-base font-bold leading-7 text-neutral-900">Fewer weeks discovering problems after signing</div></div>
+      <div class="rounded-2xl border-2 border-[#B84C16] bg-[#B84C16]/8 p-5 shadow-sm"><div class="text-base font-bold leading-7 text-neutral-900">Faster first live invoice</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4B. STAY A TECHNOLOGY COMPANY -->
+<section class="border-t border-black/10 bg-white px-5 py-20">
+  <div class="mx-auto max-w-5xl">
+    <div class="text-[10px] font-bold uppercase tracking-[0.22em] os-teal">The services-team trap</div>
+    <h2 class="mt-3 text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">Stay a technology company.</h2>
+    <p class="mt-6 text-lg leading-8 text-neutral-800 md:text-xl">You should not have to build an enablement services team to feed your own platform. Every hour your engineers spend fixing a client&rsquo;s master data is an hour they are not shipping product - and every consultant you hire to cover it changes what your company is.</p>
+    <p class="mt-4 text-lg font-semibold leading-8 text-neutral-900 md:text-xl"><span class="os-mark-teal">Atlas is the enablement layer under your brand, so readiness never becomes your headcount problem.</span></p>
+  </div>
+</section>
+
+
+<!-- OWNERSHIP BAND -->
+<section class="border-t border-black/10 px-5 py-14">
+  <div class="mx-auto max-w-5xl text-center">
+    <p class="text-2xl font-bold leading-9 tracking-[-0.01em] text-neutral-900 md:text-3xl md:leading-10">You own the client. You own the judgment. Atlas runs the readiness execution.</p>
+  </div>
+</section>
+
+
+<!-- 5. FINAL CTA -->
+<section class="border-t border-black/10 os-bg-ink px-5 py-24 text-white">
+  <div class="mx-auto max-w-4xl text-center">
+    <h2 class="text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Run one teardown. <span class="bg-[#B84C16]/100/30 px-1.5 pb-0.5">See a client you didn't know was ready to buy</span>.</h2>
+    <p class="mt-6 text-lg leading-9 text-neutral-300 md:text-xl">Send a limited account sample. We return findings you can walk into a sales meeting with.</p>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+      <button type="button" data-open-lead-modal data-intent="assessment" class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-neutral-900 shadow-sm hover:bg-neutral-100">Get one free client assessment</button>
+    </div>
+  </div>
+</section>
+
+
+<footer class="border-t border-black/10 bg-white px-5 py-10">
+  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 text-sm text-neutral-600">
+    <div>© OneSig 2026</div>
+    <div class="flex flex-wrap gap-5">
+      <a href="/solutions/atlas/" class="hover:text-neutral-900">Atlas</a>
+      <a href="/for/advisors/" class="hover:text-neutral-900">Advisors</a>
+      <a href="/for/technologypartners/" class="hover:text-neutral-900">SIs / ERP</a>
+      <a href="/for/asps/" class="hover:text-neutral-900">ASPs</a>
+      <a href="/solutions/atlas/how-it-works/" class="hover:text-neutral-900">How it works</a>
+      <a href="/access/" class="hover:text-neutral-900">Access</a>
+      <a href="mailto:abhi@onesig.co" class="hover:text-neutral-900">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+<div id="lead-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <div class="relative my-8 w-full max-w-md rounded-3xl border border-black/10 bg-white shadow-2xl">
+    <button type="button" id="lead-close" aria-label="Close" class="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button>
+    <div id="lead-form-view" class="px-7 pb-7 pt-8 md:px-9">
+      <div class="eyebrow mb-3" id="lead-eyebrow">Free assessment</div>
+      <h3 class="text-2xl font-semibold text-neutral-900">One free client assessment</h3>
+      <p class="mt-3 text-sm text-neutral-600">Drop your email and we will send you instructions on how and where to run it. No cost, no commitment.</p>
+      <form id="lead-form" class="mt-6" novalidate>
+        <label class="block"><span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Work email<span class="os-clay">*</span></span><input type="email" name="workEmail" required class="mt-1.5 w-full os-card px-4 py-3 text-sm outline-none focus:border-[#B84C16] focus:ring-2 focus:ring-[#B84C16]/30" placeholder="name@company.com" /></label>
+        <p id="lead-error" class="mt-3 hidden rounded-lg bg-[#B4432F]/8 px-3 py-2 text-xs os-clay ring-1 ring-[#B4432F]/30"></p>
+        <button type="submit" id="lead-submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black disabled:opacity-60">Send request</button>
+        <p class="mt-3 text-center text-[11px] text-neutral-500">Your email goes to abhi@onesig.co. No mailing list.</p>
+      </form>
+    </div>
+    <div id="lead-success-view" class="hidden px-7 py-10 text-center md:px-9 md:py-12">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-[#B84C16]/12 ring-4 ring-[#B84C16]/10"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3 class="mt-5 text-2xl font-semibold text-neutral-900">Thank you for your interest.</h3>
+      <p class="mx-auto mt-3 max-w-sm text-base text-neutral-700">Check your inbox. Instructions are on the way.</p>
+      <button type="button" id="lead-success-close" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    const LEAD_ENDPOINT='https://formsubmit.co/ajax/abhi@onesig.co';
+    const INTENT={'assessment':{eyebrow:'Free assessment',subject:'OneSig Atlas - free client assessment request'}};
+    const modal=document.getElementById('lead-modal'),formView=document.getElementById('lead-form-view'),successView=document.getElementById('lead-success-view'),form=document.getElementById('lead-form'),eyebrowEl=document.getElementById('lead-eyebrow'),errorEl=document.getElementById('lead-error'),submitBtn=document.getElementById('lead-submit');
+    let currentIntent='sandbox';
+    function openLeadModal(i){currentIntent=INTENT[i]?i:'sandbox';eyebrowEl.textContent=INTENT[currentIntent].eyebrow;formView.classList.remove('hidden');successView.classList.add('hidden');errorEl.classList.add('hidden');submitBtn.disabled=false;submitBtn.textContent='Send request';form.reset();modal.classList.remove('hidden');modal.classList.add('flex');document.body.style.overflow='hidden';setTimeout(()=>form.querySelector('[name=workEmail]').focus(),50);}
+    function closeLeadModal(){modal.classList.add('hidden');modal.classList.remove('flex');document.body.style.overflow='';}
+    document.querySelectorAll('[data-open-lead-modal]').forEach(b=>b.addEventListener('click',()=>openLeadModal(b.dataset.intent||'sandbox')));
+    document.getElementById('lead-close').addEventListener('click',closeLeadModal);
+    document.getElementById('lead-success-close').addEventListener('click',closeLeadModal);
+    modal.addEventListener('click',e=>{if(e.target===modal)closeLeadModal();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('hidden'))closeLeadModal();});
+    form.addEventListener('submit',async e=>{e.preventDefault();const email=form.workEmail.value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){errorEl.textContent='Please enter a valid email address.';errorEl.classList.remove('hidden');return;}errorEl.classList.add('hidden');submitBtn.disabled=true;submitBtn.textContent='Sending...';const subject=INTENT[currentIntent].subject;const payload={_subject:subject,_captcha:'false',_template:'table',source:'onesig-for-asps',intent:currentIntent,workEmail:email,page:'https://www.onesig.co/for/asps/',createdAt:new Date().toISOString()};let ok=false;try{const r=await fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});const d=await r.json().catch(()=>({}));ok=(d&&(d.success==='true'||d.success===true));}catch(x){}if(!ok){window.location.href='mailto:abhi@onesig.co?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent('Hi Abhi,\n\nI\'m interested in the OneSig Atlas ASP work.\n\nReply to: '+email+'\n\nThanks.');}submitBtn.disabled=false;submitBtn.textContent='Send request';formView.classList.add('hidden');successView.classList.remove('hidden');});
+  })();
+</script>
+</body>
+</html>

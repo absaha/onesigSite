@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OneSig Atlas · Tax discovery and deployment command center</title>
+<meta name="description" content="Tax programs fail on data, requirements, and ownership. Atlas finds what will break, assigns every fix, preserves every decision, and gives your ASP or SI a working implementation file. E-invoicing today. Any data-driven tax mandate next.">
+
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#f7f1e7">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="OneSig Atlas · Tax discovery and deployment command center">
+<meta property="og:description" content="No tax transformation should run without one. E-invoicing today. Any data-driven tax mandate next.">
+<meta property="og:url" content="https://www.onesig.co/solutions/readiness-scan/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="OneSig Atlas - Tax Readiness and Transformation">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OneSig Atlas · Tax discovery and deployment command center">
+<meta name="twitter:description" content="No tax transformation should run without one. E-invoicing today. Any data-driven tax mandate next.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', sans-serif; background: #f7f1e7; color: #161616; }
+  .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(109, 40, 217); }
+  html { scroll-behavior: smooth; }
+  /* Balance heading line lengths so wraps happen at natural break points, not mid-phrase */
+  h1, h2, h3, h4 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; text-wrap: balance; }
+  /* Pretty-wrap subheads: avoid orphan last words */
+  p { text-wrap: pretty; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 border-b border-black/10 bg-[#f7f1e7]/85 backdrop-blur-xl" id="osNav">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/solutions/readiness-scan/" class="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900">
+      <img src="../../assets/logo-v4.png" alt="OneSig" class="h-9 w-auto shrink-0">
+      Atlas
+    </a>
+    <div class="hidden items-center gap-1 lg:flex">
+      <a href="/solutions/readiness-scan/" class="osNavBtn active">Readiness Scan</a>
+      <a href="/solutions/readiness-scan/cost-calculator/" class="osNavBtn">Calculate Cost of Getting It Wrong</a>
+      <a href="/solutions/readiness-scan/partners/" class="osNavBtn">For Partners</a>
+      <a href="/access/" class="osNavBtn">Access</a>
+    </div>
+    <button type="button" data-open-lead-modal data-intent="walkthrough" class="rounded-full bg-[#171717] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black">Book a walkthrough</button>
+  </div>
+</nav>
+<style>
+  .osNavBtn { padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: rgb(82,82,82); transition: color 0.2s; white-space: nowrap; }
+  .osNavBtn:hover { color: rgb(23,23,23); }
+  .osNavBtn.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+</style>
+
+
+<!-- 1. HERO -->
+<section class="px-5 pt-16 pb-14 md:pt-24 md:pb-14">
+  <div class="mx-auto max-w-6xl">
+    <div class="eyebrow mb-4">Tax readiness and deployment, built for advisory and technology partners.</div>
+    <h1 class="text-5xl tracking-[-0.03em] text-neutral-900 md:text-7xl">Your clients need <span class="bg-amber-100 px-2 pb-1">deployment</span> faster than your firm can staff them.</h1>
+    <p class="mt-8 max-w-3xl text-2xl leading-10 text-neutral-900 md:text-3xl md:leading-[1.2]"><em>Stop running custom disjointed readiness and implementations. <span class="bg-violet-200/70 px-1.5 pb-0.5">Use a process so your whole team runs it the same way.</span></em></p>
+    <p class="mt-8 max-w-3xl text-base font-semibold leading-8 text-neutral-700 md:text-lg">E-invoicing today. Any data-driven tax mandate next.</p>
+
+    <div class="mt-8 flex flex-wrap items-center gap-3">
+      <button type="button" data-open-lead-modal data-intent="walkthrough" class="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-black">Book an Atlas walkthrough →</button>
+      <button type="button" data-open-lead-modal data-intent="teardown" class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-6 py-3 text-sm font-bold text-neutral-900 shadow-sm hover:bg-neutral-50">Get a free account teardown</button>
+    </div>
+    <p class="mt-3 text-xs text-neutral-600"><span class="font-semibold text-neutral-900">Free</span> · Limited sample · Brandable findings</p>
+
+    <!-- Small proof line: TaxTech500 badge + ex-employer wordmarks -->
+    <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-neutral-700">
+      <!-- TaxTech500 -->
+      <div class="flex items-center gap-2.5">
+        <img src="../../assets/taxtech500-badge.svg" alt="TaxTech500 award badge" class="h-8 w-8 shrink-0" loading="lazy" width="32" height="32">
+        <span><span class="font-semibold text-neutral-900">Leading E-Invoicing Consultancy</span> &middot; July 2026</span>
+      </div>
+      <!-- vertical divider -->
+      <span class="hidden text-neutral-300 md:inline">|</span>
+      <!-- Ex-employers -->
+      <div class="flex items-center gap-3">
+        <span class="text-neutral-600">Built by ex</span>
+        <img src="../../assets/amazon-wordmark.svg" alt="Amazon" class="h-5 w-auto" width="60" height="20" loading="lazy">
+        <span class="text-neutral-300">&middot;</span>
+        <img src="../../assets/deloitte-wordmark.svg" alt="Deloitte" class="h-5 w-auto" width="60" height="20" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 1B. ONE ENGINE. SWAPPABLE RULE PACKS. -->
+<section class="border-y border-black/10 bg-white/60 px-5 py-6">
+  <div class="mx-auto max-w-6xl">
+    <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+      <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">One engine · Swappable rule packs</div>
+      <div class="flex flex-wrap items-center gap-1.5">
+        <span class="rounded-md bg-violet-100 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-violet-800">UAE E-invoicing</span>
+        <span class="rounded-md bg-neutral-100 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-700">France E-invoicing</span>
+        <span class="rounded-md bg-neutral-100 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-700">Germany</span>
+        <span class="rounded-md bg-neutral-100 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-700">Tax engine &amp; ERP</span>
+        <span class="rounded-md bg-neutral-100 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-700">Pillar Two</span>
+        <span class="rounded-md bg-neutral-100 px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-neutral-700">SAF-T · DAC7 · ViDA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 1C. THE GAP — pain-setup before Who it's for -->
+<section class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-3">The gap</div>
+    <h2 class="text-4xl tracking-[-0.03em] text-neutral-900 md:text-5xl">You have <span class="bg-amber-100 px-1.5 pb-0.5">product and service expertise</span>. You don&rsquo;t have the AI-native ready process.</h2>
+    <p class="mt-8 text-lg leading-8 text-neutral-700 md:text-xl">The approach varies by client and by team member. Every readiness and implementation becomes a custom build with random tools.</p>
+    <p class="mt-6 text-xl leading-9 text-neutral-900 md:text-2xl md:leading-[1.3]"><em>Atlas is the accelerator your whole firm can use to <span class="bg-violet-200/70 px-1.5 pb-0.5">enhance the client experience</span>.</em></p>
+  </div>
+</section>
+
+
+<!-- 1D. WHO IT'S FOR — three partner routes into Atlas -->
+<section class="border-t border-black/10 px-5 py-20">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">Who it&rsquo;s for</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">One engine. <span class="bg-violet-200/70 px-1.5 pb-0.5">Three money stories</span>.</h2>
+    </div>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-3 lg:gap-6">
+      <a href="/for/advisors/" class="group flex flex-col rounded-3xl border-2 border-amber-200 bg-white p-6 shadow-sm transition hover:border-amber-400 hover:shadow-lg md:p-7">
+        <div class="grid h-11 w-11 place-items-center rounded-xl bg-amber-100 text-amber-700"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg></div>
+        <div class="mt-4 text-[10px] font-bold uppercase tracking-[0.22em] text-amber-700">For advisors</div>
+        <div class="mt-2 text-xl font-bold leading-7 text-neutral-900">Big 4-grade readiness without Big 4 overhead.</div>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">White-label the method. Own the client. Keep the follow-on advisory work.</p>
+        <div class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-amber-700 group-hover:text-amber-900">See the advisor path &rarr;</div>
+      </a>
+      <a href="/for/technologypartners/" class="group flex flex-col rounded-3xl border-2 border-violet-200 bg-white p-6 shadow-sm transition hover:border-violet-400 hover:shadow-lg md:p-7">
+        <div class="grid h-11 w-11 place-items-center rounded-xl bg-violet-100 text-violet-700"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
+        <div class="mt-4 text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">For SIs &amp; ERP partners</div>
+        <div class="mt-2 text-xl font-bold leading-7 text-neutral-900">Walk in with the problem already found.</div>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">Scan as pre-blueprint design input. Handoff file as SOW. Win the build.</p>
+        <div class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-violet-700 group-hover:text-violet-900">See the SI path &rarr;</div>
+      </a>
+      <a href="/for/asps/" class="group flex flex-col rounded-3xl border-2 border-emerald-200 bg-white p-6 shadow-sm transition hover:border-emerald-400 hover:shadow-lg md:p-7">
+        <div class="grid h-11 w-11 place-items-center rounded-xl bg-emerald-100 text-emerald-700"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg></div>
+        <div class="mt-4 text-[10px] font-bold uppercase tracking-[0.22em] text-emerald-700">For ASPs</div>
+        <div class="mt-2 text-xl font-bold leading-7 text-neutral-900">Every non-ready account is a connected client.</div>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">Neutral scan as acquisition. Cleaner onboarding. Faster first connected transaction.</p>
+        <div class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-700 group-hover:text-emerald-900">See the ASP path &rarr;</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 2. WHY NOW · MANDATE CALENDAR STRIP (2026 → 2030) -->
+<section class="border-t border-black/10 bg-white/50 px-5 py-20">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-5xl">
+      <div class="eyebrow mb-3">Why now</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">The mandate calendar is <span class="bg-amber-100 px-1.5 pb-0.5">already booked</span>.</h2>
+      <p class="mt-5 text-lg leading-8 text-neutral-700">Every wave is a new rule pack. Same engine.</p>
+    </div>
+
+    <div class="relative mt-12 overflow-hidden rounded-3xl border border-black/10 bg-white p-6 shadow-sm md:p-8">
+      <!-- Timeline base -->
+      <div class="relative">
+        <div class="absolute left-0 right-0 top-9 hidden h-0.5 bg-gradient-to-r from-violet-200 via-violet-400 to-neutral-200 md:block"></div>
+        <div class="relative grid gap-5 sm:grid-cols-2 md:grid-cols-5 md:gap-4">
+          <!-- 2026 UAE -->
+          <div class="text-center">
+            <div class="mx-auto grid h-6 w-6 place-items-center rounded-full bg-violet-600 text-white shadow-md shadow-violet-500/40"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div class="mt-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-violet-700">2026</div>
+            <div class="mt-1 text-base font-bold text-neutral-900">UAE FTA Phase 2</div>
+            <div class="mt-1 text-xs text-neutral-500">B2B e-invoicing live</div>
+          </div>
+          <!-- 2026 France -->
+          <div class="text-center">
+            <div class="mx-auto grid h-6 w-6 place-items-center rounded-full bg-violet-600 text-white shadow-md shadow-violet-500/40"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div class="mt-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-violet-700">Sep 2026</div>
+            <div class="mt-1 text-base font-bold text-neutral-900">France</div>
+            <div class="mt-1 text-xs text-neutral-500">Reception mandatory &middot; large enterprises issue</div>
+          </div>
+          <!-- 2027 Germany -->
+          <div class="text-center">
+            <div class="mx-auto grid h-6 w-6 place-items-center rounded-full bg-violet-500 text-white shadow-md shadow-violet-500/30"><span class="text-[10px] font-bold">·</span></div>
+            <div class="mt-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-violet-700">2027</div>
+            <div class="mt-1 text-base font-bold text-neutral-900">Germany</div>
+            <div class="mt-1 text-xs text-neutral-500">Issuance mandatory for >€800k</div>
+          </div>
+          <!-- 2028 ViDA -->
+          <div class="text-center">
+            <div class="mx-auto grid h-6 w-6 place-items-center rounded-full bg-neutral-300 text-neutral-500"><span class="text-[10px] font-bold">·</span></div>
+            <div class="mt-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-neutral-600">2028</div>
+            <div class="mt-1 text-base font-bold text-neutral-900">EU ViDA</div>
+            <div class="mt-1 text-xs text-neutral-500">Cross-border DRR framework</div>
+          </div>
+          <!-- 2029 UK -->
+          <div class="text-center">
+            <div class="mx-auto grid h-6 w-6 place-items-center rounded-full bg-neutral-300 text-neutral-500"><span class="text-[10px] font-bold">·</span></div>
+            <div class="mt-3 font-mono text-xs font-bold uppercase tracking-[0.12em] text-neutral-600">2029</div>
+            <div class="mt-1 text-base font-bold text-neutral-900">UK</div>
+            <div class="mt-1 text-xs text-neutral-500">HMRC e-invoicing rollout</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3 rounded-2xl border border-violet-200 bg-violet-50/60 px-5 py-4">
+        <span class="rounded-md bg-white px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-violet-800 ring-1 ring-violet-200">Live rule pack</span>
+        <span class="text-xs text-neutral-700">UAE, France</span>
+        <span class="text-violet-300">&middot;</span>
+        <span class="rounded-md bg-white px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-violet-800 ring-1 ring-violet-200">In build</span>
+        <span class="text-xs text-neutral-700">Germany, Pillar Two, SAF-T, DAC7, ViDA, UK</span>
+      </div>
+    </div>
+
+    <p class="mt-6 text-base leading-7 text-neutral-700 md:text-lg">Start with today&rsquo;s mandate. <span class="font-bold text-neutral-900">The engine carries to the next one.</span></p>
+  </div>
+</section>
+
+
+<!-- 3. SEE WHAT WILL BREAK — Evidence in / Readiness out -->
+<section id="product" class="border-t border-black/10 bg-white/50 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-5xl">
+      <div class="eyebrow mb-3">The product</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">See what will break <span class="bg-violet-200/70 px-1.5 pb-0.5">before go-live</span>.</h2>
+      <p class="mt-5 text-lg leading-8 text-neutral-700">Atlas turns your existing evidence into a live command center.</p>
+    </div>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-[1fr_auto_1fr] md:items-stretch">
+      <!-- Evidence in -->
+      <div class="rounded-3xl border border-black/10 bg-white p-7 shadow-sm md:p-8">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-neutral-500">Evidence in</div>
+        <div class="mt-5 grid gap-2 sm:grid-cols-2">
+          <div class="rounded-lg bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-800">ERP extracts</div>
+          <div class="rounded-lg bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-800">Invoice samples</div>
+          <div class="rounded-lg bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-800">Master data</div>
+          <div class="rounded-lg bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-800">Mapping files</div>
+          <div class="rounded-lg bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-800">Documents</div>
+          <div class="rounded-lg bg-neutral-50 px-3 py-2 text-sm font-semibold text-neutral-800">Workshops</div>
+        </div>
+      </div>
+
+      <!-- Arrow -->
+      <div class="hidden items-center justify-center text-violet-500 md:flex"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></div>
+
+      <!-- Readiness out -->
+      <div class="rounded-3xl border-2 border-violet-300 bg-gradient-to-br from-white via-white to-violet-50 p-7 shadow-lg shadow-violet-500/10 md:p-8">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">Readiness out</div>
+        <div class="mt-5 grid gap-2 sm:grid-cols-2">
+          <div class="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-neutral-900 ring-1 ring-violet-100">Blockers</div>
+          <div class="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-neutral-900 ring-1 ring-violet-100">Owners</div>
+          <div class="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-neutral-900 ring-1 ring-violet-100">Decisions</div>
+          <div class="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-neutral-900 ring-1 ring-violet-100">Fixes</div>
+          <div class="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-neutral-900 ring-1 ring-violet-100">Approvals</div>
+          <div class="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-neutral-900 ring-1 ring-violet-100">Implementation handoff</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4. NOT ANOTHER READINESS DECK — comparison table (moved) -->
+<section class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-5xl">
+      <div class="eyebrow mb-3">The contrast</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Not another <span class="bg-red-100 px-1.5 pb-0.5">readiness deck</span>.</h2>
+    </div>
+
+    <div class="mt-10 overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+      <div class="grid grid-cols-2 border-b border-black/10 bg-neutral-50">
+        <div class="border-r border-black/10 px-6 py-4 text-[10px] font-bold uppercase tracking-[0.22em] text-neutral-500">Traditional assessment</div>
+        <div class="px-6 py-4 text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">Atlas</div>
+      </div>
+      <div class="divide-y divide-black/5">
+        <div class="grid grid-cols-2">
+          <div class="border-r border-black/5 px-6 py-4 text-sm leading-6 text-neutral-500 line-through decoration-neutral-300">Interviews and spreadsheets</div>
+          <div class="px-6 py-4 text-sm font-semibold leading-6 text-neutral-900">Actual data and evidence</div>
+        </div>
+        <div class="grid grid-cols-2">
+          <div class="border-r border-black/5 px-6 py-4 text-sm leading-6 text-neutral-500 line-through decoration-neutral-300">Static findings</div>
+          <div class="px-6 py-4 text-sm font-semibold leading-6 text-neutral-900">Re-runnable command center</div>
+        </div>
+        <div class="grid grid-cols-2">
+          <div class="border-r border-black/5 px-6 py-4 text-sm leading-6 text-neutral-500 line-through decoration-neutral-300">Recommendations</div>
+          <div class="px-6 py-4 text-sm font-semibold leading-6 text-neutral-900">Owner-assigned actions</div>
+        </div>
+        <div class="grid grid-cols-2">
+          <div class="border-r border-black/5 px-6 py-4 text-sm leading-6 text-neutral-500 line-through decoration-neutral-300">Decisions in meeting notes</div>
+          <div class="px-6 py-4 text-sm font-semibold leading-6 text-neutral-900">Decisions and approvals preserved</div>
+        </div>
+        <div class="grid grid-cols-2">
+          <div class="border-r border-black/5 px-6 py-4 text-sm leading-6 text-neutral-500 line-through decoration-neutral-300">Depends who shows up</div>
+          <div class="px-6 py-4 text-sm font-semibold leading-6 text-neutral-900">Same engagement, any operator</div>
+        </div>
+        <div class="grid grid-cols-2 bg-violet-50/40">
+          <div class="border-r border-black/5 px-6 py-4 text-sm leading-6 text-neutral-500 line-through decoration-neutral-300">Another implementation discovery</div>
+          <div class="px-6 py-4 text-sm font-bold leading-6 text-violet-900">Working ASP and SI handoff</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 5. FOUR QUESTIONS ATLAS ANSWERS -->
+<section class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-5xl">
+      <div class="eyebrow mb-3">The four questions</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Four questions <span class="bg-violet-200/70 px-1.5 pb-0.5">Atlas answers</span>.</h2>
+    </div>
+
+    <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+      <div class="rounded-3xl border border-black/10 bg-white p-6 shadow-sm md:p-7">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">01</div>
+        <div class="mt-2 text-lg font-bold text-neutral-900">What will break?</div>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">Real records tested against the applicable rule pack.</p>
+      </div>
+      <div class="rounded-3xl border border-black/10 bg-white p-6 shadow-sm md:p-7">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">02</div>
+        <div class="mt-2 text-lg font-bold text-neutral-900">Who owns the fix?</div>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">Every blocker gets an owner, action, and evidence.</p>
+      </div>
+      <div class="rounded-3xl border border-black/10 bg-white p-6 shadow-sm md:p-7">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">03</div>
+        <div class="mt-2 text-lg font-bold text-neutral-900">What was decided?</div>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">Conflicts are surfaced. Decisions and approvals are preserved.</p>
+      </div>
+      <div class="rounded-3xl border-2 border-violet-300 bg-gradient-to-br from-white via-white to-violet-50 p-6 shadow-lg shadow-violet-500/10 md:p-7">
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-violet-700">04</div>
+        <div class="mt-2 text-lg font-bold text-neutral-900">What hands off?</div>
+        <p class="mt-3 text-sm leading-6 text-neutral-700">Scope, mappings, rules, test cases, actions, and open decisions.</p>
+      </div>
+    </div>
+
+    <!-- Chain pill -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-violet-200 bg-violet-50/40 px-6 py-5">
+      <span class="rounded-md bg-white px-3 py-1.5 text-xs font-bold text-neutral-900 ring-1 ring-violet-200">Record</span>
+      <span class="text-violet-400">→</span>
+      <span class="rounded-md bg-white px-3 py-1.5 text-xs font-bold text-neutral-900 ring-1 ring-violet-200">Rule</span>
+      <span class="text-violet-400">→</span>
+      <span class="rounded-md bg-white px-3 py-1.5 text-xs font-bold text-neutral-900 ring-1 ring-violet-200">Owner</span>
+      <span class="text-violet-400">→</span>
+      <span class="rounded-md bg-white px-3 py-1.5 text-xs font-bold text-neutral-900 ring-1 ring-violet-200">Evidence</span>
+      <span class="text-violet-400">→</span>
+      <span class="rounded-md bg-white px-3 py-1.5 text-xs font-bold text-neutral-900 ring-1 ring-violet-200">Decision</span>
+      <span class="text-violet-400">→</span>
+      <span class="rounded-md bg-violet-600 px-3 py-1.5 text-xs font-bold text-white">Approval</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- 6. WHAT IMPLEMENTATION RECEIVES -->
+<section class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-5xl">
+      <div class="eyebrow mb-3">What implementation receives</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] md:text-5xl">A <span class="bg-violet-200/70 px-1.5 pb-0.5">working implementation file</span>. Not a findings deck.</h2>
+    </div>
+
+    <div class="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+      <div class="flex items-start gap-3 rounded-xl border border-black/10 bg-white px-4 py-3.5"><svg class="mt-0.5 shrink-0 text-violet-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="text-sm font-semibold text-neutral-900">Entity and transaction scope</span></div>
+      <div class="flex items-start gap-3 rounded-xl border border-black/10 bg-white px-4 py-3.5"><svg class="mt-0.5 shrink-0 text-violet-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="text-sm font-semibold text-neutral-900">Source systems and mappings</span></div>
+      <div class="flex items-start gap-3 rounded-xl border border-black/10 bg-white px-4 py-3.5"><svg class="mt-0.5 shrink-0 text-violet-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="text-sm font-semibold text-neutral-900">Data and tax-rule gaps</span></div>
+      <div class="flex items-start gap-3 rounded-xl border border-black/10 bg-white px-4 py-3.5"><svg class="mt-0.5 shrink-0 text-violet-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="text-sm font-semibold text-neutral-900">Test scenarios</span></div>
+      <div class="flex items-start gap-3 rounded-xl border border-black/10 bg-white px-4 py-3.5"><svg class="mt-0.5 shrink-0 text-violet-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="text-sm font-semibold text-neutral-900">Remediation owners and actions</span></div>
+      <div class="flex items-start gap-3 rounded-xl border border-black/10 bg-white px-4 py-3.5"><svg class="mt-0.5 shrink-0 text-violet-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="text-sm font-semibold text-neutral-900">Decisions and approvals</span></div>
+      <div class="flex items-start gap-3 rounded-xl border-2 border-violet-300 bg-violet-50/40 px-4 py-3.5 md:col-span-2 lg:col-span-1"><svg class="mt-0.5 shrink-0 text-violet-700" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span class="text-sm font-bold text-neutral-900">ASP and SI requirements</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 7. BIGGER THAN E-INVOICING -->
+<section id="beyond" class="border-t border-black/10 bg-neutral-900 px-5 py-24 text-white">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-5xl">
+      <div class="eyebrow mb-3 text-violet-300">Beyond e-invoicing</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Every tax mandate creates the <span class="bg-violet-500/30 px-1.5 pb-0.5">same engineering problem</span>.</h2>
+    </div>
+
+    <!-- Chain -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-6">
+      <span class="rounded-md bg-white/10 px-3 py-1.5 text-xs font-bold text-white ring-1 ring-white/20">Scope</span>
+      <span class="text-violet-300">→</span>
+      <span class="rounded-md bg-white/10 px-3 py-1.5 text-xs font-bold text-white ring-1 ring-white/20">Map</span>
+      <span class="text-violet-300">→</span>
+      <span class="rounded-md bg-white/10 px-3 py-1.5 text-xs font-bold text-white ring-1 ring-white/20">Validate</span>
+      <span class="text-violet-300">→</span>
+      <span class="rounded-md bg-white/10 px-3 py-1.5 text-xs font-bold text-white ring-1 ring-white/20">Decide</span>
+      <span class="text-violet-300">→</span>
+      <span class="rounded-md bg-white/10 px-3 py-1.5 text-xs font-bold text-white ring-1 ring-white/20">Fix</span>
+      <span class="text-violet-300">→</span>
+      <span class="rounded-md bg-violet-500 px-3 py-1.5 text-xs font-bold text-white">Prove</span>
+    </div>
+
+    <p class="mt-10 text-lg leading-9 text-neutral-200 md:text-xl">Atlas uses one canonical model with swappable rule packs.</p>
+    <p class="mt-4 text-xl font-bold leading-9 text-white md:text-2xl">Start with e-invoicing.</p>
+    <p class="mt-2 text-lg leading-9 text-neutral-200 md:text-xl">Extend to tax-engine rollouts, ERP transformations, Pillar Two, SAF-T, DAC7, and future mandates.</p>
+
+    <div class="mt-8 grid gap-2 sm:grid-cols-3 lg:grid-cols-6">
+      <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center text-xs font-bold text-white">E-invoicing</div>
+      <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center text-xs font-bold text-white">Tax-engine rollouts</div>
+      <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center text-xs font-bold text-white">ERP transformations</div>
+      <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center text-xs font-bold text-white">Pillar Two</div>
+      <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center text-xs font-bold text-white">SAF-T</div>
+      <div class="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-center text-xs font-bold text-white">DAC7</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 8. QUIET ENTERPRISE LINE -->
+<section class="border-t border-black/10 px-5 py-10">
+  <div class="mx-auto max-w-5xl text-center text-sm leading-7 text-neutral-600 md:text-base">
+    <span class="font-semibold text-neutral-900">Enterprise team?</span> Atlas reaches you through your SI or advisor &mdash; or <button type="button" data-open-lead-modal data-intent="walkthrough" class="underline decoration-neutral-300 underline-offset-2 hover:text-neutral-900 hover:decoration-neutral-700">talk to us directly</button>.
+  </div>
+</section>
+
+
+<!-- 9. FAQ — questions partners ask first -->
+<section class="border-t border-black/10 bg-white/50 px-5 py-24">
+  <div class="mx-auto max-w-4xl">
+    <div class="eyebrow mb-3">FAQ</div>
+    <h2 class="text-4xl tracking-[-0.03em] text-neutral-900 md:text-5xl">Questions partners ask first.</h2>
+    <p class="mt-5 text-base leading-8 text-neutral-700 md:text-lg">The practical stuff. Who it&rsquo;s for, how long readiness takes to run, what happens if your firm has its own method, how we handle AI output quality, and whether you can white-label everything. (Yes.)</p>
+
+    <div class="mt-10 space-y-3">
+      <details class="group rounded-2xl border border-black/10 bg-white p-5 shadow-sm md:p-6">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-base font-semibold text-neutral-900 md:text-lg">
+          How is this different from just using ChatGPT or building this ourselves?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-4 text-sm leading-7 text-neutral-700 md:text-base">
+          Atlas is a domain-specific engine, not a chat interface. UAE FTA + France PINT + Peppol Directory + registry-lookup rule packs, structured evidence capture, and requirement-to-record traceability are wired in. ChatGPT can summarize a document; Atlas validates a customer master file against a live registry, tags every blocker to a rule, assigns an owner, and preserves the evidence. And it&rsquo;s the same output whoever on your team runs it.
+        </div>
+      </details>
+
+      <details class="group rounded-2xl border border-black/10 bg-white p-5 shadow-sm md:p-6">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-base font-semibold text-neutral-900 md:text-lg">
+          Can my team run scans without me being involved in every step?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-4 text-sm leading-7 text-neutral-700 md:text-base">
+          Yes. Atlas encodes the method. Any qualified team member &mdash; analyst, associate, senior &mdash; runs the same scan the same way and produces the same-shape output. You review and approve. You stop being the bottleneck.
+        </div>
+      </details>
+
+      <details class="group rounded-2xl border border-black/10 bg-white p-5 shadow-sm md:p-6">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-base font-semibold text-neutral-900 md:text-lg">
+          What if we&rsquo;re a small firm or solo advisor?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-4 text-sm leading-7 text-neutral-700 md:text-base">
+          Same engine, same output. Boutique firms and solo advisors run Atlas the same way multi-team consultancies do. The engine <em>is</em> the method &mdash; seat count doesn&rsquo;t change what lands in the client&rsquo;s hand.
+        </div>
+      </details>
+
+      <details class="group rounded-2xl border border-black/10 bg-white p-5 shadow-sm md:p-6">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-base font-semibold text-neutral-900 md:text-lg">
+          How long does it take to complete a readiness scan?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-4 text-sm leading-7 text-neutral-700 md:text-base">
+          The <span class="font-semibold text-neutral-900">free account teardown</span> returns findings on a limited sample within one business day. A full readiness engagement typically runs 1&ndash;3 weeks depending on entity count, source systems, and invoice volume.
+        </div>
+      </details>
+
+      <details class="group rounded-2xl border border-black/10 bg-white p-5 shadow-sm md:p-6">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-base font-semibold text-neutral-900 md:text-lg">
+          Which mandates does Atlas support today?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-4 text-sm leading-7 text-neutral-700 md:text-base">
+          <span class="font-semibold text-neutral-900">Live rule packs:</span> UAE FTA Phase 2 and France (Sept 2026). <span class="font-semibold text-neutral-900">In build:</span> Germany 2027, Pillar Two, SAF-T, DAC7, EU ViDA, and UK 2029. The engine is the same across mandates; only the pack swaps.
+        </div>
+      </details>
+
+      <details class="group rounded-2xl border border-black/10 bg-white p-5 shadow-sm md:p-6">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-base font-semibold text-neutral-900 md:text-lg">
+          Do we get to white-label everything?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-4 text-sm leading-7 text-neutral-700 md:text-base">
+          Yes. Findings reports, workshop outputs, and client-facing deliverables can be co-branded or fully white-labeled under your firm&rsquo;s name. Atlas is the method; your team is the face.
+        </div>
+      </details>
+
+      <details class="group rounded-2xl border border-black/10 bg-white p-5 shadow-sm md:p-6">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-base font-semibold text-neutral-900 md:text-lg">
+          What about data security and NDAs?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-4 text-sm leading-7 text-neutral-700 md:text-base">
+          NDA and DPA are signed before any engagement. Client data is encrypted at rest and in transit; access is strictly scoped. Findings anonymize sensitive identifiers unless the client explicitly agrees otherwise. SOC 2 attestation is on the roadmap.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- 10. FINAL CTA -->
+<section class="border-t border-black/10 bg-neutral-900 px-5 py-24 text-white">
+  <div class="mx-auto max-w-5xl text-center">
+    <h2 class="text-4xl font-semibold tracking-[-0.04em] text-white md:text-6xl">Run the command center <span class="bg-violet-500/30 px-2 pb-1">before the mandate runs you</span>.</h2>
+
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+      <span class="rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm font-bold text-white">Scan</span>
+      <svg class="text-violet-300" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      <span class="rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm font-bold text-white">Fix</span>
+      <svg class="text-violet-300" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      <span class="rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm font-bold text-white">Validate</span>
+      <svg class="text-violet-300" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+      <span class="rounded-full border border-violet-400 bg-violet-500/20 px-5 py-2 text-sm font-bold text-white">Prove</span>
+    </div>
+
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+      <button type="button" data-open-lead-modal data-intent="walkthrough" class="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-neutral-900 shadow-sm hover:bg-neutral-100">Book an Atlas walkthrough →</button>
+      <button type="button" data-open-lead-modal data-intent="teardown" class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-transparent px-6 py-3 text-sm font-bold text-white hover:bg-white/10">Get a free account teardown</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="border-t border-black/10 px-5 py-12">
+  <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-5">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-2 text-lg font-bold">
+        <img src="../../assets/logo-v4.png" alt="OneSig" class="h-9 w-auto shrink-0">
+        
+      </div>
+      <p class="mt-4 max-w-sm text-sm leading-6 text-neutral-600">Tax discovery and deployment command center. E-invoicing today. Any data-driven tax mandate next.</p>
+    </div>
+    <div>
+      <h4 class="font-bold">Solutions</h4>
+      <div class="mt-4 space-y-3 text-sm text-neutral-600">
+        <div><a href="/solutions/readiness-scan/" class="hover:text-violet-700">Readiness Scan</a></div>
+        <div><a href="/solutions/readiness-scan/cost-calculator/" class="hover:text-violet-700">Cost Calculator</a></div>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold">Countries</h4>
+      <div class="mt-4 space-y-3 text-sm text-neutral-600">
+        <div><a href="/countries/uae/" class="hover:text-violet-700">UAE</a></div>
+        <div><a href="/countries/france/" class="hover:text-violet-700">France</a></div>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-bold">Company</h4>
+      <div class="mt-4 space-y-3 text-sm text-neutral-600">
+        <div><a href="/solutions/readiness-scan/partners/" class="hover:text-violet-700">Partners</a></div>
+        <div><a href="/access/" class="hover:text-violet-700">Access</a></div>
+        <div><a href="mailto:abhi@onesig.co" class="hover:text-violet-700">Contact</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto mt-10 max-w-7xl text-xs text-neutral-500">© 2026 OneSig Atlas. Tax discovery and deployment command center.</div>
+</footer>
+
+
+<!-- ============ EMAIL LEAD MODAL ============ -->
+<div id="lead-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <div class="relative my-8 w-full max-w-md rounded-3xl border border-black/10 bg-white shadow-2xl">
+    <button type="button" id="lead-close" aria-label="Close" class="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+    </button>
+
+    <div id="lead-form-view" class="px-7 pb-7 pt-8 md:px-9">
+      <div class="eyebrow mb-3" id="lead-eyebrow">Book an Atlas walkthrough</div>
+      <h3 class="text-2xl font-semibold tracking-[-0.02em] text-neutral-900">Where should we reach you?</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">Drop your email and we'll get back to you within one business day.</p>
+
+      <form id="lead-form" class="mt-6" novalidate>
+        <label class="block">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Work email<span class="text-red-600">*</span></span>
+          <input type="email" name="workEmail" required class="mt-1.5 w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm text-neutral-900 outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-200" placeholder="name@company.com" />
+        </label>
+
+        <p id="lead-error" class="mt-3 hidden rounded-lg bg-red-50 px-3 py-2 text-xs text-red-700 ring-1 ring-red-200"></p>
+
+        <button type="submit" id="lead-submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black disabled:opacity-60">
+          Send →
+        </button>
+        <p class="mt-3 text-center text-[11px] text-neutral-500">Your email goes to abhi@onesig.co. No mailing list, no spam.</p>
+      </form>
+    </div>
+
+    <div id="lead-success-view" class="hidden px-7 py-10 text-center md:px-9 md:py-12">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-emerald-100 ring-4 ring-emerald-50">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3 class="mt-5 text-2xl font-semibold tracking-[-0.02em] text-neutral-900">Thank you for your interest.</h3>
+      <p class="mx-auto mt-3 max-w-sm text-base leading-7 text-neutral-700">We will shoot you an email.</p>
+      <button type="button" id="lead-success-close" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
+
+    const INTENT = {
+      'walkthrough': { eyebrow: 'Book an Atlas walkthrough',   subject: 'OneSig Atlas walkthrough request' },
+      'teardown':    { eyebrow: 'Get a free account teardown', subject: 'OneSig Atlas - free account teardown request' },
+      'demo':        { eyebrow: 'Request a demo',              subject: 'OneSig Atlas demo request' },
+    };
+
+    const modal       = document.getElementById('lead-modal');
+    const formView    = document.getElementById('lead-form-view');
+    const successView = document.getElementById('lead-success-view');
+    const form        = document.getElementById('lead-form');
+    const eyebrowEl   = document.getElementById('lead-eyebrow');
+    const errorEl     = document.getElementById('lead-error');
+    const submitBtn   = document.getElementById('lead-submit');
+    let currentIntent = 'walkthrough';
+
+    function openLeadModal(intent) {
+      currentIntent = INTENT[intent] ? intent : 'walkthrough';
+      eyebrowEl.textContent = INTENT[currentIntent].eyebrow;
+      formView.classList.remove('hidden');
+      successView.classList.add('hidden');
+      errorEl.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send →';
+      form.reset();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function(){ form.querySelector('[name="workEmail"]').focus(); }, 50);
+    }
+    function closeLeadModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-open-lead-modal]').forEach(function (btn) {
+      btn.addEventListener('click', function () { openLeadModal(btn.dataset.intent || 'walkthrough'); });
+    });
+    document.getElementById('lead-close').addEventListener('click', closeLeadModal);
+    document.getElementById('lead-success-close').addEventListener('click', closeLeadModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeLeadModal(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeLeadModal();
+    });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const email = form.workEmail.value.trim();
+      const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+      if (!emailOk) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      errorEl.classList.add('hidden');
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const subject = INTENT[currentIntent].subject;
+      const payload = {
+        _subject:  subject,
+        _captcha:  'false',
+        _template: 'table',
+        source:    'onesig-atlas-readiness-scan-page',
+        intent:    currentIntent,
+        workEmail: email,
+        page:      'https://www.onesig.co/solutions/readiness-scan/',
+        createdAt: new Date().toISOString(),
+      };
+
+      let succeeded = false;
+      try {
+        const res = await fetch(LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(function(){ return {}; });
+        succeeded = (data && (data.success === 'true' || data.success === true));
+      } catch (err) {
+        succeeded = false;
+      }
+
+      if (!succeeded) {
+        const body = 'Hi Abhi,%0A%0AI%27m interested in the OneSig Atlas readiness work.%0A%0AReply to: ' + encodeURIComponent(email) + '%0A%0AThanks.';
+        window.location.href = 'mailto:abhi@onesig.co?subject=' + encodeURIComponent(subject) + '&body=' + body;
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send →';
+      formView.classList.add('hidden');
+      successView.classList.remove('hidden');
+    });
+  })();
+</script>
+
+</body>
+</html>

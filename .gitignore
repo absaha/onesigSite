@@ -1,0 +1,29 @@
+# Whitelist: this repo tracks the onesig.co website only.
+# The surrounding folder also holds internal strategy, client data and the
+# OnesigAtlas app codebase - none of that belongs in this repo.
+
+# 1. Ignore everything at the top level.
+/*
+
+# 2. Re-include only the website.
+!/access/
+!/assets/
+!/blog/
+!/countries/
+!/for/
+!/partners/
+!/platform/
+!/solutions/
+
+# 3. Config that must ship with the site.
+!/vercel.json
+!/.vercelignore
+!/.gitignore
+
+# 4. Junk that can appear inside the included folders.
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vercel/
+node_modules/

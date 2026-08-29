@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OneSig Atlas · UAE E-Invoicing Cost of Getting It Wrong Calculator</title>
+<meta name="description" content="Estimate the cost of failed invoices, ERP rework, delayed collections, and audit cleanup if UAE e-invoicing readiness gaps surface during implementation or audit.">
+
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#F4F4F4">
+
+<!-- Open Graph (link previews on iMessage, WhatsApp, Slack, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="UAE E-Invoicing Cost of Getting It Wrong Calculator · OneSig Atlas">
+<meta property="og:description" content="Estimate the cost of failed invoices, ERP rework, delayed collections, and audit cleanup before the UAE mandate hits.">
+<meta property="og:url" content="https://www.onesig.co/solutions/readiness-scan/cost-calculator/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-calculator.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="OneSig Atlas - UAE FTA Phase 2 readiness">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UAE E-Invoicing Cost of Getting It Wrong Calculator · OneSig Atlas">
+<meta name="twitter:description" content="Estimate avoidable cost from late discovery of UAE e-invoicing readiness gaps.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-calculator.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/august.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  /* ---- OneSig brand system: matches collateral + sample reports ---- */
+  :root {
+    --navy:  #0B2E4F;
+    --teal:  #0EA5A4;
+    --gold:  #C9A227;
+    --clay:  #B4432F;
+    --paper: #f7f1e7;
+    --ink:   #161616;
+  }
+  .os-navy      { color: var(--navy); }
+  .os-bg-navy   { background: var(--navy); }
+  .os-teal      { color: var(--teal); }
+  .os-bg-teal   { background: var(--teal); }
+  .os-gold      { color: var(--gold); }
+  .os-clay      { color: var(--clay); }
+  .os-mark-gold { background: rgba(201,162,39,0.22); padding: 0 0.35rem 0.1rem; }
+  .os-mark-teal { background: rgba(14,165,164,0.18); padding: 0 0.35rem 0.1rem; }
+  .font-mono, code, kbd, samp { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #f7f1e7; color: #161616; -webkit-font-smoothing: antialiased; }
+  .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--teal); }
+  h1, h2, h3, h4 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
+  .tabnums { font-variant-numeric: tabular-nums; }
+
+  /* range slider */
+  input[type=range].brand{ -webkit-appearance:none; appearance:none; width:100%; height:6px; background:#ede9fe; border-radius:99px; outline:none; }
+  input[type=range].brand::-webkit-slider-thumb{ -webkit-appearance:none; appearance:none; width:20px; height:20px; border-radius:50%; background:#7c3aed; border:3px solid #fff; box-shadow:0 2px 6px rgba(124,58,237,0.45); cursor:pointer; }
+  input[type=range].brand::-moz-range-thumb{ width:20px; height:20px; border-radius:50%; background:#7c3aed; border:3px solid #fff; box-shadow:0 2px 6px rgba(124,58,237,0.45); cursor:pointer; }
+
+  /* number input: keep native up/down spinners visible */
+  input[type=number].brand{ width:100%; min-width:0; background:transparent; border:none; outline:none; font-weight:700; font-size:1.25rem; color:#161616; letter-spacing:-0.01em; padding-right:2px; }
+  /* make spinners always visible (default is hover-only in some browsers) */
+  input[type=number].brand::-webkit-inner-spin-button,
+  input[type=number].brand::-webkit-outer-spin-button{ opacity:1; height:24px; cursor:pointer; }
+
+  /* ===== OneSig look & feel v2 (light/airy, Poppins) — overrides above ===== */
+  :root{
+    --navy:#0B2E4F; --teal:#0EA5A4; --gold:#C9A227; --clay:#B4432F;
+    --paper:#FCFBFD; --tint:#F4F4FA; --ink:#16161A; --muted:#6B6B78;
+  }
+  body{
+    font-family:'Poppins',-apple-system,BlinkMacSystemFont,sans-serif !important;
+    font-weight:400; color:var(--ink); font-size:16px; line-height:1.7;
+    background-color:var(--paper) !important;
+    background-image:radial-gradient(rgba(11,46,79,0.05) 1px, transparent 1px);
+    background-size:24px 24px;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (min-width:768px){ body{font-size:17px;} }
+  h1,h2,h3,h4{
+    font-family:'Poppins',sans-serif !important;
+    font-weight:600 !important; letter-spacing:-0.03em; text-wrap:balance; color:var(--ink);
+  }
+  p{ text-wrap:pretty; }
+  .eyebrow{ font-family:'Poppins',sans-serif; font-size:.7rem; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--teal); }
+  .font-mono, code, kbd, samp{ font-family:'IBM Plex Mono',ui-monospace,monospace; }
+  section{ position:relative; }
+  .os-navy{color:var(--navy)} .os-bg-navy{background:var(--navy)}
+  .os-teal{color:var(--teal)} .os-bg-teal{background:var(--teal)}
+  .os-gold{color:var(--gold)} .os-clay{color:var(--clay)}
+  .os-mark-gold{ background:none; color:#C9A227; padding:0; }
+  .os-mark-teal{ background:none; color:#0EA5A4; padding:0; }
+  .os-card{ background:var(--tint); border:1px solid rgba(11,46,79,.06); border-radius:22px; }
+  .os-card-white{ background:#fff; border:1px solid rgba(11,46,79,.07); border-radius:22px; box-shadow:0 1px 2px rgba(16,16,26,.03); }
+  .os-orb{ position:absolute; border-radius:9999px; filter:blur(70px); opacity:.45; pointer-events:none; z-index:0; }
+  .os-orb-a{ width:420px;height:420px; background:radial-gradient(circle at 30% 30%, #FFD9A8, #FFB36B 45%, transparent 70%); }
+  .os-orb-b{ width:360px;height:360px; background:radial-gradient(circle at 40% 40%, #C6E9FF, #9FD4FF 45%, transparent 70%); }
+  .os-orb-c{ width:320px;height:320px; background:radial-gradient(circle at 40% 40%, #E9D7FF, #CBB4FF 45%, transparent 70%); }
+  .os-above{ position:relative; z-index:1; }
+  /* nav */
+  .osNavBtn.active{ background:rgba(11,46,79,.06) !important; }
+  .osDdItem.active{ background:rgba(14,165,164,.10) !important; color:#0B7C7B !important; }
+  /* blog nav system */
+  .os-nav{ background:rgba(255,255,255,.75) !important; }
+  .os-nav-links a.active{ background:rgba(11,46,79,.06) !important; }
+  .os-nav-cta{ background:var(--navy) !important; }
+  .os-nav-dd-menu a:hover{ background:#F4F4FA !important; }
+
+  </style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="sticky top-0 z-50 border-b border-black/10 bg-white/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/solutions/atlas/" class="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900">
+      <img src="/assets/logo-v4.png" alt="OneSig" class="h-8 w-auto shrink-0">
+      Atlas
+    </a>
+    <div class="hidden items-center gap-1 lg:flex">
+      <a href="/solutions/atlas/" class="osNavBtn">Atlas</a>
+      <a href="/solutions/atlas/how-it-works/" class="osNavBtn">How it works</a>
+      <div class="osNavDdWrap">
+        <button type="button" class="osNavBtn osNavDd" aria-haspopup="true" aria-expanded="false">Partners
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="osNavDdMenu" role="menu">
+          <a href="/solutions/atlas/partners/" class="osDdItem" role="menuitem">Overview</a>
+          <a href="/for/advisors/" class="osDdItem" role="menuitem">For Advisors</a>
+          <a href="/for/technologypartners/" class="osDdItem" role="menuitem">For Technology Partners</a>
+          <a href="/for/asps/" class="osDdItem" role="menuitem">For ASPs</a>
+        </div>
+      </div>
+      <a href="/access/" class="osNavBtn">Access</a>
+    </div>
+    <button type="button" data-open-lead-modal data-intent="assessment" class="rounded-full bg-[#171717] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black">Free assessment</button>
+  </div>
+</nav>
+<style>
+  .osNavBtn { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: rgb(82,82,82); transition: color 0.2s, background 0.2s; white-space: nowrap; background: transparent; border: 0; cursor: pointer; }
+  .osNavBtn:hover { color: rgb(23,23,23); }
+  .osNavBtn.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+  .osNavDdWrap { position: relative; }
+  .osNavDdMenu {
+    position: absolute; left: 0; top: 100%; margin-top: 0.35rem;
+    min-width: 220px; padding: 0.4rem;
+    background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px;
+    box-shadow: 0 20px 40px -12px rgba(0,0,0,0.18), 0 4px 8px -2px rgba(0,0,0,0.06);
+    opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 60;
+  }
+  .osNavDdWrap:hover .osNavDdMenu,
+  .osNavDdWrap:focus-within .osNavDdMenu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .osDdItem { display: block; padding: 0.5rem 0.75rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: rgb(64,64,64); }
+  .osDdItem:hover { background: rgb(245,245,245); color: rgb(23,23,23); }
+  .osDdItem.active { background: rgba(184,76,22,0.08); color: #B84C16; }
+</style>
+
+<!-- ============ HERO ============ -->
+<section class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-4">UAE FTA Phase 2 · OneSig Atlas</div>
+      <h1 class="text-5xl font-semibold tracking-[-0.05em] text-neutral-900 md:text-6xl">Cost of Getting It Wrong Calculator.</h1>
+      <p class="mt-6 text-xl font-medium leading-9 text-neutral-800">Estimate the cost of failed invoices, ERP rework, delayed collections, and audit cleanup.</p>
+      <p class="mt-4 text-lg leading-8 text-neutral-600">Most companies budget for ASP fees and implementation. They often miss the cost of discovering readiness gaps too late.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#calc" class="inline-flex items-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black">
+          Calculate Your Exposure →
+        </a>
+        <a href="/solutions/atlas/" class="inline-flex items-center gap-2 rounded-full bg-white/85 px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-white">
+          Run a Readiness Scan
+        </a>
+      </div>
+    </div>
+
+    <!-- timeline strip -->
+    <div class="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div class="os-card p-5">
+        <div class="eyebrow mb-1">1 Jul 2026</div>
+        <div class="text-sm font-semibold text-neutral-900">Voluntary adoption opens</div>
+      </div>
+      <div class="os-card p-5">
+        <div class="eyebrow mb-1">30 Oct 2026</div>
+        <div class="text-sm font-semibold text-neutral-900">Large-business ASP deadline</div>
+      </div>
+      <div class="os-card p-5">
+        <div class="eyebrow mb-1">1 Jan 2027</div>
+        <div class="text-sm font-semibold text-neutral-900">Large businesses go live</div>
+      </div>
+      <div class="os-card p-5">
+        <div class="eyebrow mb-1">1 Jul 2027</div>
+        <div class="text-sm font-semibold text-neutral-900">SMEs go live</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALCULATOR ============ -->
+<section id="calc" class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">Cost of getting it wrong</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">If readiness gaps surface in implementation or audit, what could it cost?</h2>
+      <p class="mt-5 text-lg leading-8 text-neutral-600">This calculator estimates avoidable cost. What you spend cleaning up failed invoices, ERP rework, delayed collections, and audit evidence when a rollout is not properly readied. ASP and implementation fees are excluded.</p>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 gap-7 lg:grid-cols-12">
+
+      <!-- ==== LEFT: INPUTS ==== -->
+      <div class="space-y-5 lg:col-span-7">
+
+        <!-- STEP 1 -->
+        <div class="os-card p-7">
+          <div class="eyebrow mb-3">Step 1 · Volume</div>
+          <h3 class="text-lg font-bold text-neutral-900">Monthly invoice volume</h3>
+          <div class="mt-4 flex flex-wrap gap-2" data-group="volume">
+            <button class="chip" data-val="lt1k">Under 1,000</button>
+            <button class="chip" data-val="1k-10k">1,000 to 10,000</button>
+            <button class="chip on" data-val="10k-50k">10,000 to 50,000</button>
+            <button class="chip" data-val="50k+">50,000+</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="os-card p-7">
+          <div class="eyebrow mb-3">Step 2 · Failure rate</div>
+          <h3 class="text-lg font-bold text-neutral-900">Expected first-month failure rate</h3>
+          <p class="mt-2 text-sm leading-6 text-neutral-600">Benchmark. 15 to 25% of invoices fail validation in the first 30 days after go-live when preparation is unstructured. Source: IOFM / SoftCo, 2026.</p>
+          <div class="mt-5 flex items-baseline justify-between">
+            <span class="text-xs font-bold uppercase tracking-[0.18em] text-neutral-500">Failure rate</span>
+            <span class="text-3xl font-bold tabular-nums tracking-[-0.02em] os-teal" id="failure-val">15%</span>
+          </div>
+          <input type="range" id="failure-range" min="5" max="35" step="1" value="15" class="brand mt-3" />
+          <div class="mt-2 flex justify-between text-[10px] font-semibold uppercase tracking-wider text-neutral-500 tabular-nums">
+            <span>5% low</span><span>10%</span><span>15% expected</span><span>25% high</span><span>35% severe</span>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="os-card p-7">
+          <div class="eyebrow mb-3">Step 3 · Manual fix cost</div>
+          <h3 class="text-lg font-bold text-neutral-900">Cost per failed invoice</h3>
+          <p class="mt-2 text-sm leading-6 text-neutral-600">Finance review, tax review, correction, resubmission, customer or vendor follow-up, tracking.</p>
+          <div class="mt-4 flex flex-wrap gap-2" data-group="fixcost">
+            <button class="chip-tier" data-val="25"><span class="t">AED 25</span><span class="s">Low</span></button>
+            <button class="chip-tier on" data-val="75"><span class="t">AED 75</span><span class="s">Medium</span></button>
+            <button class="chip-tier" data-val="150"><span class="t">AED 150</span><span class="s">High</span></button>
+          </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="os-card p-7">
+          <div class="eyebrow mb-3">Step 4 · Collections delay</div>
+          <h3 class="text-lg font-bold text-neutral-900">Delay in collections</h3>
+          <p class="mt-2 text-sm leading-6 text-neutral-600">Failed invoices delay cash. Average invoice value, days delayed, and your cost of capital size the financing impact.</p>
+          <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
+            <label class="block rounded-2xl border border-black/10 bg-neutral-50 p-4">
+              <div class="text-[10.5px] font-bold uppercase tracking-[0.10em] text-neutral-500">Invoice value <span class="os-teal">· AED</span></div>
+              <input type="number" id="inv-value" value="2500" min="0" step="100" class="brand mt-1.5" />
+            </label>
+            <label class="block rounded-2xl border border-black/10 bg-neutral-50 p-4">
+              <div class="text-[10.5px] font-bold uppercase tracking-[0.10em] text-neutral-500">Delay <span class="os-teal">· days</span></div>
+              <input type="number" id="delay-days" value="7" min="0" step="1" class="brand mt-1.5" />
+            </label>
+            <label class="block rounded-2xl border border-black/10 bg-neutral-50 p-4">
+              <div class="text-[10.5px] font-bold uppercase tracking-[0.10em] text-neutral-500">Capital cost <span class="os-teal">· %/yr</span></div>
+              <input type="number" id="cap-rate" value="8" min="0" step="0.5" class="brand mt-1.5" />
+            </label>
+          </div>
+        </div>
+
+        <!-- STEP 5 -->
+        <div class="os-card p-7">
+          <div class="eyebrow mb-3">Step 5 · ERP rework</div>
+          <h3 class="text-lg font-bold text-neutral-900">ERP rework and retesting</h3>
+          <p class="mt-2 text-sm leading-6 text-neutral-600">Late changes to tax codes, invoice fields, master data, credit-note logic, integration mapping, testing, partner time.</p>
+          <div class="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4" data-group="erp">
+            <button class="chip-tier" data-val="50000"><span class="t">AED 50K</span><span class="s">Light</span></button>
+            <button class="chip-tier on" data-val="150000"><span class="t">AED 150K</span><span class="s">Moderate</span></button>
+            <button class="chip-tier" data-val="350000"><span class="t">AED 350K</span><span class="s">Heavy</span></button>
+            <button class="chip-tier" data-val="750000"><span class="t">AED 750K</span><span class="s">Major redesign</span></button>
+          </div>
+        </div>
+
+        <!-- STEP 6 -->
+        <div class="os-card p-7">
+          <div class="eyebrow mb-3">Step 6 · Audit support</div>
+          <h3 class="text-lg font-bold text-neutral-900">Audit and evidence preparation</h3>
+          <p class="mt-2 text-sm leading-6 text-neutral-600">Post go-live cleanup, evidence collection, reconciliation, external advisor support, management reporting.</p>
+          <div class="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4" data-group="audit">
+            <button class="chip-tier" data-val="25000"><span class="t">AED 25K</span><span class="s">Basic</span></button>
+            <button class="chip-tier on" data-val="100000"><span class="t">AED 100K</span><span class="s">Moderate</span></button>
+            <button class="chip-tier" data-val="250000"><span class="t">AED 250K</span><span class="s">Heavy</span></button>
+            <button class="chip-tier" data-val="500000"><span class="t">AED 500K</span><span class="s">Severe</span></button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==== RIGHT: RESULTS ==== -->
+      <div class="space-y-5 lg:col-span-5">
+        <div class="lg:sticky lg:top-24 space-y-5">
+
+          <!-- Primary cost number -->
+          <div class="rounded-3xl border border-[#B4432F]/35 bg-gradient-to-br from-[#B4432F]/8 to-[#B4432F]/25 p-7 shadow-sm">
+            <div class="flex items-center gap-2">
+              <span class="inline-flex h-2 w-2 rounded-full bg-[#B4432F]/80"></span>
+              <span class="text-xs font-bold uppercase tracking-[0.18em] os-clay">Cost of getting it wrong</span>
+            </div>
+            <div class="mt-3 text-5xl font-bold tabular-nums tracking-[-0.03em] os-clay md:text-6xl" id="r-total">AED 0</div>
+            <div class="mt-4 rounded-xl border border-[#B4432F]/35 bg-white/85 px-4 py-3">
+              <div class="text-[11px] font-bold uppercase tracking-[0.14em] os-clay">This is not your implementation budget.</div>
+              <p class="mt-1 text-xs leading-5 text-neutral-700">This is the estimated cost of late discovery. Failed invoice handling, rework, audit cleanup, and collection delays.</p>
+            </div>
+            <p class="mt-3 text-xs leading-5 text-neutral-600">A three-month stabilisation period is assumed for failed-invoice handling. ASP fees and implementation are excluded.</p>
+          </div>
+
+          <!-- Cash at risk -->
+          <div class="rounded-3xl border border-[#C9A227]/40 bg-[#C9A227]/10 p-6 shadow-sm">
+            <div class="text-[11px] font-bold uppercase tracking-[0.18em] os-gold">Cash flow at risk</div>
+            <div class="mt-2 text-3xl font-bold tabular-nums tracking-[-0.02em] os-gold" id="r-cash">AED 0</div>
+            <p class="mt-2 text-xs leading-5 text-neutral-600">Cash tied up in failed invoices during the first month of go-live. Reported separately from cost above.</p>
+          </div>
+
+          <!-- Breakdown -->
+          <div class="os-card p-6">
+            <div class="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-700">Cost breakdown</div>
+            <div class="mt-4 space-y-4" id="breakdown"></div>
+            <div class="mt-5 border-t border-black/5 pt-4">
+              <span class="text-xs text-neutral-500">Main cost driver: </span>
+              <span class="text-sm font-semibold text-neutral-900" id="r-driver">.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- bridging callout -->
+    <div class="mt-10 rounded-2xl border border-[#B84C16]/40 bg-[#B84C16]/8 px-6 py-4 text-base font-semibold text-neutral-900 md:text-lg">
+      A readiness scan is a small upfront step compared to the cost of late discovery.
+    </div>
+
+    <!-- ONE-PAGE SUMMARY CTA -->
+    <div class="mt-6 grid grid-cols-1 gap-7 rounded-3xl border border-black/10 bg-[#0f0f10] p-8 text-white shadow-xl md:grid-cols-5 md:p-10">
+      <div class="md:col-span-3">
+        <div class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#FF8D6B]">One-page summary</div>
+        <h3 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-white md:text-4xl">We captured your inputs.</h3>
+        <p class="mt-4 text-lg leading-8 text-neutral-300">Want a one-page summary you can share with your team?</p>
+        <p class="mt-3 text-sm leading-7 text-neutral-400">Get a board-ready summary with your assumptions, exposure estimate, cost breakdown, cash-flow-at-risk view, and recommended next steps.</p>
+      </div>
+      <div class="flex flex-col justify-center gap-3 md:col-span-2">
+        <button type="button" id="open-summary" class="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-base font-semibold text-neutral-900 shadow-lg shadow-[#B84C16]/15 hover:bg-neutral-100">
+          Create My One-Page Summary →
+        </button>
+        <p class="text-center text-xs text-neutral-500">Built from the values currently selected above.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WORKED EXAMPLE ============ -->
+<section id="example" class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">Worked example</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">A 25,000-invoice business at 15% failure rate.</h2>
+      <p class="mt-5 text-lg leading-8 text-neutral-600">Even with moderate ERP rework and moderate audit support, the total avoidable exposure clears AED 1.1M. A further AED 9.4M of cash sits trapped in failed invoices during go-live.</p>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-5">
+      <div class="os-card p-7 lg:col-span-3">
+        <div class="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-700">Cost breakdown</div>
+        <div class="mt-5 divide-y divide-black/5">
+          <div class="flex items-baseline justify-between py-3"><span class="text-sm text-neutral-800">Failed invoice handling, 3 months</span><span class="text-base font-bold tabular-nums text-neutral-900">AED 844K</span></div>
+          <div class="flex items-baseline justify-between py-3"><span class="text-sm text-neutral-800">ERP rework and retesting</span><span class="text-base font-bold tabular-nums text-neutral-900">AED 150K</span></div>
+          <div class="flex items-baseline justify-between py-3"><span class="text-sm text-neutral-800">Audit and evidence preparation</span><span class="text-base font-bold tabular-nums text-neutral-900">AED 100K</span></div>
+          <div class="flex items-baseline justify-between py-3"><span class="text-sm text-neutral-800">Delayed collections cost</span><span class="text-base font-bold tabular-nums text-neutral-900">AED 14K</span></div>
+          <div class="flex items-baseline justify-between py-4"><span class="text-sm font-semibold text-neutral-900">Total avoidable exposure</span><span class="text-xl font-bold tabular-nums os-clay">AED 1.1M</span></div>
+        </div>
+      </div>
+      <div class="space-y-5 lg:col-span-2">
+        <div class="rounded-3xl border border-[#B4432F]/35 bg-[#B4432F]/8 p-6 shadow-sm">
+          <div class="text-[11px] font-bold uppercase tracking-[0.18em] os-clay">Avoidable cost</div>
+          <div class="mt-2 text-4xl font-bold tabular-nums tracking-[-0.02em] os-clay">AED 1.1M</div>
+          <p class="mt-2 text-xs leading-5 text-neutral-600">If readiness gaps are discovered post go-live.</p>
+        </div>
+        <div class="rounded-3xl border border-[#C9A227]/40 bg-[#C9A227]/10 p-6 shadow-sm">
+          <div class="text-[11px] font-bold uppercase tracking-[0.18em] os-gold">Cash flow at risk</div>
+          <div class="mt-2 text-4xl font-bold tabular-nums tracking-[-0.02em] os-gold">AED 9.4M</div>
+          <p class="mt-2 text-xs leading-5 text-neutral-600">Cash trapped in failed or delayed invoices in month 1.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 rounded-2xl border border-[#B84C16]/40 bg-[#B84C16]/8 px-6 py-4 text-base font-semibold text-neutral-900 md:text-lg">
+      A few wrong assumptions create months of rework. Find them before they become invoices.
+    </div>
+  </div>
+</section>
+
+<!-- ============ ONESIG ANGLE ============ -->
+<section id="angle" class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">How OneSig removes the cost</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">The cost above is largely <span class="os-teal">avoidable</span>.</h2>
+      <p class="mt-5 text-lg leading-8 text-neutral-600">Failed invoices, ERP rework, and audit cleanup almost always trace back to four things. Unmapped fields, broken master data, hidden tax logic, and no exception ownership. OneSig Atlas surfaces all four before go-live.</p>
+    </div>
+
+    <div class="mt-10 overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-black/5 text-left">
+            <th class="px-5 py-4 text-[11px] font-bold uppercase tracking-[0.12em] text-neutral-700">Where the cost comes from</th>
+            <th class="px-5 py-4 text-[11px] font-bold uppercase tracking-[0.12em] text-neutral-500">Without OneSig</th>
+            <th class="px-5 py-4 text-[11px] font-bold uppercase tracking-[0.12em] os-teal">With OneSig Atlas</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-black/5">
+          <tr>
+            <td class="bg-neutral-50/50 px-5 py-4 font-bold text-neutral-900">Failed invoice handling</td>
+            <td class="px-5 py-4 italic text-neutral-500">Discovered post go-live, fixed manually one by one</td>
+            <td class="bg-[#B84C16]/6 px-5 py-4 font-semibold text-neutral-900"><span class="os-teal">✓</span> Failure modes simulated against PINT-AE before live transmission</td>
+          </tr>
+          <tr>
+            <td class="bg-neutral-50/50 px-5 py-4 font-bold text-neutral-900">Master data issues</td>
+            <td class="px-5 py-4 italic text-neutral-500">TRN, endpoint, and designated-zone errors caught by the ASP</td>
+            <td class="bg-[#B84C16]/6 px-5 py-4 font-semibold text-neutral-900"><span class="os-teal">✓</span> Flagged in advance with owner and fix path</td>
+          </tr>
+          <tr>
+            <td class="bg-neutral-50/50 px-5 py-4 font-bold text-neutral-900">ERP rework</td>
+            <td class="px-5 py-4 italic text-neutral-500">Late changes to tax codes, fields, and credit-note logic</td>
+            <td class="bg-[#B84C16]/6 px-5 py-4 font-semibold text-neutral-900"><span class="os-teal">✓</span> Gaps mapped on a canonical invoice schema before ERP changes</td>
+          </tr>
+          <tr>
+            <td class="bg-neutral-50/50 px-5 py-4 font-bold text-neutral-900">Audit evidence</td>
+            <td class="px-5 py-4 italic text-neutral-500">Screenshots, emails, and reconciliations after the fact</td>
+            <td class="bg-[#B84C16]/6 px-5 py-4 font-semibold text-neutral-900"><span class="os-teal">✓</span> Invoice-level audit pack with rule source, evidence, timestamp</td>
+          </tr>
+          <tr>
+            <td class="bg-neutral-50/50 px-5 py-4 font-bold text-neutral-900">Collections delay</td>
+            <td class="px-5 py-4 italic text-neutral-500">Rejected invoices hold up customer payment cycles</td>
+            <td class="bg-[#B84C16]/6 px-5 py-4 font-semibold text-neutral-900"><span class="os-teal">✓</span> Validation runs upstream of customer delivery</td>
+          </tr>
+          <tr>
+            <td class="bg-neutral-50/50 px-5 py-4 font-bold text-neutral-900">ASP onboarding gaps</td>
+            <td class="px-5 py-4 italic text-neutral-500">ASP asks for required fields, but teams do not know source system, owner, or gap status</td>
+            <td class="bg-[#B84C16]/6 px-5 py-4 font-semibold text-neutral-900"><span class="os-teal">✓</span> ASP-ready mapped file showing each required data point, source system, owner, gap status, and fix path</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-6 rounded-2xl border border-[#B84C16]/40 bg-[#B84C16]/8 px-6 py-4 text-base font-semibold text-neutral-900 md:text-lg">
+      Every line above moves from manual rework to validated readiness, before a single invoice ships.
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASP-READY MAPPED FILE ============ -->
+<section id="mapped-file" class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="max-w-3xl">
+      <div class="eyebrow mb-3">ASP-ready mapped file</div>
+      <h2 class="text-4xl font-semibold tracking-[-0.04em] text-neutral-900 md:text-5xl">One deliverable your ASP can actually use.</h2>
+      <p class="mt-5 text-lg leading-8 text-neutral-600">At the end of the scan, you receive an ASP-ready mapped file that shows how your invoice data maps to UAE e-invoicing requirements. Each row tells finance, tax, IT, and the ASP exactly what is ready, what is missing, who owns it, and what needs to be fixed before onboarding.</p>
+    </div>
+
+    <!-- The schema of the mapped file -->
+    <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div class="os-card p-5">
+        <div class="eyebrow mb-2">Required UAE / PINT-AE data point</div>
+        <p class="text-sm leading-6 text-neutral-700">What the ASP or mandate requires.</p>
+      </div>
+      <div class="os-card p-5">
+        <div class="eyebrow mb-2">Source system</div>
+        <p class="text-sm leading-6 text-neutral-700">ERP, billing, AP tool, tax engine, spreadsheet, or master data table.</p>
+      </div>
+      <div class="os-card p-5">
+        <div class="eyebrow mb-2">Source field</div>
+        <p class="text-sm leading-6 text-neutral-700">The actual field name or data location.</p>
+      </div>
+      <div class="os-card p-5">
+        <div class="eyebrow mb-2">Data owner</div>
+        <p class="text-sm leading-6 text-neutral-700">Finance, tax, IT, master data, AR, AP, or shared services.</p>
+      </div>
+      <div class="os-card p-5">
+        <div class="eyebrow mb-2">Gap status</div>
+        <p class="text-sm leading-6 text-neutral-700">Available, missing, inconsistent, needs transformation, needs business decision.</p>
+      </div>
+      <div class="os-card p-5">
+        <div class="eyebrow mb-2">Fix recommendation</div>
+        <p class="text-sm leading-6 text-neutral-700">What needs to change before ASP onboarding.</p>
+      </div>
+      <div class="os-card p-5 md:col-span-2">
+        <div class="eyebrow mb-2">Evidence note</div>
+        <p class="text-sm leading-6 text-neutral-700">What proof exists that the field was reviewed or validated.</p>
+      </div>
+    </div>
+
+    <!-- Sample rows -->
+    <div class="mt-10">
+      <div class="mb-3 flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-[#B84C16]/8 px-2.5 py-1 text-[11px] font-semibold os-teal ring-1 ring-[#B84C16]/30">Sample preview</span>
+        <span class="text-sm text-neutral-600">Example rows from a real mapped file.</span>
+      </div>
+      <div class="overflow-x-auto rounded-3xl border border-black/10 bg-white shadow-sm">
+        <table class="w-full min-w-[820px] text-sm">
+          <thead>
+            <tr class="border-b border-black/5 text-left">
+              <th class="px-5 py-3.5 text-[10.5px] font-bold uppercase tracking-[0.12em] text-neutral-700">Data point</th>
+              <th class="px-5 py-3.5 text-[10.5px] font-bold uppercase tracking-[0.12em] text-neutral-700">Source system</th>
+              <th class="px-5 py-3.5 text-[10.5px] font-bold uppercase tracking-[0.12em] text-neutral-700">Source field</th>
+              <th class="px-5 py-3.5 text-[10.5px] font-bold uppercase tracking-[0.12em] text-neutral-700">Status</th>
+              <th class="px-5 py-3.5 text-[10.5px] font-bold uppercase tracking-[0.12em] text-neutral-700">Owner</th>
+              <th class="px-5 py-3.5 text-[10.5px] font-bold uppercase tracking-[0.12em] text-neutral-700">Fix path</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-black/5">
+            <tr>
+              <td class="px-5 py-4 font-semibold text-neutral-900">Buyer TRN</td>
+              <td class="px-5 py-4 text-neutral-700">Customer master</td>
+              <td class="px-5 py-4 font-mono text-[12px] text-neutral-700">tax_registration_number</td>
+              <td class="px-5 py-4"><span class="inline-flex items-center gap-1 rounded-full bg-[#B4432F]/8 px-2 py-0.5 text-[11px] font-semibold os-clay ring-1 ring-[#B4432F]/30">Gap</span></td>
+              <td class="px-5 py-4 text-neutral-700">Master data</td>
+              <td class="px-5 py-4 text-neutral-700">Add missing TRN before onboarding</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-neutral-900">Invoice currency</td>
+              <td class="px-5 py-4 text-neutral-700">ERP invoice header</td>
+              <td class="px-5 py-4 font-mono text-[12px] text-neutral-700">currency_code</td>
+              <td class="px-5 py-4"><span class="inline-flex items-center gap-1 rounded-full bg-[#B84C16]/10 px-2 py-0.5 text-[11px] font-semibold os-teal ring-1 ring-[#B84C16]/30">Ready</span></td>
+              <td class="px-5 py-4 text-neutral-700">Finance systems</td>
+              <td class="px-5 py-4 text-neutral-700">Validate AED and foreign currency scenarios</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-neutral-900">Credit note reference</td>
+              <td class="px-5 py-4 text-neutral-700">Billing system</td>
+              <td class="px-5 py-4 font-mono text-[12px] text-neutral-700">original_invoice_id</td>
+              <td class="px-5 py-4"><span class="inline-flex items-center gap-1 rounded-full bg-[#B4432F]/8 px-2 py-0.5 text-[11px] font-semibold os-clay ring-1 ring-[#B4432F]/30">Gap</span></td>
+              <td class="px-5 py-4 text-neutral-700">AR operations</td>
+              <td class="px-5 py-4 text-neutral-700">Link credit notes to original invoice</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-neutral-900">Tax category</td>
+              <td class="px-5 py-4 text-neutral-700">Tax engine / ERP</td>
+              <td class="px-5 py-4 font-mono text-[12px] text-neutral-700">vat_code</td>
+              <td class="px-5 py-4"><span class="inline-flex items-center gap-1 rounded-full bg-[#C9A227]/10 px-2 py-0.5 text-[11px] font-semibold os-gold ring-1 ring-[#C9A227]/35">Needs review</span></td>
+              <td class="px-5 py-4 text-neutral-700">Tax</td>
+              <td class="px-5 py-4 text-neutral-700">Map VAT codes to UAE treatment</td>
+            </tr>
+            <tr>
+              <td class="px-5 py-4 font-semibold text-neutral-900">Buyer address</td>
+              <td class="px-5 py-4 text-neutral-700">Customer master</td>
+              <td class="px-5 py-4 font-mono text-[12px] text-neutral-700">billing_address</td>
+              <td class="px-5 py-4"><span class="inline-flex items-center gap-1 rounded-full bg-[#C9A227]/10 px-2 py-0.5 text-[11px] font-semibold os-gold ring-1 ring-[#C9A227]/35">Incomplete</span></td>
+              <td class="px-5 py-4 text-neutral-700">Master data</td>
+              <td class="px-5 py-4 text-neutral-700">Complete mandatory address fields</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Why this matters -->
+    <div class="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div class="os-card p-7 lg:col-span-2">
+        <div class="eyebrow mb-2">Why this matters</div>
+        <p class="text-lg leading-8 text-neutral-800">Your ASP can help transmit the invoice. But your team still needs to know where every required data point comes from. The mapped file gives finance, tax, IT, and the ASP a shared starting point before implementation gets expensive.</p>
+      </div>
+      <div class="rounded-3xl border border-[#B84C16]/40 bg-[#B84C16]/10 p-7 shadow-sm">
+        <div class="flex items-center gap-2">
+          <span class="relative flex h-1.5 w-1.5">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#B84C16] opacity-75"></span>
+            <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#B84C16]/100"></span>
+          </span>
+          <span class="text-[11px] font-bold uppercase tracking-[0.18em] os-teal">Hand to ASP</span>
+        </div>
+        <div class="mt-3 text-xl font-semibold leading-7 text-neutral-900">A clean starting point, before onboarding gets expensive.</div>
+      </div>
+    </div>
+
+    <div class="mt-6 rounded-2xl border border-[#B84C16]/40 bg-[#B84C16]/8 px-6 py-4 text-base font-semibold text-neutral-900 md:text-lg">
+      Your ASP should not have to discover your data gaps during onboarding. The mapped file gives them a cleaner starting point.
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING CTA ============ -->
+<section id="bookscan" class="border-t border-black/10 px-5 py-24">
+  <div class="mx-auto max-w-7xl">
+    <div class="grid grid-cols-1 gap-8 rounded-3xl border border-black/10 bg-[#0f0f10] p-10 text-white shadow-xl md:grid-cols-5 md:p-14">
+      <div class="md:col-span-3">
+        <div class="text-[11px] font-bold uppercase tracking-[0.22em] text-[#FF8D6B]">Run the scan</div>
+        <h2 class="mt-3 text-4xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Find the gaps before they become <span class="text-[#FF8D6B]">failed invoices</span>.</h2>
+        <p class="mt-5 text-lg leading-8 text-neutral-300">We map your invoice scenarios, master data, tax logic, exception ownership, and required UAE data points before go-live. You also receive an <span class="font-semibold text-white">ASP-ready mapped file</span> showing where each required data point comes from, what is missing, who owns it, and what needs to be fixed before onboarding.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/solutions/atlas/" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 shadow-sm hover:bg-neutral-100">
+            Run the Readiness Scan →
+          </a>
+          <a href="#example" class="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 hover:bg-white/15">
+            See Sample Output
+          </a>
+        </div>
+      </div>
+      <div class="space-y-4 md:col-span-2">
+        <div class="rounded-2xl border border-[#B4432F]/30 bg-[#B4432F]/80/10 p-5">
+          <div class="text-[10.5px] font-bold uppercase tracking-[0.18em] text-[#B4432F]/60">Cost of getting it wrong</div>
+          <div class="mt-1.5 text-3xl font-bold tabular-nums tracking-[-0.02em] text-[#B4432F]/35" id="cmp-bad">AED 0</div>
+          <div class="mt-1.5 text-xs leading-5 text-neutral-400">Avoidable, but only if you find the gaps before go-live.</div>
+        </div>
+        <div class="rounded-2xl border border-[#B84C16]/30 bg-[#B84C16]/100/10 p-5">
+          <div class="flex items-center gap-2">
+            <span class="relative flex h-1.5 w-1.5">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#B84C16] opacity-75"></span>
+              <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#B84C16]/100"></span>
+            </span>
+            <div class="text-[10.5px] font-bold uppercase tracking-[0.18em] text-[#B84C16]">A readiness scan</div>
+          </div>
+          <div class="mt-1.5 text-2xl font-bold tracking-[-0.01em] text-[#B84C16]/40">A fraction of the above</div>
+          <ul class="mt-3 space-y-1.5 text-[12.5px] leading-5 text-neutral-200">
+            <li class="flex items-start gap-2"><span class="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-[#B84C16]"></span> Failure mode simulation</li>
+            <li class="flex items-start gap-2"><span class="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-[#B84C16]"></span> Readiness gap report</li>
+            <li class="flex items-start gap-2"><span class="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-[#B84C16]"></span> Owner and fix path</li>
+            <li class="flex items-start gap-2"><span class="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-[#B84C16]"></span> Audit evidence checklist</li>
+            <li class="flex items-start gap-2"><span class="mt-1.5 inline-block h-1 w-1 shrink-0 rounded-full bg-[#B84C16]"></span> <span class="font-semibold text-white">ASP-ready mapped data file</span></li>
+          </ul>
+          <div class="mt-3 border-t border-white/10 pt-3 text-xs leading-5 text-neutral-400">Scoped in days. Useful before ASP onboarding, implementation, or audit preparation.</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-8 max-w-4xl text-xs leading-6 text-neutral-500">Estimates are illustrative and based on the inputs above. Failed-invoice handling assumes a three-month stabilisation period. Cash flow at risk reflects one month of failed invoices delayed by the configured days at the configured cost of capital. The model excludes ASP subscription fees, ERP licence costs, implementation partner fees, and any regulatory penalties. Benchmark failure-rate range (15 to 25%) sourced from IOFM / SoftCo 2026 e-invoicing readiness data.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-black/10 px-5 py-12">
+  <div class="mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 text-sm text-neutral-600 md:flex-row md:items-center">
+    <div class="flex items-center gap-2.5 font-semibold text-neutral-900">
+      <svg width="22" height="22" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M23 16 L31 11 L31 50" stroke="#1e2a4d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M22 50 L40 50" stroke="#1e2a4d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M13 32 L24 42 L47 17" stroke="#2563eb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      OneSig Atlas
+    </div>
+    <div class="flex flex-wrap gap-6">
+      <a href="/solutions/atlas/" class="hover:text-neutral-900">Atlas</a>
+      <a href="#" class="hover:text-neutral-900">Privacy</a>
+      <a href="#" class="hover:text-neutral-900">Terms</a>
+      <a href="mailto:abhi@onesig.co" class="hover:text-neutral-900">abhi@onesig.co</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ ONE-PAGE SUMMARY MODAL ============ -->
+<div id="summary-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <div class="relative my-8 w-full max-w-2xl rounded-3xl border border-black/10 bg-white shadow-2xl">
+    <button type="button" id="close-summary" aria-label="Close" class="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+    </button>
+
+    <!-- FORM STATE -->
+    <div id="modal-form-view">
+      <!-- Header -->
+      <div class="px-7 pb-5 pt-8 md:px-9">
+        <div class="eyebrow mb-3">One-page summary</div>
+        <h3 class="text-2xl font-semibold tracking-[-0.02em] text-neutral-900 md:text-3xl">Create your one-page summary.</h3>
+        <p class="mt-3 text-sm leading-6 text-neutral-600">We will use the assumptions currently selected in the calculator and send you a one-page summary you can share with your finance, tax, ERP, or leadership team.</p>
+      </div>
+
+      <!-- Section 1: Selected assumptions -->
+      <div class="border-t border-black/5 bg-neutral-50 px-7 py-5 md:px-9">
+        <div class="text-[10.5px] font-bold uppercase tracking-[0.18em] os-teal">Your selected assumptions</div>
+        <dl id="modal-inputs" class="mt-4 grid grid-cols-1 gap-x-6 gap-y-2.5 text-sm sm:grid-cols-2"></dl>
+      </div>
+
+      <!-- Section 2: Calculated result -->
+      <div class="border-t border-black/5 px-7 py-5 md:px-9">
+        <div class="text-[10.5px] font-bold uppercase tracking-[0.18em] os-clay">Calculated result</div>
+        <div id="modal-results" class="mt-4 space-y-2.5 text-sm"></div>
+      </div>
+
+      <!-- Section 3: Lead form -->
+      <form id="summary-form" class="border-t border-black/5 px-7 py-6 md:px-9" novalidate>
+        <div class="text-[10.5px] font-bold uppercase tracking-[0.18em] text-neutral-700">Where should we send it?</div>
+        <div class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <label class="block">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Company name<span class="os-clay">*</span></span>
+            <input type="text" name="companyName" required class="mt-1.5 w-full os-card px-4 py-3 text-sm text-neutral-900 outline-none focus:border-[#B84C16] focus:ring-2 focus:ring-[#B84C16]/30" placeholder="ABC Trading LLC" />
+          </label>
+          <label class="block">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Work email<span class="os-clay">*</span></span>
+            <input type="email" name="workEmail" required class="mt-1.5 w-full os-card px-4 py-3 text-sm text-neutral-900 outline-none focus:border-[#B84C16] focus:ring-2 focus:ring-[#B84C16]/30" placeholder="name@company.com" />
+          </label>
+          <label class="block sm:col-span-2">
+            <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Role <span class="text-neutral-400">(optional)</span></span>
+            <select name="role" class="mt-1.5 w-full os-card px-4 py-3 text-sm text-neutral-900 outline-none focus:border-[#B84C16] focus:ring-2 focus:ring-[#B84C16]/30">
+              <option value="">Select a role</option>
+              <option>CFO / Finance leader</option>
+              <option>Tax leader</option>
+              <option>IT / ERP leader</option>
+              <option>Implementation partner</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+
+        <p id="form-error" class="mt-3 hidden rounded-lg bg-[#B4432F]/8 px-3 py-2 text-xs os-clay ring-1 ring-[#B4432F]/30"></p>
+
+        <div class="mt-5 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-xs text-neutral-500">We will send a notification to the OneSig team and email you the summary.</p>
+          <button type="submit" id="submit-summary" class="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black disabled:opacity-60">
+            Send My Summary →
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div id="modal-success-view" class="hidden px-7 py-10 text-center md:px-12 md:py-12">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-[#B84C16]/12 ring-4 ring-[#B84C16]/10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3 class="mt-5 text-2xl font-semibold tracking-[-0.02em] text-neutral-900">Your summary request has been sent.</h3>
+      <p class="mx-auto mt-3 max-w-md text-sm leading-6 text-neutral-600">We will send a one-page UAE e-invoicing exposure summary based on your selected assumptions.</p>
+
+      <div class="mx-auto mt-7 max-w-md rounded-2xl border border-[#B84C16]/40 bg-[#B84C16]/8 px-5 py-4 text-left">
+        <div class="text-[10.5px] font-bold uppercase tracking-[0.18em] os-teal">Next step</div>
+        <p class="mt-1.5 text-sm font-semibold text-neutral-900">Book a Readiness Scan to walk through the gaps live.</p>
+      </div>
+
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="/solutions/atlas/" class="inline-flex items-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black">
+          Book a Readiness Scan →
+        </a>
+        <button type="button" id="success-close" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">
+          Close
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- chip styles via Tailwind apply (inline) -->
+<style>
+  .chip{ display:inline-flex; align-items:center; padding:0.5rem 0.85rem; border-radius:0.625rem; border:1px solid rgba(0,0,0,0.10); background:#fff; font-size:0.8125rem; font-weight:500; color:#374151; transition:all .14s ease; cursor:pointer; }
+  .chip:hover{ border-color:#c4b5fd; color:#6d28d9; }
+  .chip.on{ background:#161616; border-color:#161616; color:#fff; font-weight:600; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+
+  .chip-tier{ display:flex; flex-direction:column; align-items:flex-start; padding:0.65rem 0.85rem; border-radius:0.75rem; border:1px solid rgba(0,0,0,0.10); background:#fff; transition:all .14s ease; cursor:pointer; min-width:0; }
+  .chip-tier:hover{ border-color:#c4b5fd; }
+  .chip-tier .t{ font-family:'Inter',sans-serif; font-variant-numeric:tabular-nums; font-size:0.875rem; font-weight:700; color:#161616; letter-spacing:-0.01em; }
+  .chip-tier .s{ font-size:0.6875rem; color:#6b7280; margin-top:2px; font-weight:500; }
+  .chip-tier.on{ background:#161616; border-color:#161616; box-shadow:0 4px 10px rgba(0,0,0,0.20); }
+  .chip-tier.on .t{ color:#fff; }
+  .chip-tier.on .s{ color:#c4b5fd; }
+</style>
+
+<script>
+  const VOLUME = { 'lt1k':750, '1k-10k':5000, '10k-50k':25000, '50k+':75000 };
+  const VOLUME_LBL = { 'lt1k':'Under 1,000', '1k-10k':'1,000 to 10,000', '10k-50k':'10,000 to 50,000', '50k+':'50,000+' };
+  const ERP_LBL    = { 50000:'Light', 150000:'Moderate', 350000:'Heavy', 750000:'Major redesign' };
+  const AUDIT_LBL  = { 25000:'Basic', 100000:'Moderate', 250000:'Heavy', 500000:'Severe' };
+
+  const state = {
+    volume:'10k-50k', failure:15, fixcost:75,
+    invValue:2500, delayDays:7, capRate:8,
+    erp:150000, audit:100000,
+  };
+
+  // Latest computed results, kept fresh by recalc() so the modal always reads the current numbers.
+  const lastResults = {
+    monthlyVol:0, failed:0, threeMonthFix:0, cashAtRisk:0, collectionDelay:0,
+    erpRework:0, audit:0, total:0, mainDriver:'.',
+  };
+
+  document.querySelectorAll('[data-group]').forEach(group => {
+    const key = group.dataset.group;
+    group.querySelectorAll('.chip, .chip-tier').forEach(c => {
+      c.addEventListener('click', () => {
+        group.querySelectorAll('.chip, .chip-tier').forEach(x => x.classList.remove('on'));
+        c.classList.add('on');
+        const v = c.dataset.val;
+        if (key === 'volume')        state.volume  = v;
+        else if (key === 'fixcost')  state.fixcost = parseInt(v,10);
+        else if (key === 'erp')      state.erp     = parseInt(v,10);
+        else if (key === 'audit')    state.audit   = parseInt(v,10);
+        recalc();
+      });
+    });
+  });
+
+  const failureRange = document.getElementById('failure-range');
+  const failureVal   = document.getElementById('failure-val');
+  failureRange.addEventListener('input', e => {
+    state.failure = parseInt(e.target.value,10);
+    failureVal.textContent = state.failure + '%';
+    recalc();
+  });
+
+  document.getElementById('inv-value').addEventListener('input', e => { const v=parseFloat(e.target.value); if(!isNaN(v)&&v>=0){ state.invValue=v; recalc(); } });
+  document.getElementById('delay-days').addEventListener('input', e => { const v=parseFloat(e.target.value); if(!isNaN(v)&&v>=0){ state.delayDays=v; recalc(); } });
+  document.getElementById('cap-rate').addEventListener('input', e => { const v=parseFloat(e.target.value); if(!isNaN(v)&&v>=0){ state.capRate=v; recalc(); } });
+
+  function fmt(n) {
+    n = Math.round(n);
+    if (n >= 1000000) return 'AED ' + (n/1000000).toFixed(2).replace(/\.?0+$/,'') + 'M';
+    if (n >= 1000)    return 'AED ' + Math.round(n/1000) + 'K';
+    return 'AED ' + n.toLocaleString();
+  }
+
+  function recalc() {
+    const monthlyVol      = VOLUME[state.volume] || 0;
+    const failureRate     = state.failure / 100;
+    const failed          = monthlyVol * failureRate;
+    const threeMonthFix   = failed * state.fixcost * 3;
+    const cashAtRisk      = failed * state.invValue;
+    const collectionDelay = cashAtRisk * (state.capRate/100) * (state.delayDays/365);
+    const erpRework       = state.erp;
+    const audit           = state.audit;
+    const total           = threeMonthFix + collectionDelay + erpRework + audit;
+
+    document.getElementById('r-total').textContent = fmt(total);
+    document.getElementById('r-cash').textContent  = fmt(cashAtRisk);
+    document.getElementById('cmp-bad').textContent = fmt(total);
+
+    const rows = [
+      { lbl:'Failed invoice handling, 3 months', amt:threeMonthFix },
+      { lbl:'ERP rework and retesting',          amt:erpRework     },
+      { lbl:'Audit and evidence preparation',    amt:audit         },
+      { lbl:'Delayed collections cost',          amt:collectionDelay },
+    ];
+    const maxAmt = Math.max(...rows.map(r=>r.amt), 1);
+    const driver = rows.reduce((a,b)=> b.amt > a.amt ? b : a, rows[0]);
+
+    const bd = document.getElementById('breakdown');
+    bd.innerHTML = rows.map(r => `
+      <div>
+        <div class="flex items-baseline justify-between text-sm">
+          <span class="text-neutral-700">${r.lbl}</span>
+          <span class="font-bold tabular-nums text-neutral-900">${fmt(r.amt)}</span>
+        </div>
+        <div class="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-[#B84C16]/12">
+          <div class="h-full rounded-full bg-gradient-to-r from-[#B84C16] to-[#B84C16]" style="width:${(r.amt/maxAmt*100).toFixed(1)}%"></div>
+        </div>
+      </div>
+    `).join('');
+    document.getElementById('r-driver').textContent = driver.lbl;
+
+    // Keep lastResults fresh for the modal.
+    lastResults.monthlyVol      = monthlyVol;
+    lastResults.failed          = failed;
+    lastResults.threeMonthFix   = threeMonthFix;
+    lastResults.cashAtRisk      = cashAtRisk;
+    lastResults.collectionDelay = collectionDelay;
+    lastResults.erpRework       = erpRework;
+    lastResults.audit           = audit;
+    lastResults.total           = total;
+    lastResults.mainDriver      = driver.lbl;
+  }
+
+  recalc();
+
+  // ============ ONE-PAGE SUMMARY MODAL ============
+  const SUMMARY_ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
+  const modal       = document.getElementById('summary-modal');
+  const modalFormEl = document.getElementById('modal-form-view');
+  const modalSuccEl = document.getElementById('modal-success-view');
+  const errorEl     = document.getElementById('form-error');
+  const submitBtn   = document.getElementById('submit-summary');
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+  function row(dt, dd) {
+    return `<div><dt class="text-[11px] font-semibold uppercase tracking-wider text-neutral-500">${escapeHtml(dt)}</dt><dd class="mt-0.5 text-sm font-semibold tabular-nums text-neutral-900">${escapeHtml(dd)}</dd></div>`;
+  }
+  function resultRow(lbl, val, accent) {
+    return `<div class="flex items-baseline justify-between gap-4 border-b border-black/5 pb-2 last:border-0 last:pb-0"><span class="text-neutral-700">${escapeHtml(lbl)}</span><span class="font-bold tabular-nums ${accent || 'text-neutral-900'}">${escapeHtml(val)}</span></div>`;
+  }
+
+  function populateModal() {
+    const erpLbl   = ERP_LBL[state.erp]     || 'Custom';
+    const auditLbl = AUDIT_LBL[state.audit] || 'Custom';
+
+    document.getElementById('modal-inputs').innerHTML = [
+      row('Monthly invoice volume', `${VOLUME_LBL[state.volume]} (~${lastResults.monthlyVol.toLocaleString()})`),
+      row('Failure rate',            `${state.failure}%`),
+      row('Cost per failed invoice', `AED ${state.fixcost}`),
+      row('Average invoice value',   `AED ${state.invValue.toLocaleString()}`),
+      row('Collection delay',        `${state.delayDays} days`),
+      row('Cost of capital',         `${state.capRate}% / yr`),
+      row('ERP rework level',        `${erpLbl} (${fmt(state.erp)})`),
+      row('Audit support level',     `${auditLbl} (${fmt(state.audit)})`),
+    ].join('');
+
+    document.getElementById('modal-results').innerHTML = [
+      resultRow('Estimated cost of getting it wrong', fmt(lastResults.total),         'os-clay'),
+      resultRow('Cash flow at risk',                  fmt(lastResults.cashAtRisk),    'os-gold'),
+      resultRow('Main cost driver',                   lastResults.mainDriver,         'text-neutral-900'),
+    ].join('');
+  }
+
+  function openSummaryModal() {
+    populateModal();
+    modalFormEl.classList.remove('hidden');
+    modalSuccEl.classList.add('hidden');
+    errorEl.classList.add('hidden');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send My Summary →';
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSummaryModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('open-summary').addEventListener('click', openSummaryModal);
+  document.getElementById('close-summary').addEventListener('click', closeSummaryModal);
+  document.getElementById('success-close').addEventListener('click', closeSummaryModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeSummaryModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeSummaryModal(); });
+
+  // ---- Submit ----
+  document.getElementById('summary-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form    = e.target;
+    const company = form.companyName.value.trim();
+    const email   = form.workEmail.value.trim();
+    const role    = form.role.value || 'Not specified';
+
+    const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+    if (!company || !emailOk) {
+      errorEl.textContent = 'Please enter a valid company name and work email.';
+      errorEl.classList.remove('hidden');
+      return;
+    }
+    errorEl.classList.add('hidden');
+
+    submitBtn.disabled    = true;
+    submitBtn.textContent = 'Creating summary...';
+
+    // Build the email-friendly payload (formsubmit emails each key/value pair).
+    const erpLbl   = ERP_LBL[state.erp]     || 'Custom';
+    const auditLbl = AUDIT_LBL[state.audit] || 'Custom';
+    const payload  = {
+      _subject:  `New UAE Calculator Summary Request - ${company}`,
+      _captcha:  'false',
+      _template: 'table',
+      source:    'uae-cost-of-getting-it-wrong-calculator',
+      companyName:                  company,
+      workEmail:                    email,
+      role:                         role,
+      estimatedCostOfGettingItWrong: fmt(lastResults.total),
+      cashFlowAtRisk:                fmt(lastResults.cashAtRisk),
+      mainCostDriver:                lastResults.mainDriver,
+      monthlyInvoiceVolume:          `${VOLUME_LBL[state.volume]} (~${lastResults.monthlyVol.toLocaleString()})`,
+      failureRate:                   `${state.failure}%`,
+      costPerFailedInvoice:          `AED ${state.fixcost}`,
+      averageInvoiceValue:           `AED ${state.invValue.toLocaleString()}`,
+      collectionDelayDays:           `${state.delayDays} days`,
+      costOfCapital:                 `${state.capRate}%`,
+      erpReworkLevel:                `${erpLbl} (${fmt(state.erp)})`,
+      auditSupportLevel:             `${auditLbl} (${fmt(state.audit)})`,
+      failedInvoiceHandling:         fmt(lastResults.threeMonthFix),
+      erpReworkAndRetesting:         fmt(lastResults.erpRework),
+      auditAndEvidencePreparation:   fmt(lastResults.audit),
+      delayedCollectionsCost:        fmt(lastResults.collectionDelay),
+      createdAt:                     new Date().toISOString(),
+    };
+
+    // We treat "FormSubmit returned a response" as success from the visitor's perspective.
+    // FormSubmit handles activation on its side. The mailto fallback only fires on true
+    // network failure (offline / DNS / fetch threw) so the visitor never sees an unexpected
+    // email-client popup just because the endpoint is unactivated.
+    let networkOk = false;
+    try {
+      await fetch(SUMMARY_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      networkOk = true;
+    } catch (err) {
+      networkOk = false;
+    }
+
+    if (!networkOk) {
+      // Genuine network failure: open the visitor's mail client so the lead is preserved.
+      const lines = [
+        'New one-page summary request from the UAE Cost of Getting It Wrong Calculator.',
+        '',
+        `Company: ${company}`,
+        `Email: ${email}`,
+        `Role: ${role}`,
+        '',
+        `Estimated cost of getting it wrong: ${fmt(lastResults.total)}`,
+        `Cash flow at risk: ${fmt(lastResults.cashAtRisk)}`,
+        `Main cost driver: ${lastResults.mainDriver}`,
+        '',
+        'Selected assumptions:',
+        `- Monthly invoice volume: ${VOLUME_LBL[state.volume]} (~${lastResults.monthlyVol.toLocaleString()})`,
+        `- Failure rate: ${state.failure}%`,
+        `- Cost per failed invoice: AED ${state.fixcost}`,
+        `- Average invoice value: AED ${state.invValue.toLocaleString()}`,
+        `- Collection delay: ${state.delayDays} days`,
+        `- Cost of capital: ${state.capRate}%`,
+        `- ERP rework level: ${erpLbl} (${fmt(state.erp)})`,
+        `- Audit support level: ${auditLbl} (${fmt(state.audit)})`,
+        '',
+        'Cost breakdown:',
+        `- Failed invoice handling: ${fmt(lastResults.threeMonthFix)}`,
+        `- ERP rework and retesting: ${fmt(lastResults.erpRework)}`,
+        `- Audit and evidence preparation: ${fmt(lastResults.audit)}`,
+        `- Delayed collections cost: ${fmt(lastResults.collectionDelay)}`,
+        '',
+        'Source: UAE Cost of Getting It Wrong Calculator',
+      ].join('\n');
+      const subject = `New UAE Calculator Summary Request - ${company}`;
+      window.location.href = 'mailto:abhi@onesig.co?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines);
+    }
+
+    // Show success state. FormSubmit handles delivery (and activation, on first run) on its side.
+    submitBtn.disabled    = false;
+    submitBtn.textContent = 'Send My Summary →';
+    modalFormEl.classList.add('hidden');
+    modalSuccEl.classList.remove('hidden');
+  });
+</script>
+
+<div id="lead-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <div class="relative my-8 w-full max-w-md rounded-3xl border border-black/10 bg-white shadow-2xl">
+    <button type="button" id="lead-close" aria-label="Close" class="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg></button>
+    <div id="lead-form-view" class="px-7 pb-7 pt-8 md:px-9">
+      <div class="eyebrow mb-3" id="lead-eyebrow">Free assessment</div>
+      <h3 class="text-2xl font-semibold text-neutral-900">One free client assessment</h3>
+      <p class="mt-3 text-sm text-neutral-600">Drop your email and we will send you instructions on how and where to run it. No cost, no commitment.</p>
+      <form id="lead-form" class="mt-6" novalidate>
+        <label class="block"><span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Work email<span class="os-clay">*</span></span><input type="email" name="workEmail" required class="mt-1.5 w-full os-card px-4 py-3 text-sm outline-none focus:border-[#B84C16] focus:ring-2 focus:ring-[#B84C16]/30" placeholder="name@company.com" /></label>
+        <p id="lead-error" class="mt-3 hidden rounded-lg bg-[#B4432F]/8 px-3 py-2 text-xs os-clay ring-1 ring-[#B4432F]/30"></p>
+        <button type="submit" id="lead-submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black disabled:opacity-60">Send request</button>
+        <p class="mt-3 text-center text-[11px] text-neutral-500">Your email goes to abhi@onesig.co. No mailing list.</p>
+      </form>
+    </div>
+    <div id="lead-success-view" class="hidden px-7 py-10 text-center md:px-9 md:py-12">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-[#B84C16]/12 ring-4 ring-[#B84C16]/10"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3 class="mt-5 text-2xl font-semibold text-neutral-900">Thank you for your interest.</h3>
+      <p class="mx-auto mt-3 max-w-sm text-base text-neutral-700">Check your inbox. Instructions are on the way.</p>
+      <button type="button" id="lead-success-close" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">Close</button>
+    </div>
+  </div>
+</div>
+<script>
+  (function () {
+    const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
+    const INTENT = {
+      'assessment': { eyebrow: 'Free assessment', subject: 'OneSig Atlas - free client assessment request' },
+    };
+    const modal=document.getElementById('lead-modal'), formView=document.getElementById('lead-form-view'), successView=document.getElementById('lead-success-view'), form=document.getElementById('lead-form'), eyebrowEl=document.getElementById('lead-eyebrow'), errorEl=document.getElementById('lead-error'), submitBtn=document.getElementById('lead-submit');
+    let currentIntent='sandbox';
+    function openLeadModal(i){currentIntent=INTENT[i]?i:'sandbox';eyebrowEl.textContent=INTENT[currentIntent].eyebrow;formView.classList.remove('hidden');successView.classList.add('hidden');errorEl.classList.add('hidden');submitBtn.disabled=false;submitBtn.textContent='Send request';form.reset();modal.classList.remove('hidden');modal.classList.add('flex');document.body.style.overflow='hidden';setTimeout(()=>form.querySelector('[name=workEmail]').focus(),50);}
+    function closeLeadModal(){modal.classList.add('hidden');modal.classList.remove('flex');document.body.style.overflow='';}
+    document.querySelectorAll('[data-open-lead-modal]').forEach(b=>b.addEventListener('click',()=>openLeadModal(b.dataset.intent||'sandbox')));
+    document.getElementById('lead-close').addEventListener('click',closeLeadModal);
+    document.getElementById('lead-success-close').addEventListener('click',closeLeadModal);
+    modal.addEventListener('click',e=>{if(e.target===modal)closeLeadModal();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!modal.classList.contains('hidden'))closeLeadModal();});
+    form.addEventListener('submit',async e=>{e.preventDefault();const email=form.workEmail.value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){errorEl.textContent='Please enter a valid email address.';errorEl.classList.remove('hidden');return;}errorEl.classList.add('hidden');submitBtn.disabled=true;submitBtn.textContent='Sending...';const subject=INTENT[currentIntent].subject;const payload={_subject:subject,_captcha:'false',_template:'table',source:'onesig-for-advisors',intent:currentIntent,workEmail:email,page:'https://www.onesig.co/for/advisors/',createdAt:new Date().toISOString()};let ok=false;try{const r=await fetch(LEAD_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});const d=await r.json().catch(()=>({}));ok=(d&&(d.success==='true'||d.success===true));}catch(x){}if(!ok){window.location.href='mailto:abhi@onesig.co?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent('Hi Abhi,\n\nI\'m interested in the OneSig Atlas advisor readiness work.\n\nReply to: '+email+'\n\nThanks.');}submitBtn.disabled=false;submitBtn.textContent='Send request';formView.classList.add('hidden');successView.classList.remove('hidden');});
+  })();
+</script>
+</body>
+</html>

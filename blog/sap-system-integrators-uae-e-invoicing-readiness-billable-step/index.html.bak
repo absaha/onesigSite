@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How SAP system integrators can sell UAE e-invoicing readiness as a billable first step · OneSig Atlas</title>
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<meta name="theme-color" content="#f7f1e7">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="How SAP system integrators can sell UAE e-invoicing readiness as a billable first step">
+<meta property="og:description" content="UAE e-invoicing readiness is a scoping step most SIs give away. Here's how to make it a billable, AI-native deliverable that de-risks the implementation you win next.">
+<meta property="og:url" content="https://www.onesig.co/blog/sap-system-integrators-uae-e-invoicing-readiness-billable-step/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="OneSig Atlas - UAE FTA Phase 2 readiness">
+<meta property="article:published_time" content="2026-06-03">
+<meta property="article:author" content="OneSig">
+<meta property="article:section" content="For partners">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How SAP system integrators can sell UAE e-invoicing readiness as a billable first step">
+<meta name="twitter:description" content="UAE e-invoicing readiness is a scoping step most SIs give away. Here's how to make it a billable, AI-native deliverable.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image.png">
+
+<meta name="description" content="UAE e-invoicing readiness is a scoping step most SIs give away. Here's how to make it a billable, AI-native deliverable that de-risks the implementation you win next.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  /* OneSig site chrome (does not collide with .onesig-post) */
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #f7f1e7; color: #161616; -webkit-font-smoothing: antialiased; }
+  .os-nav { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(0,0,0,0.10); background: rgba(247,241,231,0.85); backdrop-filter: blur(20px); }
+  .os-nav-inner { max-width: 1280px; margin: 0 auto; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .os-brand { display: flex; align-items: center; gap: 8px; text-decoration: none; color: #171717; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  .os-brand img { height: 36px; width: auto; flex-shrink: 0; }
+  .os-nav-links { display: none; gap: 4px; }
+  @media (min-width: 1024px) { .os-nav-links { display: flex; } }
+  .os-nav-links a { padding: 6px 12px; border-radius: 9999px; font-size: 14px; font-weight: 500; color: rgb(82,82,82); text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+  .os-nav-links a:hover { color: rgb(23,23,23); }
+  .os-nav-links a.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+  .os-nav-cta { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 9999px; background: #171717; color: #fff; font-size: 14px; font-weight: 600; text-decoration: none; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .os-nav-cta:hover { background: #000; }
+
+  .os-back { max-width: 720px; margin: 32px auto 0; padding: 0 24px; }
+  .os-back a { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: rgb(109,40,217); text-decoration: none; font-weight: 600; }
+  .os-back a:hover { text-decoration: underline; }
+
+  .os-footer { border-top: 1px solid rgba(0,0,0,0.10); background: rgba(255,255,255,0.4); padding: 40px 20px; margin-top: 64px; }
+  .os-footer-inner { max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-size: 14px; color: rgb(82,82,82); }
+  .os-footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+  .os-footer-links a { color: rgb(82,82,82); text-decoration: none; }
+  .os-footer-links a:hover { color: rgb(23,23,23); }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="os-nav">
+  <div class="os-nav-inner">
+    <a href="/solutions/readiness-scan/" class="os-brand">
+      <img src="/assets/logo.png" alt="OneSig">
+      OneSig
+    </a>
+    <div class="os-nav-links">
+      <a href="/solutions/readiness-scan/">Readiness Scan</a>
+      <a href="/solutions/readiness-scan/cost-calculator/">Calculate Cost of Getting It Wrong</a>
+      <a href="/solutions/readiness-scan/partners/">For Partners</a>
+      <a href="/blog/" class="active">Blog</a>
+    </div>
+    <a href="/solutions/readiness-scan/" class="os-nav-cta">Book a Readiness Scan</a>
+  </div>
+</nav>
+
+<!-- ============ BACK TO BLOG ============ -->
+<div class="os-back">
+  <a href="/blog/">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></svg>
+    Back to all posts
+  </a>
+</div>
+
+
+<!-- ============ POST BODY (scoped, user-provided) ============ -->
+<style>
+.onesig-post{
+  --os-cream:#f7f1e7; --os-paper:#fffdf8; --os-ink:#1c1813; --os-muted:#6f6557;
+  --os-faint:#9a9081; --os-line:#e7ddcd; --os-accent:#c1502e; --os-accent-dark:#a8421f;
+  --os-accent-soft:#f6e3da; --os-panel:#211d18;
+  --os-serif:Georgia,'Times New Roman',serif;
+  --os-sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  max-width:720px; margin:0 auto; padding:24px; background:var(--os-cream);
+  color:var(--os-ink); font-family:var(--os-sans); font-size:18px; line-height:1.7;
+}
+.onesig-post *{box-sizing:border-box}
+.onesig-post .os-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--os-accent);font-weight:700;margin-bottom:14px}
+.onesig-post h1{font-family:var(--os-serif);font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-.5px;margin:0 0 18px;color:var(--os-ink)}
+.onesig-post .os-byline{color:var(--os-faint);font-size:14px;margin-bottom:8px}
+.onesig-post .os-hr{height:1px;background:var(--os-line);margin:26px 0 30px;border:0}
+.onesig-post p{margin:0 0 20px}
+.onesig-post h2{font-family:var(--os-serif);font-weight:700;font-size:25px;line-height:1.25;letter-spacing:-.3px;margin:40px 0 14px;color:var(--os-ink)}
+.onesig-post a{color:var(--os-accent-dark);text-decoration:underline;text-underline-offset:2px}
+.onesig-post .os-callout{background:var(--os-paper);border:1px solid var(--os-line);border-left:3px solid var(--os-accent);border-radius:10px;padding:20px 22px;margin:0 0 30px}
+.onesig-post .os-callout .os-lbl{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--os-accent);font-weight:700;margin-bottom:8px}
+.onesig-post .os-callout p:last-child{margin-bottom:0}
+.onesig-post ul{margin:0 0 22px;padding:0;list-style:none}
+.onesig-post ul li{position:relative;padding-left:26px;margin-bottom:11px}
+.onesig-post ul li::before{content:"";position:absolute;left:6px;top:12px;width:7px;height:7px;background:var(--os-accent);border-radius:2px;transform:rotate(45deg)}
+.onesig-post .os-receive{background:var(--os-panel);border-radius:14px;padding:28px;margin:6px 0 30px;color:#ece4d6}
+.onesig-post .os-receive h3{font-family:var(--os-serif);color:#fff;font-size:20px;margin:0 0 4px}
+.onesig-post .os-receive .os-sub{color:#b6a98f;font-size:14px;margin-bottom:18px}
+.onesig-post .os-receive ol{margin:0;padding:0;counter-reset:r;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.onesig-post .os-receive ol li{counter-increment:r;position:relative;padding-left:40px;font-size:15px;line-height:1.5;color:#ddd3c2}
+.onesig-post .os-receive ol li::before{content:counter(r,decimal-leading-zero);position:absolute;left:0;top:0;font-family:var(--os-serif);font-size:13px;color:var(--os-accent);background:#2f2a23;width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:700}
+.onesig-post .os-receive ol li b{color:#fbf3e7;font-weight:600}
+.onesig-post .os-faq .os-q{font-family:var(--os-serif);font-weight:700;font-size:19px;margin:24px 0 6px}
+.onesig-post .os-endcta{background:var(--os-accent-soft);border:1px solid #eecbbd;border-radius:14px;padding:26px;margin:38px 0 10px;text-align:center}
+.onesig-post .os-endcta .os-big{font-family:var(--os-serif);font-size:22px;color:#7e3a1f;margin:0 0 6px}
+.onesig-post .os-endcta p{color:#8a4a2c;font-size:15px;margin:0 0 16px}
+.onesig-post .os-endcta a{display:inline-block;background:var(--os-accent);color:#fff;text-decoration:none;padding:11px 22px;border-radius:9px;font-weight:600;font-size:15px}
+@media(max-width:620px){.onesig-post .os-receive ol{grid-template-columns:1fr}.onesig-post h1{font-size:32px}}
+</style>
+<div class="onesig-post">
+  <div class="os-kicker">For partners</div>
+  <h1>How SAP system integrators can sell UAE e-invoicing readiness as a billable first step</h1>
+  <div class="os-byline">OneSig · 3 June 2026 · 6 min read</div>
+  <hr class="os-hr">
+  <div class="os-callout">
+    <div class="os-lbl">The short answer</div>
+    <p>Most system integrators treat UAE e-invoicing readiness as unpaid pre-sales. They run a few workshops to scope the SAP work, then give it away to win the implementation. That's a missed line item, and it's a hidden risk. Readiness can be a billable deliverable in its own right, two to three weeks long, that prices itself, de-risks the build you win next, and makes your firm look AI-native instead of old-school.</p>
+    <p>The change is simple. Stop running readiness as a conversation and start running it as a product.</p>
+  </div>
+  <h2>Why the readiness step is worth charging for</h2>
+  <p>When a UAE client gets ready for the FTA mandate, the SAP integration is the visible work. But it only goes smoothly if the data feeding it is correct: buyer tax registration numbers, exemption reason codes, reverse-charge routing, and credit notes that reference an original invoice. The FTA made this concrete in February 2026 when it published 50 mandatory invoice fields. A lot of them aren't covered by current VAT law, so they aren't clean in most clients' systems today.</p>
+  <p>Finding those gaps is skilled work, and it decides the scope, timeline, and risk of everything that follows. The Big Four already charge a premium for it as a standalone assessment. If you're doing the same work to scope an SAP project and not billing for it, you're funding your competitor's pricing model.</p>
+  <h2>The two ways this usually goes wrong</h2>
+  <p>The first is giving it away. You run discovery workshops, build a rough picture, and fold it into pre-sales. The client gets a free assessment, you absorb the cost, and you inherit the risk when the data turns out worse than the workshop suggested.</p>
+  <p>The second is guessing at the scope. Without a record-level view of the data, you price the integration on assumptions. Then 150 buyer TRNs turn out to be invalid halfway through the project, the timeline slips, and your margin goes with it.</p>
+  <p>Both problems come from the same place. Readiness got treated as a conversation instead of a deliverable.</p>
+  <h2>What a billable readiness deliverable contains</h2>
+  <p>To charge for readiness, it has to produce something the client can hold and act on. A strong package includes:</p>
+  <ul>
+    <li>Validation of the client's actual sample data, not a description of their systems</li>
+    <li>Record-level failures, each with the rule it broke and the owner who fixes it</li>
+    <li>A contradiction report across Tax, Finance, IT, AP and AR, captured during discovery</li>
+    <li>Tribal knowledge written up as verifiable rules</li>
+    <li>An owner-specific workplan ranked by impact</li>
+    <li>A readiness score by area, re-runnable so you can prove the fixes worked</li>
+    <li>A clean handoff package for the SAP build and the chosen ASP</li>
+  </ul>
+  <p>That's something a partner can price, defend, and repeat across clients. It's also the scoping input that protects your margin on the implementation you win next.</p>
+  <h2>Where this fits in e-invoicing implementation scoping</h2>
+  <p>Think of readiness as the diagnostic that sets up the whole project. It tells you which entities are clean, which fields are missing, and where the process breaks, before you commit a single delivery day to the SAP build. Scope built on that evidence holds up. Scope built on a workshop impression tends to move once the data shows its true state.</p>
+  <h2>The positioning advantage</h2>
+  <p>There's a second return beyond the fee. Running readiness as a live, AI-native loop changes how the client sees your firm. Instead of another set of workshop slides, you show up with record-level evidence, a score that moves, and a digital audit trail of who signed off on what. Every Big Four firm is selling the same workshop-and-deck model, so that contrast does a lot of the selling for you.</p>
+  <p>It also compresses the timeline. The traditional assessment runs six to eight weeks. A productized one runs two to three. A faster path to a signed scope means a faster path to implementation revenue.</p>
+  <h2>How to package it for clients</h2>
+  <p>You have three clean options, and all of them work.</p>
+  <ul>
+    <li><b>Bundle it.</b> Fold readiness into your overall fee as the first phase, priced as a distinct deliverable so the client sees the value.</li>
+    <li><b>Bill it standalone.</b> Sell readiness as an upfront diagnostic before any technology decision. It's how the Big Four protect their premium, and it qualifies the client before you commit delivery capacity.</li>
+    <li><b>Use it to win.</b> Run a fast readiness scan as a paid pilot that proves your approach, then convert it into the full SAP engagement.</li>
+  </ul>
+  <p>The thread running through all three is the same. The client pays for readiness because it gives them evidence they can act on, and you keep the margin instead of donating it.</p>
+  <h2>Frequently asked questions</h2>
+  <div class="os-faq">
+    <div class="os-q">Should a system integrator charge for an e-invoicing readiness assessment?</div>
+    <p>Yes. Readiness is skilled work that sets the scope and risk of the implementation. Giving it away funds the Big Four's pricing model and leaves you carrying the risk if the data is worse than assumed. Charging for it qualifies the client and protects your delivery margin.</p>
+    <div class="os-q">How long should a UAE e-invoicing readiness assessment take?</div>
+    <p>A workshop-and-deck assessment usually runs six to eight weeks. A productized, record-level assessment can run in two to three, because the data is validated directly rather than discussed.</p>
+    <div class="os-q">How does readiness reduce SAP implementation risk?</div>
+    <p>It surfaces invalid records and process contradictions before the build is scoped, so the timeline and price reflect reality. Without it, problems like invalid buyer TRNs appear mid-project and cause slippage.</p>
+    <div class="os-q">Where does readiness sit relative to ASP selection?</div>
+    <p>Before it. Readiness confirms the data and processes can produce a compliant invoice. ASP selection and onboarding come after. A good readiness package hands off cleanly to whichever ASP the client chooses.</p>
+  </div>
+  <div class="os-endcta">
+    <div class="os-big">Launch a UAE Readiness Scan offering.</div>
+    <p>You bring the client relationship. OneSig provides the scan engine, workshop structure, validation logic, scoring, and client-ready outputs.</p>
+    <a href="/solutions/readiness-scan/partners/">Become a Readiness Partner →</a>
+  </div>
+</div>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="os-footer">
+  <div class="os-footer-inner">
+    <div>© OneSig 2026</div>
+    <div class="os-footer-links">
+      <a href="/solutions/readiness-scan/">Readiness Scan</a>
+      <a href="/solutions/readiness-scan/cost-calculator/">Cost Calculator</a>
+      <a href="/solutions/readiness-scan/partners/">For Partners</a>
+      <a href="/blog/">Blog</a>
+      <a href="mailto:abhi@onesig.co">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============ STRUCTURED DATA (Article + FAQ) ============ -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"How SAP system integrators can sell UAE e-invoicing readiness as a billable first step","description":"UAE e-invoicing readiness is a scoping step most SIs give away. Here's how to make it a billable, AI-native deliverable that de-risks the implementation you win next.","author":{"@type":"Organization","name":"OneSig"},"publisher":{"@type":"Organization","name":"OneSig Atlas","logo":{"@type":"ImageObject","url":"https://www.onesig.co/assets/logo.png"}},"datePublished":"2026-06-03","dateModified":"2026-06-03","mainEntityOfPage":"https://www.onesig.co/blog/sap-system-integrators-uae-e-invoicing-readiness-billable-step/"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Should a system integrator charge for an e-invoicing readiness assessment?","acceptedAnswer":{"@type":"Answer","text":"Yes. Readiness is skilled work that sets the scope and risk of the implementation. Giving it away funds the Big Four's pricing model and leaves you carrying the risk if the data is worse than assumed. Charging for it qualifies the client and protects your delivery margin."}},{"@type":"Question","name":"How long should a UAE e-invoicing readiness assessment take?","acceptedAnswer":{"@type":"Answer","text":"A workshop-and-deck assessment usually runs six to eight weeks. A productized, record-level assessment can run in two to three, because the data is validated directly rather than discussed."}},{"@type":"Question","name":"How does readiness reduce SAP implementation risk?","acceptedAnswer":{"@type":"Answer","text":"It surfaces invalid records and process contradictions before the build is scoped, so the timeline and price reflect reality. Without it, problems like invalid buyer TRNs appear mid-project and cause slippage."}},{"@type":"Question","name":"Where does readiness sit relative to ASP selection?","acceptedAnswer":{"@type":"Answer","text":"Before it. Readiness confirms the data and processes can produce a compliant invoice. ASP selection and onboarding come after. A good readiness package hands off cleanly to whichever ASP the client chooses."}}]}
+</script>
+
+</body>
+</html>

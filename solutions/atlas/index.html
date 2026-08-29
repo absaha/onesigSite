@@ -1,0 +1,1598 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OneSig Atlas | The AI OS for tax transformation advisors</title>
+<meta name="description" content="Expert work. Not busywork. Atlas is the AI analyst who collects, checks and drafts. Your experts judge and approve. More revenue per expert.">
+
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#F4F4F4">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="OneSig Atlas | The AI OS for tax transformation advisors">
+<meta property="og:description" content="Expert work. Not busywork. Atlas is the AI analyst who collects, checks and drafts. Your experts judge and approve. More revenue per expert.">
+<meta property="og:url" content="https://www.onesig.co/solutions/atlas/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image-v13.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="OneSig Atlas - the AI OS for tax transformation advisors">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OneSig Atlas | The AI OS for tax transformation advisors">
+<meta name="twitter:description" content="Expert work. Not busywork. Atlas is the AI analyst who collects, checks and drafts.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image-v13.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/august.css">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 border-b border-black/10 bg-white/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
+    <a href="/solutions/atlas/" class="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900">
+      <img src="/assets/logo-v4.png" alt="OneSig" class="h-8 w-auto shrink-0">
+      Atlas
+    </a>
+    <div class="hidden items-center gap-1 lg:flex">
+      <a href="/solutions/atlas/" class="osNavBtn active">Atlas</a>
+      <a href="/solutions/atlas/how-it-works/" class="osNavBtn">How it works</a>
+      <div class="osNavDdWrap">
+        <button type="button" class="osNavBtn osNavDd" aria-haspopup="true" aria-expanded="false">Partners
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="osNavDdMenu" role="menu">
+          <a href="/solutions/atlas/partners/" class="osDdItem" role="menuitem">Overview</a>
+          <a href="/for/advisors/" class="osDdItem" role="menuitem">For Advisors</a>
+          <a href="/for/technologypartners/" class="osDdItem" role="menuitem">For Technology Partners</a>
+          <a href="/for/asps/" class="osDdItem" role="menuitem">For ASPs</a>
+        </div>
+      </div>
+      <a href="/access/" class="osNavBtn">Access</a>
+    </div>
+    <button type="button" data-open-lead-modal data-intent="assessment" class="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:opacity-90" style="background: var(--ink);">Free assessment</button>
+  </div>
+</nav>
+<style>
+  .osNavBtn { display: inline-flex; align-items: center; gap: 0.25rem; padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: rgb(82,82,82); transition: color 0.2s, background 0.2s; white-space: nowrap; background: transparent; border: 0; cursor: pointer; }
+  .osNavBtn:hover { color: rgb(23,23,23); }
+  .osNavBtn.active { background: rgba(11,46,79,0.06); color: rgb(23,23,23); }
+  .osNavDdWrap { position: relative; }
+  .osNavDdMenu {
+    position: absolute; left: 0; top: 100%; margin-top: 0.35rem;
+    min-width: 220px; padding: 0.4rem;
+    background: #ffffff; border: 1px solid rgba(0,0,0,0.08); border-radius: 14px;
+    box-shadow: 0 20px 40px -12px rgba(0,0,0,0.18), 0 4px 8px -2px rgba(0,0,0,0.06);
+    opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+    z-index: 60;
+  }
+  .osNavDdWrap:hover .osNavDdMenu,
+  .osNavDdWrap:focus-within .osNavDdMenu { opacity: 1; visibility: visible; transform: translateY(0); }
+  .osDdItem { display: block; padding: 0.5rem 0.75rem; border-radius: 8px; font-size: 0.875rem; font-weight: 500; color: rgb(64,64,64); }
+  .osDdItem:hover { background: rgb(245,245,245); color: rgb(23,23,23); }
+  .osDdItem.active { background: rgba(14,165,164,0.10); color: #B84C16; }
+</style>
+
+
+<style>
+/* ---- hero task chip: one action at a time ---- */
+#tk-card{display:inline-flex;align-items:center;gap:12px;max-width:100%;
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;
+  padding:13px 18px 13px 14px;box-shadow:0 2px 14px rgba(28,28,28,.05)}
+#tk-card .ic{flex:none;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;
+  background:rgba(184,76,22,.1);color:var(--orange)}
+#tk-card .tx{min-width:0;text-align:left}
+#tk-card .tx b{display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--orange);margin-bottom:2px}
+#tk-card .tx span{display:block;font-size:14px;line-height:1.4;font-weight:500;color:var(--ink)}
+#tk-card.swap{animation:tkIn .5s cubic-bezier(.4,0,.2,1)}
+@keyframes tkIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){#tk-card.swap{animation:none}}
+</style>
+<!-- 1. HERO -->
+<section class="relative overflow-hidden px-5 pt-24 pb-20 md:pt-32 md:pb-24">
+  <div class="os-orb os-orb-a" style="top:-90px; right:-40px;"></div>
+  <div class="os-orb os-orb-c" style="top:220px; right:180px; opacity:.35;"></div>
+  <div class="mx-auto max-w-6xl os-above">
+    <div>
+    <div class="text-[11px] font-bold uppercase tracking-[0.16em]" style="color:var(--orange)">The AI OS for tax transformation advisors</div>
+
+    <h1 class="mt-4 text-[34px] font-semibold leading-[1.12] tracking-[-0.035em] text-neutral-900 sm:text-[40px] md:text-[52px]" style="text-wrap: pretty;">No more <span class="os-mark-gold">copy-paste</span><br>engagements.</h1>
+
+    <p class="mt-8 max-w-lg text-base leading-8 md:text-lg" style="color:var(--muted)">Your workflow is duct tape - email, calls, sheets, one-off prompts, decks, held together by hand. It works at two clients. It breaks at ten.</p>
+
+    <div class="mt-5 grid items-center gap-8 lg:grid-cols-[minmax(0,32rem)_1fr] lg:gap-12">
+      <p class="max-w-lg text-base font-medium leading-8 text-neutral-900 md:text-lg">Atlas is the AI analyst that does the busywork, so you focus on the expert work. <span class="os-mark-teal">Busy season means more clients, not more hires.</span></p>
+
+      <div class="hidden lg:block lg:justify-self-end lg:mr-14 xl:mr-20">
+        <div class="text-[11px] font-bold uppercase tracking-[0.18em]" style="color:var(--muted)">Let Atlas help on your discovery phase</div>
+        <div id="tk-card" class="mt-3"><span class="ic"></span><span class="tx"><b></b><span></span></span></div>
+      </div>
+    </div>
+
+    <!-- PROOF STRIP -->
+    <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+      <div class="flex items-center gap-3">
+        <img src="/assets/taxtech500-badge.svg" alt="Tax Tech 500" class="h-11 w-auto shrink-0">
+        <div class="leading-tight">
+          <div class="text-[11px] font-bold uppercase tracking-[0.14em]" style="color:var(--orange)">Ranked #1</div>
+          <div class="text-sm font-semibold text-neutral-900">E-invoicing consulting</div>
+          <div class="text-[11px]" style="color:var(--muted)">Tax Tech 500 &middot; July 2026</div>
+        </div>
+      </div>
+
+      <div class="hidden h-10 w-px sm:block" style="background:var(--line)"></div>
+
+      <div class="flex items-center gap-3">
+        <img src="/assets/taxtech500-badge.svg" alt="Tax Tech 500" class="h-11 w-auto shrink-0">
+        <div class="leading-tight">
+          <div class="text-[11px] font-bold uppercase tracking-[0.14em]" style="color:var(--orange)">Ranked #1</div>
+          <div class="text-sm font-semibold text-neutral-900">E-invoicing implementation partner</div>
+          <div class="text-[11px]" style="color:var(--muted)">Tax Tech 500 &middot; July 2026</div>
+        </div>
+      </div>
+
+      <div class="hidden h-10 w-px sm:block" style="background:var(--line)"></div>
+
+      <div class="flex items-center gap-4">
+        <span class="text-[11px] font-bold uppercase tracking-[0.14em]" style="color:var(--muted)">Built by ex</span>
+        <img src="/assets/amazon-wordmark.svg" alt="Amazon" class="h-5 w-auto opacity-70">
+        <img src="/assets/deloitte-wordmark.svg" alt="Deloitte" class="h-4 w-auto opacity-70">
+      </div>
+    </div>
+
+    <!-- ACTION -->
+    <div class="mt-11">
+      <button type="button" data-open-lead-modal data-intent="assessment" class="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-white transition hover:opacity-90" style="background: var(--ink);">Get one free client assessment</button>
+    </div>
+  </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var card=document.getElementById('tk-card'); if(!card) return;
+  var icEl=card.querySelector('.ic'),
+      lbEl=card.querySelector('.tx b'),
+      txEl=card.querySelector('.tx span');
+  var IC={
+    data:'<path d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3z"/><path d="M4 7v5c0 1.7 3.6 3 8 3s8-1.3 8-3V7"/><path d="M4 12v5c0 1.7 3.6 3 8 3s8-1.3 8-3v-5"/>',
+    flag:'<path d="M4 21V4h9l.6 2H20v9h-7l-.6-2H4"/>',
+    user:'<circle cx="12" cy="8" r="3.4"/><path d="M5 20a7 7 0 0 1 14 0"/>',
+    flow:'<rect x="3" y="4" width="6" height="5" rx="1.4"/><rect x="15" y="15" width="6" height="5" rx="1.4"/><path d="M9 6.5h4a2 2 0 0 1 2 2v9"/>',
+    doc:'<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/>',
+    rec:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 1.8"/>',
+    map:'<rect x="3" y="3" width="7" height="5" rx="1.3"/><rect x="3" y="16" width="7" height="5" rx="1.3"/><rect x="14" y="16" width="7" height="5" rx="1.3"/><path d="M6.5 8v8"/><path d="M10 18.5h4"/>',
+    gap:'<rect x="2.5" y="7" width="6.5" height="10" rx="1.4"/><rect x="15" y="7" width="6.5" height="10" rx="1.4"/><path d="M11.5 12h.01"/><path d="M13.5 12h.01"/>',
+    bolt:'<path d="M13 2.5 5 13.5h6l-1 8 8-11h-6z"/>'
+  };
+  var ROWS=[
+    ['data','Processed','1,412 invoices from the client sample'],
+    ['flag','Flagged','92 records missing a Buyer TRN'],
+    ['user','Assigned','7 findings to named owners'],
+    ['flow','Mapped','38 process flows across 9 systems'],
+    ['doc','Generated','24 requirements, each with a test case'],
+    ['map','Documented','the as-is process, owner by owner'],
+    ['gap','Surfaced','12 gaps between as-is and the future state'],
+    ['bolt','Configured','a legislation change to auto-trigger actions']
+  ];
+  var i=0;
+  function paint(){
+    var r=ROWS[i % ROWS.length];
+    icEl.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+IC[r[0]]+'</svg>';
+    lbEl.textContent=r[1]; txEl.textContent=r[2];
+    card.classList.remove('swap'); void card.offsetWidth; card.classList.add('swap');
+    i++;
+  }
+  paint();
+  var t=setInterval(paint,2600);
+  card.addEventListener('mouseenter',function(){ clearInterval(t); });
+  card.addEventListener('mouseleave',function(){ t=setInterval(paint,2600); });
+})();
+</script>
+
+<script>
+(function(){
+  var sec=document.getElementById('produces'); if(!sec) return;
+  var tabs=[].slice.call(sec.querySelectorAll('.pd-tab'));
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){
+        var on = t===tab;
+        t.setAttribute('aria-selected', on);
+        sec.querySelector('#pd-'+t.dataset.pd).hidden = !on;
+      });
+    });
+  });
+  sec.addEventListener('keydown', function(e){
+    if(e.key!=='ArrowRight' && e.key!=='ArrowLeft') return;
+    var i=tabs.indexOf(document.activeElement); if(i<0) return;
+    var n=(i + (e.key==='ArrowRight'?1:-1) + tabs.length) % tabs.length;
+    tabs[n].focus(); tabs[n].click(); e.preventDefault();
+  });
+})();
+</script>
+
+<script>
+(function(){
+  var sec=document.getElementById('produces'); if(!sec) return;
+  var tabs=[].slice.call(sec.querySelectorAll('.pd-tab'));
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){
+        var on = t===tab;
+        t.setAttribute('aria-selected', on);
+        sec.querySelector('#pd-'+t.dataset.pd).hidden = !on;
+      });
+    });
+  });
+  sec.addEventListener('keydown', function(e){
+    if(e.key!=='ArrowRight' && e.key!=='ArrowLeft') return;
+    var i=tabs.indexOf(document.activeElement); if(i<0) return;
+    var n=(i + (e.key==='ArrowRight'?1:-1) + tabs.length) % tabs.length;
+    tabs[n].focus(); tabs[n].click(); e.preventDefault();
+  });
+})();
+</script>
+
+
+
+<!-- WHY / SOLUTION / RESULT -->
+<section class="border-t px-5 py-24 md:py-28" style="border-color:var(--line); background:var(--canvas)">
+  <div class="mx-auto max-w-6xl">
+
+    <div class="max-w-3xl">
+      <h2 class="text-3xl leading-tight md:text-[42px]">Why does tax transformation face <span class="os-mark-gold">months of uncertainty?</span></h2>
+    </div>
+
+    <div class="mt-14 grid gap-5 md:grid-cols-3">
+      <div class="os-card p-8">
+        <div class="font-mono text-xs font-semibold" style="color: var(--orange);">01</div>
+        <p class="mt-4 text-lg font-semibold leading-8 text-neutral-900">Delivery takes a backseat</p>
+        <p class="mt-3 text-base leading-7" style="color:var(--muted)">By the time discovery ends, months have passed and workshops have been repeated. Before anything is built, you have already spent your client's most valuable resource: their confidence.</p>
+      </div>
+      <div class="os-card p-8">
+        <div class="font-mono text-xs font-semibold" style="color: var(--orange);">02</div>
+        <p class="mt-4 text-lg font-semibold leading-8 text-neutral-900">The real test begins in UAT</p>
+        <p class="mt-3 text-base leading-7" style="color:var(--muted)">What seemed validated during discovery is challenged by production data in UAT, due to regulations and personnel changes, forcing expensive corrections and avoidable delays.</p>
+      </div>
+      <div class="os-card p-8">
+        <div class="font-mono text-xs font-semibold" style="color: var(--orange);">03</div>
+        <p class="mt-4 text-lg font-semibold leading-8 text-neutral-900">Every delayed go-live delays someone's revenue</p>
+        <p class="mt-3 text-base leading-7" style="color:var(--muted)">Clients wait for value. Partners wait for revenue. Teams wait to move on. Momentum slows for everyone.</p>
+      </div>
+    </div>
+
+      </div>
+</section>
+
+
+<style>
+/* ===== Discovery transform (dt-) - namespaced, self-contained ===== */
+#dt-sec .dt-mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+#dt-sec .dt-shead{display:flex;align-items:baseline;gap:16px;min-height:54px}
+#dt-sec .dt-shead .dt-n{font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--orange)}
+#dt-sec .dt-shead .dt-t{font-size:29px;font-weight:700;letter-spacing:-0.03em;line-height:1.15;
+  transition:opacity .18s ease;color:var(--ink)}
+#dt-sec .dt-duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+#dt-sec .dt-pane{border-radius:16px;padding:22px 26px 24px;height:344px;display:flex;flex-direction:column;overflow:hidden}
+#dt-sec .dt-hdrow{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+#dt-sec .dt-hd{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+#dt-sec .dt-wk{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:opacity .18s ease}
+#dt-sec .dt-art{transition:opacity .18s ease}
+#dt-sec .dt-art svg{height:100%;width:auto;max-width:100%;display:block}
+#dt-sec .dt-tx{font-size:15.5px;line-height:1.58;transition:opacity .18s ease;max-width:46ch}
+#dt-sec .dt-pane.dt-b{background:#ECECEC;border:1px solid #E0E0E0}
+#dt-sec .dt-pane.dt-b .dt-hd{color:#8A8A8A}
+#dt-sec .dt-pane.dt-b .dt-wk{color:#9A9A9A}
+#dt-sec .dt-pane.dt-b .dt-tx{color:#565656}
+#dt-sec .dt-pane.dt-a{background:var(--surface);border:1px solid rgba(184,76,22,.4);
+  box-shadow:0 2px 18px rgba(184,76,22,.06)}
+#dt-sec .dt-pane.dt-a .dt-hd,#dt-sec .dt-pane.dt-a .dt-wk{color:var(--orange)}
+#dt-sec .dt-pane.dt-a .dt-tx{color:var(--ink);font-weight:500}
+#dt-sec .dt-tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;padding-top:16px;transition:opacity .18s ease}
+#dt-sec .dt-tl{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #D8D8D8;
+  border-radius:999px;padding:3px 10px 3px 4px;font-size:10.5px;font-weight:600;color:#7A7A7A}
+#dt-sec .dt-tl i{width:18px;height:18px;border-radius:999px;display:grid;place-items:center;
+  font-size:8px;font-weight:800;color:#fff;font-style:normal}
+#dt-sec .dt-prog{display:flex;gap:6px;margin-top:22px;align-items:center}
+#dt-sec .dt-prog i{height:3px;flex:1;background:var(--line);border-radius:2px;transition:background .25s}
+#dt-sec .dt-prog i.on{background:var(--orange)}
+#dt-sec .dt-cnt{font-size:11px;color:var(--muted);margin-left:10px;white-space:nowrap;
+  font-family:'IBM Plex Mono',monospace}
+#dt-sec .dt-bigv{font-size:46px;font-weight:700;letter-spacing:-0.04em;line-height:1}
+#dt-sec .dt-pane.dt-b .dt-bigv{color:#5F5F5F}
+#dt-sec .dt-pane.dt-a .dt-bigv{color:var(--orange)}
+#dt-sec .dt-statlbl{font-size:13.5px;margin-top:6px}
+#dt-sec .dt-pane.dt-b .dt-statlbl{color:#8A8A8A}
+#dt-sec .dt-pane.dt-a .dt-statlbl{color:var(--muted)}
+#dt-sec .dt-statrow{display:flex;gap:34px;align-items:flex-end}
+#dt-sec .dt-statnote{margin-top:auto;padding-top:16px;border-top:1px solid;font-size:13.5px;line-height:1.5}
+#dt-sec .dt-pane.dt-b .dt-statnote{border-color:#DCDCDC;color:#6A6A6A}
+#dt-sec .dt-pane.dt-a .dt-statnote{border-color:rgba(184,76,22,.25);color:var(--orange);font-weight:600}
+
+
+
+
+/* ---- animated scene stages (Streamline-style live mockups) ---- */
+#dt-sec .dt-art{height:116px;margin-bottom:14px;position:relative}
+#dt-sec .sc{position:absolute;inset:0;border-radius:10px;overflow:hidden}
+#dt-sec .dt-pane.dt-b .sc{background:#F7F7F7;border:1px solid #E4E4E4}
+#dt-sec .dt-pane.dt-a .sc{background:#FDFAF8;border:1px solid rgba(184,76,22,.16)}
+#dt-sec .sc>*{position:absolute}
+#dt-sec .sc-l{display:flex;align-items:center;gap:5px;background:#fff;border:1px solid #E2E2E2;
+  border-radius:7px;padding:3.5px 8px 3.5px 4px;font-size:8.5px;font-weight:600;color:#6E6E6E;
+  white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+#dt-sec .sc-l i{width:14px;height:14px;border-radius:4px;display:grid;place-items:center;
+  font-size:6px;font-weight:800;color:#fff;font-style:normal;font-family:'Inter',sans-serif}
+#dt-sec .sc-card{background:#fff;border:1px solid #E2E2E2;border-radius:7px}
+#dt-sec .dt-pane.dt-a .sc-card{border-color:rgba(184,76,22,.22)}
+#dt-sec .sc-bar{height:5px;border-radius:3px;background:#E7E7E7}
+#dt-sec .sc-bar.o{background:rgba(184,76,22,.28)}
+#dt-sec .sc-bar.r{background:rgba(180,67,47,.30)}
+#dt-sec .sc-tx{font-family:'IBM Plex Mono',monospace;font-size:8px;font-weight:600;
+  letter-spacing:.07em;color:#9A9A9A;white-space:nowrap}
+#dt-sec .sc-tx.o{color:var(--orange)}
+#dt-sec .sc-tx.r{color:#B4432F}
+#dt-sec .sc-dsh{border:1px dashed #CFCFCF;border-radius:7px}
+#dt-sec .dt-pane.dt-a .sc-dsh{border-color:rgba(184,76,22,.35)}
+#dt-sec .sc-dot{border-radius:999px;background:#CFCFCF}
+#dt-sec .sc-dot.o{background:var(--orange)}
+#dt-sec .sc-ln{height:1px;background:#DCDCDC}
+#dt-sec .sc-ok{width:13px;height:13px;border-radius:999px;background:rgba(15,120,60,.12);
+  display:grid;place-items:center}
+#dt-sec .sc-ok:after{content:"";width:5px;height:2.5px;border-left:1.6px solid #0F783C;
+  border-bottom:1.6px solid #0F783C;transform:rotate(-45deg) translate(.5px,-1px)}
+#dt-sec .sc-x{width:13px;height:13px;border-radius:999px;background:rgba(180,67,47,.12);
+  display:grid;place-items:center;font-size:8px;font-weight:800;color:#B4432F;font-family:'Inter',sans-serif}
+
+/* motion */
+#dt-sec .a-in{opacity:0;animation:scIn .5s cubic-bezier(.3,0,.2,1) forwards}
+#dt-sec .a-jit{animation:scJit 2.4s ease-in-out infinite}
+#dt-sec .a-pulse{animation:scPulse 1.9s ease-in-out infinite}
+#dt-sec .a-fade{opacity:1;animation:scFade .7s ease forwards}
+#dt-sec .a-grow{transform:scaleX(0);transform-origin:left;animation:scGrow .8s cubic-bezier(.3,0,.2,1) forwards}
+#dt-sec .a-spin{animation:scSpin 1.3s linear infinite}
+#dt-sec .a-sweep{animation:scSweep 2.6s cubic-bezier(.5,0,.5,1) infinite}
+#dt-sec .a-loop{animation:scLoop 3s ease-in-out infinite}
+@keyframes scIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
+@keyframes scJit{0%,100%{transform:translate(0,0)}25%{transform:translate(2px,-2px)}
+  50%{transform:translate(-2px,1px)}75%{transform:translate(1px,2px)}}
+@keyframes scPulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes scFade{to{opacity:.28}}
+@keyframes scGrow{to{transform:scaleX(1)}}
+@keyframes scSpin{to{transform:rotate(360deg)}}
+@keyframes scSweep{0%{transform:translateX(-110%)}60%,100%{transform:translateX(360%)}}
+@keyframes scLoop{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media(prefers-reduced-motion:reduce){
+  #dt-sec .a-jit,#dt-sec .a-pulse,#dt-sec .a-spin,#dt-sec .a-sweep,#dt-sec .a-loop{animation:none}
+}
+
+/* ---- inline player ---- */
+#dt-sec .dt-stage{max-width:1160px;margin:0 auto;padding:0 20px}
+#dt-sec .dt-rail{display:grid;grid-template-columns:repeat(9,1fr);gap:8px;margin-bottom:26px}
+#dt-sec .dt-seg{position:relative;text-align:left;background:none;border:0;padding:0;cursor:pointer;
+  font-family:inherit;display:block}
+#dt-sec .dt-seg .bar{display:block;height:3px;border-radius:2px;background:var(--line);overflow:hidden}
+#dt-sec .dt-seg .bar i{display:block;height:100%;width:0;background:var(--orange);border-radius:2px}
+#dt-sec .dt-seg.done .bar i{width:100%}
+#dt-sec .dt-seg.on .bar i{width:100%;transition:width var(--dwell,5200ms) linear}
+#dt-sec .dt-seg .lb{display:block;margin-top:9px;font-family:'IBM Plex Mono',monospace;
+  font-size:10.5px;font-weight:600;color:#B0B0B0;transition:color .2s}
+#dt-sec .dt-seg.on .lb,#dt-sec .dt-seg.done .lb{color:var(--orange)}
+#dt-sec .dt-seg:hover .lb{color:var(--ink)}
+#dt-sec .dt-shead{display:flex;align-items:baseline;gap:16px;min-height:54px}
+#dt-sec .dt-ctls{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:20px}
+#dt-sec .dt-ctl{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);
+  background:var(--surface);border-radius:999px;padding:9px 18px;font-size:13px;font-weight:600;
+  color:var(--ink);cursor:pointer;font-family:inherit}
+#dt-sec .dt-ctl:hover{border-color:#BDBDBD}
+#dt-hold[aria-pressed="true"]{border-color:var(--orange);color:var(--orange);
+  background:rgba(184,76,22,.07)}
+#dt-replay{display:none}
+#dt-replay.show{display:inline-flex}
+#dt-sec .dt-hint{font-size:12.5px;color:var(--muted)}
+/* held: the picked step reads as current and nothing advances */
+#dt-rail.held .dt-seg.on .bar i{width:100%;transition:none}
+#dt-rail.held .dt-seg.on .lb{color:var(--orange)}
+@media(max-width:880px){
+  #dt-sec .dt-stage{padding:0 18px}
+  #dt-sec .dt-rail{gap:5px;margin-bottom:16px}
+  #dt-sec .dt-seg .lb{display:none}
+  #dt-sec .dt-seg .bar{height:4px}
+  #dt-sec .dt-shead{min-height:0;gap:10px;align-items:baseline}
+  #dt-sec .dt-shead .dt-n{font-size:11px}
+  #dt-sec .dt-shead .dt-t{font-size:20px;line-height:1.2}
+  #dt-sec .dt-duo{grid-template-columns:1fr;gap:10px;margin-top:14px}
+  #dt-sec .dt-pane{height:266px;padding:14px 16px;border-radius:12px}
+  #dt-sec .dt-hdrow{margin-bottom:8px}
+  #dt-sec .dt-hd,#dt-sec .dt-wk{font-size:9px}
+  #dt-sec .dt-art{height:84px;margin-bottom:10px}
+  #dt-sec .sc{transform:scale(.72);transform-origin:top left;width:138.9%;height:161.1%}
+  #dt-sec .dt-tx{font-size:13px;line-height:1.5}
+  #dt-sec .dt-tools{gap:5px;padding-top:10px}
+  #dt-sec .dt-tl{font-size:9.5px;padding:2px 8px 2px 3px}
+  #dt-sec .dt-tl i{width:15px;height:15px;font-size:7px}
+  #dt-sec .dt-bigv{font-size:32px}
+  #dt-sec .dt-statlbl{font-size:12px}
+  #dt-sec .dt-statrow{gap:24px}
+  #dt-sec .dt-statnote{font-size:12.5px;padding-top:12px}
+  #dt-sec .dt-prog{margin-top:16px}
+  #dt-replay{margin-top:14px;padding:8px 15px;font-size:12.5px}
+}
+@media(prefers-reduced-motion:reduce){#dt-sec .dt-seg.on .bar i{transition:none}}
+</style>
+<!-- HOW DISCOVERY TRANSFORMS -->
+<section id="dt-sec" class="border-t" style="border-color:var(--line); background:var(--canvas)">
+  <div class="mx-auto max-w-6xl px-5 pt-20 md:pt-24">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl leading-tight md:text-[42px]">Inside a <span class="os-mark-gold">discovery phase</span></h2>
+      <p class="mt-6 text-base leading-8 md:text-lg" style="color:var(--muted)">Alex has six weeks to answer one question: is the client ready? Eight touchpoints, playing through. Pick any one to jump to it.</p>
+    </div>
+  </div>
+
+  <div class="dt-stage mt-12">
+    <div class="dt-rail" id="dt-rail"></div>
+    <div class="dt-shead">
+        <span class="dt-n dt-mono" id="dt-sn">01</span>
+        <span class="dt-t" id="dt-stt"></span>
+      </div>
+      <div class="dt-duo">
+        <div class="dt-pane dt-b">
+          <div class="dt-hdrow"><span class="dt-hd">Without Atlas</span><span class="dt-wk" id="dt-bwk"></span></div>
+          <div class="dt-art" id="dt-bart"></div>
+          <div class="dt-tx" id="dt-btx"></div>
+          <div class="dt-tools" id="dt-btools"></div>
+        </div>
+        <div class="dt-pane dt-a">
+          <div class="dt-hdrow"><span class="dt-hd">With Atlas</span><span class="dt-wk" id="dt-awk"></span></div>
+          <div class="dt-art" id="dt-aart"></div>
+          <div class="dt-tx" id="dt-atx"></div>
+        </div>
+      </div>
+      <div class="dt-prog" id="dt-prog"></div>
+    
+    <div class="dt-ctls">
+      <button type="button" id="dt-hold" class="dt-ctl" aria-pressed="false">
+        <span id="dt-hold-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg></span>
+        <span id="dt-hold-txt">Pause</span>
+      </button>
+      <button type="button" id="dt-replay" class="dt-ctl">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+        Play again
+      </button>
+      <span class="dt-hint">Click any step to hold it there.</span>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-6xl px-5 pb-24 pt-14 text-center md:pb-28">
+    <h2 class="text-3xl leading-tight md:text-[42px]">Same team. Same project. <span class="os-mark-gold">Better discovery.</span></h2>
+    <p class="mx-auto mt-6 max-w-3xl text-base leading-8 md:text-lg" style="color:var(--muted)">Every finding, decision, and owner remains connected, traceable, and ready for implementation.</p>
+    <div class="mt-9">
+      <a href="/solutions/atlas/how-it-works/" class="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium transition hover:bg-white" style="border-color:var(--line); background:var(--surface); color:var(--ink)">
+        See how it works
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <p class="mt-8 text-sm" style="color:var(--muted)">Illustrative. Alex is composite and the client is our demo account.</p>
+  </div>
+</section>
+
+
+<script>
+(function(){
+
+/* ---------- icon vignettes: grey palette for left, orange for right ---------- */
+const G={s:'#9A9A9A',f:'#D8D8D8',x:'#B0463A',t:'#7A7A7A'};
+const O={s:'#B84C16',f:'#FFE3D6',ok:'#0F783C',t:'#1C1C1C'};
+
+const ART={
+b1:`<svg viewBox="0 0 220 100" fill="none">
+  <path d="M20 30h34l8 8h60v42a4 4 0 01-4 4H24a4 4 0 01-4-4V30z" fill="${G.f}" stroke="${G.s}" stroke-width="2"/>
+  <text x="40" y="66" font-size="11" font-weight="700" fill="${G.t}" font-family="Inter">SP</text>
+  <rect x="140" y="28" width="34" height="42" rx="3" fill="#fff" stroke="${G.s}" stroke-width="2" transform="rotate(6 157 49)"/>
+  <rect x="168" y="36" width="34" height="42" rx="3" fill="#fff" stroke="${G.s}" stroke-width="2" transform="rotate(-7 185 57)"/>
+  <line x1="146" y1="42" x2="166" y2="42" stroke="${G.f}" stroke-width="3" transform="rotate(6 157 49)"/>
+  <line x1="146" y1="50" x2="162" y2="50" stroke="${G.f}" stroke-width="3" transform="rotate(6 157 49)"/></svg>`,
+a1:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="18" y="16" width="184" height="70" rx="8" fill="#fff" stroke="${O.s}" stroke-width="2"/>
+  <rect x="18" y="16" width="184" height="18" rx="8" fill="${O.f}"/>
+  <circle cx="30" cy="25" r="3" fill="${O.s}"/><circle cx="41" cy="25" r="3" fill="${O.s}" opacity=".5"/>
+  <rect x="30" y="44" width="52" height="10" rx="3" fill="${O.f}"/>
+  <rect x="30" y="60" width="72" height="7" rx="3" fill="#EFEFEF"/>
+  <rect x="30" y="72" width="60" height="7" rx="3" fill="#EFEFEF"/>
+  <path d="M150 50l7 7 13-14" stroke="${O.ok}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="128" y="80" font-size="9" font-weight="700" fill="${O.s}" font-family="Inter" letter-spacing="1">WORKSPACE</text></svg>`,
+b2:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="40" y="14" width="140" height="74" rx="8" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  <rect x="40" y="14" width="140" height="16" rx="8" fill="${G.f}"/>
+  ${[0,1,2,3,4].map(c=>[0,1,2].map(r=>
+    `<rect x="${50+c*25}" y="${38+r*16}" width="20" height="11" rx="2" fill="${(c+r)%5<4?G.f:'#fff'}" stroke="${G.s}" stroke-width="1"/>`).join('')).join('')}
+  <text x="72" y="99" font-size="9" font-weight="700" fill="${G.t}" font-family="Inter" letter-spacing="1">FULLY BOOKED</text></svg>`,
+a2:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="30" y="14" width="160" height="72" rx="10" fill="#fff" stroke="${O.s}" stroke-width="2" stroke-dasharray="7 5"/>
+  <path d="M110 34v22M100 48l10 10 10-10" stroke="${O.s}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="63" y="78" font-size="10" font-weight="600" fill="${O.s}" font-family="Inter">Drop whatever you have</text></svg>`,
+b3:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="30" y="16" width="160" height="60" rx="8" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  <rect x="30" y="16" width="160" height="14" rx="8" fill="${G.f}"/>
+  ${[0,1,2,3].map(i=>`<circle cx="${58+i*36}" cy="52" r="11" fill="${G.f}" stroke="${G.s}" stroke-width="2"/>`).join('')}
+  <path d="M52 46l12 12M64 46l-12 12" stroke="${G.x}" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M124 46l12 12M136 46l-12 12" stroke="${G.x}" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="62" y="93" font-size="9" font-weight="700" fill="${G.x}" font-family="Inter" letter-spacing="1">DECLINED &middot; DECLINED</text></svg>`,
+a3:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="24" y="20" width="70" height="58" rx="6" fill="#fff" stroke="${O.s}" stroke-width="2"/>
+  <line x1="34" y1="34" x2="80" y2="34" stroke="${O.f}" stroke-width="4"/>
+  <line x1="34" y1="45" x2="74" y2="45" stroke="#EFEFEF" stroke-width="4"/>
+  <line x1="34" y1="56" x2="80" y2="56" stroke="#EFEFEF" stroke-width="4"/>
+  <path d="M100 49h28" stroke="${O.s}" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ah)"/>
+  <defs><marker id="ah" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+    <path d="M0 0l6 3.5L0 7z" fill="${O.s}"/></marker></defs>
+  <rect x="134" y="26" width="62" height="46" rx="6" fill="${O.f}" stroke="${O.s}" stroke-width="2"/>
+  <text x="146" y="46" font-size="10" font-weight="700" fill="${O.s}" font-family="Inter">Q-14</text>
+  <path d="M146 58l6 6 11-12" stroke="${O.ok}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="30" y="95" font-size="9" font-weight="600" fill="${O.s}" font-family="Inter">A doc or a voice note answers it</text></svg>`,
+b4:`<svg viewBox="0 0 220 100" fill="none">
+  ${[[40,58],[80,64],[120,58],[160,64]].map(p=>
+    `<circle cx="${p[0]}" cy="${p[1]}" r="13" fill="${G.f}" stroke="${G.s}" stroke-width="2"/>`).join('')}
+  <rect x="28" y="18" width="46" height="20" rx="9" fill="#fff" stroke="${G.s}" stroke-width="1.6"/>
+  <rect x="62" y="8" width="52" height="20" rx="9" fill="#fff" stroke="${G.s}" stroke-width="1.6"/>
+  <rect x="104" y="20" width="44" height="20" rx="9" fill="#fff" stroke="${G.s}" stroke-width="1.6"/>
+  <rect x="140" y="6" width="52" height="20" rx="9" fill="#fff" stroke="${G.s}" stroke-width="1.6"/>
+  <text x="60" y="98" font-size="9" font-weight="700" fill="${G.t}" font-family="Inter" letter-spacing="1">EVERYONE AT ONCE</text></svg>`,
+a4:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="22" y="30" width="80" height="40" rx="7" fill="#fff" stroke="${O.s}" stroke-width="2"/>
+  ${[0,1,2,3,4,5,6,7,8].map(i=>
+    `<rect x="${32+i*8}" y="${50-[6,10,14,8,16,9,13,7,11][i]/1.4}" width="4" rx="2" height="${[6,10,14,8,16,9,13,7,11][i]}" fill="${O.s}" opacity=".8"/>`).join('')}
+  <circle cx="34" cy="38" r="3" fill="${G.x}"/>
+  <text x="42" y="41" font-size="8" font-weight="700" fill="${O.t}" font-family="Inter">REC</text>
+  <path d="M108 50h22" stroke="${O.s}" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ah2)"/>
+  <defs><marker id="ah2" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+    <path d="M0 0l6 3.5L0 7z" fill="${O.s}"/></marker></defs>
+  <rect x="136" y="30" width="62" height="40" rx="7" fill="${O.f}" stroke="${O.s}" stroke-width="2"/>
+  <text x="148" y="48" font-size="10" font-weight="700" fill="${O.s}" font-family="Inter">Answer</text>
+  <path d="M148 56l5 5 10-10" stroke="${O.ok}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="36" y="93" font-size="9" font-weight="600" fill="${O.s}" font-family="Inter">Every recording linked to an answer</text></svg>`,
+b5:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="20" y="18" width="54" height="34" rx="7" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  <text x="30" y="39" font-size="10" font-weight="700" fill="${G.t}" font-family="Inter">Slack</text>
+  <rect x="20" y="60" width="54" height="30" rx="6" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  <path d="M20 66l27 14 27-14" stroke="${G.s}" stroke-width="2" fill="none"/>
+  <rect x="120" y="26" width="76" height="52" rx="5" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  ${[0,1,2].map(r=>[0,1,2].map(c=>
+    `<rect x="${128+c*20}" y="${34+r*13}" width="17" height="10" fill="${(r+c)%2?'#fff':G.f}" stroke="${G.s}" stroke-width="1"/>`).join('')).join('')}
+  <text x="120" y="94" font-size="9" font-weight="700" fill="${G.x}" font-family="Inter" letter-spacing="1">NO EXPLANATION</text>
+  <path d="M80 40 Q100 34 116 42" stroke="${G.s}" stroke-width="1.6" stroke-dasharray="4 4" fill="none"/>
+  <path d="M80 72 Q100 66 116 58" stroke="${G.s}" stroke-width="1.6" stroke-dasharray="4 4" fill="none"/></svg>`,
+a5:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="20" y="26" width="64" height="48" rx="6" fill="#fff" stroke="${O.s}" stroke-width="2"/>
+  ${[0,1,2].map(r=>`<rect x="28" y="${34+r*11}" width="48" height="7" rx="2" fill="${r?'#EFEFEF':O.f}"/>`).join('')}
+  <path d="M90 50h20" stroke="${O.s}" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ah3)"/>
+  <defs><marker id="ah3" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+    <path d="M0 0l6 3.5L0 7z" fill="${O.s}"/></marker></defs>
+  ${[['Q-03',18],[ 'Q-14',44],['MAP',70]].map(q=>
+    `<rect x="118" y="${q[1]}" width="78" height="20" rx="5" fill="${O.f}" stroke="${O.s}" stroke-width="1.6"/>
+     <text x="127" y="${q[1]+14}" font-size="9.5" font-weight="700" fill="${O.s}" font-family="Inter">${q[0]}</text>
+     <path d="M${168} ${q[1]+10}l4 4 8-8" stroke="${O.ok}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>`).join('')}
+  </svg>`,
+b6:`<svg viewBox="0 0 220 100" fill="none">
+  <path d="M18 30h34l8 8h50v40a5 5 0 01-5 5H23a5 5 0 01-5-5V30z" fill="${G.f}" stroke="${G.s}" stroke-width="2"/>
+  ${[['v3.21',36,24,-6],['xls',74,14,4],['pptx',94,26,-3]].map(f=>
+    `<g transform="rotate(${f[3]} ${f[1]} ${f[2]})">
+     <rect x="${f[1]-16}" y="${f[2]-9}" width="38" height="18" rx="4" fill="#fff" stroke="${G.s}" stroke-width="1.6"/>
+     <text x="${f[1]-11}" y="${f[2]+4}" font-size="8" font-weight="700" fill="${G.t}" font-family="IBM Plex Mono">${f[0]}</text></g>`).join('')}
+  <path d="M116 58h14" stroke="${G.s}" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <rect x="134" y="30" width="72" height="48" rx="8" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  <circle cx="146" cy="42" r="5" fill="#10A37F" opacity=".75"/>
+  <text x="155" y="45" font-size="8" font-weight="700" fill="${G.t}" font-family="Inter">GPT</text>
+  <rect x="142" y="52" width="56" height="7" rx="3.5" fill="${G.f}"/>
+  <rect x="142" y="63" width="40" height="7" rx="3.5" fill="#EFEFEF"/>
+  <text x="134" y="94" font-size="9" font-weight="700" fill="${G.x}" font-family="Inter" letter-spacing="1">PROMPT &amp; PRAY</text>
+  <text x="18" y="94" font-size="9" font-weight="700" fill="${G.t}" font-family="Inter" letter-spacing="1">DAYS LEFT</text></svg>`,
+a6:`<svg viewBox="0 0 220 100" fill="none">
+  ${[['xls'],['docx'],['pptx']].map((f,i)=>
+    `<rect x="16" y="${16+i*24}" width="40" height="18" rx="4" fill="#fff" stroke="${O.s}" stroke-width="1.6"/>
+     <text x="23" y="${29+i*24}" font-size="8.5" font-weight="700" fill="${O.s}" font-family="IBM Plex Mono">${f[0]}</text>
+     <path d="M60 ${25+i*24} Q80 ${25+i*24} 92 50" stroke="${O.s}" stroke-width="1.6" fill="none" opacity=".7"/>`).join('')}
+  <rect x="94" y="30" width="58" height="40" rx="8" fill="${O.f}" stroke="${O.s}" stroke-width="2"/>
+  <text x="104" y="47" font-size="9.5" font-weight="700" fill="${O.s}" font-family="Inter">AI CHECK</text>
+  <text x="104" y="60" font-size="7.5" font-weight="600" fill="${O.t}" font-family="Inter" opacity=".65">rule pack v1.2</text>
+  <path d="M156 50h14" stroke="${O.s}" stroke-width="2.4" stroke-linecap="round" marker-end="url(#ah4)"/>
+  <defs><marker id="ah4" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+    <path d="M0 0l6 3.5L0 7z" fill="${O.s}"/></marker></defs>
+  <rect x="174" y="30" width="34" height="40" rx="6" fill="#fff" stroke="${O.s}" stroke-width="2"/>
+  <text x="181" y="48" font-size="10" font-weight="700" fill="${O.s}" font-family="Inter">F-03</text>
+  <text x="181" y="61" font-size="8" fill="${O.t}" font-family="Inter">92</text>
+  <text x="16" y="95" font-size="9" font-weight="600" fill="${O.s}" font-family="Inter">Grounded, and traceable to the record</text></svg>`,
+b7:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="24" y="30" width="96" height="58" rx="5" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  <rect x="32" y="40" width="34" height="22" fill="${G.f}"/>
+  <rect x="72" y="40" width="10" height="22" fill="${G.f}"/><rect x="86" y="48" width="10" height="14" fill="${G.f}"/>
+  <circle cx="44" cy="76" r="6" fill="${G.f}" stroke="${G.s}" stroke-width="1.4"/>
+  <circle cx="60" cy="76" r="6" fill="#fff" stroke="${G.s}" stroke-width="1.4"/>
+  <circle cx="76" cy="76" r="6" fill="${G.f}" stroke="${G.s}" stroke-width="1.4"/>
+  <rect x="112" y="18" width="86" height="48" rx="5" fill="#fff" stroke="${G.s}" stroke-width="2" transform="rotate(4 155 42)"/>
+  <text x="124" y="38" font-size="8.5" font-weight="700" fill="${G.x}" font-family="Inter" transform="rotate(4 155 42)">RECOMMENDATION</text>
+  <line x1="124" y1="48" x2="186" y2="48" stroke="${G.f}" stroke-width="4" transform="rotate(4 155 42)"/>
+  <text x="122" y="92" font-size="9" font-weight="700" fill="${G.t}" font-family="Inter" letter-spacing="1">ONE SLIDE ON TOP</text></svg>`,
+a7:`<svg viewBox="0 0 220 100" fill="none">
+  ${[['F-01','Approve',0],['F-02','Rewrite',1],['F-03','Approve',2]].map(f=>
+    `<rect x="26" y="${16+f[2]*26}" width="168" height="20" rx="5" fill="#fff" stroke="${O.s}" stroke-width="1.6"/>
+     <text x="36" y="${30+f[2]*26}" font-size="9.5" font-weight="700" fill="${O.t}" font-family="IBM Plex Mono">${f[0]}</text>
+     <line x1="72" y1="${26+f[2]*26}" x2="128" y2="${26+f[2]*26}" stroke="#EFEFEF" stroke-width="5"/>
+     <rect x="138" y="${19+f[2]*26}" width="48" height="14" rx="7" fill="${f[1]==='Approve'?O.f:'#fff'}" stroke="${O.s}" stroke-width="1.4"/>
+     <text x="${f[1]==='Approve'?146:148}" y="${29.5+f[2]*26}" font-size="8" font-weight="700" fill="${O.s}" font-family="Inter">${f[1].toUpperCase()}</text>`).join('')}
+  <text x="30" y="96" font-size="9" font-weight="600" fill="${O.s}" font-family="Inter">The human judges. The record keeps.</text></svg>`,
+b8:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="20" y="24" width="66" height="44" rx="6" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  <path d="M20 32l33 20 33-20" stroke="${G.s}" stroke-width="2" fill="none"/>
+  <rect x="34" y="56" width="60" height="16" rx="3" fill="${G.f}" stroke="${G.s}" stroke-width="1.4"/>
+  <text x="38" y="67.5" font-size="8" font-weight="700" fill="${G.x}" font-family="IBM Plex Mono">v42_FINAL.pptx</text>
+  <path d="M100 46h16" stroke="${G.s}" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <rect x="122" y="28" width="36" height="36" rx="5" fill="#fff" stroke="${G.s}" stroke-width="2"/>
+  <rect x="122" y="28" width="36" height="9" fill="${G.f}"/>
+  <text x="128" y="52" font-size="8" font-weight="700" fill="${G.t}" font-family="Inter">CALL</text>
+  <path d="M164 46h12" stroke="${G.s}" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4"/>
+  <path d="M180 38h14l4 4h18v22a3 3 0 01-3 3h-30a3 3 0 01-3-3V38z" fill="${G.f}" stroke="${G.s}" stroke-width="1.8"/>
+  <text x="52" y="92" font-size="9" font-weight="700" fill="${G.t}" font-family="Inter" letter-spacing="1">EMAIL &rarr; CALL &rarr; SHAREPOINT</text></svg>`,
+a8:`<svg viewBox="0 0 220 100" fill="none">
+  <rect x="20" y="10" width="150" height="62" rx="9" fill="#fff" stroke="${O.s}" stroke-width="2"/>
+  <rect x="20" y="10" width="150" height="16" rx="9" fill="${O.f}"/>
+  <circle cx="32" cy="18" r="3" fill="${O.s}"/>
+  <text x="42" y="22" font-size="8" font-weight="700" fill="${O.s}" font-family="Inter">LIVE</text>
+  <circle cx="160" cy="18" r="3.5" fill="${O.ok}">
+    <animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/></circle>
+  <rect x="30" y="34" width="56" height="7" rx="3" fill="#EFEFEF"/>
+  <rect x="30" y="46" width="40" height="7" rx="3" fill="#EFEFEF"/>
+  <rect x="30" y="58" width="48" height="7" rx="3" fill="#EFEFEF"/>
+  <rect x="96" y="34" width="62" height="31" rx="5" fill="${O.f}"/>
+  <text x="103" y="47" font-size="8" font-weight="700" fill="${O.s}" font-family="Inter">INSTALLING</text>
+  <rect x="103" y="52" width="46" height="5" rx="2.5" fill="#fff"/>
+  <rect x="103" y="52" width="31" height="5" rx="2.5" fill="${O.s}"/>
+  <path d="M176 41h16" stroke="${O.s}" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 4"/>
+  <rect x="182" y="24" width="34" height="34" rx="6" fill="#fff" stroke="${O.s}" stroke-width="1.8" stroke-dasharray="4 4"/>
+  <path d="M199 34v14M192 41h14" stroke="${O.s}" stroke-width="2" stroke-linecap="round"/>
+  <text x="20" y="92" font-size="9" font-weight="600" fill="${O.s}" font-family="Inter">The next engagement starts from here</text></svg>`
+};
+
+const TOOLCOLORS={OL:'#0F6CBD',SP:'#036C70',TM:'#6264A7',ZM:'#2D8CFF',XL:'#217346',
+  PP:'#B7472A',WD:'#2B579A',SL:'#611F69',GD:'#F9AB00',EM:'#5F6368',AI:'#10A37F'};
+const TOOLNAMES={OL:'Outlook',SP:'SharePoint',TM:'Teams',ZM:'Zoom',XL:'Excel',
+  PP:'PowerPoint',WD:'Word',SL:'Slack',GD:'Drive',EM:'Email',AI:'ChatGPT / Claude'};
+function chips(list){return list.map(k=>
+  `<span class="dt-tl"><i style="background:${TOOLCOLORS[k]}">${k}</i>${TOOLNAMES[k]}</span>`).join('');}
+
+/* ---- animated scenes: small live mockups per step ---- */
+function LG(k,css,d){return `<span class="sc-l a-in" style="${css};animation-delay:${d}ms">`+
+  `<i style="background:${TOOLCOLORS[k]}">${k}</i>${TOOLNAMES[k]}</span>`;}
+
+const SCENE={
+/* 01 - assigned */
+b1:`<div class="sc">
+  ${LG('SP','left:10px;top:14px','60')}${LG('GD','left:118px;top:12px','200')}${LG('OL','left:26px;top:76px','340')}
+  <span class="sc-dsh a-jit" style="left:120px;top:56px;width:82px;height:38px"></span>
+  <span class="sc-tx a-pulse" style="left:150px;top:70px">WHERE IS IT?</span>
+  <span class="sc-ln" style="left:60px;top:44px;width:70px"></span></div>`,
+a1:`<div class="sc">
+  <span class="sc-card a-in" style="left:14px;top:12px;right:14px;bottom:12px;animation-delay:40ms"></span>
+  <span class="sc-tx o a-in" style="left:26px;top:22px;animation-delay:220ms">WORKSPACE &middot; RULE PACK UAE v1.2</span>
+  <span class="sc-bar o a-grow" style="left:26px;top:44px;width:120px;animation-delay:400ms"></span>
+  <span class="sc-bar a-grow" style="left:26px;top:60px;width:158px;animation-delay:540ms"></span>
+  <span class="sc-bar a-grow" style="left:26px;top:76px;width:96px;animation-delay:680ms"></span>
+  <span class="sc-ok a-in" style="right:28px;top:70px;animation-delay:900ms"></span></div>`,
+
+/* 02 - first move */
+b2:`<div class="sc">
+  <span class="sc-tx" style="left:14px;top:12px">CALENDAR</span>
+  ${[0,1,2,3,4,5].map((i)=>`<span class="sc-card a-in" style="left:${14+i*34}px;top:30px;width:26px;height:${28+(i%3)*10}px;animation-delay:${120+i*110}ms"></span>`).join('')}
+  <span class="sc-tx r a-in" style="left:14px;top:92px;animation-delay:900ms">6 CALLS BOOKED &middot; 0 RECORDS SEEN</span></div>`,
+a2:`<div class="sc">
+  <span class="sc-dsh a-in" style="left:14px;top:14px;width:112px;height:74px;animation-delay:60ms"></span>
+  <span class="sc-tx o a-in" style="left:30px;top:44px;animation-delay:200ms">DROP FILES</span>
+  <span class="sc-card a-loop" style="left:44px;top:22px;width:22px;height:16px"></span>
+  <span class="sc-card a-loop" style="left:74px;top:26px;width:22px;height:16px;animation-delay:.5s"></span>
+  <span class="sc-bar o a-grow" style="left:146px;top:36px;width:82px;animation-delay:600ms"></span>
+  <span class="sc-bar a-grow" style="left:146px;top:52px;width:60px;animation-delay:760ms"></span>
+  <span class="sc-tx o a-in" style="left:146px;top:70px;animation-delay:1000ms">1,412 PROCESSED</span></div>`,
+
+/* 03 - what the calls are for */
+b3:`<div class="sc">
+  <span class="sc-tx" style="left:14px;top:12px">QUESTION LIST</span>
+  <span class="sc-bar a-in" style="left:14px;top:32px;width:150px;animation-delay:100ms"></span>
+  <span class="sc-bar a-in" style="left:14px;top:50px;width:118px;animation-delay:220ms"></span>
+  <span class="sc-bar a-in" style="left:14px;top:68px;width:136px;animation-delay:340ms"></span>
+  <span class="sc-x a-in" style="left:178px;top:46px;animation-delay:700ms">&times;</span>
+  <span class="sc-x a-in" style="left:178px;top:64px;animation-delay:880ms">&times;</span>
+  <span class="sc-tx r a-in" style="left:14px;top:90px;animation-delay:1050ms">2 DECLINED &middot; STILL UNANSWERED</span></div>`,
+a3:`<div class="sc">
+  ${LG('WD','left:12px;top:16px','80')}
+  <span class="sc-card a-in" style="left:12px;top:46px;width:74px;height:22px;animation-delay:240ms"></span>
+  <span class="sc-tx o" style="left:20px;top:53px">VOICE NOTE</span>
+  <span class="sc-dot o a-pulse" style="left:74px;top:52px;width:5px;height:5px"></span>
+  <span class="sc-ln" style="left:92px;top:46px;width:34px"></span>
+  <span class="sc-card a-in" style="left:130px;top:22px;right:12px;height:68px;animation-delay:500ms"></span>
+  <span class="sc-tx o a-in" style="left:140px;top:32px;animation-delay:660ms">Q-07 ANSWERED</span>
+  <span class="sc-bar o a-grow" style="left:140px;top:52px;width:52px;animation-delay:800ms"></span>
+  <span class="sc-ok a-in" style="left:140px;top:66px;animation-delay:1000ms"></span></div>`,
+
+/* 04 - half the room drops off */
+b4:`<div class="sc">
+  ${[0,1,2,3,4].map(i=>`<span class="sc-card ${i>1?'a-fade':'a-in'}" style="left:${14+i*42}px;top:26px;width:34px;height:34px;animation-delay:${200+i*140}ms"></span>`).join('')}
+  ${[0,1,2,3,4].map(i=>`<span class="sc-dot" style="left:${26+i*42}px;top:36px;width:10px;height:10px"></span>`).join('')}
+  <span class="sc-tx r a-in" style="left:14px;top:80px;animation-delay:1000ms">3 OF 5 NOT IN THE ROOM</span></div>`,
+a4:`<div class="sc">
+  <span class="sc-card a-in" style="left:12px;top:16px;right:12px;height:32px;animation-delay:60ms"></span>
+  ${[0,1,2,3,4,5,6,7,8,9,10,11].map(i=>`<span class="sc-bar o" style="left:${24+i*13}px;top:${26+(i%3)*3}px;width:5px;height:${8+((i*7)%14)}px;border-radius:2px"></span>`).join('')}
+  <span class="sc-tx o a-in" style="left:12px;top:58px;animation-delay:400ms">RECORDING &rarr; LINKED</span>
+  <span class="sc-bar o a-grow" style="left:12px;top:76px;width:96px;animation-delay:560ms"></span>
+  <span class="sc-ok a-in" style="left:120px;top:71px;animation-delay:800ms"></span>
+  <span class="sc-tx a-in" style="left:142px;top:74px;animation-delay:900ms">Q-11 &middot; Q-12</span></div>`,
+
+/* 05 - chasing the client for data */
+b5:`<div class="sc">
+  ${LG('SL','left:10px;top:12px','60')}${LG('EM','left:96px;top:14px','200')}
+  <span class="sc-dot a-pulse" style="left:70px;top:14px;width:6px;height:6px;background:#B4432F"></span>
+  <span class="sc-card a-in" style="left:10px;top:48px;right:10px;height:44px;animation-delay:400ms"></span>
+  ${[0,1,2,3,4,5].map(i=>`<span class="sc-bar ${i%4===1?'r':''}" style="left:${20+(i%3)*62}px;top:${58+Math.floor(i/3)*16}px;width:48px"></span>`).join('')}
+  <span class="sc-tx r a-pulse" style="right:16px;top:34px">GAPS</span></div>`,
+a5:`<div class="sc">
+  <span class="sc-card a-in" style="left:10px;top:30px;width:52px;height:36px;animation-delay:60ms"></span>
+  <span class="sc-tx" style="left:18px;top:44px">FILE</span>
+  <span class="sc-ln" style="left:66px;top:48px;width:22px"></span>
+  <span class="sc-card a-in" style="left:92px;top:30px;width:64px;height:36px;animation-delay:340ms"></span>
+  <span class="sc-tx o" style="left:100px;top:44px">DESCRIBED</span>
+  <span class="sc-ln" style="left:160px;top:48px;width:22px"></span>
+  <span class="sc-card a-in" style="left:186px;top:30px;right:10px;height:36px;animation-delay:620ms"></span>
+  <span class="sc-tx o" style="left:194px;top:44px">MAPPED</span>
+  <span class="sc-bar o a-grow" style="left:10px;top:84px;right:10px;animation-delay:820ms"></span></div>`,
+
+/* 06 - the clock becomes the constraint */
+b6:`<div class="sc">
+  ${[0,1,2,3].map(i=>`<span class="sc-card a-in" style="left:${10+i*8}px;top:${14+i*7}px;width:66px;height:40px;animation-delay:${80+i*90}ms"></span>`).join('')}
+  <span class="sc-tx" style="left:22px;top:60px">v3.21 &middot; xls &middot; ppt</span>
+  ${LG('AI','right:10px;top:16px','460')}
+  <span class="sc-card a-in" style="right:10px;top:46px;width:104px;height:38px;animation-delay:620ms"></span>
+  <span class="sc-dot a-spin" style="right:96px;top:60px;width:9px;height:9px;border:2px solid #CFCFCF;border-top-color:#8A8A8A;background:none"></span>
+  <span class="sc-tx r a-pulse" style="right:16px;top:62px">PROMPT &amp; PRAY</span></div>`,
+a6:`<div class="sc">
+  <span class="sc-card a-in" style="left:10px;top:14px;right:10px;bottom:14px;animation-delay:40ms"></span>
+  <span class="sc-tx o a-in" style="left:20px;top:24px;animation-delay:200ms">AI CHECK &middot; RULE PACK v1.2</span>
+  <span class="sc-bar o a-grow" style="left:20px;top:44px;right:20px;animation-delay:360ms"></span>
+  ${[0,1,2].map(i=>`<span class="sc-ok a-in" style="left:${20+i*30}px;top:60px;animation-delay:${560+i*180}ms"></span>`).join('')}
+  <span class="sc-tx a-in" style="left:112px;top:64px;animation-delay:1100ms">24 RULES PASSED</span>
+  <span class="sc-bar o a-sweep" style="left:20px;top:84px;width:34px"></span></div>`,
+
+/* 07 - the write-up */
+b7:`<div class="sc">
+  <span class="sc-card a-in" style="left:12px;top:14px;width:96px;height:62px;animation-delay:60ms"></span>
+  <span class="sc-bar a-in" style="left:22px;top:26px;width:54px;animation-delay:240ms"></span>
+  <span class="sc-bar a-in" style="left:22px;top:40px;width:70px;animation-delay:340ms"></span>
+  <span class="sc-bar r a-jit" style="left:22px;top:54px;width:44px"></span>
+  <span class="sc-card a-in" style="right:12px;top:20px;width:96px;height:56px;animation-delay:520ms"></span>
+  <span class="sc-tx r a-pulse" style="right:22px;top:40px">REDO THE FORMAT</span>
+  <span class="sc-tx" style="left:12px;top:88px">42 SLIDES &middot; 3 DAYS</span></div>`,
+a7:`<div class="sc">
+  <span class="sc-tx o a-in" style="left:12px;top:12px;animation-delay:60ms">FINDING &rarr; SOURCE</span>
+  ${[0,1,2].map(i=>`<span class="sc-card a-in" style="left:12px;top:${30+i*26}px;right:12px;height:20px;animation-delay:${240+i*180}ms"></span>`).join('')}
+  ${[0,1,2].map(i=>`<span class="sc-bar o a-grow" style="left:22px;top:${37+i*26}px;width:${64-i*10}px;animation-delay:${400+i*180}ms"></span>`).join('')}
+  ${[0,1,2].map(i=>`<span class="sc-tx a-in" style="right:22px;top:${36+i*26}px;animation-delay:${520+i*180}ms">row 88${42+i}</span>`).join('')}</div>`,
+
+/* 08 - where it ends up */
+b8:`<div class="sc">
+  ${LG('EM','left:12px;top:18px','60')}
+  <span class="sc-card a-in" style="left:12px;top:50px;width:104px;height:34px;animation-delay:280ms"></span>
+  <span class="sc-tx r" style="left:22px;top:63px">v42_FINAL.pptx</span>
+  <span class="sc-ln" style="left:120px;top:66px;width:26px"></span>
+  <span class="sc-dsh a-jit" style="left:152px;top:44px;right:12px;height:46px"></span>
+  <span class="sc-tx r a-pulse" style="left:166px;top:62px">DEAD END</span></div>`,
+a8:`<div class="sc">
+  <span class="sc-card a-in" style="left:10px;top:12px;right:10px;bottom:12px;animation-delay:40ms"></span>
+  <span class="sc-tx o a-in" style="left:20px;top:22px;animation-delay:200ms">LIVE RECORD &middot; UPDATED 2m AGO</span>
+  <span class="sc-bar o a-grow" style="left:20px;top:42px;width:74px;animation-delay:360ms"></span>
+  <span class="sc-bar a-grow" style="left:104px;top:42px;width:56px;animation-delay:460ms"></span>
+  <span class="sc-bar a-grow" style="left:20px;top:58px;width:120px;animation-delay:560ms"></span>
+  <span class="sc-ok a-in" style="right:24px;top:52px;animation-delay:760ms"></span>
+  <span class="sc-tx o a-in" style="left:20px;top:78px;animation-delay:900ms">CLIENT CAN OPEN IT ANY TIME</span></div>`
+};
+
+const STEPS=[
+ {n:'01', tools:['OL','SP','GD'], t:'The team gets assigned', bw:'Week 1 of 6', aw:'Week 1 of 3',
+  b:'Two analysts and a SharePoint folder someone set up last time. The engagement starts by hunting for what already exists.',
+  a:'A workspace opens with the rule pack loaded. Day one starts from structure, not from search.',
+  ba:'b1', aa:'a1'},
+ {n:'02', tools:['OL','TM','ZM'], t:'The first move', bw:'Week 1 of 6', aw:'Week 1 of 3',
+  b:'Six calls get booked across everyone’s calendars. Nobody has looked at a single transaction yet.',
+  a:'The first ask is not a meeting. It is: drop whatever you have. The sample is processed before anyone talks.',
+  ba:'b2', aa:'a2'},
+ {n:'03', tools:['TM','WD','OL'], t:'What the calls are for', bw:'Week 2 of 6', aw:'Week 1 of 3',
+  b:'A specific question list, written the night before. Declines come in, and the questions go unanswered.',
+  a:'Calls only carry what the data could not answer - verifying ground truth against the SOP. Can’t attend? Drop a doc or a voice note. The question still gets answered.',
+  ba:'b3', aa:'a3'},
+ {n:'04', tools:['ZM','TM'], t:'Half the room drops off', bw:'Week 3 of 6', aw:'Week 2 of 3',
+  b:'The calls that do happen are crowded. Everyone talking over each other, and the answer still does not land.',
+  a:'All call notes are tracked, and voice notes can be dropped against a specific answer. Nothing said in a room gets lost.',
+  ba:'b4', aa:'a4'},
+ {n:'05', tools:['SL','EM','XL'], t:'Chasing the client for data', bw:'Week 4 of 6', aw:'Week 2 of 3',
+  b:'Messages across Slack and email. What comes back is a spreadsheet with no explanation of what it is.',
+  a:'Every file that lands is described on arrival and mapped to the questions it answers.',
+  ba:'b5', aa:'a5'},
+ {n:'06', tools:['SP','XL','PP','WD','AI'], t:'The clock becomes the constraint', bw:'Week 5 of 6', aw:'Week 2 of 3',
+  b:'A folder full of v3.21, .xls, .pptx, .docx - dropped into ChatGPT, prompting for an output. No trace of what went in or why the answer came out.',
+  a:'The same files feed the check directly. AI runs inside every step here - grounded in the rule pack, and every output traces back to the record it came from.',
+  ba:'b6', aa:'a6'},
+ {n:'07', tools:['PP','WD'], t:'The write-up', bw:'Week 6 of 6', aw:'Week 3 of 3',
+  b:'Days go into formatting, colour coding, fancy charts. Then the senior partner adds one recommendation slide on top - after Alex has rolled off.',
+  a:'There is no write-up. Every finding and requirement is mapped to its source, and a human approves or rewrites each one.',
+  ba:'b7', aa:'a7'},
+ {n:'08', tools:['EM','TM','SP'], t:'Where it ends up', bw:'Week 6 of 6', aw:'Week 3 of 3',
+  b:'v42_FINAL attached to an email. A call to walk the client through it. Then it sleeps in SharePoint, and the next project with them starts from scratch.',
+  a:'A live place the client can open any time - what was found, what was decided, what is being installed. The next engagement with them starts from this record, not from a blank page.',
+  ba:'b8', aa:'a8'},
+ {n:'', t:'The bottom line', stat:true, bw:'', aw:''}
+];
+const N=STEPS.length;
+
+const prog=document.getElementById('dt-prog');
+prog.innerHTML='<i></i>'.repeat(8)+'<span class="dt-cnt" id="dt-cnt">01 / 08</span>';
+const bars=[...prog.querySelectorAll('i')];
+
+const sn=document.getElementById('dt-sn'), stt=document.getElementById('dt-stt'),
+      btx=document.getElementById('dt-btx'), atx=document.getElementById('dt-atx'),
+      bart=document.getElementById('dt-bart'), aart=document.getElementById('dt-aart'),
+      bwk=document.getElementById('dt-bwk'), awk=document.getElementById('dt-awk'),
+      btools=document.getElementById('dt-btools');
+
+let cur=-1;
+function show(i){
+  if(i===cur) return; cur=i;
+  const s=STEPS[i];
+  [stt,btx,atx,bart,aart,bwk,awk,btools].forEach(el=>el.style.opacity=0);
+  setTimeout(()=>{
+    sn.textContent=s.n; stt.textContent=s.t;
+    bwk.textContent=s.bw; awk.textContent=s.aw;
+    if(s.stat){
+      bart.innerHTML=''; aart.innerHTML=''; btools.innerHTML='';
+      btx.innerHTML='<div class="dt-statrow"><div><div class="dt-bigv">6</div><div class="dt-statlbl">weeks</div></div>'+
+        '<div><div class="dt-bigv">10</div><div class="dt-statlbl">calls to a first tested fact</div></div></div>'+
+        '<div class="dt-statnote">And the next engagement with this client starts at zero again.</div>';
+      atx.innerHTML='<div class="dt-statrow"><div><div class="dt-bigv">3</div><div class="dt-statlbl">weeks</div></div>'+
+        '<div><div class="dt-bigv">4</div><div class="dt-statlbl">calls - each one verification, not collection</div></div></div>'+
+        '<div class="dt-statnote">And the next engagement starts from everything this one proved. You never begin from zero again.</div>';
+    }else{
+      bart.innerHTML=SCENE[s.ba]||''; aart.innerHTML=SCENE[s.aa]||'';
+      btx.textContent=s.b; atx.textContent=s.a;
+      btools.innerHTML=s.tools?chips(s.tools):'';
+    }
+    [stt,btx,atx,bart,aart,bwk,awk,btools].forEach(el=>el.style.opacity=1);
+    bars.forEach((b,j)=>b.classList.toggle('on', j<=Math.min(i,7)));
+    const c=document.getElementById('dt-cnt'); if(c) c.textContent=(s.stat?'08':s.n)+' / 08';
+  },110);
+}
+
+const DWELL=5000;
+var rail=document.getElementById('dt-rail'), replay=document.getElementById('dt-replay'),
+    segs=[], timer=null, idx=-1, paused=false, started=false, held=false;
+
+rail.innerHTML = STEPS.map(function(st,k){
+  return '<button type="button" class="dt-seg" data-k="'+k+'" aria-label="Touchpoint '+(st.n||'summary')+'">'
+       + '<span class="bar"><i></i></span><span class="lb">'+(st.n||'&#9679;')+'</span></button>';
+}).join('');
+segs=[].slice.call(rail.querySelectorAll('.dt-seg'));
+document.documentElement.style.setProperty('--dwell', DWELL+'ms');
+
+function paint(i){
+  idx=i; show(i);
+  segs.forEach(function(sg,k){
+    sg.classList.toggle('done', k<i);
+    sg.classList.remove('on');
+  });
+  void segs[i].offsetWidth;
+  segs[i].classList.add('on');
+  replay.classList.toggle('show', i===N-1);
+}
+function tick(){
+  clearTimeout(timer);
+  if(paused || held) return;
+  timer=setTimeout(function(){
+    if(idx < N-1){ paint(idx+1); tick(); }
+  }, DWELL);
+}
+function play(from){ paint(from); tick(); }
+
+var holdBtn=document.getElementById('dt-hold'),
+    holdIco=document.getElementById('dt-hold-ico'),
+    holdTxt=document.getElementById('dt-hold-txt');
+var ICO_PAUSE='<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>',
+    ICO_PLAY ='<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>';
+
+function setHold(v){
+  held=v;
+  rail.classList.toggle('held', v);
+  holdBtn.setAttribute('aria-pressed', v ? 'true' : 'false');
+  holdIco.innerHTML = v ? ICO_PLAY : ICO_PAUSE;
+  holdTxt.textContent = v ? 'Resume' : 'Pause';
+  if(v){ clearTimeout(timer); } else { if(idx>=N-1){ play(0); } else { play(idx); } }
+}
+
+segs.forEach(function(sg){
+  sg.addEventListener('click', function(){
+    paused=false;
+    paint(+sg.dataset.k);
+    setHold(true);          // a click pins the step until you resume
+  });
+});
+holdBtn.addEventListener('click', function(){ setHold(!held); });
+replay.addEventListener('click', function(){ setHold(false); play(0); });
+
+var stage=document.querySelector('#dt-sec .dt-stage');
+// hovering the rail pauses, so you can read a step before picking it
+rail.addEventListener('mouseenter', function(){
+  if(held) return;
+  paused=true; clearTimeout(timer);
+  if(segs[idx]){ var b=segs[idx].querySelector('.bar i');
+    b.style.width=getComputedStyle(b).width; }
+});
+rail.addEventListener('mouseleave', function(){
+  if(held) return;
+  paused=false; play(idx);   // finish the current step rather than skipping it
+});
+
+new IntersectionObserver(function(es){
+  es.forEach(function(e){
+    if(e.isIntersecting && !started){ started=true; play(0); }
+  });
+},{threshold:.35}).observe(stage);
+
+paint(0);
+
+
+})();
+</script>
+
+<!-- 4. BUILT FOR EVERY TEAM -->
+<section class="border-t px-5  py-24 md:py-28" style="border-color:var(--line); background:var(--surface)">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl font-semibold leading-tight tracking-[-0.03em] text-neutral-900 md:text-[42px]">Built for every team that <span class="os-mark-gold">delivers tax transformation</span></h2>
+      <p class="mt-7 text-lg leading-8 text-neutral-700 md:text-xl">For advisors and technology partners.</p>
+      <p class="mt-4 text-lg font-semibold leading-8 text-neutral-900 md:text-xl">You keep the human judgement; Atlas keeps discovery moving.</p>
+    </div>
+
+    <div class="mt-14 grid gap-6 md:grid-cols-2 lg:gap-7">
+      <a href="/for/advisors/" class="group flex flex-col os-card p-8 transition hover:shadow-lg" style="--tw-ring-color: var(--coral);">
+        <div class="flex items-start justify-between gap-4">
+          <div class="text-[22px] font-semibold leading-snug tracking-[-0.02em] text-neutral-900">The advisor model</div>
+          <span class="mt-1 shrink-0 text-xl transition group-hover:translate-x-1" style="color: var(--orange);">&rarr;</span>
+        </div>
+        <p class="mt-5 text-[15px] leading-7" style="color:var(--muted)">Launch a premium, scalable readiness service under your own brand.</p>
+      </a>
+      <a href="/for/technologypartners/" class="group flex flex-col os-card p-8 transition hover:shadow-lg">
+        <div class="flex items-start justify-between gap-4">
+          <div class="text-[22px] font-semibold leading-snug tracking-[-0.02em] text-neutral-900">The technology partner model</div>
+          <span class="mt-1 shrink-0 text-xl transition group-hover:translate-x-1" style="color: var(--orange);">&rarr;</span>
+        </div>
+        <p class="mt-5 text-[15px] leading-7" style="color:var(--muted)">Reduce discovery overhead. Reach billable work sooner.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 7. WHAT ATLAS PRODUCES -->
+<section id="produces" class="border-t px-5 py-24 md:py-28" style="border-color:var(--line); background:var(--surface)">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl leading-tight md:text-[42px]">What Atlas <span class="os-mark-gold">produces</span></h2>
+      <p class="mt-6 text-lg font-semibold leading-8 text-neutral-900 md:text-xl">Not a findings deck. A live system of record.</p>
+    </div>
+
+    <style>
+#produces .pd-tab{text-align:left;border-top:2px solid var(--line);padding-top:14px;cursor:pointer;
+  background:none;font-family:inherit;transition:border-color .2s}
+#produces .pd-tab:hover{border-color:#C9C9C9}
+#produces .pd-tab[aria-selected="true"]{border-color:var(--orange)}
+#produces .pd-tab .n{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:#A6A6A6;transition:color .2s}
+#produces .pd-tab[aria-selected="true"] .n{color:var(--orange)}
+#produces .pd-tab .t{display:block;margin-top:10px;font-size:16px;font-weight:600;line-height:1.3;color:#8A8A8A;transition:color .2s}
+#produces .pd-tab[aria-selected="true"] .t{color:var(--ink)}
+#produces .pd-tab .d{display:block;margin-top:7px;font-size:13.5px;line-height:1.5;color:#9A9A9A;transition:color .2s}
+#produces .pd-tab[aria-selected="true"] .d{color:var(--muted)}
+#produces .pd-panel[hidden]{display:none}
+#produces .pd-panel{animation:pdIn .32s ease}
+@keyframes pdIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style>
+    <div class="mt-12 grid gap-x-7 gap-y-6 sm:grid-cols-2 lg:grid-cols-4" role="tablist">
+      <button type="button" class="pd-tab" role="tab" data-pd="01" aria-selected="true" aria-controls="pd-01">
+        <span class="n">01</span><span class="t">Validated findings</span><span class="d">Counted against sample data, not asserted in a workshop.</span>
+      </button>
+      <button type="button" class="pd-tab" role="tab" data-pd="02" aria-selected="false" aria-controls="pd-02">
+        <span class="n">02</span><span class="t">Process IQ</span><span class="d">How the process actually runs, drillable to the step.</span>
+      </button>
+      <button type="button" class="pd-tab" role="tab" data-pd="03" aria-selected="false" aria-controls="pd-03">
+        <span class="n">03</span><span class="t">Approved findings, owners, caveats and requirements</span><span class="d">Nothing moves forward until a human signs it off.</span>
+      </button>
+      <button type="button" class="pd-tab" role="tab" data-pd="04" aria-selected="false" aria-controls="pd-04">
+        <span class="n">04</span><span class="t">Implementation handoff package</span><span class="d">Everything delivery needs, in one file set.</span>
+      </button>
+    </div>
+
+    <div class="mt-12">
+      <div class="pd-panel" id="pd-01" role="tabpanel"><div class="grid gap-5 lg:grid-cols-2"><!-- A. SCHEMA CHECK ON SAMPLE -->
+      <div class="overflow-hidden rounded-[14px] border" style="border-color:var(--line); background:var(--canvas)">
+        <div class="flex items-center justify-between gap-4 border-b px-6 py-4" style="border-color:var(--line); background:var(--surface)">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-[0.16em]" style="color:var(--orange)">Schema check &middot; sample data</div>
+            <div class="mt-1 text-lg font-bold">Structural validation on a real sample</div>
+          </div>
+          <span class="hidden shrink-0 rounded-md px-2.5 py-1 font-mono text-[11px] font-semibold sm:inline" style="background:rgba(184,76,22,.08); color:var(--orange)">TD-2026-081</span>
+        </div>
+        <div class="px-6 py-5">
+          <div class="flex flex-wrap items-end gap-x-8 gap-y-3">
+            <div><div class="font-mono text-3xl font-bold">1,240</div><div class="text-xs" style="color:var(--muted)">lines in sample</div></div>
+            <div><div class="font-mono text-3xl font-bold" style="color:var(--clay)">92</div><div class="text-xs" style="color:var(--muted)">schema failures</div></div>
+            <div><div class="font-mono text-3xl font-bold">1,148</div><div class="text-xs" style="color:var(--muted)">pass</div></div>
+            <div class="ml-auto text-right"><div class="font-mono text-xs" style="color:var(--muted)">PINT-AE v1.0.1</div><div class="font-mono text-xs" style="color:var(--muted)">pack UAE v1.2</div></div>
+          </div>
+          <div class="mt-6 overflow-hidden rounded-lg border" style="border-color:var(--line); background:var(--surface)">
+            <div class="grid grid-cols-[1fr_auto_auto] gap-3 border-b px-4 py-2 font-mono text-[10px] uppercase tracking-wider" style="border-color:var(--line); color:var(--muted)">
+              <span>Sampled record</span><span>Rule</span><span>Result</span>
+            </div>
+            <div class="grid grid-cols-[1fr_auto_auto] items-center gap-3 border-b px-4 py-2.5" style="border-color:var(--line)">
+              <span class="truncate font-mono text-xs">INV-2026-04417 &middot; buyer TRN</span>
+              <span class="font-mono text-[11px]" style="color:var(--muted)">CAN-R-03</span>
+              <span class="rounded px-2 py-0.5 font-mono text-[10px] font-bold" style="background:rgba(180,67,47,.10); color:var(--clay)">FAIL</span>
+            </div>
+            <div class="grid grid-cols-[1fr_auto_auto] items-center gap-3 border-b px-4 py-2.5" style="border-color:var(--line)">
+              <span class="truncate font-mono text-xs">INV-2026-04418 &middot; emirate code</span>
+              <span class="font-mono text-[11px]" style="color:var(--muted)">CAN-R-11</span>
+              <span class="rounded px-2 py-0.5 font-mono text-[10px] font-bold" style="background:rgba(180,67,47,.10); color:var(--clay)">FAIL</span>
+            </div>
+            <div class="grid grid-cols-[1fr_auto_auto] items-center gap-3 px-4 py-2.5">
+              <span class="truncate font-mono text-xs">INV-2026-04419 &middot; doc type 380</span>
+              <span class="font-mono text-[11px]" style="color:var(--muted)">CAN-R-01</span>
+              <span class="rounded px-2 py-0.5 font-mono text-[10px] font-bold" style="background:rgba(28,28,28,.06)">PASS</span>
+            </div>
+          </div>
+          <p class="mt-4 text-xs leading-5" style="color:var(--muted)">A limited sample, not the full population. Full coverage is scoped in the engagement.</p>
+        </div>
+      </div>
+
+      </div></div>
+            <div class="pd-panel" id="pd-02" role="tabpanel" hidden><div class="grid gap-5 lg:grid-cols-2"><!-- C. PROCESS IQ -->
+      <div class="overflow-hidden rounded-[14px] border" style="border-color:var(--line); background:var(--canvas)">
+        <div class="border-b px-6 py-4" style="border-color:var(--line); background:var(--surface)">
+          <div class="text-[11px] font-bold uppercase tracking-[0.16em]" style="color:var(--orange)">Process IQ</div>
+          <div class="mt-1 text-lg font-bold">How it really runs</div>
+        </div>
+        <div class="px-6 py-6">
+          <svg viewBox="0 0 260 96" class="w-full" role="img" aria-label="Process map with a rework loop from approval back to invoice">
+            <g font-family="IBM Plex Mono, monospace" font-size="8" fill="#1C1C1C">
+              <rect x="2"  y="30" width="52" height="22" rx="5" fill="#FFFFFF" stroke="#E2E2E2"/><text x="28" y="44" text-anchor="middle">Order</text>
+              <rect x="68" y="30" width="52" height="22" rx="5" fill="#FFFFFF" stroke="#E2E2E2"/><text x="94" y="44" text-anchor="middle">Invoice</text>
+              <rect x="134" y="30" width="58" height="22" rx="5" fill="#B84C16" stroke="#B84C16"/><text x="163" y="44" text-anchor="middle" fill="#FFFFFF">Approval</text>
+              <rect x="206" y="30" width="52" height="22" rx="5" fill="#FFFFFF" stroke="#E2E2E2"/><text x="232" y="44" text-anchor="middle">Submit</text>
+              <path d="M54 41 H66" stroke="#C9C9C9" stroke-width="1.2"/><path d="M120 41 H132" stroke="#C9C9C9" stroke-width="1.2"/><path d="M192 41 H204" stroke="#C9C9C9" stroke-width="1.2"/>
+              <path d="M163 54 V70 Q163 76 157 76 H100 Q94 76 94 70 V54" fill="none" stroke="#FF8D6B" stroke-width="1.6" stroke-dasharray="3 3"/>
+              <path d="M91 58 L94 53 L97 58" fill="none" stroke="#FF8D6B" stroke-width="1.6"/>
+              <text x="128" y="90" text-anchor="middle" fill="#B84C16" font-size="7.5">3 rework loops</text>
+            </g>
+          </svg>
+          <!-- drill-down: the approval step opens up -->
+          <div class="mt-4 rounded-lg border px-4 py-3" style="border-color:var(--line); background:var(--surface)">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[11px] font-bold" style="color:var(--orange)">Approval</span>
+              <span class="font-mono text-[10px]" style="color:var(--muted)">4 rules behind this step</span>
+            </div>
+            <div class="mt-2.5 space-y-1 font-mono text-[10px]" style="color:var(--muted)">
+              <div>&middot; threshold &gt; AED 50,000 &rarr; dual sign-off</div>
+              <div>&middot; credit note &rarr; original invoice ref required</div>
+              <div>&middot; intercompany &rarr; unresolved</div>
+              <div class="opacity-60">&middot; +1 more</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- E. WHAT COMPOUNDS -->
+      <div class="overflow-hidden rounded-[14px] border" style="border-color:var(--line); background:var(--canvas)">
+        <div class="border-b px-6 py-4" style="border-color:var(--line); background:var(--surface)">
+          <div class="text-[11px] font-bold uppercase tracking-[0.16em]" style="color:var(--orange)">What compounds</div>
+          <div class="mt-1 text-lg font-bold">The account gets easier</div>
+        </div>
+        <div class="px-6 py-5">
+          <div class="space-y-2.5">
+            <div class="flex items-baseline justify-between gap-3"><span class="text-sm font-semibold">Process</span><span class="font-mono text-[11px]" style="color:var(--muted)">38 flows mapped</span></div>
+            <div class="flex items-baseline justify-between gap-3"><span class="text-sm font-semibold">People</span><span class="font-mono text-[11px]" style="color:var(--muted)">21 owners named</span></div>
+            <div class="flex items-baseline justify-between gap-3"><span class="text-sm font-semibold">Tooling</span><span class="font-mono text-[11px]" style="color:var(--muted)">9 systems catalogued</span></div>
+            <div class="flex items-baseline justify-between gap-3"><span class="text-sm font-semibold">Data</span><span class="font-mono text-[11px]" style="color:var(--muted)">1,240 records profiled</span></div>
+          </div>
+          <p class="mt-5 text-sm leading-6" style="color:var(--muted)">Every engagement adds to what the next one starts with. The second scan is cheaper than the first.</p>
+        </div>
+      </div>
+
+      </div></div>
+      <div class="pd-panel" id="pd-03" role="tabpanel" hidden><div class="grid gap-5 lg:grid-cols-2"><!-- B. EVIDENCE CHAIN -->
+      <div class="overflow-hidden rounded-[14px] border" style="border-color:var(--line); background:var(--canvas)">
+        <div class="border-b px-6 py-4" style="border-color:var(--line); background:var(--surface)">
+          <div class="text-[11px] font-bold uppercase tracking-[0.16em]" style="color:var(--orange)">Evidence chain</div>
+          <div class="mt-1 text-lg font-bold">Nothing is asserted</div>
+        </div>
+        <div class="px-6 py-5">
+          <div class="flex gap-3"><span class="mt-1 font-mono text-[10px]" style="color:var(--muted)">01</span><div><div class="text-sm font-semibold">Record</div><div class="font-mono text-[11px]" style="color:var(--muted)">customer master, row 8842</div></div></div>
+          <div class="ml-[7px] h-3.5 w-px" style="background:var(--line)"></div>
+          <div class="flex gap-3"><span class="mt-1 font-mono text-[10px]" style="color:var(--muted)">02</span><div><div class="text-sm font-semibold">Rule</div><div class="font-mono text-[11px]" style="color:var(--muted)">CAN-R-03 &middot; TRN 15-digit</div></div></div>
+          <div class="ml-[7px] h-3.5 w-px" style="background:var(--line)"></div>
+          <div class="flex gap-3"><span class="mt-1 font-mono text-[10px]" style="color:var(--muted)">03</span><div><div class="text-sm font-semibold">Finding</div><div class="font-mono text-[11px]" style="color:var(--muted)">TRN length 13, expected 15</div></div></div>
+          <div class="ml-[7px] h-3.5 w-px" style="background:var(--line)"></div>
+          <div class="flex gap-3"><span class="mt-1 font-mono text-[10px]" style="color:var(--muted)">04</span><div><div class="text-sm font-semibold">Owner</div><div class="font-mono text-[11px]" style="color:var(--muted)">Master Data &middot; named</div></div></div>
+          <div class="ml-[7px] h-3.5 w-px" style="background:var(--line)"></div>
+          <div class="flex gap-3"><span class="mt-1 font-mono text-[10px]" style="color:var(--orange)">05</span><div><div class="text-sm font-semibold" style="color:var(--orange)">Requirement + test case</div><div class="font-mono text-[11px]" style="color:var(--muted)">REQ-14 &rarr; TC-08</div></div></div>
+        </div>
+      </div>
+
+
+      <!-- WHAT GETS APPROVED -->
+      <div class="overflow-hidden rounded-[14px] border" style="border-color:var(--line); background:var(--canvas)">
+        <div class="border-b px-6 py-4" style="border-color:var(--line); background:var(--surface)">
+          <div class="text-[11px] font-bold uppercase tracking-[0.16em]" style="color:var(--orange)">Sign-off</div>
+          <div class="mt-1 text-lg font-bold">Four things get approved</div>
+        </div>
+        <div class="px-6 py-2">
+            <div class="flex items-start gap-3.5 border-b py-3.5 last:border-0" style="border-color:var(--line)">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-[10px]" style="background:rgba(184,76,22,.10); color:var(--orange)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.4 15.4 21 21"/><path d="m7.8 10.6 1.9 1.9 3.5-3.6"/></svg></span>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-baseline justify-between gap-3">
+                  <span class="text-sm font-semibold text-neutral-900">Findings</span>
+                  <span class="shrink-0 font-mono text-[10.5px]" style="color:var(--orange)">7 approved</span>
+                </div>
+                <div class="mt-1 font-mono text-[11px] leading-4" style="color:var(--muted)">what the data showed, with the record behind it</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3.5 border-b py-3.5 last:border-0" style="border-color:var(--line)">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-[10px]" style="background:rgba(184,76,22,.10); color:var(--orange)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19a6 6 0 0 1 12 0"/><path d="M16.5 5.6a3.2 3.2 0 0 1 0 5.1"/><path d="M18 19a6 6 0 0 0-2.2-4.6"/></svg></span>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-baseline justify-between gap-3">
+                  <span class="text-sm font-semibold text-neutral-900">Owners</span>
+                  <span class="shrink-0 font-mono text-[10.5px]" style="color:var(--orange)">21 named</span>
+                </div>
+                <div class="mt-1 font-mono text-[11px] leading-4" style="color:var(--muted)">a named person, not a team inbox</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3.5 border-b py-3.5 last:border-0" style="border-color:var(--line)">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-[10px]" style="background:rgba(184,76,22,.10); color:var(--orange)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.7 2.4 17.3A1.9 1.9 0 0 0 4 20.2h16a1.9 1.9 0 0 0 1.6-2.9L13.7 3.7a1.9 1.9 0 0 0-3.4 0z"/><path d="M12 9.4v4"/><path d="M12 17h.01"/></svg></span>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-baseline justify-between gap-3">
+                  <span class="text-sm font-semibold text-neutral-900">Caveats</span>
+                  <span class="shrink-0 font-mono text-[10.5px]" style="color:var(--orange)">4 open</span>
+                </div>
+                <div class="mt-1 font-mono text-[11px] leading-4" style="color:var(--muted)">what the sample could not prove, stated up front</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3.5 border-b py-3.5 last:border-0" style="border-color:var(--line)">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-[10px]" style="background:rgba(184,76,22,.10); color:var(--orange)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="m9.2 14.3 1.8 1.8 3.8-3.9"/></svg></span>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-baseline justify-between gap-3">
+                  <span class="text-sm font-semibold text-neutral-900">Requirements</span>
+                  <span class="shrink-0 font-mono text-[10.5px]" style="color:var(--orange)">24 signed off</span>
+                </div>
+                <div class="mt-1 font-mono text-[11px] leading-4" style="color:var(--muted)">each one paired with a test case</div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      </div></div>
+      <div class="pd-panel" id="pd-04" role="tabpanel" hidden><div class="grid gap-5"><!-- F. HANDOVER - full width close -->
+      <div class="overflow-hidden rounded-[14px] border-2" style="border-color:var(--orange); background:var(--canvas)">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b px-6 py-4" style="border-color:var(--line); background:var(--surface)">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-[0.16em]" style="color:var(--orange)">Handover</div>
+            <div class="mt-1 text-lg font-bold">Ready for delivery</div>
+          </div>
+          <span class="text-sm" style="color:var(--muted)">Your SI, ERP team or ASP picks this up and starts building.</span>
+        </div>
+        <div class="grid gap-2.5 px-6 py-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>entity_scope.csv</span></div>
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>field_mappings.json</span></div>
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>rules_applied.yaml</span></div>
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>requirements.csv</span></div>
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>test_scenarios.csv</span></div>
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>owners_actions.csv</span></div>
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>decisions_log.csv</span></div>
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>process_map.svg</span></div>
+          <div class="flex items-center gap-2 font-mono text-[11px]"><span style="color:var(--orange)">&#10003;</span><span>open_questions.csv</span></div>
+        </div>
+      </div>
+
+
+      <!-- VERSION CONTROL -->
+      <div class="overflow-hidden rounded-[14px] border" style="border-color:var(--line); background:var(--canvas)">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b px-6 py-4" style="border-color:var(--line); background:var(--surface)">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-[0.16em]" style="color:var(--orange)">Version control</div>
+            <div class="mt-1 text-lg font-bold">Nothing changes silently</div>
+          </div>
+          <span class="text-sm" style="color:var(--muted)">Every change is versioned, and whoever it affects is told.</span>
+        </div>
+
+        <div class="px-6 py-5">
+          <div class="mb-4 flex items-center justify-between gap-3 rounded-lg border px-4 py-2.5" style="border-color:var(--line); background:var(--surface)">
+            <span class="font-mono text-[11px] font-bold">REQ-14 &middot; Buyer TRN validation</span>
+            <span class="rounded px-2 py-0.5 font-mono text-[10px] font-bold" style="background:rgba(184,76,22,.10); color:var(--orange)">v3 &middot; current</span>
+          </div>
+
+          <div class="space-y-0">
+            <!-- v3 regulation -->
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 border-b pb-4" style="border-color:var(--line)">
+              <span class="mt-0.5 font-mono text-[11px] font-bold" style="color:var(--orange)">v3</span>
+              <div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="rounded px-2 py-0.5 font-mono text-[9.5px] font-bold uppercase tracking-wider" style="background:rgba(184,76,22,.10); color:var(--orange)">Regulation</span>
+                  <span class="text-sm font-semibold text-neutral-900">Rule pack UAE v1.2 &rarr; v1.3</span>
+                </div>
+                <div class="mt-1.5 font-mono text-[11px] leading-5" style="color:var(--muted)">TRN check tightened. 2 requirements and 1 test case re-opened.</div>
+                <div class="mt-2 flex items-center gap-2 font-mono text-[10.5px]" style="color:var(--orange)">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+                  Notified: Master Data owner, delivery lead
+                </div>
+              </div>
+            </div>
+
+            <!-- v2 personnel -->
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 border-b py-4" style="border-color:var(--line)">
+              <span class="mt-0.5 font-mono text-[11px] font-bold" style="color:var(--muted)">v2</span>
+              <div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="rounded px-2 py-0.5 font-mono text-[9.5px] font-bold uppercase tracking-wider" style="background:rgba(28,28,28,.06); color:var(--muted)">Personnel</span>
+                  <span class="text-sm font-semibold text-neutral-900">Owner reassigned</span>
+                </div>
+                <div class="mt-1.5 font-mono text-[11px] leading-5" style="color:var(--muted)">Previous owner left the account. Finding stays open, owner does not go blank.</div>
+                <div class="mt-2 flex items-center gap-2 font-mono text-[10.5px]" style="color:var(--muted)">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+                  Notified: incoming owner, tax lead
+                </div>
+              </div>
+            </div>
+
+            <!-- v1 requirement -->
+            <div class="grid grid-cols-[auto_1fr] gap-x-4 pt-4">
+              <span class="mt-0.5 font-mono text-[11px] font-bold" style="color:var(--muted)">v1</span>
+              <div>
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="rounded px-2 py-0.5 font-mono text-[9.5px] font-bold uppercase tracking-wider" style="background:rgba(28,28,28,.06); color:var(--muted)">Requirement</span>
+                  <span class="text-sm font-semibold text-neutral-900">Approved as scoped</span>
+                </div>
+                <div class="mt-1.5 font-mono text-[11px] leading-5" style="color:var(--muted)">Signed off against the sample. Baseline for everything after it.</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-5 text-sm leading-6" style="color:var(--muted)">Regulations move, requirements get revised, and people leave. Each one bumps the version and pushes a notification to the owners it touches, so delivery never builds against a stale spec.</p>
+        </div>
+      </div>
+
+    </div></div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var sec=document.getElementById('produces'); if(!sec) return;
+  var tabs=[].slice.call(sec.querySelectorAll('.pd-tab'));
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){
+        var on = t===tab;
+        t.setAttribute('aria-selected', on);
+        sec.querySelector('#pd-'+t.dataset.pd).hidden = !on;
+      });
+    });
+  });
+  sec.addEventListener('keydown', function(e){
+    if(e.key!=='ArrowRight' && e.key!=='ArrowLeft') return;
+    var i=tabs.indexOf(document.activeElement); if(i<0) return;
+    var n=(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+    tabs[n].focus(); tabs[n].click(); e.preventDefault();
+  });
+})();
+</script>
+
+
+
+<!-- 8. BUILD ONCE -->
+<section id="platform" class="border-t border-black/10 os-bg-ink px-5 py-24 text-white md:py-28">
+  <div class="mx-auto max-w-6xl">
+    <div class="max-w-3xl">
+      <h2 class="text-3xl font-semibold leading-tight tracking-[-0.03em] text-white md:text-[42px]">Build once. <span class="px-2 pb-1" style="background: rgba(255,141,107,0.35);">Apply to every mandate.</span></h2>
+      <p class="mt-8 text-lg leading-8 text-neutral-200 md:text-xl">Every mandate uses the same proven workflow. Only the rule pack changes.</p>
+    </div>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-[auto_1fr] md:gap-14">
+      <div>
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em]" style="color:#FF8D6B">Live today</div>
+        <div class="mt-4 inline-flex rounded-2xl border-2 px-6 py-3" style="border-color: var(--orange); background: rgba(184,76,22,0.08);">
+          <span class="font-mono text-xs font-bold uppercase tracking-[0.12em] text-white">UAE e-invoicing</span>
+        </div>
+      </div>
+      <div>
+        <div class="text-[10px] font-bold uppercase tracking-[0.22em] text-neutral-400">Same engine extends to</div>
+        <div class="mt-4 flex flex-wrap gap-2.5">
+          <span class="rounded-lg bg-white/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-neutral-200 ring-1 ring-white/10">E-invoicing</span>
+          <span class="rounded-lg bg-white/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-neutral-200 ring-1 ring-white/10">ViDA</span>
+          <span class="rounded-lg bg-white/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-neutral-200 ring-1 ring-white/10">Tax engine</span>
+          <span class="rounded-lg bg-white/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-neutral-200 ring-1 ring-white/10">ERP programs</span>
+          <span class="rounded-lg bg-white/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-neutral-200 ring-1 ring-white/10">Pillar Two</span>
+          <span class="rounded-lg bg-white/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-neutral-200 ring-1 ring-white/10">SAF-T</span>
+          <span class="rounded-lg bg-white/5 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.1em] text-neutral-200 ring-1 ring-white/10">DAC7</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <a href="/solutions/atlas/how-it-works/" class="inline-flex items-center gap-2 rounded-full border px-6 py-3 text-sm font-medium text-white transition hover:bg-white/10" style="border-color: rgba(255,255,255,0.25);">
+        See how it works
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- 9. AI'S ROLE -->
+<section class="border-t border-black/10 px-5 py-24 md:py-28">
+  <div class="mx-auto max-w-6xl">
+    <div class="eyebrow mb-5">AI&rsquo;s role</div>
+    <div class="grid gap-8 md:grid-cols-2 md:items-start md:gap-16">
+      <h2 class="text-3xl font-semibold leading-tight tracking-[-0.03em] text-neutral-900 md:text-4xl">AI extracts, validates, and organizes the evidence. <span class="os-mark-gold">Your team applies the judgment.</span></h2>
+      <p class="text-lg leading-8 text-neutral-700 md:text-xl md:leading-9">People remain at the center of every decision.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- 11. FAQ -->
+<section class="border-t border-black/10 px-5 py-24 md:py-28">
+  <div class="mx-auto max-w-4xl">
+    <h2 class="text-3xl font-semibold leading-tight tracking-[-0.03em] text-neutral-900 md:text-[42px]">Frequently asked</h2>
+
+    <div class="mt-12 space-y-4">
+      <details class="group os-card p-6 md:p-7">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-lg font-semibold text-neutral-900">
+          How is Atlas different from ChatGPT?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-5 text-[15px] leading-7" style="color:var(--muted)">Atlas is a domain-specific readiness system with rule packs, structured evidence, record-level validation, ownership, approvals, and implementation handoff.</div>
+      </details>
+
+      <details class="group os-card p-6 md:p-7">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-lg font-semibold text-neutral-900">
+          Can my team run scans without me?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-5 text-[15px] leading-7" style="color:var(--muted)">Yes. Atlas standardizes the method so qualified team members produce consistent outputs for your review.</div>
+      </details>
+
+      <details class="group os-card p-6 md:p-7">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-lg font-semibold text-neutral-900">
+          How long does a scan take?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-5 text-[15px] leading-7" style="color:var(--muted)">A limited teardown provides an early view of readiness within days. A complete engagement typically takes one to three weeks, depending on scope and complexity.</div>
+      </details>
+
+      <details class="group os-card p-6 md:p-7">
+        <summary class="flex cursor-pointer items-start justify-between gap-4 text-lg font-semibold text-neutral-900">
+          What about data security?
+          <svg class="mt-1 shrink-0 text-neutral-400 transition group-open:rotate-45" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M5 12h14"/></svg>
+        </summary>
+        <div class="mt-5 text-[15px] leading-7" style="color:var(--muted)">Data handling, access, retention, and NDA requirements are agreed during engagement setup.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- 12. FINAL CTA -->
+<section class="border-t px-5 py-16" style="border-color:var(--line); background:var(--canvas)">
+  <div class="mx-auto max-w-6xl text-center">
+    <button type="button" data-open-lead-modal data-intent="assessment" class="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium text-white transition hover:opacity-90" style="background: var(--ink);">Get one free client assessment</button>
+  </div>
+</section>
+
+<footer class="border-t border-black/10 bg-white px-5 py-10">
+  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 text-sm text-neutral-600">
+    <div>&copy; OneSig 2026</div>
+    <div class="flex flex-wrap gap-5">
+      <a href="/solutions/atlas/" class="hover:text-neutral-900">Atlas</a>
+      <a href="/for/advisors/" class="hover:text-neutral-900">Advisors</a>
+      <a href="/for/technologypartners/" class="hover:text-neutral-900">SIs / ERP</a>
+      <a href="/for/asps/" class="hover:text-neutral-900">ASPs</a>
+      <a href="/solutions/atlas/how-it-works/" class="hover:text-neutral-900">How it works</a>
+      <a href="/access/" class="hover:text-neutral-900">Access</a>
+      <a href="mailto:abhi@onesig.co" class="hover:text-neutral-900">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============ EMAIL LEAD MODAL ============ -->
+<div id="lead-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <div class="relative my-8 w-full max-w-md rounded-3xl border border-black/10 bg-white shadow-2xl">
+    <button type="button" id="lead-close" aria-label="Close" class="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+    </button>
+
+    <div id="lead-form-view" class="px-7 pb-7 pt-8 md:px-9">
+      <div class="eyebrow mb-3" id="lead-eyebrow">Free assessment</div>
+      <h3 class="text-2xl font-semibold tracking-[-0.02em] text-neutral-900">One free client assessment</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">Drop your email and we will send you instructions on how and where to run it. No cost, no commitment.</p>
+
+      <form id="lead-form" class="mt-6" novalidate>
+        <label class="block">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Work email<span class="text-[#B4432F]">*</span></span>
+          <input type="email" name="workEmail" required class="mt-1.5 w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm text-neutral-900 outline-none focus:border-[#B84C16] focus:ring-2 focus:ring-[#B84C16]/30" placeholder="name@company.com" />
+        </label>
+
+        <p id="lead-error" class="mt-3 hidden rounded-lg bg-[#B4432F]/8 px-3 py-2 text-xs os-clay ring-1 ring-[#B4432F]/35"></p>
+
+        <button type="submit" id="lead-submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black disabled:opacity-60">
+          Send request
+        </button>
+        <p class="mt-3 text-center text-[11px] text-neutral-500">Your email goes to abhi@onesig.co. No mailing list, no spam.</p>
+      </form>
+    </div>
+
+    <div id="lead-success-view" class="hidden px-7 py-10 text-center md:px-9 md:py-12">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-[#B84C16]/12 ring-4 ring-[#B84C16]/10">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3 class="mt-5 text-2xl font-semibold tracking-[-0.02em] text-neutral-900">Thank you for your interest.</h3>
+      <p class="mx-auto mt-3 max-w-sm text-base leading-7 text-neutral-700">Check your inbox. Instructions are on the way.</p>
+      <button type="button" id="lead-success-close" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
+
+    const INTENT = {
+      'assessment': { eyebrow: 'Free assessment', subject: 'OneSig Atlas - free client assessment request' },
+    };
+
+    const modal       = document.getElementById('lead-modal');
+    const formView    = document.getElementById('lead-form-view');
+    const successView = document.getElementById('lead-success-view');
+    const form        = document.getElementById('lead-form');
+    const eyebrowEl   = document.getElementById('lead-eyebrow');
+    const errorEl     = document.getElementById('lead-error');
+    const submitBtn   = document.getElementById('lead-submit');
+    let currentIntent = 'sandbox';
+
+    function openLeadModal(intent) {
+      currentIntent = INTENT[intent] ? intent : 'assessment';
+      eyebrowEl.textContent = INTENT[currentIntent].eyebrow;
+      formView.classList.remove('hidden');
+      successView.classList.add('hidden');
+      errorEl.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send request';
+      form.reset();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function(){ form.querySelector('[name="workEmail"]').focus(); }, 50);
+    }
+    function closeLeadModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-open-lead-modal]').forEach(function (btn) {
+      btn.addEventListener('click', function () { openLeadModal(btn.dataset.intent || 'walkthrough'); });
+    });
+    document.getElementById('lead-close').addEventListener('click', closeLeadModal);
+    document.getElementById('lead-success-close').addEventListener('click', closeLeadModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeLeadModal(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeLeadModal();
+    });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const email = form.workEmail.value.trim();
+      const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+      if (!emailOk) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      errorEl.classList.add('hidden');
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      const subject = INTENT[currentIntent].subject;
+      const payload = {
+        _subject:  subject,
+        _captcha:  'false',
+        _template: 'table',
+        source:    'onesig-atlas-readiness-scan-page',
+        intent:    currentIntent,
+        workEmail: email,
+        page:      'https://www.onesig.co/solutions/atlas/',
+        createdAt: new Date().toISOString(),
+      };
+
+      let succeeded = false;
+      try {
+        const res = await fetch(LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(function(){ return {}; });
+        succeeded = (data && (data.success === 'true' || data.success === true));
+      } catch (err) {
+        succeeded = false;
+      }
+
+      if (!succeeded) {
+        const body = 'Hi Abhi,%0A%0AI%27m interested in the OneSig Atlas readiness work.%0A%0AReply to: ' + encodeURIComponent(email) + '%0A%0AThanks.';
+        window.location.href = 'mailto:abhi@onesig.co?subject=' + encodeURIComponent(subject) + '&body=' + body;
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send request';
+      formView.classList.add('hidden');
+      successView.classList.remove('hidden');
+    });
+  })();
+</script>
+
+
+<script>
+  (function(){
+    var ENDPOINT='https://formsubmit.co/ajax/abhi@onesig.co';
+    document.querySelectorAll('form.os-waitlist').forEach(function(f){
+      f.addEventListener('submit', async function(e){
+        e.preventDefault();
+        var input=f.querySelector('[name=workEmail]');
+        var btn=f.querySelector('button[type=submit]');
+        var msg=f.parentElement.querySelector('.os-waitlist-msg');
+        var email=(input.value||'').trim();
+        if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+          msg.textContent='Please enter a valid work email.'; msg.classList.remove('hidden'); return;
+        }
+        msg.classList.add('hidden');
+        btn.disabled=true; var label=btn.textContent; btn.textContent='Adding you...';
+        try{
+          await fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+            body:JSON.stringify({_subject:'OneSig Atlas - free client assessment request',_captcha:'false',_template:'table',
+              source:'onesig-free-assessment',workEmail:email,page:location.pathname,createdAt:new Date().toISOString()})});
+        }catch(x){}
+        f.style.display='none';
+        msg.textContent="Check your inbox. Instructions are on the way.";
+        msg.classList.remove('hidden');
+        btn.disabled=false; btn.textContent=label;
+      });
+    });
+  })();
+</script>
+</body>
+</html>

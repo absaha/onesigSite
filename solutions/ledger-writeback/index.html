@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ledger + Writeback · OneSig</title>
+<!-- Favicon set -->
+<link rel="icon" href="/assets/favicon.ico?v=2" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?v=2">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#f7f1e7">
+
+<!-- Open Graph (link previews on iMessage, WhatsApp, Slack, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OneSig Atlas">
+<meta property="og:title" content="Ledger + Writeback - OneSig Atlas">
+<meta property="og:description" content="Write validation outcomes back to ERP. Preserve evidence at the invoice level.">
+<meta property="og:url" content="https://www.onesig.co/solutions/ledger-writeback/">
+<meta property="og:image" content="https://www.onesig.co/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="OneSig Atlas - UAE FTA Phase 2 readiness">
+
+<!-- Twitter / X cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ledger + Writeback - OneSig Atlas">
+<meta name="twitter:description" content="Write validation outcomes back to ERP. Preserve evidence at the invoice level.">
+<meta name="twitter:image" content="https://www.onesig.co/assets/og-image.png">
+
+<meta name="description" content="Close the loop from source systems to compliance outcomes. Canonical invoice ledger, ERP writeback, and audit evidence across UAE, Belgium, France, and the EU CTC wave.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: #f7f1e7; color: #161616; }
+  .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(109, 40, 217); }
+</style>
+</head>
+<body>
+
+<nav class="sticky top-0 z-50 border-b border-black/10 bg-[#f7f1e7]/85 backdrop-blur-xl" id="osNav">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
+    <a href="/" class="flex items-center gap-2 text-lg font-bold tracking-tight text-neutral-900">
+      <div class="grid h-8 w-8 place-items-center rounded-xl bg-[#171717] text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+      </div>
+      OneSig
+    </a>
+    <div class="hidden items-center gap-1 md:flex">
+      <a href="/#platform" class="osNavBtn">Platform</a>
+      <button data-menu="solutions" class="osNavBtn">Solutions</button>
+      <button data-menu="countries" class="osNavBtn">Countries</button>
+      <button data-menu="partners"  class="osNavBtn">Partners</button>
+      <a href="/access/" class="osNavBtn">Access</a>
+    </div>
+    <button type="button" data-open-lead-modal data-intent="demo" class="rounded-full bg-[#171717] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black">Request Demo</button>
+  </div>
+  <div id="osNavPanel" class="hidden mx-auto max-w-7xl px-5 pb-4"></div>
+</nav>
+<style>
+  .osNavBtn { padding: 0.375rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 500; color: rgb(82,82,82); transition: color 0.2s; }
+  .osNavBtn:hover { color: rgb(23,23,23); }
+  .osNavBtn.active { background: rgba(255,255,255,0.7); color: rgb(23,23,23); }
+</style>
+<script>
+  (function(){
+    var menus = {
+      platform: [
+        ["Platform overview", "/#platform"],
+        ["Architecture", "/#platform"],
+        ["Field Gap Agent", "#"],
+        ["Jurisdiction Validation Agent", "#"],
+        ["Exception Routing Agent", "#"],
+        ["Clearance Monitoring Agent", "#"],
+        ["Audit Evidence Agent", "#"],
+      ],
+      solutions: [
+        ["All solutions",      "/solutions/"],
+        ["Readiness Scan",     "/solutions/readiness-scan/"],
+        ["Validate + Fix",     "/solutions/validate-fix/"],
+        ["Ledger + Writeback", "/solutions/ledger-writeback/"],
+      ],
+      countries: [
+        ["UAE", "/countries/uae/"],
+        ["France", "/countries/france/"],
+      ],
+      partners: [
+        ["All partners", "/partners/"],
+        ["Tax advisory firms", "/partners/#advisory"],
+        ["ERP / SI partners", "/partners/#si"],
+        ["ASP / Peppol providers", "/partners/#asp"],
+      ],
+      resources: [
+        ["Access", "/access/"],
+        ["Briefings", "#"],
+        ["Documentation", "#"],
+        ["About us", "#"],
+      ],
+    };
+    var btns = document.querySelectorAll(".osNavBtn");
+    var panel = document.getElementById("osNavPanel");
+    var current = null;
+    function close(){ panel.classList.add("hidden"); panel.innerHTML = ""; current = null; btns.forEach(function(b){ b.classList.remove("active"); }); }
+    function open(name, btn){
+      current = name;
+      btns.forEach(function(b){ b.classList.toggle("active", b===btn); });
+      var items = menus[name] || [];
+      panel.innerHTML = '<div class="grid grid-cols-2 gap-2 rounded-2xl border border-black/10 bg-white p-2 shadow-xl md:grid-cols-3">' +
+        items.map(function(it){ return '<a href="'+it[1]+'" class="block rounded-xl px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-violet-50 hover:text-violet-700">'+it[0]+'</a>'; }).join("") + '</div>';
+      panel.classList.remove("hidden");
+    }
+    btns.forEach(function(btn){
+      btn.addEventListener("click", function(e){
+        e.stopPropagation();
+        var name = btn.getAttribute("data-menu");
+        if (current === name) { close(); } else { open(name, btn); }
+      });
+    });
+    document.addEventListener("click", function(e){
+      var nav = document.getElementById("osNav");
+      if (!nav.contains(e.target)) close();
+    });
+    document.addEventListener("keydown", function(e){ if (e.key === "Escape") close(); });
+  })();
+</script>
+
+
+<section class="px-5 pb-12 pt-16 md:pt-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="eyebrow mb-4">Package · Ledger + Writeback</div>
+    <h1 class="text-5xl font-semibold tracking-[-0.04em] md:text-6xl">Close the loop from source systems to compliance outcomes.</h1>
+    <p class="mt-5 max-w-3xl text-xl leading-9 text-neutral-700">OneSig creates the governed invoice ledger between your ERP, ASP, tax engine, warehouse, and regulators, then writes status, receipts, rejections, corrections, and audit evidence back to the systems your teams already use.</p>
+    <div class="mt-8">
+      <button type="button" data-open-lead-modal data-intent="ledger-writeback" class="inline-flex items-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black">See the ledger workflow →</button>
+    </div>
+  </div>
+</section>
+
+<section class="px-5 py-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-3">Architecture</div>
+    <h2 class="text-3xl font-semibold tracking-[-0.03em] md:text-4xl">One connection model in. Many governed outcomes out.</h2>
+    <div class="mt-6">
+<div class="mt-6 rounded-[1.5rem] border border-black/10 bg-white/70 p-7 shadow-sm">
+  <div class="text-xs font-bold uppercase tracking-[0.22em] text-violet-700">Architecture</div>
+  <div class="mt-2 text-2xl font-semibold tracking-[-0.02em] text-neutral-900 md:text-3xl">One connection model in. Many governed outcomes out.</div>
+  <div class="mt-6 grid items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
+    <div class="grid gap-2">
+      <div class="text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-500">Source systems</div>
+      <div class="rounded-xl border border-black/10 bg-white px-4 py-2 text-sm font-semibold">ERP (SAP / Oracle / NetSuite / Dynamics)</div>
+      <div class="rounded-xl border border-black/10 bg-white px-4 py-2 text-sm font-semibold">Tax engine</div>
+      <div class="rounded-xl border border-black/10 bg-white px-4 py-2 text-sm font-semibold">Master data &amp; spreadsheets</div>
+      <div class="rounded-xl border border-black/10 bg-white px-4 py-2 text-sm font-semibold">Banking &amp; payments</div>
+    </div>
+    <div class="hidden flex-col items-center gap-2 md:flex">
+      <div class="rounded-2xl bg-[#171717] px-5 py-3 text-sm font-bold text-white">OneSig</div>
+      <div class="text-[10px] font-semibold text-neutral-500">canonical invoice ledger</div>
+    </div>
+    <div class="grid gap-2">
+      <div class="text-[10px] font-bold uppercase tracking-[0.18em] text-neutral-500">Governed outcomes</div>
+      <div class="rounded-xl border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold">ASP / Peppol / PDP transmission</div>
+      <div class="rounded-xl border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold">Regulator response &amp; clearance</div>
+      <div class="rounded-xl border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold">ERP writeback</div>
+      <div class="rounded-xl border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold">Audit evidence pack</div>
+      <div class="rounded-xl border border-violet-200 bg-violet-50 px-4 py-2 text-sm font-semibold">Reconciliation &amp; warehouse</div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+</section>
+
+<section class="px-5 py-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-3">What gets written back</div>
+    <h2 class="text-3xl font-semibold tracking-[-0.03em] md:text-4xl">AR, AP, treasury, and tax all read the same record.</h2>
+    <div class="mt-6"><ul class="mt-4 grid gap-3 md:grid-cols-2"><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Validation status</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Rejection reason</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Clearance ID</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Receipt ID</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Lifecycle status</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>QR code or authority reference</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Correction status</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Evidence link</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Audit pack reference</span></li></ul></div>
+  </div>
+</section>
+
+<section class="px-5 py-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-3">System of record vs system of evidence</div>
+    <h2 class="text-3xl font-semibold tracking-[-0.03em] md:text-4xl">ERP remains the financial system of record. OneSig becomes the invoice compliance system of evidence.</h2>
+    <div class="mt-6"><p class="mt-4 text-lg leading-8 text-neutral-700">ERPs preserve accounting records. OneSig preserves the regulated invoice evidence: field lineage, validation history, rule versions, lifecycle statuses, regulator responses, writebacks, and audit trails.</p><p class="mt-4 text-lg leading-8 text-neutral-700">The two systems are complementary. The ERP is unchanged. The compliance layer absorbs the next mandate, the next rule, and the next regulator response without rebuilding the operating model.</p><div class="mt-6 rounded-[1.25rem] border border-violet-200 bg-violet-50 px-6 py-5"><div class="text-xs font-bold uppercase tracking-[0.22em] text-violet-700">Key idea</div><div class="mt-2 text-xl font-semibold tracking-[-0.02em] text-neutral-900 md:text-2xl">Mandates change faster than ERP cores should.</div></div></div>
+  </div>
+</section>
+
+<section class="px-5 py-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-3">Best for</div>
+    <h2 class="text-3xl font-semibold tracking-[-0.03em] md:text-4xl">Teams running e-invoicing as a programme, not a project.</h2>
+    <div class="mt-6"><ul class="mt-4 grid gap-3 md:grid-cols-2"><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Multi-entity groups</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Multi-ERP environments</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Companies keeping their ASP / ERP stack</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Tax advisory firms running productized compliance services</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>System integrators delivering ERP + e-invoicing engagements</span></li><li class="flex items-start gap-3 rounded-2xl border border-black/10 bg-white/65 px-5 py-4 text-base leading-7 text-neutral-800"><span class="mt-2 inline-block h-2 w-2 shrink-0 rounded-full bg-violet-600"></span><span>Companies expanding from UAE to the EU CTC wave</span></li></ul></div>
+  </div>
+</section>
+
+<section class="px-5 py-16">
+  <div class="mx-auto max-w-5xl">
+    <div class="eyebrow mb-3">Pricing</div>
+    <h2 class="text-3xl font-semibold tracking-[-0.03em] md:text-4xl">Implementation plus monthly platform.</h2>
+    <div class="mt-6">
+<div class="mt-6 rounded-[1.5rem] border border-black/10 bg-white/70 p-7 shadow-sm">
+  <div class="text-xs font-bold uppercase tracking-[0.22em] text-violet-700">Pricing</div>
+  <div class="mt-2 text-3xl font-semibold tracking-[-0.02em] text-neutral-900 md:text-4xl">Implementation plus monthly platform</div>
+  <p class="mt-2 text-base leading-7 text-neutral-700">Pricing scoped to entities, connected systems, invoice volume, jurisdictions, and writeback requirements.</p><p class="mt-2 text-base leading-7 text-neutral-700">Implementation packs include connector setup, jurisdiction model activation, validation libraries, and a working writeback flow into the ERP of record.</p>
+  <p class="mt-3 text-xs text-neutral-500">Partner pricing available for tax advisory firms, SI partners, and ASP / Peppol providers.</p>
+</div>
+</div>
+  </div>
+</section>
+
+
+<section class="px-5 py-24">
+  <div class="mx-auto max-w-5xl rounded-[2rem] bg-[#0c0c0c] p-12 text-white shadow-xl md:p-16">
+    <div class="text-xs font-bold uppercase tracking-[0.22em] text-violet-300">Ledger + Writeback</div>
+    <h2 class="mt-3 text-4xl font-semibold tracking-[-0.04em] md:text-5xl">Make the compliance layer the invoice system of evidence.</h2>
+    <p class="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">Implementation plus monthly platform. Scoped per engagement.</p>
+    <div class="mt-8 flex flex-wrap items-center gap-3">
+      <button type="button" data-open-lead-modal data-intent="ledger-writeback" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 shadow-sm hover:bg-neutral-100">Book a ledger architecture review →</button>
+      <button type="button" data-open-lead-modal data-intent="talk" class="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 hover:bg-white/15">Talk to Us →</button>
+    </div>
+  </div>
+</section>
+<footer class="border-t border-black/10 bg-white/40 px-5 py-10">
+  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 text-sm text-neutral-600">
+    <div>© OneSig 2026</div>
+    <div class="flex gap-5">
+      <a href="/" class="hover:text-neutral-900">Home</a>
+      <a href="/solutions/" class="hover:text-neutral-900">Solutions</a>
+      <a href="/countries/uae/" class="hover:text-neutral-900">Countries</a>
+      <a href="/partners/" class="hover:text-neutral-900">Partners</a>
+      <a href="mailto:abhi@onesig.co" class="hover:text-neutral-900">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ EMAIL LEAD MODAL ============ -->
+<div id="lead-modal" class="fixed inset-0 z-[100] hidden items-start justify-center overflow-y-auto bg-black/60 p-4 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <div class="relative my-8 w-full max-w-md rounded-3xl border border-black/10 bg-white shadow-2xl">
+    <button type="button" id="lead-close" aria-label="Close" class="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-neutral-100 text-neutral-700 hover:bg-neutral-200">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></svg>
+    </button>
+
+    <div id="lead-form-view" class="px-7 pb-7 pt-8 md:px-9">
+      <div class="eyebrow mb-3" id="lead-eyebrow">Request a demo</div>
+      <h3 class="text-2xl font-semibold tracking-[-0.02em] text-neutral-900">Where should we reach you?</h3>
+      <p class="mt-3 text-sm leading-6 text-neutral-600">Drop your email and we'll get back to you within one business day.</p>
+
+      <form id="lead-form" class="mt-6" novalidate>
+        <label class="block">
+          <span class="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">Work email<span class="text-red-600">*</span></span>
+          <input type="email" name="workEmail" required class="mt-1.5 w-full rounded-xl border border-black/10 bg-white px-4 py-3 text-sm text-neutral-900 outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-200" placeholder="name@company.com" />
+        </label>
+        <p id="lead-error" class="mt-3 hidden rounded-lg bg-red-50 px-3 py-2 text-xs text-red-700 ring-1 ring-red-200"></p>
+        <button type="submit" id="lead-submit" class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#161616] px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black disabled:opacity-60">
+          Send →
+        </button>
+        <p class="mt-3 text-center text-[11px] text-neutral-500">Your email goes to abhi@onesig.co. No mailing list, no spam.</p>
+      </form>
+    </div>
+
+    <div id="lead-success-view" class="hidden px-7 py-10 text-center md:px-9 md:py-12">
+      <div class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-emerald-100 ring-4 ring-emerald-50">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+      </div>
+      <h3 class="mt-5 text-2xl font-semibold tracking-[-0.02em] text-neutral-900">Thank you for your interest.</h3>
+      <p class="mx-auto mt-3 max-w-sm text-base leading-7 text-neutral-700">We will shoot you an email.</p>
+      <button type="button" id="lead-success-close" class="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-neutral-900 ring-1 ring-black/10 hover:bg-neutral-50">
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
+    const INTENT = {
+      'demo':             { eyebrow: 'Request a demo', subject: 'OneSig Atlas demo request' },
+      'talk':             { eyebrow: 'Talk to us',     subject: 'Talk to OneSig' },
+      'ledger-writeback': { eyebrow: 'Book a ledger write-back walkthrough', subject: 'Book a ledger write-back walkthrough' },
+    };
+    const modal = document.getElementById('lead-modal');
+    const formView = document.getElementById('lead-form-view');
+    const successView = document.getElementById('lead-success-view');
+    const form = document.getElementById('lead-form');
+    const eyebrowEl = document.getElementById('lead-eyebrow');
+    const errorEl = document.getElementById('lead-error');
+    const submitBtn = document.getElementById('lead-submit');
+    let currentIntent = 'demo';
+
+    function openLeadModal(intent) {
+      currentIntent = INTENT[intent] ? intent : 'demo';
+      eyebrowEl.textContent = INTENT[currentIntent].eyebrow;
+      formView.classList.remove('hidden');
+      successView.classList.add('hidden');
+      errorEl.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send →';
+      form.reset();
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      setTimeout(function(){ form.querySelector('[name="workEmail"]').focus(); }, 50);
+    }
+    function closeLeadModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+    document.querySelectorAll('[data-open-lead-modal]').forEach(function (btn) {
+      btn.addEventListener('click', function () { openLeadModal(btn.dataset.intent || 'demo'); });
+    });
+    document.getElementById('lead-close').addEventListener('click', closeLeadModal);
+    document.getElementById('lead-success-close').addEventListener('click', closeLeadModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeLeadModal(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeLeadModal();
+    });
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const email = form.workEmail.value.trim();
+      const emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+      if (!emailOk) {
+        errorEl.textContent = 'Please enter a valid email address.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+      errorEl.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      const subject = INTENT[currentIntent].subject;
+      const payload = {
+        _subject: subject,
+        _captcha: 'false',
+        _template: 'table',
+        source: 'onesig-ledger-writeback',
+        intent: currentIntent,
+        workEmail: email,
+        page: 'https://www.onesig.co/solutions/ledger-writeback/',
+        createdAt: new Date().toISOString(),
+      };
+      let succeeded = false;
+      try {
+        const res = await fetch(LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(function(){ return {}; });
+        succeeded = (data && (data.success === 'true' || data.success === true));
+      } catch (err) { succeeded = false; }
+      if (!succeeded) {
+        const body = 'Hi Abhi,%0A%0AI%27m interested in the OneSig Atlas readiness work.%0A%0AReply to: ' + encodeURIComponent(email) + '%0A%0AThanks.';
+        window.location.href = 'mailto:abhi@onesig.co?subject=' + encodeURIComponent(subject) + '&body=' + body;
+      }
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send →';
+      formView.classList.add('hidden');
+      successView.classList.remove('hidden');
+    });
+  })();
+</script>
+
+</body>
+</html>
