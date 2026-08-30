@@ -204,17 +204,17 @@
 (function () {
   var ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
 
-  // Google Sheets logging.
-  // Deploy the Apps Script bound to the leads spreadsheet as a Web App
-  // (Execute as: Me / Who has access: Anyone) and paste its /exec URL here.
-  var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/PASTE_DEPLOYMENT_ID_HERE/exec';
+  // Google Sheets logging. Apps Script web app bound to the leads spreadsheet,
+  // deployed as Execute as: Me / Who has access: Anyone.
+  // Use the generic script.google.com/macros/s/... form, NOT the domain-scoped
+  // /a/macros/onesig.co/... form: the latter bounces anonymous visitors to the
+  // onesig.co sign-in page instead of running the script.
+  var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwbA6am7Ys8sx1NY-hhXo-Z-1vwL1WxowWCIzaz35CxJsSy7ibdbyxhD9IPLhxseYno/exec';
 
   // Writes one lead row to the sheet. Never throws: a sheet outage must not
   // block the email notification or the success state.
   function logToSheet(record) {
-    if (!SHEETS_ENDPOINT || SHEETS_ENDPOINT.indexOf('PASTE_DEPLOYMENT_ID_HERE') !== -1) {
-      return Promise.resolve(false);
-    }
+    if (!SHEETS_ENDPOINT) { return Promise.resolve(false); }
     try {
       return fetch(SHEETS_ENDPOINT, {
         method: 'POST',
