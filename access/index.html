@@ -203,6 +203,29 @@
 <script>
 (function () {
   var ENDPOINT = 'https://formsubmit.co/ajax/abhi@onesig.co';
+
+  // Google Sheets logging.
+  // Deploy the Apps Script bound to the leads spreadsheet as a Web App
+  // (Execute as: Me / Who has access: Anyone) and paste its /exec URL here.
+  var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/PASTE_DEPLOYMENT_ID_HERE/exec';
+
+  // Writes one lead row to the sheet. Never throws: a sheet outage must not
+  // block the email notification or the success state.
+  function logToSheet(record) {
+    if (!SHEETS_ENDPOINT || SHEETS_ENDPOINT.indexOf('PASTE_DEPLOYMENT_ID_HERE') !== -1) {
+      return Promise.resolve(false);
+    }
+    try {
+      return fetch(SHEETS_ENDPOINT, {
+        method: 'POST',
+        // text/plain keeps this a CORS "simple request", so the browser skips the
+        // preflight that Apps Script web apps do not answer.
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(record)
+      }).then(function (res) { return res.ok; }).catch(function () { return false; });
+    } catch (err) { return Promise.resolve(false); }
+  }
+
   var openBtn = document.getElementById('acc-open');
   var cta     = document.getElementById('acc-cta');
   var wrap    = document.getElementById('acc-form-wrap');
@@ -248,6 +271,17 @@
       createdAt:    new Date().toISOString()
     };
 
+    // Fire the sheet write in parallel with the email; awaited below so the row
+    // is committed before any mailto navigation can cancel it.
+    var sheetPromise = logToSheet({
+      workEmail:    payload.workEmail,
+      name:         payload.firmName,
+      practiceArea: payload.practiceArea,
+      page:         payload.page,
+      source:       payload.source,
+      createdAt:    payload.createdAt
+    });
+
     var ok = false;
     try {
       var res = await fetch(ENDPOINT, {
@@ -258,6 +292,8 @@
       var data = await res.json().catch(function () { return {}; });
       ok = (data && (data.success === 'true' || data.success === true));
     } catch (err) { ok = false; }
+
+    await sheetPromise;
 
     if (!ok) {
       var body = 'Hi Abhi,%0A%0AI would like access to OneSig Atlas.%0A%0AEmail: ' + encodeURIComponent(email)
