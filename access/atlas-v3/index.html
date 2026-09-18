@@ -831,6 +831,21 @@ th{background:transparent}td,th{border-bottom-color:rgba(26,34,51,.07)}
 .npop .x{background:none;border:0;color:var(--mute);cursor:pointer;font-size:16px;line-height:1;margin-left:auto}
 .menu.npanel{left:0;right:auto;width:460px;min-width:460px;max-width:460px;padding:6px;top:calc(100% + 8px)}.menu.npanel .mi.ni{display:flex;align-items:flex-start;gap:10px;padding:9px 10px;white-space:normal;line-height:1.35}.menu.npanel .mh{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.npanel .ni b{display:block;font-weight:500;font-size:13px;line-height:1.35}.npanel .ni small{display:block;color:var(--mute);font-size:11.5px;margin-top:2px}
 .dc-main .ns-box{margin:10px 0 0}.dc-main .ns-tr{margin-top:8px}
+/* ---- settings v43 ---- */
+.st-wrap{display:grid;grid-template-columns:220px 1fr;gap:14px;align-items:start;max-width:1040px}
+.st-nav{padding:6px}.st-nav a{display:block;padding:9px 12px;border-radius:8px;color:var(--ink2);text-decoration:none;font-size:13.5px}.st-nav a:hover{background:#f6f8fc}.st-nav a.on{background:#eef4ff;color:#1558A6;font-weight:500}
+.st-body{padding:20px 24px}.st-body h2{font-family:var(--serif);font-weight:500;font-size:22px;margin:0 0 4px}.st-body>p.mute{margin:0 0 14px;font-size:13px}
+.st-h3{font:500 11px var(--mono);color:#7e8a9a;text-transform:uppercase;letter-spacing:.06em;margin:18px 0 8px}
+.st-row{display:grid;grid-template-columns:240px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);align-items:start}.st-row:last-child{border-bottom:0}
+.st-k{font-size:13.5px;font-weight:500}.st-k .xs{font-weight:400;margin-top:2px;line-height:1.4}.st-v{font-size:13px}
+.st-in{border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:13px var(--sans);background:#fff}
+.st-logo{display:inline-flex;align-items:center;gap:10px}
+.st-tog{width:38px;height:22px;border-radius:999px;border:0;background:#c9d3e3;position:relative;cursor:pointer;vertical-align:middle}.st-tog i{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:#fff;transition:left .15s}.st-tog.on{background:#1e7b3a}.st-tog.on i{left:19px}
+.st-invite{display:flex;gap:8px;margin:0 0 14px}
+.st-role{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:6px 0;font-size:13px;border-bottom:1px solid var(--line)}.st-role:last-child{border-bottom:0}
+.st-opt{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:8px;cursor:pointer;background:#fff;font-size:13.5px}.st-opt.on{border-color:#9cc4ff;background:#f6f9ff}.st-opt.off{opacity:.6;cursor:default}.st-opt input{margin-top:3px}
+.st-conn{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:8px;background:#fff;font-size:13.5px}.st-ci{width:32px;height:32px;border-radius:9px;background:#f1f4fa;display:grid;place-items:center;flex:none}
+.st-exports{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px}.st-exp{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;font-size:13.5px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;gap:2px 12px;align-items:center}.st-exp b{grid-column:1;grid-row:1}.st-exp .xs{grid-column:1;grid-row:2}.st-exp .btn{grid-column:2;grid-row:1/3;width:auto;align-self:center}
 </style>
 </head>
 <body>
@@ -855,7 +870,7 @@ th{background:transparent}td,th{border-bottom-color:rgba(26,34,51,.07)}
       <div class="grp">Ask history</div>
       <div id="askHist"></div>
     </nav>
-    <div class="foot">Atlas demo V3.32 · Sep 2026 · account + seed data are fictional (XYZ Petrocorp). <b>Clickable mockup, not the product.</b> <a href="javascript:void(0)" onclick="location.hash='#home';location.reload()" style="color:var(--blue)">Reset demo</a> · <a href="javascript:void(0)" onclick="ONB={done:false,step:0,name:''};go('home');render()" style="color:var(--blue)">Replay welcome</a></div>
+    <div class="foot">Atlas demo V3.33 · Sep 2026 · account + seed data are fictional (XYZ Petrocorp). <b>Clickable mockup, not the product.</b> <a href="javascript:void(0)" onclick="location.hash='#home';location.reload()" style="color:var(--blue)">Reset demo</a> · <a href="javascript:void(0)" onclick="ONB={done:false,step:0,name:''};go('home');render()" style="color:var(--blue)">Replay welcome</a></div>
   </aside>
 
   <header class="top">
@@ -864,7 +879,7 @@ th{background:transparent}td,th{border-bottom-color:rgba(26,34,51,.07)}
     <div class="search">⌕ Search… <kbd>⌘K</kbd></div>
     <span class="dd" style="position:relative"><button class="notif" id="notif" title="Atlas is waiting on you" onclick="event.stopPropagation();NOTIF.open=!NOTIF.open;notifSync()"><span class="ndot"></span>Atlas needs you <span class="n" id="notifN">0</span></button><div class="menu npanel" id="npanel" onclick="event.stopPropagation()"></div></span>
     <button class="iconbtn" title="Activity log" onclick="openLog()">☰</button>
-    <div class="avatar" title="Profile · settings · sign out">AB</div>
+    <span class="dd" style="position:relative"><div class="avatar" title="Profile · settings · sign out" style="cursor:pointer" onclick="event.stopPropagation();abMenu=abMenu==='me'?'':'me';render()">AB</div><div class="menu" id="meMenu" style="left:auto;right:0;min-width:220px"><div class="mh">Abhi · Owner</div><div class="mi" onclick="abMenu='';toast('Profile — name, signature, notifications (personal)')"><span>☺</span>Profile &amp; preferences</div><div class="mi" onclick="abMenu='';go('settings','org')"><span>⚙</span>Settings <small>organisation</small></div><div class="mi" onclick="abMenu='';toast('Signed out')"><span>↪</span>Sign out</div></div></span>
   </header>
 
   <main class="main"><div class="page" id="page"></div></main>
@@ -2024,6 +2039,68 @@ function notifSync(){const all=needsItems().length,ask=askN();const nc=document.
   if(onNeeds)NOTIF.pop=null;if(!quiet)NOTIF.seen=ask;
   const old=document.getElementById('npop');if(old)old.remove();
   if(NOTIF.pop){const x=NOTIF.pop;const d=document.createElement('div');d.id='npop';d.className='npop';d.innerHTML=`<span class="av">✳<i class="ndot"></i></span><div style="flex:1"><b>Atlas needs you</b><div class="t">${esc(x.t)}</div><div class="acts"><button class="btn s p" onclick="NOTIF.pop=null;${nsGo(x).replace(/"/g,'&quot;')}">Open →</button><button class="btn s ghost" onclick="NOTIF.pop=null;document.getElementById('npop').remove()">Later</button></div></div><button class="x" onclick="NOTIF.pop=null;document.getElementById('npop').remove()">×</button>`;document.body.appendChild(d)}}
+/* ---------- SETTINGS (General) ---------- */
+let ST={tab:'org',mfa:true,sso:'google',conn:{email:'Google Workspace',slack:false,gdrive:false,sharepoint:false},send:'noreply',improve:false,invite:'',role:'Member',residency:'UAE',retain:'12 months',
+  members:[{n:'Abhi',e:'abhi@onesig.co',r:'Owner',last:'now'},{n:'Komal',e:'komal@onesig.co',r:'Admin',last:'2h ago'},{n:'Vansh',e:'vansh@onesig.co',r:'Member',last:'yesterday'},{n:'Tushar',e:'tushar@onesig.co',r:'Reviewer',last:'Sep 12'}]};
+const ST_TABS=[['org','Organisation'],['members','Members & roles'],['send','Sending identity'],['conn','Connectors'],['sec','Security'],['data','Privacy & data']];
+const ST_ROLES={Owner:'Everything, including billing and deleting the organisation',Admin:'Members, connectors, security, playbooks — no billing',Member:'Consultant: runs workflows, reviews and signs off their own runs',Reviewer:'Sign-off only (e.g. a partner): sees runs and outputs, approves, cannot run',['Client guest']:'Link only, no account — managed per space under Access'};
+const tog=(on,fn)=>`<button class="st-tog ${on?'on':''}" onclick="${fn}"><i></i></button>`;
+function stInvite(){const e=ST.invite.trim();if(!e||!e.includes('@')){toast('Enter a work email');return}ST.members.push({n:e.split('@')[0].replace(/^./,c=>c.toUpperCase()),e,r:ST.role,last:'invited'});toast('Invite sent to '+e+' as '+ST.role);ST.invite='';render()}
+function stBody(){const t=ST.tab;
+  const row=(k,v,sub='')=>`<div class="st-row"><div class="st-k">${k}${sub?`<div class="xs mute">${sub}</div>`:''}</div><div class="st-v">${v}</div></div>`;
+  const inp=(v,w=280)=>`<input class="st-in" style="width:${w}px" value="${esc(v)}" onchange="toast('Saved')">`;
+  if(t==='org')return `<h2>Organisation</h2><p class="mute">Shown on client links and in the emails Atlas drafts for you.</p>
+    ${row('Firm name',inp('OneSig'))}${row('Logo',`<span class="st-logo"><span class="ph-logo">M</span><button class="btn s" onclick="openPicker(n=>toast(n[0]+' uploaded'))">Upload</button></span>`,'PNG or SVG · used on questionnaire links')}
+    ${row('Jurisdictions',`<span class="dc-chip">UAE</span> <span class="dc-chip">Oman</span> <button class="dc-plus" onclick="toast('Add jurisdiction — KSA, Belgium, France…')">+</button>`,'default for new spaces; each space can differ')}
+    ${row('Timezone',`<select class="dc-sel" style="width:220px"><option>Asia/Dubai (GMT+4)</option><option>America/Chicago</option><option>Europe/Amsterdam</option></select>`)}${row('Language',`<select class="dc-sel" style="width:220px"><option>English</option><option>Arabic</option></select>`,'for the interface; client-facing drafts follow the space')}`;
+  if(t==='members')return `<h2>Members & roles</h2><p class="mute">Invite by email. Client guests never get an account — they are managed per space under Access.</p>
+    <div class="st-invite"><input class="st-in" style="flex:1" placeholder="name@firm.com" value="${esc(ST.invite)}" oninput="ST.invite=this.value" onkeydown="if(event.key==='Enter')stInvite()"><select class="dc-sel" onchange="ST.role=this.value">${['Member','Admin','Reviewer','Owner'].map(r=>`<option ${ST.role===r?'selected':''}>${r}</option>`).join('')}</select><button class="btn p" onclick="stInvite()">Invite</button></div>
+    <div class="card"><table class="dc-t"><tr><th>Name</th><th>Email</th><th style="width:150px">Role</th><th style="width:110px">Last active</th><th style="width:40px"></th></tr>${ST.members.map((m,i)=>`<tr><td>${dcAv(m.n,22)} <b style="font-weight:500">${esc(m.n)}</b></td><td class="mute">${esc(m.e)}</td><td><select class="dc-sel" ${m.r==='Owner'?'disabled':''} onchange="ST.members[${i}].r=this.value;toast('Role changed')">${['Owner','Admin','Member','Reviewer'].map(r=>`<option ${m.r===r?'selected':''}>${r}</option>`).join('')}</select></td><td class="mute xs">${m.last}</td><td>${m.r==='Owner'?'':`<button class="dc-del" title="Remove" onclick="ST.members.splice(${i},1);render()">🗑</button>`}</td></tr>`).join('')}</table></div>
+    <div class="card" style="margin-top:14px"><div class="hd"><h3>Roles</h3><span class="sub">what each role can do</span></div><div class="bd">${Object.entries(ST_ROLES).map(([r,d])=>`<div class="st-role"><b>${r}</b><span class="mute">${d}</span></div>`).join('')}</div></div>
+    <p class="xs mute" style="margin-top:10px">Client guests in this account: <b>5</b> across 3 spaces — <a href="#spaces/access" onclick="curSpace='e-invoicing UAE'" style="color:var(--blue)">manage under each space › Access</a>.</p>`;
+  if(t==='send')return `<h2>Sending identity</h2><p class="mute">Who the questionnaire links, requests and chases appear to come from. Atlas never sends without your approval.</p>
+    <div class="st-opt ${ST.send==='noreply'?'on':''}" onclick="ST.send='noreply';render()"><input type="radio" ${ST.send==='noreply'?'checked':''}><div><b>noreply@onesig.co — on behalf of the user</b><div class="xs mute">From: “OneSig Atlas on behalf of Abhi” &lt;noreply@onesig.co&gt; · Reply-to: abhi@onesig.co. Replies land in your inbox; Atlas reads only what comes back through the link.</div></div></div>
+    <div class="st-opt ${ST.send==='own'?'on':''}" onclick="ST.send='own';render()"><input type="radio" ${ST.send==='own'?'checked':''}><div><b>The user’s own mailbox</b> <span class="pill soon">needs Email connector</span><div class="xs mute">Sent from abhi@onesig.co via the connected Google Workspace / Microsoft 365 account. Same wording, your name and signature.</div></div></div>
+    <div class="st-opt off"><input type="radio" disabled><div><b>Firm domain (atlas.yourfirm.com)</b> <span class="pill soon">coming soon</span><div class="xs mute">DKIM / SPF set-up, links on your own domain.</div></div></div>
+    <div class="card" style="margin-top:14px"><div class="hd"><h3>Preview</h3></div><div class="bd email-draft"><b>From:</b> ${ST.send==='own'?'Abhi &lt;abhi@onesig.co&gt;':'OneSig Atlas on behalf of Abhi &lt;noreply@onesig.co&gt;'}
+<b>Reply-to:</b> abhi@onesig.co
+<b>Subject:</b> XYZ Petrocorp · readiness questions for Finance
+
+Hi Rania,
+OneSig is helping XYZ Petrocorp prepare for UAE e-invoicing. Could you answer a few questions for your area by 30 Sep? Your personal link is below…
+
+Thanks,
+Abhi
+<span class="xs mute">OneSig · This link opens only for rania@xyzpetrocorp.example</span></div></div>
+    ${row('Email footer',inp('OneSig · Dubai · onesig.co',420),'appended to every email Atlas drafts')}`;
+  if(t==='conn'){const c=ST.conn;const item=(k,name,ic,what,on,fn)=>`<div class="st-conn"><span class="st-ci">${ic}</span><div style="flex:1"><b>${name}</b><div class="xs mute">${what}</div></div>${on?`<span class="pill status-done">Connected${typeof on==='string'?' · '+esc(on):''}</span><button class="btn s ghost" onclick="${fn}">Disconnect</button>`:`<button class="btn s p" onclick="${fn}">Connect</button>`}</div>`;
+    return `<h2>Connectors</h2><p class="mute">Where Atlas may read and where it may post. Every connector is scoped: read returns, post notifications, sync files — nothing else.</p>
+    <h3 class="st-h3">Email</h3>${item('email','Google Workspace','✉','Send as you and read questionnaire returns · required for “own mailbox” sending',c.email,"ST.conn.email=ST.conn.email?'':'Google Workspace';toast(ST.conn.email?'Google Workspace connected':'Disconnected');render()")}${item('m365','Microsoft 365','✉','Same as above for Outlook / Exchange',false,"toast('Opens Microsoft sign-in — one account per user')")}
+    <h3 class="st-h3">Channels</h3>${item('slack','Slack','💬','“Atlas needs you” notifications and daily digest to a channel or DM',c.slack,"ST.conn.slack=!ST.conn.slack;toast(ST.conn.slack?'Slack connected — pick a channel per space':'Slack disconnected');render()")}
+    <h3 class="st-h3">Files</h3>${item('gdrive','Google Drive','▤','Sync a folder into a space’s Drive; outputs written back',c.gdrive,"ST.conn.gdrive=!ST.conn.gdrive;toast(ST.conn.gdrive?'Google Drive connected':'Disconnected');render()")}${item('sharepoint','SharePoint / OneDrive','▤','Same for Microsoft 365 document libraries',c.sharepoint,"ST.conn.sharepoint=!ST.conn.sharepoint;toast(ST.conn.sharepoint?'SharePoint connected':'Disconnected');render()")}
+    <p class="xs mute" style="margin-top:12px">Coming later: calendar (Join), ERP connectors (Map / Validate), API keys &amp; webhooks.</p>`}
+  if(t==='sec')return `<h2>Security</h2>
+    ${row('Multi-factor authentication',`${tog(ST.mfa,"ST.mfa=!ST.mfa;toast(ST.mfa?'MFA required for everyone':'MFA optional');render()")} <span class="xs mute">${ST.mfa?'required for all members':'optional'}</span>`,'authenticator app or passkey; client guests are gated by email link instead')}
+    ${row('Single sign-on',`<select class="dc-sel" style="width:220px" onchange="ST.sso=this.value;toast('SSO: '+this.value)"><option value="google" ${ST.sso==='google'?'selected':''}>Google Workspace</option><option value="m365" ${ST.sso==='m365'?'selected':''}>Microsoft 365</option><option value="none">Email + password</option></select>`,'SAML / SCIM coming later')}
+    ${row('Session length',`<select class="dc-sel" style="width:220px"><option>8 hours</option><option>24 hours</option><option>7 days</option></select>`)}
+    ${row('Active sessions',`<div class="xs">Abhi · MacBook Pro · Dubai · now<br>Abhi · iPhone · Dubai · 2h ago<br><a href="javascript:void(0)" onclick="toast('Signed out everywhere except this device')" style="color:var(--blue)">Sign out all other sessions</a></div>`)}
+    ${row('Audit log',`<button class="btn s" onclick="openLog()">Open activity log</button> <button class="btn s ghost" onclick="toast('audit_log_2026-09.csv downloading')">Export CSV</button>`,'every action by a person or by Atlas, attributable')}`;
+  if(t==='data')return `<h2>Privacy & data</h2>
+    ${row('Data residency',`<select class="dc-sel" style="width:220px" onchange="ST.residency=this.value;toast('Residency: '+this.value)"><option ${ST.residency==='UAE'?'selected':''}>UAE</option><option>EU (Frankfurt)</option></select>`,'where client documents and runs are stored')}
+    ${row('Retention after a space is archived',`<select class="dc-sel" style="width:220px"><option>12 months</option><option>24 months</option><option>Until deleted</option></select>`)}
+    ${row('Client data isolation',`<span class="pill status-done">always on</span> <span class="xs mute">spaces never share context — Atlas cannot read one client’s files while working in another</span>`)}
+    ${row('Use human corrections to improve Atlas',`${tog(ST.improve,"ST.improve=!ST.improve;toast(ST.improve?'Corrections will be used for evals (anonymised)':'Corrections stay inside your account');render()")} <span class="xs mute">${ST.improve?'on · anonymised before/after/why only':'off'}</span>`,'the before / after / why you record in a run')}
+    <h3 class="st-h3">Export data</h3><div class="st-exports">
+      <div class="st-exp"><b>Chats & briefs</b><div class="xs mute">every brief, question and answer with citations</div><button class="btn s" onclick="toast('atlas_chats_2026-09-18.json downloading')">JSON</button></div>
+      <div class="st-exp"><b>Runs & outputs</b><div class="xs mute">response sets, trace, corrections, files</div><button class="btn s" onclick="toast('atlas_runs_2026-09-18.zip preparing — emailed when ready')">ZIP</button></div>
+      <div class="st-exp"><b>Drive</b><div class="xs mute">all files per space, original formats</div><button class="btn s" onclick="toast('drive_export.zip preparing')">ZIP</button></div>
+      <div class="st-exp"><b>Audit log</b><div class="xs mute">who did what, including Atlas</div><button class="btn s" onclick="toast('audit_log.csv downloading')">CSV</button></div></div>
+    ${row('Delete organisation data',`<button class="btn s ghost" style="color:#b42318" onclick="toast('Request logged — an owner must confirm by email; 30-day grace period')">Request deletion…</button>`,'30-day grace period, then permanent')}
+    <p class="xs mute" style="margin-top:12px"><a href="javascript:void(0)" onclick="toast('DPA · opens PDF')" style="color:var(--blue)">Data processing agreement</a> · <a href="javascript:void(0)" onclick="toast('Sub-processors list')" style="color:var(--blue)">Sub-processors</a></p>`;
+  return ''}
+R.settings=(tab)=>{if(tab&&ST_TABS.some(t=>t[0]===tab))ST.tab=tab;
+  return `<div class="intro"><h1>Settings <span class="h1sub">General</span></h1><p>Organisation-wide settings. Personal preferences (name, signature, notifications) are under your profile.</p></div>
+  <div class="st-wrap"><div class="card st-nav">${ST_TABS.map(t=>`<a class="${ST.tab===t[0]?'on':''}" href="#settings/${t[0]}">${t[1]}</a>`).join('')}</div><div class="card st-body">${stBody()}</div></div>`};
 R.qa=()=>`<div class="intro"><h1>Ask <span class="h1sub">the documents</span> ${pillSt('ship')}</h1><p>Questions over any files → answers with the exact spot cited. When sources disagree, you see both. When it isn't there, it says so.</p></div>
 <div class="row" style="margin-bottom:14px"><div class="card" style="flex:0 0 300px"><div class="hd"><h3>Sources · 4</h3></div><div class="bd">${['AP_SOP_v4.pdf','ERP_field_extract.pdf','XYZ_June_invoices.xlsx','Response set · questionnaire v1'].map(s=>`<label class="chk"><input type="checkbox" checked> ${s}</label>`).join('')}<button class="btn s" style="margin-top:6px">+ Add</button></div></div>
 <div class="card"><div class="hd"><h3>Questions</h3><span class="sub">type, paste a list, or use a question bank</span></div><div class="bd"><textarea style="width:100%;min-height:96px;border:1px solid var(--line);border-radius:7px;padding:8px;font:13px var(--sans);background:#FBFAF7">Who approves a credit note above AED 10,000?
@@ -2115,7 +2192,7 @@ R.buildout=()=>{
 };
 
 /* ---------- router ---------- */
-const CR={ideas:'Ideas',brief:'Home › Draft run',respond:'Rania’s link',writing:'Write',answer:'Ask',dc:'Collect · Response set',home:'Home',spaces:'Spaces',ask:'Home › Run',run:'Home › Run view',workflows:'Workflows',assistant:'Assistant',drive:'Drive',files:'Drive',output:'Drive › Outputs › Output',templates:'Drive › Templates',library:'Drive › Company library',review:'Review',dc:'Collect',qa:'Ask',report:'Write',diagram:'Draw',changes:'What changed',buildout:'IA & buildout map'};
+const CR={settings:'Settings',ideas:'Ideas',brief:'Home › Draft run',respond:'Rania’s link',writing:'Write',answer:'Ask',dc:'Collect · Response set',home:'Home',spaces:'Spaces',ask:'Home › Run',run:'Home › Run view',workflows:'Workflows',assistant:'Assistant',drive:'Drive',files:'Drive',output:'Drive › Outputs › Output',templates:'Drive › Templates',library:'Drive › Company library',review:'Review',dc:'Collect',qa:'Ask',report:'Write',diagram:'Draw',changes:'What changed',buildout:'IA & buildout map'};
 function go(r,arg){location.hash='#'+r+(arg?'/'+encodeURIComponent(arg):'')}
 function render(){
   const h=location.hash.slice(1)||'home';const [r,...rest]=h.split('/');const arg=rest.length?decodeURIComponent(rest.join('/')):undefined;
@@ -2123,7 +2200,7 @@ function render(){
   if(r==='templates'){wfTab='tpl';location.hash='#workflows';return}
   if(r==='library'){location.hash='#drive/library';return}
   if(r==='needs'){NOTIF.open=true;location.hash='#home';return}
-  const fn=R[r]||R.home;if(NOTIF.lastHash!==location.hash){UNDO=null;NOTIF.open=false}NOTIF.lastHash=location.hash;document.getElementById('page').innerHTML=fn(arg)+filesOverlay()+pickerHtml()+(ONB.done?demoGuide():'')+undoHtml()+onbHtml();renderAskHist();notifSync();
+  const fn=R[r]||R.home;if(NOTIF.lastHash!==location.hash){UNDO=null;NOTIF.open=false}NOTIF.lastHash=location.hash;document.getElementById('page').innerHTML=fn(arg)+filesOverlay()+pickerHtml()+(ONB.done?demoGuide():'')+undoHtml()+onbHtml();renderAskHist();notifSync();{const mm=document.getElementById('meMenu');if(mm)mm.classList.toggle('open',abMenu==='me')}
   {const spTabs={overview:'Home',tasks:'Tasks',drive:'Drive',review:'Client reviews',activity:'Activity',access:'Access'};const drv={files:'Files',outputs:'Outputs',templates:'Templates',library:'Company library'};document.getElementById('crumb').innerHTML=(r==='home'||r==='assistant')?'':r==='spaces'?`<b>${curSpace}</b> › <span>${spTabs[arg]||'Home'}</span>`:r==='drive'?`<b>Drive</b> › <span>${drv[arg]||'Files'}</span>`:`<b>${CR[r]||'Home'}</b>`;}
   let navKey={run:'home',ask:'home',assistant:'home',brief:'home',output:'drive',dc:'workflows',qa:'workflows',report:'workflows',diagram:'workflows'}[r]||r;
   document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===navKey));
